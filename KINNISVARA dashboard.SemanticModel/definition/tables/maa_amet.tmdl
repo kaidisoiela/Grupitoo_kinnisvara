@@ -1,0 +1,58 @@
+table maa_amet
+	lineageTag: 8be0dfe2-979c-4ecb-8851-05658dfc2089
+
+	column quarter
+		dataType: string
+		lineageTag: ff7a3e9c-85d6-41da-8ac7-41c9fb850c59
+		summarizeBy: none
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column county
+		dataType: string
+		lineageTag: 93e5ce1d-9b34-44cb-9132-c85588a44081
+		summarizeBy: none
+		sourceColumn: county
+
+		annotation SummarizationSetBy = Automatic
+
+	column transaction_count
+		dataType: string
+		lineageTag: 7751083e-9d5c-44eb-a276-e1c7379bcd93
+		summarizeBy: none
+		sourceColumn: transaction_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_area_ha
+		dataType: string
+		lineageTag: a1d92d1a-c42d-4fb3-9c29-14e35163622d
+		summarizeBy: none
+		sourceColumn: total_area_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_value_eur
+		dataType: string
+		lineageTag: 1d7b4b59-0fcc-4df1-933d-d0579c8f58b0
+		summarizeBy: none
+		sourceColumn: total_value_eur
+
+		annotation SummarizationSetBy = Automatic
+
+	partition maa_amet = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\opilane\Desktop\Grupotoo_kinnisvara\maa_amet.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"quarter", type text}, {"county", type text}, {"transaction_count", type text}, {"total_area_ha", type text}, {"total_value_eur", type text}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
