@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "KINNISVARA dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3f54fd22-58f0-43ad-bcc0-5ba023882b98"
+  }
+}
