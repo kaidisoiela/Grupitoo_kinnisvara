@@ -14,8 +14,8 @@ create table grupitoo_kv.fact_kv AS
         	WHEN SPLIT_PART(quarter, ' ', 2) = 'II'  THEN (SPLIT_PART(quarter, ' ', 1) || '-04-01')::DATE
         	WHEN SPLIT_PART(quarter, ' ', 2) = 'III' THEN (SPLIT_PART(quarter, ' ', 1) || '-07-01')::DATE
         	WHEN SPLIT_PART(quarter, ' ', 2) = 'IV'  THEN (SPLIT_PART(quarter, ' ', 1) || '-10-01')::DATE
-    	END AS FK_quarter_ID foreign KEY,
-		county as FK_county_ID foreign KEY,
+    	END AS FK_quarter_ID,
+		county as county_name,
 		transaction_count::INTEGER,
 		total_area_ha::numeric(20,2),
 		total_value_eur::numeric(20,2),
@@ -83,3 +83,35 @@ SELECT DISTINCT
     END AS half_year
 FROM grupitoo_kv.maa_amet_py_final
 ORDER BY PK_quarter_ID;
+
+
+
+
+--- Ühendame Fact_KV tabeli dim tabelitega
+
+
+--County dim'iga:
+
+ALTER TABLE grupitoo_kv.Fact_KV 
+ADD COLUMN FK_county_id INTEGER;
+
+
+UPDATE grupitoo_kv.Fact_KV as f
+SET FK_county_id = c.PK_county_ID
+FROM grupitoo_kv.Dim_County c
+WHERE f.county_name = c.county_name;
+
+
+ALTER TABLE grupitoo_kv.Fact_KV DROP COLUMN county_name;
+
+
+ALTER TABLE grupitoo_kv.Fact_KV 
+ADD CONSTRAINT FK_Fact_county 
+FOREIGN KEY (FK_county_ID) REFERENCES grupitoo_kv.Dim_County(PK_county_ID);
+
+--Time dim'iga:
+
+ALTER TABLE grupitoo_kv.Fact_KV 
+ADD CONSTRAINT FK_Fact_time 
+FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
+
