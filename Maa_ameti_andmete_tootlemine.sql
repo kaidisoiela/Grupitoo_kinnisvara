@@ -115,3 +115,55 @@ ALTER TABLE grupitoo_kv.Fact_KV
 ADD CONSTRAINT FK_Fact_time 
 FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
 
+
+
+/* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "Eesti_keskmine_palk_maakonniti_2005_2025_py_final.csv" */
+
+-- 1. Kustutame vana tabeli, kui see on olemas
+DROP TABLE IF EXISTS grupitoo_kv.fact_palk CASCADE;
+
+-- 2. Loome esialgse Fact_PALK tabeli koos kõigi andmetulpadega (sh palk / salary)
+CREATE TABLE grupitoo_kv.fact_palk AS
+SELECT
+    CASE 
+        WHEN SPLIT_PART(quarter, ' ', 2) = 'I'   THEN (SPLIT_PART(quarter, ' ', 1) || '-01-01')::DATE
+        WHEN SPLIT_PART(quarter, ' ', 2) = 'II'  THEN (SPLIT_PART(quarter, ' ', 1) || '-04-01')::DATE
+        WHEN SPLIT_PART(quarter, ' ', 2) = 'III' THEN (SPLIT_PART(quarter, ' ', 1) || '-07-01')::DATE
+        WHEN SPLIT_PART(quarter, ' ', 2) = 'IV'  THEN (SPLIT_PART(quarter, ' ', 1) || '-10-01')::DATE
+    END AS FK_quarter_ID,
+    county AS county_name,
+    salary AS average_salary -- Lisatud sisendtabeli palga veerg
+FROM grupitoo_kv.Eesti_keskmine_palk_maakonniti;
+
+-- 3. SEOSETE LOOMINE: Järgime täpselt Sinu näidatud Fact_KV loogikat
+
+-- Samm A: Lisame Fact_PALK tabelisse uue tühja maakonna ID veeru
+ALTER TABLE grupitoo_kv.fact_palk 
+ADD COLUMN FK_county_id INTEGER;
+
+-- Samm B: Uuendame ID väärtused Dim_County tabeli põhjal, ühitades nimed
+UPDATE grupitoo_kv.fact_palk AS f
+SET FK_county_id = c.PK_county_ID
+FROM grupitoo_kv.Dim_County c
+WHERE f.county_name = c.county_name;
+
+-- Samm C: Eemaldame nüüd ülearuseks muutunud tekstipõhise maakonna nime veeru
+ALTER TABLE grupitoo_kv.fact_palk DROP COLUMN county_name;
+
+-- Samm D: Määrame andmetüüpidele rangemad piirangud (andmeterviklikkus)
+ALTER TABLE grupitoo_kv.fact_palk 
+    ALTER COLUMN FK_quarter_ID SET NOT NULL,
+    ALTER COLUMN FK_county_id SET NOT NULL;
+
+-- Samm E: Lisame välisvõtme (Foreign Key) seose County dimensiooniga
+ALTER TABLE grupitoo_kv.fact_palk 
+ADD CONSTRAINT FK_Fact_PALK_county 
+FOREIGN KEY (FK_county_id) REFERENCES grupitoo_kv.Dim_County(PK_county_ID);
+
+-- Samm F: Lisame välisvõtme (Foreign Key) seose Time dimensiooniga
+ALTER TABLE grupitoo_kv.fact_palk 
+ADD CONSTRAINT FK_Fact_PALK_time 
+FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
+
+-- 4. KONTROLLPÄRING: Vaatame, kas andmed ja ID-d said korrektselt paika
+SELECT * FROM grupitoo_kv.fact_palk ORDER BY FK_quarter_ID, FK_county_id LIMIT 10;
