@@ -1,6 +1,18 @@
 table 'grupitoo_kv fact_kv'
 	lineageTag: 0790d168-e311-4134-bd9a-3ec607babc4b
 
+	measure M2_Kuupalga_Eest = ```
+			
+			DIVIDE(
+			    AVERAGE('grupitoo_kv fact_palk'[average_salary]), 
+			    AVERAGE('grupitoo_kv fact_kv'[value_per_m2]) * 1000, 
+			    0
+			)
+			```
+		lineageTag: 0163f08d-29b5-4e5b-90fb-11ea56163052
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column fk_quarter_id
 		dataType: dateTime
 		formatString: Long Date
