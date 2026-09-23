@@ -35,8 +35,8 @@ relationship 0621df59-f94a-4ecc-99a2-4ebfbb0e3d34
 
 	annotation PBI_IsFromSource = FS
 
-relationship d974d97a-3fde-4164-924b-cef130c1533c
+relationship 325cf003-9b28-4aa5-8a52-f27827773e0a
 	joinOnDateBehavior: datePartOnly
 	fromColumn: 'grupitoo_kv fact_thi'.fk_quarter_id
-	toColumn: LocalDateTable_80f47668-b9cd-4a7c-8394-82760f93b876.Date
+	toColumn: LocalDateTable_4f67597e-26b2-41e0-8ada-f70aa61ce0ea.Date
 
