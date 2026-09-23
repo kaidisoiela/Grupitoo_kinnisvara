@@ -6,8 +6,7 @@ CREATE TABLE grupitoo_kv.maa_amet_py_final (
     quarter VARCHAR(50),
     county VARCHAR(100),
     transaction_count INTEGER,
-    total_area_ha NUMERIC(20,4),
-    total_value_eur BIGINT  -- <--- SEE ON VÕTMERIDA, mis kaitseb suuri arve!
+    avg_price_m2 NUMERIC(20,4)
 );
 
 
@@ -28,10 +27,7 @@ create table grupitoo_kv.fact_kv AS
     	END AS FK_quarter_ID,
 		county as county_name,
 		transaction_count::INTEGER,
-		total_area_ha::numeric(20),
-		total_value_eur::numeric(20),
-		round(total_value_eur::numeric / nullif(total_area_ha::numeric * 10000, 0), 2) as value_per_m2,
-		round(total_value_eur::numeric / transaction_count::integer, 2) as value_per_transaction
+		avg_price_m2::numeric(20)
 	from grupitoo_kv.maa_amet_py_final;
 
 
@@ -178,9 +174,6 @@ FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
 
 -- 4. KONTROLLPÄRING: Vaatame, kas andmed ja ID-d said korrektselt paika
 SELECT * FROM grupitoo_kv.fact_palk ORDER BY FK_quarter_ID, FK_county_id LIMIT 10;
-
-
-
 
 
 
