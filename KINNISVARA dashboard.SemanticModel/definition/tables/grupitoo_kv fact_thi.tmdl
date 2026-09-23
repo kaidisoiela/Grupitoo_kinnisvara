@@ -1,17 +1,6 @@
 table 'grupitoo_kv fact_thi'
 	lineageTag: 171342b0-9e7d-4fcd-a969-e334a7b16a11
 
-	column quarter_id
-		dataType: dateTime
-		formatString: Long Date
-		lineageTag: cf138df6-cec5-40f7-9b72-a5e9c1b80702
-		summarizeBy: none
-		sourceColumn: quarter_id
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column keskmine_indeks
 		dataType: double
 		lineageTag: 6f8a59ac-3a13-4142-9142-8efd545f1a40
@@ -21,6 +10,22 @@ table 'grupitoo_kv fact_thi'
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fk_quarter_id
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0a39b873-d49c-4d8e-afcd-96af1f039e57
+		summarizeBy: none
+		sourceColumn: fk_quarter_id
+
+		variation Variation
+			isDefault
+			relationship: d974d97a-3fde-4164-924b-cef130c1533c
+			defaultHierarchy: LocalDateTable_80f47668-b9cd-4a7c-8394-82760f93b876.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	partition 'grupitoo_kv fact_thi' = m
 		mode: import
