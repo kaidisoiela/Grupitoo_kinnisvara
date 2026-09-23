@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
+            "x": 131.06798269321706,
+            "y": 259.31729909195633
           },
           "nodeIndex": "grupitoo_kv dim_county",
           "nodeLineageTag": "b8c952a5-01f8-4645-8a1e-a6b3930e1b4f",
@@ -23,34 +23,34 @@
         },
         {
           "location": {
-            "x": 528.1732880721446,
-            "y": 0
+            "x": 653.60393817640625,
+            "y": 315.69062498151203
           },
           "nodeIndex": "grupitoo_kv dim_time",
           "nodeLineageTag": "a6e9b90b-69ee-48d2-9865-3cea0a0a182d",
           "size": {
             "height": 200,
-            "width": 234
+            "width": 291.7826590367946
           },
           "zIndex": 2
         },
         {
           "location": {
-            "x": 796.87729661087224,
-            "y": 0
+            "x": 1226.723906518735,
+            "y": 245.22396761956742
           },
           "nodeIndex": "grupitoo_kv fact_intressid",
           "nodeLineageTag": "0c1620aa-a808-4fd2-9875-409f90eaff74",
           "size": {
-            "height": 136.45599888343335,
-            "width": 546.87195868703429
+            "height": 145,
+            "width": 276.27999441716679
           },
           "zIndex": 6
         },
         {
           "location": {
-            "x": 35.379642493462086,
-            "y": 359.20645825287886
+            "x": 258.05427975720715,
+            "y": 772.14107039387454
           },
           "nodeIndex": "grupitoo_kv fact_kv",
           "nodeLineageTag": "0790d168-e311-4134-bd9a-3ec607babc4b",
@@ -62,8 +62,8 @@
         },
         {
           "location": {
-            "x": 259.4902129230872,
-            "y": 101.47198660120029
+            "x": 723.160818364683,
+            "y": 0
           },
           "nodeIndex": "grupitoo_kv fact_palk",
           "nodeLineageTag": "1dadcdcc-fee7-4ecd-ba61-826922285f37",
@@ -75,14 +75,14 @@
         },
         {
           "location": {
-            "x": 717.719906132669,
-            "y": 352.83884543797922
+            "x": 1146.1571828932927,
+            "y": 819.32811717405286
           },
           "nodeIndex": "grupitoo_kv fact_thi",
           "nodeLineageTag": "171342b0-9e7d-4fcd-a969-e334a7b16a11",
           "size": {
-            "height": 128,
-            "width": 234
+            "height": 145,
+            "width": 246.68399832515001
           },
           "zIndex": 5
         }
