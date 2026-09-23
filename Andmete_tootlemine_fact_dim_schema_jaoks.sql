@@ -192,9 +192,9 @@ FROM grupitoo_kv.puhastatud_eluasemelaenud_py_final;
 
 
 
-DROP TABLE IF exists grupitoo_kv.intressid_py_final;
+DROP TABLE IF exists grupitoo_kv.Fact_intressid;
 
-create table grupitoo_kv.intressid_py_final as
+create table grupitoo_kv.Fact_intressid as
 SELECT 
 	FK_quarter_ID,
     avg(intressimaar_laenusummalt)::numeric(10,2) as intress
@@ -205,7 +205,29 @@ group by FK_quarter_ID;
 
 -- Lisame välisvõtme (Foreign Key) seose Time dimensiooniga
 
-ALTER TABLE grupitoo_kv.intressid_py_final
+ALTER TABLE grupitoo_kv.Fact_intressid
 ADD CONSTRAINT FK_Fact_intress_time 
 FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
+
+--THI tabeli lisamine ja ühendamine
+
+
+/* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "thi_py_final.csv" */
+
+
+-- 1. Kustutame vana fact_thi tabeli, kui see on olemas
+DROP TABLE IF EXISTS grupitoo_kv.fact_thi CASCADE;
+
+-- 2. Loome uue faktitabeli võttes andmed Sinu tabelist thi_py_final
+CREATE TABLE grupitoo_kv.fact_thi AS
+SELECT 
+    quarter_id::DATE,
+    keskmine_indeks
+FROM grupitoo_kv.thi_py_final;
+
+
+-- 3. Lisame välisvõtme seose Dim_Time dimensiooniga
+ALTER TABLE grupitoo_kv.fact_thi
+ADD CONSTRAINT FK_Fact_thi_time 
+FOREIGN KEY (quarter_id) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
 
