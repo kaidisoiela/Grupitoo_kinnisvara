@@ -1,18 +1,6 @@
 table 'grupitoo_kv fact_kv'
 	lineageTag: 0790d168-e311-4134-bd9a-3ec607babc4b
 
-	measure M2_Kuupalga_Eest = ```
-			
-			DIVIDE(
-			    AVERAGE('grupitoo_kv fact_palk'[average_salary]), 
-			    AVERAGE('grupitoo_kv fact_kv'[value_per_m2]) * 1000, 
-			    0
-			)
-			```
-		lineageTag: 0163f08d-29b5-4e5b-90fb-11ea56163052
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column fk_quarter_id
 		dataType: dateTime
 		formatString: Long Date
@@ -33,46 +21,6 @@ table 'grupitoo_kv fact_kv'
 
 		annotation SummarizationSetBy = Automatic
 
-	column total_area_ha
-		dataType: double
-		lineageTag: e6b6e24c-65bf-4c7a-8afa-262f6722aa8b
-		summarizeBy: sum
-		sourceColumn: total_area_ha
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column total_value_eur
-		dataType: double
-		lineageTag: 8978abe6-abbd-4663-8567-0213a2cc74d1
-		summarizeBy: sum
-		sourceColumn: total_value_eur
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column value_per_m2
-		dataType: double
-		lineageTag: 417f2b14-8663-42a2-a530-cbf2128bbd0d
-		summarizeBy: sum
-		sourceColumn: value_per_m2
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column value_per_transaction
-		dataType: double
-		lineageTag: 5884420d-e323-4b20-aa2f-eaf5ed0cfa86
-		summarizeBy: sum
-		sourceColumn: value_per_transaction
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column fk_county_id
 		dataType: int64
 		formatString: 0
@@ -81,6 +29,16 @@ table 'grupitoo_kv fact_kv'
 		sourceColumn: fk_county_id
 
 		annotation SummarizationSetBy = Automatic
+
+	column avg_price_m2
+		dataType: double
+		lineageTag: f850ccfc-35ca-4ce3-9ed0-ac1e94980087
+		summarizeBy: sum
+		sourceColumn: avg_price_m2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition 'grupitoo_kv fact_kv' = m
 		mode: import

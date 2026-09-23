@@ -50,17 +50,6 @@
           "type": "BaseTheme"
         }
       ]
-    },
-    {
-      "name": "RegisteredResources",
-      "type": "RegisteredResources",
-      "items": [
-        {
-          "name": "maakond4762259160712292.json",
-          "path": "maakond4762259160712292.json",
-          "type": "ShapeMap"
-        }
-      ]
     }
   ],
   "settings": {

@@ -6,8 +6,7 @@
     "y": 75.1659574468085,
     "z": 0,
     "height": 388.90212765957449,
-    "width": 860.59574468085111,
-    "tabOrder": 3000
+    "width": 860.59574468085111
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -424,6 +423,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "9d463d6963916042b4a5",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_kv"
+                  }
+                },
+                "Property": "value_per_m2"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "debf320ac3c305305130",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
+              }
+            },
+            "Property": "Reaalne_Palk"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
