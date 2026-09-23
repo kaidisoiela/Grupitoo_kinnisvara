@@ -167,3 +167,45 @@ FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
 
 -- 4. KONTROLLPÄRING: Vaatame, kas andmed ja ID-d said korrektselt paika
 SELECT * FROM grupitoo_kv.fact_palk ORDER BY FK_quarter_ID, FK_county_id LIMIT 10;
+
+
+
+
+
+
+--Intressimäärade tabeli lisamine ja ühendamine
+
+
+/* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "puhastatud_eluasemelaenud_py_final.csv" */
+
+
+DROP TABLE IF exists grupitoo_kv.intressid_kv;
+
+create table grupitoo_kv.intressid_kv as
+SELECT 
+    kuupaev,
+    valuuta,
+    intressimaar_laenusummalt,
+    -- Muudame teksti kuupäevaks ja arvutame kvartali alguse
+    DATE_TRUNC('quarter', kuupaev::DATE)::DATE AS FK_quarter_ID
+FROM grupitoo_kv.puhastatud_eluasemelaenud_py_final;
+
+
+
+DROP TABLE IF exists grupitoo_kv.intressid_py_final;
+
+create table grupitoo_kv.intressid_py_final as
+SELECT 
+	FK_quarter_ID,
+    avg(intressimaar_laenusummalt)::numeric(10,2) as intress
+FROM grupitoo_kv.intressid_kv
+where valuuta='EUR' and FK_quarter_ID < DATE '2026-07-01'
+group by FK_quarter_ID;
+
+
+-- Lisame välisvõtme (Foreign Key) seose Time dimensiooniga
+
+ALTER TABLE grupitoo_kv.intressid_py_final
+ADD CONSTRAINT FK_Fact_intress_time 
+FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
+
