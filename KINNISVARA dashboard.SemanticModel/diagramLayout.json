@@ -10,19 +10,112 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
+            "x": 33.088002233133281,
             "y": 0
           },
-          "nodeIndex": "maa_amet",
-          "nodeLineageTag": "8be0dfe2-979c-4ecb-8851-05658dfc2089",
+          "nodeIndex": "grupitoo_kv dim_county",
+          "nodeLineageTag": "b8c952a5-01f8-4645-8a1e-a6b3930e1b4f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 722.66126239111179,
+            "y": 0
+          },
+          "nodeIndex": "grupitoo_kv dim_time",
+          "nodeLineageTag": "a6e9b90b-69ee-48d2-9865-3cea0a0a182d",
           "size": {
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1109.7492552979065,
+            "y": 8.45599888343336
+          },
+          "nodeIndex": "grupitoo_kv fact_intressid",
+          "nodeLineageTag": "0c1620aa-a808-4fd2-9875-409f90eaff74",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 35.379642493462086,
+            "y": 359.20645825287886
+          },
+          "nodeIndex": "grupitoo_kv fact_kv",
+          "nodeLineageTag": "0790d168-e311-4134-bd9a-3ec607babc4b",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 338.41286916846519,
+            "y": 208.58130579135616
+          },
+          "nodeIndex": "grupitoo_kv fact_palk",
+          "nodeLineageTag": "1dadcdcc-fee7-4ecd-ba61-826922285f37",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 951.66920857432535,
+            "y": 261.23219086745115
+          },
+          "nodeIndex": "grupitoo_kv fact_thi",
+          "nodeLineageTag": "171342b0-9e7d-4fcd-a969-e334a7b16a11",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
         }
       ],
       "name": "All tables",
+      "zoomValue": 70.955543900968948,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [],
+      "name": "Siret",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [],
+      "name": "Kristel",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
@@ -30,6 +123,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "All tables",
+  "selectedDiagram": "Kristel",
   "defaultDiagram": "All tables"
 }

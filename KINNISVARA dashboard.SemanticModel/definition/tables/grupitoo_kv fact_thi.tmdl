@@ -1,0 +1,33 @@
+table 'grupitoo_kv fact_thi'
+	lineageTag: 171342b0-9e7d-4fcd-a969-e334a7b16a11
+
+	column quarter_id
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cf138df6-cec5-40f7-9b72-a5e9c1b80702
+		summarizeBy: none
+		sourceColumn: quarter_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column keskmine_indeks
+		dataType: double
+		lineageTag: 6f8a59ac-3a13-4142-9142-8efd545f1a40
+		summarizeBy: sum
+		sourceColumn: keskmine_indeks
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'grupitoo_kv fact_thi' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "postgres"),
+				    grupitoo_kv_fact_thi = Source{[Schema="grupitoo_kv",Item="fact_thi"]}[Data]
+				in
+				    grupitoo_kv_fact_thi
+
