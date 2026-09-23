@@ -14,14 +14,14 @@ table 'grupitoo_kv fact_thi'
 	column fk_quarter_id
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 0a39b873-d49c-4d8e-afcd-96af1f039e57
+		lineageTag: 68ab4cd8-d5ee-42c1-b38c-5e086c1503c8
 		summarizeBy: none
 		sourceColumn: fk_quarter_id
 
 		variation Variation
 			isDefault
-			relationship: d974d97a-3fde-4164-924b-cef130c1533c
-			defaultHierarchy: LocalDateTable_80f47668-b9cd-4a7c-8394-82760f93b876.'Date Hierarchy'
+			relationship: 325cf003-9b28-4aa5-8a52-f27827773e0a
+			defaultHierarchy: LocalDateTable_4f67597e-26b2-41e0-8ada-f70aa61ce0ea.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
