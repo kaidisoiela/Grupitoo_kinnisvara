@@ -1,0 +1,81 @@
+table 'grupitoo_kv fact_kv'
+	lineageTag: 0790d168-e311-4134-bd9a-3ec607babc4b
+
+	column fk_quarter_id
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a87df17a-29b9-4a04-a2e9-aeeb64c2dace
+		summarizeBy: none
+		sourceColumn: fk_quarter_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column transaction_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 8405eb27-3977-47c1-8527-1b3d2fe16062
+		summarizeBy: sum
+		sourceColumn: transaction_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_area_ha
+		dataType: double
+		lineageTag: e6b6e24c-65bf-4c7a-8afa-262f6722aa8b
+		summarizeBy: sum
+		sourceColumn: total_area_ha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_value_eur
+		dataType: double
+		lineageTag: 8978abe6-abbd-4663-8567-0213a2cc74d1
+		summarizeBy: sum
+		sourceColumn: total_value_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column value_per_m2
+		dataType: double
+		lineageTag: 417f2b14-8663-42a2-a530-cbf2128bbd0d
+		summarizeBy: sum
+		sourceColumn: value_per_m2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column value_per_transaction
+		dataType: double
+		lineageTag: 5884420d-e323-4b20-aa2f-eaf5ed0cfa86
+		summarizeBy: sum
+		sourceColumn: value_per_transaction
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fk_county_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4911c464-990d-45c3-949f-b8c9d7a6f5ca
+		summarizeBy: none
+		sourceColumn: fk_county_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'grupitoo_kv fact_kv' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "postgres"),
+				    grupitoo_kv_fact_kv = Source{[Schema="grupitoo_kv",Item="fact_kv"]}[Data]
+				in
+				    grupitoo_kv_fact_kv
+
