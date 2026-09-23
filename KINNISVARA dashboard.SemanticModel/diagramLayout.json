@@ -10,7 +10,7 @@
       "nodes": [
         {
           "location": {
-            "x": 33.088002233133281,
+            "x": 0,
             "y": 0
           },
           "nodeIndex": "grupitoo_kv dim_county",
@@ -23,7 +23,7 @@
         },
         {
           "location": {
-            "x": 722.66126239111179,
+            "x": 528.1732880721446,
             "y": 0
           },
           "nodeIndex": "grupitoo_kv dim_time",
@@ -36,16 +36,16 @@
         },
         {
           "location": {
-            "x": 1109.7492552979065,
-            "y": 8.45599888343336
+            "x": 796.87729661087224,
+            "y": 0
           },
           "nodeIndex": "grupitoo_kv fact_intressid",
           "nodeLineageTag": "0c1620aa-a808-4fd2-9875-409f90eaff74",
           "size": {
-            "height": 128,
-            "width": 234
+            "height": 136.45599888343335,
+            "width": 546.87195868703429
           },
-          "zIndex": 3
+          "zIndex": 6
         },
         {
           "location": {
@@ -58,12 +58,12 @@
             "height": 248,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 338.41286916846519,
-            "y": 208.58130579135616
+            "x": 259.4902129230872,
+            "y": 101.47198660120029
           },
           "nodeIndex": "grupitoo_kv fact_palk",
           "nodeLineageTag": "1dadcdcc-fee7-4ecd-ba61-826922285f37",
@@ -71,12 +71,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 951.66920857432535,
-            "y": 261.23219086745115
+            "x": 717.719906132669,
+            "y": 352.83884543797922
           },
           "nodeIndex": "grupitoo_kv fact_thi",
           "nodeLineageTag": "171342b0-9e7d-4fcd-a969-e334a7b16a11",
@@ -84,7 +84,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 5
         }
       ],
       "name": "All tables",
@@ -93,36 +93,8 @@
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
       "tablesLocked": false
-    },
-    {
-      "ordinal": 1,
-      "scrollPosition": {
-        "x": 0,
-        "y": 0
-      },
-      "nodes": [],
-      "name": "Siret",
-      "zoomValue": 100,
-      "pinKeyFieldsToTop": false,
-      "showExtraHeaderInfo": false,
-      "hideKeyFieldsWhenCollapsed": false,
-      "tablesLocked": false
-    },
-    {
-      "ordinal": 2,
-      "scrollPosition": {
-        "x": 0,
-        "y": 0
-      },
-      "nodes": [],
-      "name": "Kristel",
-      "zoomValue": 100,
-      "pinKeyFieldsToTop": false,
-      "showExtraHeaderInfo": false,
-      "hideKeyFieldsWhenCollapsed": false,
-      "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Kristel",
+  "selectedDiagram": "All tables",
   "defaultDiagram": "All tables"
 }
