@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 370.84676032270647
+        "y": 0
       },
       "nodes": [
         {
@@ -20,19 +20,6 @@
             "width": 234
           },
           "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 653.60393817640625,
-            "y": 315.69062498151203
-          },
-          "nodeIndex": "grupitoo_kv dim_time",
-          "nodeLineageTag": "a6e9b90b-69ee-48d2-9865-3cea0a0a182d",
-          "size": {
-            "height": 200,
-            "width": 291.7826590367946
-          },
-          "zIndex": 2
         },
         {
           "location": {
@@ -85,10 +72,22 @@
             "width": 246.68399832515001
           },
           "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 653.60393817640625,
+            "y": 315.69062498151203
+          },
+          "nodeIndex": "grupitoo_kv dim_time",
+          "size": {
+            "height": 200,
+            "width": 291.7826590367946
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 56.447393005378,
+      "zoomValue": 40,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
