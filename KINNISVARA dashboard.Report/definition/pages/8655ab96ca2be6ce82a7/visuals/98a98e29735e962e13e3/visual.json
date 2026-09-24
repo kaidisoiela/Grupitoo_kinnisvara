@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "98a98e29735e962e13e3",
   "position": {
-    "x": 921.5,
+    "x": 800,
     "y": 382,
     "z": 1003,
-    "height": 385,
-    "width": 905,
+    "height": 460,
+    "width": 830,
     "tabOrder": 1001
   },
   "visual": {
@@ -30,6 +30,70 @@
               "nativeQueryRef": "county_name"
             }
           ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "grupitoo_kv dim_county"
+                    }
+                  },
+                  "Property": "county_name"
+                }
+              },
+              "queryRef": "grupitoo_kv dim_county.county_name",
+              "nativeQueryRef": "county_name"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_palk"
+                        }
+                      },
+                      "Property": "average_salary"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Sum(grupitoo_kv fact_palk.average_salary)",
+              "nativeQueryRef": "Max of average_salary"
+            }
+          ]
+        },
+        "Value": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_kv"
+                        }
+                      },
+                      "Property": "avg_price_m2"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)1",
+              "nativeQueryRef": "Max of avg_price_m21"
+            }
+          ]
         }
       }
     },
@@ -49,23 +113,23 @@
                 "type": {
                   "expr": {
                     "Literal": {
-                      "Value": "'shared'"
+                      "Value": "'packaged'"
                     }
                   }
                 },
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'usa.states.topo'"
+                      "Value": "'maakond.json'"
                     }
                   }
                 },
                 "content": {
                   "expr": {
                     "ResourcePackageItem": {
-                      "PackageName": "SharedResources",
-                      "PackageType": 2,
-                      "ItemName": "usa.states.topo"
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "maakond5300128592533392.json"
                     }
                   }
                 }
@@ -74,7 +138,44 @@
             "projectionEnum": {
               "expr": {
                 "Literal": {
-                  "Value": "'albersUsa'"
+                  "Value": "'mercator'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fillRule": {
+              "linearGradient2": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'asZero'"
+                      }
+                    }
+                  }
                 }
               }
             }
