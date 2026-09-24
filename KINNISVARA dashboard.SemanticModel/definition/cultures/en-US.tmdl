@@ -1,2 +1,18 @@
 cultureInfo en-US
 
+	linguisticMetadata =
+			{
+			  "Version": "1.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "grupitoo_kv_dim_county.county_name": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_county",
+			        "ConceptualProperty": "county_name"
+			      },
+			      "State": "Generated"
+			    }
+			  }
+			}
+		contentType: json
+
