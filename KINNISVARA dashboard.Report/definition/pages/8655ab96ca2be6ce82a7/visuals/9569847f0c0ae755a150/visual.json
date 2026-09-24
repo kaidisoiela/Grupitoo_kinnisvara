@@ -2,18 +2,18 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "9569847f0c0ae755a150",
   "position": {
-    "x": 11,
-    "y": 450,
-    "z": 1,
-    "height": 270,
-    "width": 574,
-    "tabOrder": 1
+    "x": 0,
+    "y": 381.66666666666669,
+    "z": 1000,
+    "height": 385,
+    "width": 905,
+    "tabOrder": 1000
   },
   "visual": {
-    "visualType": "treemap",
+    "visualType": "scriptVisual",
     "query": {
       "queryState": {
-        "Group": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -27,13 +27,8 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name",
-              "active": true
-            }
-          ]
-        },
-        "Values": {
-          "projections": [
+              "nativeQueryRef": "county_name"
+            },
             {
               "field": {
                 "Aggregation": {
@@ -47,51 +42,68 @@
                       "Property": "average_salary"
                     }
                   },
-                  "Function": 0
+                  "Function": 4
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_palk.average_salary)",
-              "nativeQueryRef": "Sum of average_salary"
+              "queryRef": "Max(grupitoo_kv fact_palk.average_salary)",
+              "nativeQueryRef": "Max of average_salary"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_kv"
+                        }
+                      },
+                      "Property": "avg_price_m2"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Max(grupitoo_kv fact_kv.avg_price_m2)",
+              "nativeQueryRef": "Max of avg_price_m2"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv dim_county"
+                  }
+                },
+                "Property": "county_name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
     "objects": {
-      "dataPoint": [
+      "script": [
         {
           "properties": {
-            "fillRule": {
-              "linearGradient2": {
-                "min": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'minColor'"
-                      }
-                    }
-                  }
-                },
-                "max": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'maxColor'"
-                      }
-                    }
-                  }
-                },
-                "nullColoringStrategy": {
-                  "strategy": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'asZero'"
-                      }
-                    }
-                  }
+            "source": {
+              "expr": {
+                "Literal": {
+                  "Value": "'# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: \n\n# dataset <- data.frame(county_name, average_salary, avg_price_m2)\n# dataset <- unique(dataset)\n\n# Paste or type your script code here:\n# === R SCRIPT: Kinnisvarahindade ja Keskmise Palga Seose Efektne Visuaal ===\n# See skript loob professionaalse ja efektse animeeritud ning staatilise mullidiagrammi, \n# mis näitab ruutmeetri hinna ja keskmise palga dünaamikat Eesti maakondades läbi aastate.\n\n# 1. Vajalike pakettide laadimine\n# Installeeri enne käivitamist: install.packages(c(\"tidyverse\", \"ggrepel\", \"gganimate\", \"scales\", \"RColorBrewer\", \"DBI\", \"RPostgres\"))\nsuppressPackageStartupMessages(library(tidyverse))\nsuppressPackageStartupMessages(library(scales))\nlibrary(DBI)\nlibrary(RPostgres)\nlibrary(tidyverse)\nlibrary(ggrepel)\nlibrary(scales)\nlibrary(RColorBrewer)\nlibrary(gganimate)\n\n# 2. Andmebaasi ühenduse loomine (Asenda parameetrid oma PostgreSQL andmetega)\ncon <- dbConnect(RPostgres::Postgres(),\n                 dbname = \"postgres\",\n                 host = \"localhost\",\n                 port = 5432,\n                 user = \"postgres\",\n                 password = \"andmed\")\n\n# 3. Andmete pärimine ja tabelite liitmine otse PostgreSQL andmebaasis läbi välisvõtmete\nquery <- \"\nSELECT \n    c.county_name,\n    t.year_number,\n    AVG(k.avg_price_m2)::NUMERIC(10,2) AS avg_price_m2,\n    AVG(p.average_salary)::NUMERIC(10,2) AS avg_salary,\n    SUM(k.transaction_count) AS total_transactions\nFROM grupitoo_kv.fact_kv k\nINNER JOIN grupitoo_kv.fact_palk p ON k.fk_quarter_id = p.fk_quarter_id AND k.fk_county_id = p.fk_county_id\nINNER JOIN grupitoo_kv.dim_time t ON k.fk_quarter_id = t.pk_quarter_id\nINNER JOIN grupitoo_kv.dim_county c ON k.fk_county_id = c.pk_county_id\nGROUP BY c.county_name, t.year_number\nORDER BY c.county_name, t.year_number;\n\"\n\ndf_data <- dbGetQuery(con, query)\ndbDisconnect(con) # Sulgeme ühenduse pärast andmete kättesaamist\n\n# 4. Eriti Efektse Staatilise Visuaali Loomine (Trendijoonte ja mullidega)\nvisuaal_staatiline <- ggplot(df_data, aes(x = avg_salary, y = avg_price_m2, color = county_name)) +\n  geom_point(aes(size = total_transactions), alpha = 0.6) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.8, linetype = \"dashed\", alpha = 0.4) +\n  scale_x_continuous(labels = unit_format(unit = \" €\", sep = \"\")) +\n  scale_y_continuous(labels = unit_format(unit = \" €/m²\", sep = \"\")) +\n  scale_size_continuous(labels = comma, range = c(3, 12)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  labs(\n    title = \"Kinnisvarahindade ja Keskmise Palga Seos Eestis\",\n    subtitle = \"Maakondade pikaajaline makromajanduslik trajektoor (2005-2025)\",\n    x = \"Keskmine Brutokuupalk (€)\",\n    y = \"Korterite Keskmine Ruutmeetri Hind (€/m²)\",\n    color = \"Maakond\",\n    size = \"Tehinguaktiivsus (maht)\"\n  ) +\n  theme_minimal(base_family = \"sans\") +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 18, color = \"#1a1a1a\", margin = margin(b = 5)),\n    plot.subtitle = element_text(size = 12, color = \"#555555\", margin = margin(b = 15)),\n    axis.title = element_text(face = \"bold\", size = 11, color = \"#333333\"),\n    panel.grid.major = element_line(color = \"#f0f0f0\"),\n    panel.grid.minor = element_blank(),\n    legend.position = \"right\"\n  ) +\n  # Lisame viimase aasta sildid otse punktide juurde, et graafik oleks kergemini loetav\n  geom_text_repel(\n    data = df_data %>% group_by(county_name) %>% filter(year_number == max(year_number)),\n    aes(label = county_name),\n    fontface = \"bold\", size = 3.5, show.legend = FALSE, box.padding = 0.5\n  )\n\n# Salvestame staatilise pildi kõrgresolutsioonis\nggsave(\"kinnisvara_vs_palk_staatiline.png\", plot = visuaal_staatiline, width = 11, height = 7, dpi = 300)\n\n# 5. Animeeritud Mullidiagrammi Loomine (Ajatelg liigub läbi aastate)\nvisuaal_animeeritud <- ggplot(df_data, aes(x = avg_salary, y = avg_price_m2, color = county_name, size = total_transactions)) +\n  geom_point(alpha = 0.7, show.legend = TRUE) +\n  scale_x_continuous(limits = c(min(df_data$avg_salary)*0.9, max(df_data$avg_salary)*1.1), labels = unit_format(unit = \" €\", sep = \"\")) +\n  scale_y_continuous(limits = c(min(df_data$avg_price_m2)*0.9, max(df_data$avg_price_m2)*1.1), labels = unit_format(unit = \" €/m²\", sep = \"\")) +\n  scale_size_continuous(range = c(4, 15), labels = comma) +\n  scale_color_brewer(palette = \"Set1\") +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 20, color = \"#1a1a1a\"),\n    axis.title = element_text(face = \"bold\", size = 12),\n    legend.position = \"bottom\"\n  ) +\n  # GGANIMATE dünaamilised sildid:\n  labs(\n    title = \"Kinnisvaraturu ja palgakasvu dünaamika aastal: {frame_time}\",\n    x = \"Keskmine brutopalk kvartalis\",\n    y = \"Keskmine korteri m² hind\",\n    color = \"Maakond\",\n    size = \"Tehingute arv kokku\"\n  ) +\n  transition_time(as.integer(year_number)) +\n  ease_aes(''linear'') +\n  shadow_wake(wake_length = 0.1, alpha = FALSE) # Jtab mullile väikese \"saba\", mis näitab liikumise suunda\n\n# Salvestame animeeritud GIF faili\nanim_save(\"kinnisvara_vs_palk_animatsioon.gif\", animate(visuaal_animeeritud, width = 800, height = 600, fps = 10, duration = 15))'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'R'"
                 }
               }
             }
@@ -104,21 +116,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a75e470e29b900a32d18",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d75f7bc7698016eea774",
+        "name": "96880efb6e988a264a16",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -131,7 +129,26 @@
                 "Property": "average_salary"
               }
             },
-            "Function": 0
+            "Function": 4
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9b742393195d0ab88c8e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_kv"
+                  }
+                },
+                "Property": "avg_price_m2"
+              }
+            },
+            "Function": 4
           }
         },
         "type": "Advanced"
