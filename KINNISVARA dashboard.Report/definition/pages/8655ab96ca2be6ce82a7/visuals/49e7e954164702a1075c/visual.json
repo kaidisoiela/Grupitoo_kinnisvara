@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "49e7e954164702a1075c",
   "position": {
-    "x": 11.045145052920159,
+    "x": 11.666666666666668,
     "y": 0,
     "z": 0,
-    "height": 427.07894204624614,
-    "width": 1268.3508235769982,
+    "height": 281.66666666666669,
+    "width": 610,
     "tabOrder": 0
   },
   "visual": {
-    "visualType": "lineStackedColumnComboChart",
+    "visualType": "areaChart",
     "query": {
       "queryState": {
         "Category": {
@@ -50,7 +50,7 @@
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
+              "queryRef": "Avg(grupitoo_kv fact_kv.avg_price_m2)",
               "nativeQueryRef": "Average of avg_price_m2"
             },
             {
@@ -69,7 +69,7 @@
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_palk.average_salary)",
+              "queryRef": "Avg(grupitoo_kv fact_palk.average_salary)",
               "nativeQueryRef": "Average of average_salary"
             }
           ]
@@ -100,61 +100,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1f557a5b22075a65b162",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "366de130409a0a60de38",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4003beed3ad9e41c5890",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_palk"
-                  }
-                },
-                "Property": "average_salary"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
