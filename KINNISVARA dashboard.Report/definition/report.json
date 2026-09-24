@@ -31,7 +31,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "false"
+                "Value": "true"
               }
             }
           }
@@ -48,6 +48,11 @@
           "name": "CY26SU07",
           "path": "BaseThemes/CY26SU07.json",
           "type": "BaseTheme"
+        },
+        {
+          "name": "usa.states.topo",
+          "path": "Shapemaps/usa.states.topo.json",
+          "type": "ShapeMap"
         }
       ]
     },
@@ -55,11 +60,6 @@
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
-        {
-          "name": "maakond5300128592533392.json",
-          "path": "maakond5300128592533392.json",
-          "type": "ShapeMap"
-        },
         {
           "name": "maakond8820914705387286.json",
           "path": "maakond8820914705387286.json",
