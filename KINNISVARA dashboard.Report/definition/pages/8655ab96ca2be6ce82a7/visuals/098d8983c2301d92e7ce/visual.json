@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "098d8983c2301d92e7ce",
+  "position": {
+    "x": 621.66666666666674,
+    "y": 15,
+    "z": 1002,
+    "height": 353.33333333333337,
+    "width": 601.66666666666674
+  },
+  "visual": {
+    "visualType": "scriptVisual",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "grupitoo_kv dim_county"
+                    }
+                  },
+                  "Property": "county_name"
+                }
+              },
+              "queryRef": "grupitoo_kv dim_county.county_name",
+              "nativeQueryRef": " ",
+              "displayName": " "
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "script": [
+        {
+          "properties": {
+            "source": {
+              "expr": {
+                "Literal": {
+                  "Value": "'# === PARANDATUD R SKRIPT: FILTREERITAV VISUAAL TOP 5 LOOGIKAGA ===\n\n# 1. Vajalike pakettide laadimine\nsuppressPackageStartupMessages(library(tidyverse))\nsuppressPackageStartupMessages(library(scales))\nlibrary(DBI)\nlibrary(RPostgres)\nlibrary(ggrepel)\nlibrary(RColorBrewer)\n\n# 2. Kontrollime Power BI sliceri seisundit (Kaldkriipsud eemaldatud!)\nvalitud_maakonnad <- unique(dataset$county_name)\nkokku_maakondi_andmetes <- length(valitud_maakonnad)\n\n# 3. Andmebaasi ühenduse loomine\ncon <- dbConnect(RPostgres::Postgres(),\n                 dbname = \"postgres\",\n                 host = \"localhost\",\n                 port = 5432,\n                 user = \"postgres\",\n                 password = \"andmed\")\n\n# 4. Andmete pärimine PostgreSQL-ist\nquery <- \"\nSELECT \n    c.county_name,\n    t.year_number,\n    AVG(k.avg_price_m2)::NUMERIC(10,2) AS avg_price_m2,\n    AVG(p.average_salary)::NUMERIC(10,2) AS avg_salary,\n    SUM(k.transaction_count) AS total_transactions\nFROM grupitoo_kv.fact_kv k\nINNER JOIN grupitoo_kv.fact_palk p ON k.fk_quarter_id = p.fk_quarter_id AND k.fk_county_id = p.fk_county_id\nINNER JOIN grupitoo_kv.dim_time t ON k.fk_quarter_id = t.pk_quarter_id\nINNER JOIN grupitoo_kv.dim_county c ON k.fk_county_id = c.pk_county_id\nGROUP BY c.county_name, t.year_number\nORDER BY c.county_name, t.year_number;\n\"\n\ndf_data <- dbGetQuery(con, query)\ndbDisconnect(con)\n\n# 5. DÜNAAMILINE FILTREERIMINE (TOP 5 vs Sliceri valik)\nkoik_maakonnad_baasis <- unique(df_data$county_name)\n\nif (kokku_maakondi_andmetes >= length(koik_maakonnad_baasis)) {\n  # Kui slicer on tühi, leiame 5 kõige aktiivsemat maakonda\n  top_5_maakonnad <- df_data %>%\n    group_by(county_name) %>%\n    summarise(kogu_maht = sum(total_transactions, na.rm = TRUE)) %>%\n    top_n(5, kogu_maht) %>%\n    pull(county_name)\n  \n  df_filtered <- df_data %>% filter(county_name %in% top_5_maakonnad)\n  graafiku_subtitle <- \"Kuvatakse 5 kõige suurema tehinguaktiivsusega maakonda (filtreerimata)\"\n} else {\n  # Kui kasutaja tegi valiku, näitame ainult valitud maakondi\n  df_filtered <- df_data %>% filter(county_name %in% valitud_maakonnad)\n  graafiku_subtitle <- \"Valitud maakondade trajektoor (2005-2025)\"\n}\n\n# 6. Staatilise Visuaali Joonistamine Power BI ekraanile\nvisuaal_staatiline <- ggplot(df_filtered, aes(x = avg_salary, y = avg_price_m2, color = county_name)) +\n  geom_point(aes(size = total_transactions), alpha = 0.6) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.8, linetype = \"dashed\", alpha = 0.4) +\n  scale_x_continuous(labels = unit_format(unit = \" €\", sep = \"\")) +\n  scale_y_continuous(labels = unit_format(unit = \" €/m²\", sep = \"\")) +\n  scale_size_continuous(labels = comma, range = c(3, 12)) +\n  scale_color_brewer(palette = \"Dark2\") +\n  labs(\n    title = \"Kinnisvarahindade ja Keskmise Palga Seos Eestis\",\n    subtitle = graafiku_subtitle,\n    x = \"Keskmine Brutokuupalk (€)\",\n    y = \"Korterite Keskmine Ruutmeetri Hind (€/m²)\",\n    color = \"Maakond\",\n    size = \"Tehinguaktiivsus\"\n  ) +\n  theme_minimal(base_family = \"sans\") +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 14, color = \"#1a1a1a\"),\n    plot.subtitle = element_text(size = 10, color = \"#555555\"),\n    axis.title = element_text(face = \"bold\", size = 10),\n    legend.position = \"right\"\n  ) +\n  geom_text_repel(\n    data = df_filtered %>% group_by(county_name) %>% filter(year_number == max(year_number)),\n    aes(label = county_name),\n    fontface = \"bold\", size = 3.5, show.legend = FALSE, box.padding = 0.5\n  )\n\nprint(visuaal_staatiline)'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'R'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
