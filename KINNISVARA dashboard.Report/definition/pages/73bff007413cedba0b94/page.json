@@ -45,5 +45,25 @@
         }
       }
     ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.6
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }

@@ -3,10 +3,10 @@
   "name": "3d9cf5405314050ad597",
   "position": {
     "x": 0,
-    "y": 508.88888888888886,
+    "y": 508.75,
     "z": 0,
     "height": 280,
-    "width": 665.55555555555554,
+    "width": 522.5,
     "tabOrder": 0
   },
   "visual": {
@@ -29,24 +29,6 @@
               "queryRef": "grupitoo_kv dim_time.year_number",
               "nativeQueryRef": "year_number",
               "active": true
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
-                    }
-                  },
-                  "Property": "county_name"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name"
             }
           ]
         },
@@ -98,6 +80,21 @@
         "isDefaultSort": true
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Keskmine tarbijahinnaindeks '"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
@@ -134,20 +131,6 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "6359cc140b46999d1d31",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }
