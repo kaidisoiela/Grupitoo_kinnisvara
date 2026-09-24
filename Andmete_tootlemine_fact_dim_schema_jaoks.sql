@@ -1,7 +1,17 @@
 CREATE SCHEMA IF NOT exists Grupitoo_KV;
 
+DROP TABLE IF EXISTS grupitoo_kv.maa_amet_py_final CASCADE;
+
+CREATE TABLE grupitoo_kv.maa_amet_py_final (
+    quarter VARCHAR(50),
+    county VARCHAR(100),
+    transaction_count INTEGER,
+    avg_price_m2 NUMERIC(20,4)
+);
+
 
 /* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "maa_amet_py_final.csv" */
+
 
 --- Teeme Fact_KV tabeli:
 
@@ -17,10 +27,7 @@ create table grupitoo_kv.fact_kv AS
     	END AS FK_quarter_ID,
 		county as county_name,
 		transaction_count::INTEGER,
-		total_area_ha::numeric(20,2),
-		total_value_eur::numeric(20,2),
-		round(total_value_eur::numeric / nullif(total_area_ha::numeric * 100000, 0), 2) as value_per_m2,
-		round(total_value_eur::numeric / transaction_count::integer, 2) as value_per_transaction
+		avg_price_m2::numeric(20)
 	from grupitoo_kv.maa_amet_py_final;
 
 
@@ -170,9 +177,6 @@ SELECT * FROM grupitoo_kv.fact_palk ORDER BY FK_quarter_ID, FK_county_id LIMIT 1
 
 
 
-
-
-
 --Intressimäärade tabeli lisamine ja ühendamine
 
 
@@ -192,9 +196,9 @@ FROM grupitoo_kv.puhastatud_eluasemelaenud_py_final;
 
 
 
-DROP TABLE IF exists grupitoo_kv.intressid_py_final;
+DROP TABLE IF exists grupitoo_kv.Fact_intressid;
 
-create table grupitoo_kv.intressid_py_final as
+create table grupitoo_kv.Fact_intressid as
 SELECT 
 	FK_quarter_ID,
     avg(intressimaar_laenusummalt)::numeric(10,2) as intress
@@ -205,7 +209,29 @@ group by FK_quarter_ID;
 
 -- Lisame välisvõtme (Foreign Key) seose Time dimensiooniga
 
-ALTER TABLE grupitoo_kv.intressid_py_final
+ALTER TABLE grupitoo_kv.Fact_intressid
 ADD CONSTRAINT FK_Fact_intress_time 
+FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
+
+--THI tabeli lisamine ja ühendamine
+
+
+/* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "thi_py_final.csv" */
+
+
+-- 1. Kustutame vana fact_thi tabeli, kui see on olemas
+DROP TABLE IF EXISTS grupitoo_kv.fact_thi CASCADE;
+
+-- 2. Loome uue faktitabeli võttes andmed Sinu tabelist thi_py_final
+CREATE TABLE grupitoo_kv.fact_thi AS
+SELECT 
+    quarter_id::DATE as FK_quarter_ID,
+    keskmine_indeks
+FROM grupitoo_kv.thi_py_final;
+
+
+-- 3. Lisame välisvõtme seose Dim_Time dimensiooniga
+ALTER TABLE grupitoo_kv.fact_thi
+ADD CONSTRAINT FK_Fact_thi_time 
 FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
 

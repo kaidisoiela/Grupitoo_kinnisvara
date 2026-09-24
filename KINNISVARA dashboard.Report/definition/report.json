@@ -24,6 +24,19 @@
           }
         }
       }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
     ]
   },
   "resourcePackages": [
@@ -35,6 +48,17 @@
           "name": "CY26SU07",
           "path": "BaseThemes/CY26SU07.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "maakond8820914705387286.json",
+          "path": "maakond8820914705387286.json",
+          "type": "ShapeMap"
         }
       ]
     }
