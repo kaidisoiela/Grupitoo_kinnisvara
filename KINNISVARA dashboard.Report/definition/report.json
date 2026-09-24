@@ -55,6 +55,17 @@
           "type": "ShapeMap"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "maakond8820914705387286.json",
+          "path": "maakond8820914705387286.json",
+          "type": "ShapeMap"
+        }
+      ]
     }
   ],
   "settings": {
