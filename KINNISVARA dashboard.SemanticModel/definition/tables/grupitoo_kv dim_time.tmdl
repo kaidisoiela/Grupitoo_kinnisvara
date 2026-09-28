@@ -57,9 +57,12 @@ table 'grupitoo_kv dim_time'
 		source =
 				let
 				    Source = PostgreSQL.Database("localhost", "postgres"),
-				    grupitoo_kv_dim_time = Source{[Schema="grupitoo_kv",Item="dim_time"]}[Data]
+				    grupitoo_kv_dim_time = Source{[Schema="grupitoo_kv",Item="dim_time"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(grupitoo_kv_dim_time,{"grupitoo_kv.fact_intressid", "grupitoo_kv.fact_kv", "grupitoo_kv.fact_palk", "grupitoo_kv.fact_thi"})
 				in
-				    grupitoo_kv_dim_time
+				    #"Removed Columns"
 
-	changedProperty = Name
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
 
