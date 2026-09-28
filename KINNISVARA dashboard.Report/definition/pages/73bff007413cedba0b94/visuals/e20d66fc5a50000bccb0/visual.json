@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e20d66fc5a50000bccb0",
   "position": {
-    "x": 666.25,
-    "y": 1077.5,
+    "x": 50,
+    "y": 1206.25,
     "z": 6006,
     "height": 391.25,
     "width": 581.25,
@@ -50,9 +50,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {

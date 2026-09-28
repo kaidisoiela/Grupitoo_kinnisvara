@@ -16,17 +16,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_palk"
+                        }
+                      },
+                      "Property": "average_salary"
                     }
                   },
-                  "Property": "Ostujõud_m2"
+                  "Function": 1
                 }
               },
-              "queryRef": "_Measures.Ostujõud_m2",
-              "nativeQueryRef": "Ostujõud_m2"
+              "queryRef": "Sum(grupitoo_kv fact_palk.average_salary)",
+              "nativeQueryRef": "Average of average_salary"
             }
           ]
         },
@@ -37,47 +42,89 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv fact_kv"
+                      "Entity": "grupitoo_kv dim_time"
                     }
                   },
-                  "Property": "avg_price_m2"
+                  "Property": "year_number"
                 }
               },
-              "queryRef": "grupitoo_kv fact_kv.avg_price_m2",
-              "nativeQueryRef": "avg_price_m2"
+              "queryRef": "grupitoo_kv dim_time.year_number",
+              "nativeQueryRef": "year_number"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "indicator": [
+        {
+          "properties": {
+            "indicatorPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "indicatorDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'KESKMINE PALK'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "f6baeeb780694812ce95",
+        "name": "05fec4c55e59ac9e92c2",
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_Measures"
+                "Entity": "grupitoo_kv dim_time"
               }
             },
-            "Property": "Ostujõud_m2"
+            "Property": "year_number"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "5783fc75204b0be0643e",
+        "name": "edc85e62ce064e8dc810",
         "field": {
-          "Column": {
+          "Aggregation": {
             "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv fact_kv"
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_palk"
+                  }
+                },
+                "Property": "average_salary"
               }
             },
-            "Property": "avg_price_m2"
+            "Function": 1
           }
         },
         "type": "Advanced"

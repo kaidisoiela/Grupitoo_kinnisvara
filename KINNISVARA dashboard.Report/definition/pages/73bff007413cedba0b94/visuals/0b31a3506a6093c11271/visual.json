@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "0b31a3506a6093c11271",
   "position": {
-    "x": 8.75,
-    "y": 315,
+    "x": 6.25,
+    "y": 355,
     "z": 5000,
     "height": 368.88888888888886,
     "width": 584.44444444444446,
@@ -85,7 +85,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Keskmine palk maakondade kaupa'"
+                  "Value": "'Keskmine palk'"
                 }
               }
             }

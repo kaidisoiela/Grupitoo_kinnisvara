@@ -1,15 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "f6074d22510ccae8ea44",
+  "name": "f180899d1006db1ce308",
   "position": {
-    "x": 10,
-    "y": 828.75,
-    "z": 6004,
-    "height": 368.75,
-    "width": 581.25
+    "x": 632.5,
+    "y": 355,
+    "z": 6009,
+    "height": 441.25,
+    "width": 606.25,
+    "tabOrder": 6006
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -19,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
+                      "Entity": "grupitoo_kv dim_county"
                     }
                   },
-                  "Property": "year_number"
+                  "Property": "county_name"
                 }
               },
-              "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
+              "queryRef": "grupitoo_kv dim_county.county_name",
+              "nativeQueryRef": "county_name",
               "active": true
             }
           ]
@@ -40,23 +41,20 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_intressid"
+                          "Entity": "grupitoo_kv fact_kv"
                         }
                       },
-                      "Property": "intress"
+                      "Property": "avg_price_m2"
                     }
                   },
-                  "Function": 1
+                  "Function": 0
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_intressid.intress)",
-              "nativeQueryRef": "Average of intress"
+              "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
+              "nativeQueryRef": "Sum of avg_price_m2"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {
@@ -66,7 +64,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Intressimäärade mõju eluasemelaenudele'"
+                  "Value": "'Keskmine m2 hind'"
                 }
               }
             }
@@ -79,37 +77,37 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "77d6415481b909c1e99e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9c8fe13408b5502bbc06",
+        "name": "4179bc0fd22e70a04617",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "grupitoo_kv fact_intressid"
+                    "Entity": "grupitoo_kv fact_kv"
                   }
                 },
-                "Property": "intress"
+                "Property": "avg_price_m2"
               }
             },
-            "Function": 1
+            "Function": 0
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "41d343c99146764346ee",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
+              }
+            },
+            "Property": "county_name"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

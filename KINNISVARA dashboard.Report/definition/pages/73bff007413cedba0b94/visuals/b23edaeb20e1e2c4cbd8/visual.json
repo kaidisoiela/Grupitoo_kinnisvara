@@ -1,18 +1,42 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "f6074d22510ccae8ea44",
+  "name": "b23edaeb20e1e2c4cbd8",
   "position": {
-    "x": 10,
-    "y": 828.75,
-    "z": 6004,
-    "height": 368.75,
-    "width": 581.25
+    "x": 1001.25,
+    "y": 83.75,
+    "z": 6011,
+    "height": 150,
+    "width": 210,
+    "tabOrder": 6008
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "kpi",
     "query": {
       "queryState": {
-        "Category": {
+        "Indicator": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_kv"
+                        }
+                      },
+                      "Property": "avg_price_m2"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
+              "nativeQueryRef": "Average of avg_price_m2"
+            }
+          ]
+        },
+        "TrendLine": {
           "projections": [
             {
               "field": {
@@ -26,37 +50,10 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "grupitoo_kv fact_intressid"
-                        }
-                      },
-                      "Property": "intress"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Sum(grupitoo_kv fact_intressid.intress)",
-              "nativeQueryRef": "Average of intress"
+              "nativeQueryRef": "year_number"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {
@@ -66,7 +63,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Intressimäärade mõju eluasemelaenudele'"
+                  "Value": "'KESKMINE M2 HIND'"
                 }
               }
             }
@@ -79,7 +76,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "77d6415481b909c1e99e",
+        "name": "ddb5f2452c867cad7008",
         "field": {
           "Column": {
             "Expression": {
@@ -93,17 +90,17 @@
         "type": "Advanced"
       },
       {
-        "name": "9c8fe13408b5502bbc06",
+        "name": "2e23bf8cd987816515d2",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "grupitoo_kv fact_intressid"
+                    "Entity": "grupitoo_kv fact_kv"
                   }
                 },
-                "Property": "intress"
+                "Property": "avg_price_m2"
               }
             },
             "Function": 1

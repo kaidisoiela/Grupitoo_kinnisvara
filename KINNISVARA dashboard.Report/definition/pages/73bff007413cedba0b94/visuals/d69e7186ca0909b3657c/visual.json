@@ -1,18 +1,42 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "f6074d22510ccae8ea44",
+  "name": "d69e7186ca0909b3657c",
   "position": {
-    "x": 10,
-    "y": 828.75,
-    "z": 6004,
-    "height": 368.75,
-    "width": 581.25
+    "x": 787.5,
+    "y": 83.75,
+    "z": 6010,
+    "height": 150,
+    "width": 213.75,
+    "tabOrder": 6007
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "kpi",
     "query": {
       "queryState": {
-        "Category": {
+        "Indicator": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_thi"
+                        }
+                      },
+                      "Property": "keskmine_indeks"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(grupitoo_kv fact_thi.keskmine_indeks)",
+              "nativeQueryRef": "Average of keskmine_indeks"
+            }
+          ]
+        },
+        "TrendLine": {
           "projections": [
             {
               "field": {
@@ -26,37 +50,10 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "grupitoo_kv fact_intressid"
-                        }
-                      },
-                      "Property": "intress"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Sum(grupitoo_kv fact_intressid.intress)",
-              "nativeQueryRef": "Average of intress"
+              "nativeQueryRef": "year_number"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {
@@ -66,7 +63,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Intressimäärade mõju eluasemelaenudele'"
+                  "Value": "'TARBIJAHINNAINDEKS'"
                 }
               }
             }
@@ -79,7 +76,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "77d6415481b909c1e99e",
+        "name": "7246854c4000624c40a6",
         "field": {
           "Column": {
             "Expression": {
@@ -93,17 +90,17 @@
         "type": "Advanced"
       },
       {
-        "name": "9c8fe13408b5502bbc06",
+        "name": "1f45b6c5ce8d06d585a1",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "grupitoo_kv fact_intressid"
+                    "Entity": "grupitoo_kv fact_thi"
                   }
                 },
-                "Property": "intress"
+                "Property": "keskmine_indeks"
               }
             },
             "Function": 1
