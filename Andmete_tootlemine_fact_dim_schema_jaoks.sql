@@ -227,7 +227,8 @@ CREATE TABLE grupitoo_kv.fact_thi AS
 SELECT 
     quarter_id::DATE as FK_quarter_ID,
     keskmine_indeks
-FROM grupitoo_kv.thi_py_final;
+FROM grupitoo_kv.thi_py_final
+where quarter_id::DATE < DATE '2026-07-01';
 
 
 -- 3. Lisame välisvõtme seose Dim_Time dimensiooniga
