@@ -69,16 +69,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "grupitoo_kv dim_time"
+                    "Entity": "_Measures"
                   }
                 },
-                "Property": "year_number"
+                "Property": "Kinnisvara_kasv_2005"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
