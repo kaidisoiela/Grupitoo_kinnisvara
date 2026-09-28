@@ -1,61 +1,74 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "ea4e4dcf47d6c360b0eb",
+  "name": "6b6723002da5de802a91",
   "position": {
     "x": 12,
-    "y": 213,
-    "z": 1000,
-    "height": 500,
-    "width": 203,
-    "tabOrder": 1000
+    "y": 74,
+    "z": 4002,
+    "height": 126,
+    "width": 162,
+    "tabOrder": 4002
   },
   "visual": {
-    "visualType": "listSlicer",
+    "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Values": {
+        "Data": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
+                      "Entity": "_Measures"
                     }
                   },
-                  "Property": "county_name"
+                  "Property": "Keskmine_m2_hind"
                 }
               },
-              "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name",
-              "active": true
+              "queryRef": "_Measures.Keskmine_m2_hind",
+              "nativeQueryRef": "Keskmine_m2_hind"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "general": [
+      "value": [
         {
-          "properties": {}
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "28D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ]
     },
     "visualContainerObjects": {
-      "title": [
+      "visualTooltip": [
         {
           "properties": {
-            "text": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'Maakond'"
+                  "Value": "true"
                 }
               }
             }
           }
         }
       ],
-      "border": [
+      "title": [
         {
           "properties": {
             "show": {
@@ -65,23 +78,17 @@
                 }
               }
             },
-            "radius": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "'Keskmine ruutmeetri hind'"
                 }
               }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
+            },
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'center'"
                 }
               }
             }
@@ -94,18 +101,18 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "02c87aa7baa9bdc76cc5",
+        "name": "5db6ad6dd011a67dad0c",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
+                "Entity": "_Measures"
               }
             },
-            "Property": "county_name"
+            "Property": "Keskmine_m2_hind"
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
       }
     ]
   }

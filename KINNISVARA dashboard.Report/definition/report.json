@@ -31,7 +31,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -59,16 +59,6 @@
           "name": "City_view6478255005745885.webp",
           "path": "City_view6478255005745885.webp",
           "type": "Image"
-        },
-        {
-          "name": "maakond1385383612846134.json",
-          "path": "maakond1385383612846134.json",
-          "type": "ShapeMap"
-        },
-        {
-          "name": "maakond8820914705387286.json",
-          "path": "maakond8820914705387286.json",
-          "type": "ShapeMap"
         },
         {
           "name": "maakond985143924106774.json",

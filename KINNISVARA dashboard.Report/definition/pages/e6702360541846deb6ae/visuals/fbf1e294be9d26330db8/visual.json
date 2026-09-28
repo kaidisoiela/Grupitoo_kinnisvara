@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "fbf1e294be9d26330db8",
+  "position": {
+    "x": 311,
+    "y": 756,
+    "z": 4001,
+    "height": 718,
+    "width": 733,
+    "tabOrder": 4001
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "grupitoo_kv dim_time"
+                    }
+                  },
+                  "Property": "year_number"
+                }
+              },
+              "queryRef": "grupitoo_kv dim_time.year_number",
+              "nativeQueryRef": "Sum of year_number",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Kinnisvara_kasv_2005"
+                }
+              },
+              "queryRef": "_Measures.Kinnisvara_kasv_2005",
+              "nativeQueryRef": "Kinnisvara_kasv_2005"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "THI_kasv_2005"
+                }
+              },
+              "queryRef": "_Measures.THI_kasv_2005",
+              "nativeQueryRef": "THI_kasv_2005"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "189a9d3b374065cec99a",
   "position": {
-    "x": 804.89533011272135,
-    "y": 389.56521739130432,
+    "x": 243,
+    "y": 470,
     "z": 4000,
-    "height": 250.43478260869566,
-    "width": 475.10466988727859,
+    "height": 250,
+    "width": 1014,
     "tabOrder": 4000
   },
   "visual": {
@@ -65,6 +65,13 @@
                   "Value": "'Aasta'"
                 }
               }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
             }
           }
         }
@@ -90,6 +97,19 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -170,5 +190,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4905dc28ab7905ac9239",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
+              }
+            },
+            "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bfdec95dee258c000292",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Hinnatõusu_Lõhe_YoY"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
