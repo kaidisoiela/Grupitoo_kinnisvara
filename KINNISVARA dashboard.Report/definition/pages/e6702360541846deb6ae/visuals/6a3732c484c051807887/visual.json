@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "3a89120a4c8c388a6d17",
+  "name": "6a3732c484c051807887",
   "position": {
-    "x": 63.333333333333329,
-    "y": 0,
-    "z": 4000,
-    "height": 56.666666666666664,
-    "width": 122.22222222222221,
-    "tabOrder": 4000
+    "x": 24.734299516908212,
+    "y": 18.55072463768116,
+    "z": 2000,
+    "height": 40,
+    "width": 100,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "actionButton",
@@ -39,20 +39,15 @@
               }
             }
           }
-        },
+        }
+      ],
+      "shape": [
         {
           "properties": {
-            "text": {
+            "roundEdge": {
               "expr": {
                 "Literal": {
-                  "Value": "'RESET'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "20D"
+                  "Value": "61L"
                 }
               }
             }
@@ -77,38 +72,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "''"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 5,
-                      "Percent": 0.2
-                    }
-                  }
-                }
-              }
-            },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "'Algseis'"
                 }
               }
             },
@@ -119,17 +83,29 @@
                 }
               }
             },
-            "fontFamily": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Times New Roman'''"
+                  "Value": "true"
                 }
               }
             },
-            "fontSize": {
+            "heading": {
               "expr": {
                 "Literal": {
-                  "Value": "21D"
+                  "Value": "'Heading5'"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0.6
+                    }
+                  }
                 }
               }
             }
@@ -156,7 +132,7 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'5c2e8de73e4a0cb00164'"
+                  "Value": "'72c6f8fd5082a69b92e3'"
                 }
               }
             }
