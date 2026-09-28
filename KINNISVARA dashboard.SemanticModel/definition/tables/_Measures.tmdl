@@ -1,0 +1,73 @@
+table _Measures
+	lineageTag: 2551044b-7945-4e24-819f-33094a8731fb
+
+	measure Keskmine_m2_hind = AVERAGE('grupitoo_kv fact_kv'[avg_price_m2])
+		formatString: 0
+		lineageTag: 703810ad-9b88-4e86-b87b-6ad7167dbf1a
+
+	measure Keskmine_THI = AVERAGE('grupitoo_kv fact_thi'[keskmine_indeks])
+		lineageTag: d4ff27e2-87a0-42e1-ab45-450896d2d342
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Reaalne_m2_hind = ```
+			
+			DIVIDE(
+			    [Keskmine_m2_hind], 
+			    [Keskmine_THI], 
+			    BLANK()
+			) * 100
+			```
+		lineageTag: 7e046abc-5367-49a7-9c76-67d56ec74683
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Hinnatõusu_Lõhe_YoY =
+			
+			VAR KinnisvaraEelmineAasta = CALCULATE([Keskmine_m2_hind], DATEADD('grupitoo_kv dim_time'[pk_quarter_id], -1, YEAR))
+			VAR THIEelmineAasta = CALCULATE([Keskmine_THI], DATEADD('grupitoo_kv dim_time'[pk_quarter_id], -1, YEAR))
+			
+			VAR KinnisvaraMuutus = DIVIDE([Keskmine_m2_hind] - KinnisvaraEelmineAasta, KinnisvaraEelmineAasta, 0)
+			VAR THIMuutus = DIVIDE([Keskmine_THI] - THIEelmineAasta, THIEelmineAasta, 0)
+			
+			RETURN
+			KinnisvaraMuutus - THIMuutus
+		lineageTag: 857a6e95-73c0-4f78-b207-03bb961b570e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Kinnisvara_THI_Suhe = DIVIDE([Keskmine_m2_hind], [Keskmine_THI], 0)
+		lineageTag: 923ac437-3a47-4283-b399-aae58a084bca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Kinnisvara_kasv_2005 =
+			
+			VAR BaasHind = CALCULATE([Keskmine_m2_hind], 'grupitoo_kv dim_time'[year_number] = 2005)
+			RETURN
+			DIVIDE([Keskmine_m2_hind], BaasHind, 0)
+		lineageTag: 5b8ceb19-0ce3-403e-ba25-67e06ca7efa3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure THI_kasv_2005 =
+			
+			VAR BaasTHI = CALCULATE([Keskmine_THI], 'grupitoo_kv dim_time'[year_number] = 2005)
+			RETURN
+			DIVIDE([Keskmine_THI], BaasTHI, 0)
+		lineageTag: 58b3b3f2-7aea-428b-a74a-fd7f13a73656
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

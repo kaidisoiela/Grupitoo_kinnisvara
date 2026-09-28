@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 95,
-    "z": 6,
+    "z": 5000,
     "height": 368.88888888888886,
     "width": 584.44444444444446,
-    "tabOrder": 6
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "lineChart",
@@ -94,56 +94,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "21561da241a6d9a30976",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "027f8a0cbce695150cc2",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_palk"
-                  }
-                },
-                "Property": "average_salary"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "65ed51e2e0593163e96e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
