@@ -4,10 +4,10 @@
   "position": {
     "x": 103.10030395136779,
     "y": 284.98480243161094,
-    "z": 2,
+    "z": 2000,
     "height": 308.32826747720367,
     "width": 516.47416413373867,
-    "tabOrder": 2
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -100,75 +100,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e1539a25b39aa698d7c0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f550ab9f9132ac3d6ec4",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_palk"
-                  }
-                },
-                "Property": "average_salary"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f565d2a38c9d09d9910b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "393f286838601d8aabc2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

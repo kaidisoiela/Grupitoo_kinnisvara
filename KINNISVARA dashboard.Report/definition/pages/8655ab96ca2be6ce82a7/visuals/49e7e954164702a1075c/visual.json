@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "49e7e954164702a1075c",
   "position": {
-    "x": 11.666666666666668,
-    "y": 0,
+    "x": 160,
+    "y": 97.5,
     "z": 0,
-    "height": 281.66666666666669,
-    "width": 610,
+    "height": 635,
+    "width": 1357.5,
     "tabOrder": 0
   },
   "visual": {
@@ -51,7 +51,8 @@
                 }
               },
               "queryRef": "Avg(grupitoo_kv fact_kv.avg_price_m2)",
-              "nativeQueryRef": "Average of avg_price_m2"
+              "nativeQueryRef": "Korterite keskmine m2 hind",
+              "displayName": "Korterite keskmine m2 hind"
             },
             {
               "field": {
@@ -70,7 +71,8 @@
                 }
               },
               "queryRef": "Avg(grupitoo_kv fact_palk.average_salary)",
-              "nativeQueryRef": "Average of average_salary"
+              "nativeQueryRef": "Keskmine brutopalk",
+              "displayName": "Keskmine brutopalk"
             }
           ]
         }
@@ -99,12 +101,183 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Aasta'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Korteri keskmine m2 hind'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "y2Axis": [
+        {
+          "properties": {
+            "secTitleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Keskmne palk EUR'"
+                }
+              }
+            },
+            "secTitleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "legendMarkerRendering": {
+              "expr": {
+                "Literal": {
+                  "Value": "'lineAndMarker'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "leaderLines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "plotArea": [
+        {
+          "properties": {
+            "image": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'City view.webp'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "City_view6478255005745885.webp"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Fill'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Korterite keskmine m2 hind ja keskmine brutopalk aastate lõikes'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "466f7d007a2488b5c984",
+        "name": "46cd552c2a3aa7a000d2",
         "field": {
           "Column": {
             "Expression": {
@@ -118,7 +291,7 @@
         "type": "Advanced"
       },
       {
-        "name": "599eae35c140e69bdc89",
+        "name": "4cfe9ad1bb32e08be731",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -137,7 +310,7 @@
         "type": "Advanced"
       },
       {
-        "name": "7662b5d4eba02de4cb56",
+        "name": "3b6b442d2e970b805656",
         "field": {
           "Aggregation": {
             "Expression": {

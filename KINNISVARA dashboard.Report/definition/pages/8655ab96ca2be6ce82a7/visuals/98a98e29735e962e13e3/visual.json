@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "98a98e29735e962e13e3",
   "position": {
-    "x": 742.5,
-    "y": 442.5,
-    "z": 1003,
-    "height": 572.5,
-    "width": 907.5,
-    "tabOrder": 1001
+    "x": 842.5,
+    "y": 840,
+    "z": 4000,
+    "height": 480,
+    "width": 825,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "shapeMap",
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name"
+              "nativeQueryRef": "Maakond",
+              "displayName": "Maakond"
             }
           ]
         },
@@ -45,7 +46,8 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name"
+              "nativeQueryRef": "Maakond",
+              "displayName": "Maakond"
             }
           ]
         },
@@ -180,6 +182,616 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Harju maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Tartu maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Lääne maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Pärnu maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Saare maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Hiiu maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Rapla maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Viljandi maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Võru maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Lääne-Viru maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Järva maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Valga maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Põlva maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "grupitoo_kv dim_county"
+                          }
+                        },
+                        "Property": "county_name"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Jõgeva maakond'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Korterite maksimaalne m2 hind ja maksimaalne brutopalk maakonniti'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -188,26 +800,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b501a6e9138600539803",
+        "name": "5358be70207b40ae71c9",
         "field": {
-          "Aggregation": {
+          "Column": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
               }
             },
-            "Function": 4
+            "Property": "county_name"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
       },
       {
-        "name": "17bc57b742759044c033",
+        "name": "4e898d9779ac17802d65",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -226,18 +833,23 @@
         "type": "Advanced"
       },
       {
-        "name": "f4ebb577ae308ea6769c",
+        "name": "469a457997c3bcba66e1",
         "field": {
-          "Column": {
+          "Aggregation": {
             "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_kv"
+                  }
+                },
+                "Property": "avg_price_m2"
               }
             },
-            "Property": "county_name"
+            "Function": 4
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
       }
     ]
   }

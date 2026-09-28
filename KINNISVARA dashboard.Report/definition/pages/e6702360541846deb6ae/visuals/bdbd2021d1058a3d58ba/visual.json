@@ -4,10 +4,10 @@
   "position": {
     "x": 743.10030395136778,
     "y": 30.15197568389058,
-    "z": 4,
+    "z": 4000,
     "height": 254.83282674772039,
     "width": 469.78723404255322,
-    "tabOrder": 4
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -81,42 +81,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9b1a6d327a12ca172ee6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ec2bb26f0a7092775673",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

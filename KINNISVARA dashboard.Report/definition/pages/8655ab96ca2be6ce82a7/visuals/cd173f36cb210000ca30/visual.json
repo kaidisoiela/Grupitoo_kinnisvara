@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "cd173f36cb210000ca30",
   "position": {
-    "x": 1223.3333333333335,
-    "y": 0,
-    "z": 1001,
-    "height": 342,
-    "width": 150
+    "x": 1517.5,
+    "y": 77.5,
+    "z": 2000,
+    "height": 517.5,
+    "width": 150,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -54,5 +55,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cc1e34098602943cb857",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
+              }
+            },
+            "Property": "county_name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
