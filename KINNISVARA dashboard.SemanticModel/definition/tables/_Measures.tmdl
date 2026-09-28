@@ -2,8 +2,10 @@ table _Measures
 	lineageTag: 2551044b-7945-4e24-819f-33094a8731fb
 
 	measure Keskmine_m2_hind = AVERAGE('grupitoo_kv fact_kv'[avg_price_m2])
-		formatString: 0
+		formatString: #,0\ "€";-#,0\ "€";#,0\ "€"
 		lineageTag: 703810ad-9b88-4e86-b87b-6ad7167dbf1a
+
+		annotation PBI_FormatHint = {"currencyCulture":"et-EE"}
 
 	measure Keskmine_THI = AVERAGE('grupitoo_kv fact_thi'[keskmine_indeks])
 		lineageTag: d4ff27e2-87a0-42e1-ab45-450896d2d342
