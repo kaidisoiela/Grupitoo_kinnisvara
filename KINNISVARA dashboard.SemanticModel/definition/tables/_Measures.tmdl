@@ -59,6 +59,39 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Ostujõud_m2 = ```
+			
+			DIVIDE(
+			    AVERAGE('grupitoo_kv fact_palk'[average_salary]), 
+			    AVERAGE('grupitoo_kv fact_kv'[avg_price_m2])
+			)
+			```
+		lineageTag: e8b9a67a-4b42-4fbe-8fa0-9374639d3040
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Intressi_Mõju_Indeks =
+			
+			AVERAGE('grupitoo_kv fact_thi'[keskmine_indeks]) / [Ostujõud_m2]
+		lineageTag: 7554fcfd-b60a-4556-90a6-d31a2ff107ab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Kättesaadavus (m2 kuupalga eest)'
+		lineageTag: 7369e9cf-8ced-43c7-b0b8-83564de0400f
+
+	measure Foorituli_Värv =
+			
+			VAR Ostujoud = [Ostujõud_m2]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        Ostujoud < 1.0, "#E74C3C",  // Punane (Kriitiliselt madal)
+			        Ostujoud < 2.5, "#F1C40F",  // Kollane (Keskmine kättesaadavus)
+			        "#2ECC71"                   // Roheline (Kõrge kättesaadavus)
+			    )
+		lineageTag: ca7b8f1c-4ce5-4172-8647-274ba8d3e752
+
 	partition _Measures = m
 		mode: import
 		source =
@@ -70,4 +103,6 @@ table _Measures
 				    #"Removed Columns"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

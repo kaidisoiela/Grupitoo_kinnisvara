@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "17d648ffc6c6d52a2de0",
+  "position": {
+    "x": 593.75,
+    "y": 85,
+    "z": 6008,
+    "height": 148.75,
+    "width": 193.75
+  },
+  "visual": {
+    "visualType": "kpi",
+    "query": {
+      "queryState": {
+        "Indicator": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Ostujõud_m2"
+                }
+              },
+              "queryRef": "_Measures.Ostujõud_m2",
+              "nativeQueryRef": "Ostujõud_m2"
+            }
+          ]
+        },
+        "TrendLine": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "grupitoo_kv fact_kv"
+                    }
+                  },
+                  "Property": "avg_price_m2"
+                }
+              },
+              "queryRef": "grupitoo_kv fact_kv.avg_price_m2",
+              "nativeQueryRef": "avg_price_m2"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f6baeeb780694812ce95",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Ostujõud_m2"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5783fc75204b0be0643e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv fact_kv"
+              }
+            },
+            "Property": "avg_price_m2"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

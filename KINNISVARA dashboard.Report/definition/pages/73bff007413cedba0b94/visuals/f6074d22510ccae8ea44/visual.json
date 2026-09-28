@@ -1,16 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "0b31a3506a6093c11271",
+  "name": "f6074d22510ccae8ea44",
   "position": {
-    "x": 8.75,
-    "y": 315,
-    "z": 5000,
-    "height": 368.88888888888886,
-    "width": 584.44444444444446,
-    "tabOrder": 5000
+    "x": 12.5,
+    "y": 726.25,
+    "z": 6004,
+    "height": 368.75,
+    "width": 581.25
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -32,24 +31,6 @@
             }
           ]
         },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
-                    }
-                  },
-                  "Property": "county_name"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "Count of county_name"
-            }
-          ]
-        },
         "Y": {
           "projections": [
             {
@@ -59,17 +40,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_palk"
+                          "Entity": "grupitoo_kv fact_intressid"
                         }
                       },
-                      "Property": "average_salary"
+                      "Property": "intress"
                     }
                   },
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_palk.average_salary)",
-              "nativeQueryRef": "Average of average_salary"
+              "queryRef": "Sum(grupitoo_kv fact_intressid.intress)",
+              "nativeQueryRef": "Average of intress"
             }
           ]
         }
@@ -85,7 +66,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Keskmine palk maakondade kaupa'"
+                  "Value": "'Intressimäärade mõju eluasemelaenudele'"
                 }
               }
             }
@@ -98,7 +79,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "08f4e6db09d2905016b9",
+        "name": "77d6415481b909c1e99e",
         "field": {
           "Column": {
             "Expression": {
@@ -112,31 +93,17 @@
         "type": "Advanced"
       },
       {
-        "name": "cde9d36d2cead82099ad",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8ccaef49cb011405430d",
+        "name": "9c8fe13408b5502bbc06",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "grupitoo_kv fact_palk"
+                    "Entity": "grupitoo_kv fact_intressid"
                   }
                 },
-                "Property": "average_salary"
+                "Property": "intress"
               }
             },
             "Function": 1

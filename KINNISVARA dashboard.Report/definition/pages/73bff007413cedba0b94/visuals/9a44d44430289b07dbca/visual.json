@@ -1,16 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a4804a6b95d8a5d3ab33",
+  "name": "9a44d44430289b07dbca",
   "position": {
-    "x": 685.55555555555554,
-    "y": 497.77777777777777,
-    "z": 1000,
-    "height": 301.11111111111109,
-    "width": 581.11111111111109,
-    "tabOrder": 1000
+    "x": 593.75,
+    "y": 303.75,
+    "z": 6002,
+    "height": 368.88888888888886,
+    "width": 584.44444444444446
   },
   "visual": {
-    "visualType": "scatterChart",
+    "visualType": "lineClusteredColumnComboChart",
     "query": {
       "queryState": {
         "Category": {
@@ -27,30 +26,12 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
+              "nativeQueryRef": "Sum of year_number",
               "active": true
             }
           ]
         },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
-                    }
-                  },
-                  "Property": "county_name"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name"
-            }
-          ]
-        },
-        "Size": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -59,40 +40,21 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_kv"
+                          "Entity": "grupitoo_kv fact_palk"
                         }
                       },
-                      "Property": "transaction_count"
+                      "Property": "average_salary"
                     }
                   },
-                  "Function": 0
+                  "Function": 1
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_kv.transaction_count)",
-              "nativeQueryRef": "Sum of transaction_count"
+              "queryRef": "Sum(grupitoo_kv fact_palk.average_salary)",
+              "nativeQueryRef": "Average of average_salary"
             }
           ]
         },
-        "X": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
-                    }
-                  },
-                  "Property": "Reaalne_Palk"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_county.Reaalne_Palk",
-              "nativeQueryRef": "Reaalne_Palk",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Y2": {
           "projections": [
             {
               "field": {
@@ -115,6 +77,9 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {
@@ -124,7 +89,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Keskmine m2 hind ja reaalne palk maakondade kaupa'"
+                  "Value": "'Palkade ja kinnisvara hindade kasvukiiruse võrdlus'"
                 }
               }
             }
@@ -133,5 +98,61 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "22fdd4a726a778175bdd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
+              }
+            },
+            "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bf00f8d1ab64c65bbb25",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_palk"
+                  }
+                },
+                "Property": "average_salary"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "34fdaa8d90d2bceba290",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_kv"
+                  }
+                },
+                "Property": "avg_price_m2"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
