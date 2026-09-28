@@ -8,8 +8,9 @@ st.set_page_config(page_title="Kinnisvara Ostujõu Kompass", layout="wide")
 
 st.title("📊 Eesti Kinnisvara Ostujõu Kompass (2005–2025)")
 st.markdown("""
-    Antud äpp kuvab **reaalajas kohalduva soojuskaardi**, mis näitab, millal ja kus on olnud viimase 20 aasta jooksul 
-    kõige taskukohasem aeg korteri ostuks.
+    Nihuta vasakul olevaid slidereid vastavalt oma profiilile. Kaardi värvimuutus näitab reaalajas, 
+    millised maakonnad ja aastad muutuvad sinu eelarve jaoks **taskukohaseks (roheline)** või **kättesaamatuks (punane)**.
+    Andmed põhinevad reaalsetel statistilistel näitajatel aastatest 2005–2025.
 """)
 
 # 2. ANDMETE LAADIMINE JA ANDMETÖÖTLUS CSV-FAILIDEST
@@ -34,27 +35,16 @@ def laadi_ja_puhasta_andmed():
     df_palk['Kvartal_ID'] = df_palk['Kvartal_ID'].astype(str).str.strip()
     df_palk['Maakond_Puhas'] = df_palk['Maakond'].apply(puhasta_maakond)
     
-    # B. Maa-ameti andmed koos dünaamilise veeruotsinguga
+    # B. Maa-ameti andmed
     df_kv = pd.read_csv("maa_amet_py_final.csv")
-    
-    # Otsime üles õige veeru Aeg_Plokk jaoks
-    if 'Aeg_Plokk' in df_kv.columns:
+    if 'Aeg_Plokk' in df_kv.columns: 
         df_kv.rename(columns={'Aeg_Plokk': 'Kvartal_ID'}, inplace=True)
-    elif 'quarter' in df_kv.columns:
-        df_kv.rename(columns={'quarter': 'Kvartal_ID'}, inplace=True)
-        
-    # Otsime üles õige veeru Maakond jaoks
-    if 'Maakond' in df_kv.columns:
-        pass
-    elif 'county' in df_kv.columns:
-        df_kv.rename(columns={'county': 'Maakond'}, inplace=True)
-
-    # DÜNAAMILINE HINNA VEERU OTSING: otsime veergu, mis sisaldab sõna 'hind'
+    
+    # PARANDUS: Võtame listist esimese elemendi [0]
     hinna_veerg = [col for col in df_kv.columns if 'hind' in col.lower() or 'price' in col.lower()]
     if hinna_veerg:
         df_kv.rename(columns={hinna_veerg[0]: 'Hind_m2'}, inplace=True)
     else:
-        # Kui ikka ei leia, loome ajutise tulba, et kood ei katkeks
         df_kv['Hind_m2'] = 1000
 
     df_kv['Kvartal_ID'] = df_kv['Kvartal_ID'].astype(str).str.strip()
@@ -62,31 +52,37 @@ def laadi_ja_puhasta_andmed():
 
     # C. Tarbijahinnaindeks
     df_thi = pd.read_csv("thi_py_final.csv")
-    t_id_col = [col for col in df_thi.columns if 'quarter' in col.lower() or 'id' in col.lower()][0]
-    indeks_col = [col for col in df_thi.columns if 'indeks' in col.lower() or 'index' in col.lower()][0]
+    t_id_col = [col for col in df_thi.columns if 'quarter' in col.lower() or 'id' in col.lower()]
+    indeks_col = [col for col in df_thi.columns if 'indeks' in col.lower() or 'index' in col.lower()]
     
-    df_thi[t_id_col] = pd.to_datetime(df_thi[t_id_col], errors='coerce')
-    df_thi['Aasta'] = df_thi[t_id_col].dt.year
-    df_thi['Kvartal_Rooma'] = df_thi[t_id_col].dt.month.apply(kuu_to_kvartal)
-    df_thi['Kvartal_ID'] = df_thi['Aasta'].astype(str) + " " + df_thi['Kvartal_Rooma']
-    df_thi_clean = df_thi[['Kvartal_ID', indeks_col]].rename(columns={indeks_col: 'THI'})
+    if t_id_col and indeks_col:
+        df_thi[t_id_col[0]] = pd.to_datetime(df_thi[t_id_col[0]], errors='coerce')
+        df_thi['Aasta'] = df_thi[t_id_col[0]].dt.year
+        df_thi['Kvartal_Rooma'] = df_thi[t_id_col[0]].dt.month.apply(kuu_to_kvartal)
+        df_thi['Kvartal_ID'] = df_thi['Aasta'].astype(str) + " " + df_thi['Kvartal_Rooma']
+        df_thi_clean = df_thi[['Kvartal_ID', indeks_col[0]]].rename(columns={indeks_col[0]: 'THI'})
+    else:
+        df_thi_clean = pd.DataFrame(columns=['Kvartal_ID', 'THI'])
 
     # D. Eluasemelaenud
     df_laen = pd.read_csv("puhastatud_eluasemelaenud_py_final.csv")
     df_laen = df_laen[df_laen['valuuta'].str.upper() == 'EUR'].copy()
     
-    kp_veerg = [col for col in df_laen.columns if 'kuupaev' in col.lower() or 'date' in col.lower()][0]
-    intress_veerg = [col for col in df_laen.columns if 'intress' in col.lower() or 'rate' in col.lower()][0]
+    kp_veerg = [col for col in df_laen.columns if 'kuupaev' in col.lower() or 'date' in col.lower()]
+    intress_veerg = [col for col in df_laen.columns if 'intress' in col.lower() or 'rate' in col.lower()]
     
-    df_laen[kp_veerg] = pd.to_datetime(df_laen[kp_veerg], errors='coerce')
-    df_laen['Aasta'] = df_laen[kp_veerg].dt.year
-    df_laen['Kvartal_Rooma'] = df_laen[kp_veerg].dt.month.apply(kuu_to_kvartal)
-    df_laen['Kvartal_ID'] = df_laen['Aasta'].astype(str) + " " + df_laen['Kvartal_Rooma']
-    
-    df_laen_kv = df_laen.groupby('Kvartal_ID')[intress_veerg].mean().reset_index()
-    df_laen_kv.rename(columns={intress_veerg: 'Intress'}, inplace=True)
+    if kp_veerg and intress_veerg:
+        df_laen[kp_veerg[0]] = pd.to_datetime(df_laen[kp_veerg[0]], errors='coerce')
+        df_laen['Aasta'] = df_laen[kp_veerg[0]].dt.year
+        df_laen['Kvartal_Rooma'] = df_laen[kp_veerg[0]].dt.month.apply(kuu_to_kvartal)
+        df_laen['Kvartal_ID'] = df_laen['Aasta'].astype(str) + " " + df_laen['Kvartal_Rooma']
+        
+        df_laen_kv = df_laen.groupby('Kvartal_ID')[intress_veerg[0]].mean().reset_index()
+        df_laen_kv.rename(columns={intress_veerg[0]: 'Intress'}, inplace=True)
+    else:
+        df_laen_kv = pd.DataFrame(columns=['Kvartal_ID', 'Intress'])
 
-    # E. KÕIKIDE TABELITE LIITMINE
+    # E. LIITMINE
     df_merged = pd.merge(df_kv, df_palk, on=['Kvartal_ID', 'Maakond_Puhas'], how='outer', suffixes=('', '_palk'))
     df_merged = pd.merge(df_merged, df_thi_clean, on='Kvartal_ID', how='left')
     df_merged = pd.merge(df_merged, df_laen_kv, on='Kvartal_ID', how='left')
@@ -94,37 +90,32 @@ def laadi_ja_puhasta_andmed():
     df_merged['Maakond'] = df_merged['Maakond_Puhas'] + " maakond"
     df_merged['Aasta'] = df_merged['Kvartal_ID'].str[:4].fillna(2005).astype(int)
     
-    # Täidame tühjad lahtrid
-    df_merged['Hind_m2'] = pd.to_numeric(df_merged['Hind_m2'], errors='coerce')
-    df_merged['Palk'] = pd.to_numeric(df_merged['Palk'], errors='coerce')
-    df_merged['Intress'] = pd.to_numeric(df_merged['Intress'], errors='coerce')
+    # PIIRAME ANDMED AASTATEGA 2005 KUNI 2025
+    df_merged = df_merged[(df_merged['Aasta'] >= 2005) & (df_merged['Aasta'] <= 2025)].copy()
     
-    df_merged['Hind_m2'] = df_merged['Hind_m2'].fillna(df_merged['Hind_m2'].median() if not df_merged['Hind_m2'].dropna().empty else 1000)
-    df_merged['Palk'] = df_merged['Palk'].fillna(df_merged['Palk'].median() if not df_merged['Palk'].dropna().empty else 1200)
-    df_merged['Intress'] = df_merged['Intress'].fillna(3.5)
+    df_merged['Hind_m2'] = pd.to_numeric(df_merged['Hind_m2'], errors='coerce').fillna(1000)
+    df_merged['Palk'] = pd.to_numeric(df_merged['Palk'], errors='coerce').fillna(1200)
+    df_merged['Intress'] = pd.to_numeric(df_merged['Intress'], errors='coerce').fillna(3.5)
     
     return df_merged
 
-# Andmete laadimine
-with st.spinner("⏳ Failide sisselugemine ja andmete töötlemine..."):
-    try:
-        df_kompass = laadi_ja_puhasta_andmed()
-        st.success("✅ Andmed on edukalt sisse loetud!")
-    except Exception as e:
-        st.error(f"❌ Viga andmete töötlemisel: {e}")
-        st.stop()
+with st.spinner("⏳ Andmete laadimine..."):
+    df_kompass = laadi_ja_puhasta_andmed()
 
-# 3. INTERAKTIIVNE KÜLGPANEEL
-st.sidebar.header("👤 Sinu Profiil ja Eelistused")
+# 3. INTERAKTIIVNE KÜLGPANEEL (SLIDERID)
+st.sidebar.header("👤 Sinu Personaalsed Andmed")
 korteri_suurus = st.sidebar.slider("Korteri suurus (m²)", min_value=20, max_value=120, value=55, step=5)
 omafinantseering = st.sidebar.slider("Omafinantseering (%)", min_value=10, max_value=50, value=15, step=5)
-palga_kordaja = st.sidebar.slider("Sinu palga tase (võrreldes maakonna keskmisega)", min_value=0.5, max_value=2.5, value=1.0, step=0.1)
+palga_kordaja = st.sidebar.slider("Sinu palga tase (kordne keskmisest)", min_value=0.5, max_value=3.0, value=1.0, step=0.1)
 
-# 4. MATEMAATILINE MUDEL
+st.sidebar.subheader("🎯 Eelarve kriteerium")
+max_lubatud_laenuprotsent = st.sidebar.slider("Maksimaalne % netopalgast laenumakseks", min_value=20, max_value=50, value=35, step=5)
+
+# 4. DÜNAAMILISED ARVUTUSED
 df = df_kompass.copy()
-df['net_salary'] = (df['Palk'] * palga_kordaja) * 0.80
-df['korteri_hind'] = df['Hind_m2'] * korteri_suurus
-df['laenusumma'] = df['korteri_hind'] * (1 - omafinantseering / 100)
+df['net_salary'] = round((df['Palk'] * palga_kordaja) * 0.80, 2)
+df['korteri_hind'] = round(df['Hind_m2'] * korteri_suurus, 2)
+df['laenusumma'] = round(df['korteri_hind'] * (1 - omafinantseering / 100), 2)
 
 def arvuta_kuumakse(laen, aastane_intress):
     if pd.isna(aastane_intress) or laen <= 0: return 0
@@ -133,53 +124,73 @@ def arvuta_kuumakse(laen, aastane_intress):
     if i == 0: return laen / n
     return laen * (i * (1 + i)**n) / ((1 + i)**n - 1)
 
-df['kuine_laenumakse'] = df.apply(lambda row: arvuta_kuumakse(row['laenusumma'], row['Intress']), axis=1)
-df['palga_protsent_laenule'] = (df['kuine_laenumakse'] / df['net_salary']) * 100
+df['kuine_laenumakse'] = round(df.apply(lambda row: arvuta_kuumakse(row['laenusumma'], row['Intress']), axis=1), 2)
+df['palga_protsent_laenule'] = round((df['kuine_laenumakse'] / df['net_salary']) * 100, 1)
 
-df_yearly = df.groupby(['Maakond', 'Aasta'])['palga_protsent_laenule'].mean().reset_index()
+# Agregeerime aastapõhiseks heatmapi jaoks
+df_yearly = df.groupby(['Maakond', 'Aasta']).agg({
+    'palga_protsent_laenule': 'mean',
+    'korteri_hind': 'mean',
+    'kuine_laenumakse': 'mean',
+    'net_salary': 'mean'
+}).reset_index()
+
+# Kujundame maatriksi
 heatmap_data = df_yearly.pivot(index='Maakond', columns='Aasta', values='palga_protsent_laenule')
 heatmap_data = heatmap_data.dropna(how='all')
 
-# 5. SOOJUSKAARDI (HEATMAP) JOONISTAMINE
-colorscale = [
-    [0.0, "rgb(34, 139, 34)"],    
-    [0.25, "rgb(144, 238, 144)"], 
-    [0.35, "rgb(255, 255, 153)"], 
-    [0.5, "rgb(255, 99, 71)"],    
-    [1.0, "rgb(178, 34, 34)"]     
-]
-
+# 5. EFEKTNE JA FIKSEERITUD SOOJUSKAAR
 fig = px.imshow(
     heatmap_data,
-    labels=dict(x="Aasta", y="Maakond", color="Laenumakse % netopalgast"),
+    labels=dict(x="Aasta", y="Maakond", color="Laenumakse % sissetulekust"),
     x=heatmap_data.columns,
     y=heatmap_data.index,
-    color_continuous_scale=colorscale,
-    zmin=10, 
-    zmax=60, 
+    color_continuous_scale="RdYlGn_r", 
+    range_color=[10, 60], 
     aspect="auto"
 )
 
+fig.update_traces(
+    hovertemplate="<b>%{y} (%{x})</b><br>" +
+                  "Laenumakse osakaal: %{z}% palgast<br>" +
+                  "<extra></extra>"
+)
+
 fig.update_layout(
-    title=f"Kinnisvara taskukohasus aastate lõikes ({korteri_suurus} m² korter, {omafinantseering}% sissemakse)",
+    title=f"Korteri ({korteri_suurus} m²) kuumakse osakaal sissetulekust",
     xaxis_nticks=len(heatmap_data.columns),
-    height=550,
-    margin=dict(l=20, r=20, t=40, b=20)
+    height=550
 )
 
 st.plotly_chart(fig, use_container_width=True)
 
-# 6. DÜNAAMILISED INFOKASTID
-st.subheader("💡 Kiired tähelepanekud sinu profiili põhjal:")
-df_valid = df.dropna(subset=['palga_protsent_laenule'])
-if not df_valid.empty:
-    kallim_rida = df_valid.loc[df_valid['palga_protsent_laenule'].idxmax()]
-    soodsam_rida = df_valid.loc[df_valid['palga_protsent_laenule'].idxmin()]
+# 6. DÜNAAMILINE STATISTIKA (INSIGHTS)
+st.subheader("🎯 Sinu personaalne taskukohasuse analüüs")
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.error(f"🔴 **Kõige raskem hetk ostuks:** Kvartalis **{kallim_rida['Kvartal_ID']}** piirkonnas **{kallim_rida['Maakond']}**. "
-                 f"Laenumakse oleks hauganud tervelt **{kallim_rida['palga_protsent_laenule']:.1f}%** sinu netopalgast.")
-    with col2:
-        st.success(f"🟢 **Kõige soodsam hetk ostuks:** Kvartalis **{soodsam_rida['Kvartal_ID']}** piirkonnas **{soodsam_rida['Maakond']}**. "
-                   f"Laenumakse oleks olnud vaid **{soodsam_rida['palga_protsent_laenule']:.1f}%** netopalgast.")
+kogu_ruute = len(df_yearly)
+taskukohased_ruudud = len(df_yearly[df_yearly['palga_protsent_laenule'] <= max_lubatud_laenuprotsent])
+protsent_kattuvus = (taskukohased_ruudud / kogu_ruute) * 100 if kogu_ruute > 0 else 0
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.metric(
+        label="Turu kättesaadavus Sulle", 
+        value=f"{protsent_kattuvus:.1f}%", 
+        delta=f"{taskukohased_ruudud} valikut võimalikest {kogu_ruute}-st"
+    )
+with col2:
+    df_sobivad = df_yearly[df_yearly['palga_protsent_laenule'] <= max_lubatud_laenuprotsent]
+    if not df_sobivad.empty:
+        parim_ost = df_sobivad.loc[df_sobivad['palga_protsent_laenule'].idxmin()] # leiame kõige odavama laenumakse protsendiga koha
+        st.info(f"🏆 **Optimaalne oaas turul:**\n"
+                f"Piirkonnas **{parim_ost['Maakond']}** aastal **{parim_ost['Aasta']}** oli Sulle kõige säästlikum ostupunkt, "
+                f"kus kuumakse võttis vaid **{parim_ost['palga_protsent_laenule']:.1f}%** palgast.")
+    else:
+        st.error("⚠️ Sinu seadistustega pole ükski piirkond taskukohane. Suurenda sissemakset või vähenda korteri pinda.")
+
+with col3:
+    df_sobivad_counts = df_sobivad.groupby('Aasta').size().reset_index(name='count') if not df_sobivad.empty else pd.DataFrame()
+    if not df_sobivad_counts.empty:
+        parim_aasta = df_sobivad_counts.loc[df_sobivad_counts['count'].idxmax()]['Aasta']
+        st.success(f"📅 **Parim valikuvabaduse aasta:**\n"
+                   f"Aastal **{parim_aasta}** oli Sul laual kõige rohkem erinevaid maakondi, mis mahtusid lubatud eelarve piiridesse.")
