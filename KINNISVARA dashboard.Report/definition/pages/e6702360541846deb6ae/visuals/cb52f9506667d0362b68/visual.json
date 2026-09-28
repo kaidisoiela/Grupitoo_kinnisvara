@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "cb52f9506667d0362b68",
   "position": {
-    "x": 242.9197080291971,
-    "y": 18.686131386861316,
+    "x": 243.16109422492403,
+    "y": 58.358662613981764,
     "z": 0,
     "height": 308.32116788321167,
     "width": 1018.3941605839417,
@@ -69,19 +69,18 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Measures"
+                    "Entity": "grupitoo_kv dim_time"
                   }
                 },
-                "Property": "Kinnisvara_kasv_2005"
+                "Property": "year_number"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "objects": {
