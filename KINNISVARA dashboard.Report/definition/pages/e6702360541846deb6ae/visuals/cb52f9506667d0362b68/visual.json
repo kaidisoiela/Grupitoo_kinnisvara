@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "cb52f9506667d0362b68",
   "position": {
-    "x": 243.16109422492403,
-    "y": 58.358662613981764,
+    "x": 243,
+    "y": 9,
     "z": 0,
-    "height": 308.32116788321167,
-    "width": 1018.3941605839417,
+    "height": 244,
+    "width": 1014,
     "tabOrder": 0
   },
   "visual": {
@@ -132,6 +132,32 @@
               "expr": {
                 "Literal": {
                   "Value": "'Kasvukordaja'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "seriesLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
