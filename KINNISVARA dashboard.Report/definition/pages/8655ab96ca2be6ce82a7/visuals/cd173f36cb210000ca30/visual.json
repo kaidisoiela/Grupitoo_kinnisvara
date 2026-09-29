@@ -55,23 +55,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cc1e34098602943cb857",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

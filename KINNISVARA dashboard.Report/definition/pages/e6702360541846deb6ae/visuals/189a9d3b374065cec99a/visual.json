@@ -190,37 +190,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4905dc28ab7905ac9239",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "bfdec95dee258c000292",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Hinnatõusu_Lõhe_YoY"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

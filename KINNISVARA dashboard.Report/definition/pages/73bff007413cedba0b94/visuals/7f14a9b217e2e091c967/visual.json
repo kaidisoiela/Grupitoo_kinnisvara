@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "ea4e4dcf47d6c360b0eb",
+  "name": "7f14a9b217e2e091c967",
   "position": {
-    "x": 12,
-    "y": 213,
-    "z": 1000,
-    "height": 500,
-    "width": 203,
-    "tabOrder": 1000
+    "x": 1272.8571428571429,
+    "y": 554.28571428571433,
+    "z": 6003,
+    "height": 458.57142857142861,
+    "width": 297.14285714285717,
+    "tabOrder": 6002
   },
   "visual": {
-    "visualType": "listSlicer",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
@@ -35,27 +35,48 @@
       }
     },
     "objects": {
-      "general": [
-        {
-          "properties": {}
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
+      "data": [
         {
           "properties": {
-            "text": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Maakond'"
+                  "Value": "'Basic'"
                 }
               }
             }
           }
         }
       ],
-      "border": [
+      "general": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'MAAKOND'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
             "show": {
@@ -65,17 +86,17 @@
                 }
               }
             },
-            "radius": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "''"
                 }
               }
             }
           }
         }
       ],
-      "dropShadow": [
+      "lockAspect": [
         {
           "properties": {
             "show": {
@@ -90,5 +111,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "17dabbc85b70175336bd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
+              }
+            },
+            "Property": "county_name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
