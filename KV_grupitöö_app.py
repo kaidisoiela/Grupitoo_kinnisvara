@@ -4,10 +4,37 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
+# --- CUSTOM VISUAL STYLING VIA INJECTED CSS ---
+st.markdown("""
+    <style>
+        /* Changes the style of all data tables/dataframes */
+        .dataframe {
+            font-size: 13px !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 8px !important;
+        }
+        
+        /* Adds a smooth aesthetic drop shadow to the metric blocks (like R-squared) */
+        [data-testid="stMetricSimpleValue"] {
+            font-size: 28px !important;
+            font-weight: 700 !important;
+            color: #2ca02c !important;
+        }
+        
+        /* Smooths out the custom HTML text cards we added earlier */
+        p {
+            line-height: 1.5 !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # --- LEHE SEADISTUS ---
 st.set_page_config(page_title="Kinnisvaraturu Analüüs", layout="wide")
 st.title("📊 Kinnisvara keskmise ruutmeetri hinna analüüs ja prognoos")
 st.write("See rakendus võimaldab uurida Eesti makromajandusnäitajaid ja nende mõju kinnisvaraturule.")
+
+
 
 # --- ANDMETE LAADIMINE ---
 # Loome andmed otse Notebookist salvestatud puhtast CSV-failist
@@ -27,6 +54,10 @@ df_loplis['aja_trend'] = df_loplis['fk_quarter_id'].map(kvartali_mapping)
 # Alles NÜÜD sorteerime lisaks maakondade kaupa, et OLS nihked (shift) töötaksid korrektselt
 df_loplis = df_loplis.sort_values(by=['maakond', 'fk_quarter_id'])
 
+
+
+
+
 # --- KASUTAJALIIDES (KÜLJERIBA VALIKUD) ---
 st.sidebar.header("🛠️ Rakenduse seaded")
 
@@ -37,7 +68,7 @@ valitud_maakond = st.sidebar.selectbox("Vali kuvatav piirkond:", options=maakond
 st.sidebar.markdown("---")
 st.sidebar.subheader("🤖 OLS mudeli parameetrid")
 
-# 2. OLS mudeli sisendite valik külgribal (NÜÜD SIIN!)
+# 2. OLS mudeli sisendite valik külgribal
 makro_tunnused = {
     "Palk (1-kvartalise nihkega)": "palk_lag",
     "Tarbijahinnaindeks (1-kvartalise nihkega)": "thi_lag",
@@ -49,6 +80,7 @@ valitud_makro_tekst = st.sidebar.multiselect(
     options=list(makro_tunnused.keys()),
     default=list(makro_tunnused.keys())
 )
+
 
 
 # ==============================================================================
@@ -109,6 +141,56 @@ with col_seos2:
     st.pyplot(fig_scat)
 
 
+# --- TASKUKOHASUSE INDEKSI AEGRIDA JA GRAAFIK ---
+st.markdown("---")
+st.subheader(f"📈 Kinnisvara taskukohasuse indeksi muutus ajas ({valitud_maakond})")
+st.write("Graafik näitab, mitu ruutmeetrit kinnisvara sai vastavas piirkonnas osta ühe kuu keskmise brutopalga eest.")
+
+# 1. Arvutame taskukohasuse aegrea (palk / ruutmeetri hind)
+df_seosed['taskukohasus'] = df_seosed['keskmine_brutopalk'] / df_seosed['keskmine_ruutmeetri_hind']
+
+# 2. Grupeerime kvartalite lõikes ja sorteerime kronoloogiliselt
+df_taskukohasus_aeg = df_seosed.groupby('fk_quarter_id').agg({
+    'taskukohasus': 'mean'
+}).sort_index()
+
+# Muudame indeksi tekstiks, et Matplotlib käitleks seda diskreetse ajana
+df_taskukohasus_aeg.index = df_taskukohasus_aeg.index.astype(str)
+
+# 3. Joonistame graafiku
+fig_tasku, ax_tasku = plt.subplots(figsize=(10, 5))
+ax_tasku.plot(
+    df_taskukohasus_aeg.index, 
+    df_taskukohasus_aeg['taskukohasus'], 
+    marker='o', 
+    color='#2ca02c',  # Roheline joon tähistab ostujõudu/taskukohasust
+    linewidth=2, 
+    label='Taskukohasuse indeks'
+)
+
+# Kujundus ja x-telje piirang (et sildid ei kuhjuks, kuvame iga 4. kvartali sildi)
+ax_tasku.set_title(f'Ostujõu dünaamika: Kvartali m² arv ühe brutopalga kohta ({valitud_maakond})', fontsize=12)
+ax_tasku.set_xlabel('Kvartal')
+ax_tasku.set_ylabel('m² ühe brutopalga kohta')
+    
+sammu_tihedus = 4
+valitud_positsioonid = list(range(len(df_taskukohasus_aeg)))[::sammu_tihedus]
+valitud_sildid = list(df_taskukohasus_aeg.index)[::sammu_tihedus]
+    
+from matplotlib.ticker import FixedLocator, FixedFormatter
+ax_tasku.xaxis.set_major_locator(FixedLocator(valitud_positsioonid))
+ax_tasku.xaxis.set_major_formatter(FixedFormatter(valitud_sildid))
+    
+plt.setp(ax_tasku.get_xticklabels(), rotation=45, ha='right')
+    
+plt.xticks(rotation=45, ha='right')
+ax_tasku.grid(True, alpha=0.3, linestyle=':')
+ax_tasku.legend()
+    
+# Kuvame Streamlitis
+st.pyplot(fig_tasku)
+
+
 # ==============================================================================
 # Osa 2: MULTIPLNE REGRESSIOONMUDEL (OLS)
 # ==============================================================================
@@ -143,7 +225,7 @@ else:
     tunnused = valitud_veerud + ['aja_trend'] + maakonna_veerud
 
     X = df_mudel_puhas[tunnused]
-    X = sm.add_constant(X)  # <-- SEE RIDA MUUDAB INTRESSI MÄRGI NEGATIIVSEKS!
+    X = sm.add_constant(X) 
     
     Y = df_mudel_puhas['keskmine_ruutmeetri_hind']
 
@@ -173,6 +255,16 @@ else:
         tulemuste_tabel['Statistiliselt oluline?'] = tulemuste_tabel['Statistiliselt oluline?'].map({True: "✅ Jah", False: "❌ Ei"})
         
         st.dataframe(tulemuste_tabel.style.format({"Koefitsient (coef)": "{:.2f}", "p-väärtus (P>|t|)": "{:.4f}"}))
+       
+       # --- MUDELI DÜNAAMILINE JUHEND JA TÕLGENDUS (VARIANT B) ---
+        st.write("") 
+        st.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>💡 Kuidas neid regressioonitulemusi tõlgendada?</p>", unsafe_allow_html=True)
+        
+        st.markdown("<p style='font-size: 13px; color: #555555; margin-bottom: 5px;'><b>const (vabaliige):</b> Eesti kinnisvara keskmine ruutmeetri baashind (tingimustes, kus majandusnäitajad ja maakondade mõjud on nullis).</p>", unsafe_allow_html=True)
+        st.markdown("<p style='font-size: 13px; color: #555555; margin-bottom: 5px;'><b>näitaja_lag:</b> Kui keskmine näitaja tõuseb 1 ühiku (või 1€) võrra, muutub ruutmeetri hind järgmises kvartalis koefitsiendi võrra.</p>", unsafe_allow_html=True)
+        st.markdown("<p style='font-size: 13px; color: #555555; line-height: 1.4;'><b>aja_trend:</b> Negatiivne koefitsient tuleneb brutopalga ja tarbijahinnaindeksi ülitugevast pikaajalisest kasvutrendist. Kuna palga ja THI tõus kannavad endas juba kogu majanduse pikaajalist inflatsioonilist komponenti, toimib ajamuutuja mudelis puhta matemaatilise korrigeerijana (detrendijana), mis hoiab ära palga mõju ülehindamise.</p>", unsafe_allow_html=True)
+
+
 
     with col_ols2:
         st.subheader("📉 Aegrea võrdlus: Ennustus vs Tegelik")
@@ -214,3 +306,204 @@ else:
         ax_line.legend()
         
         st.pyplot(fig_line)
+
+
+
+
+
+
+
+# ==============================================================================
+# Osa 3: GRANGERI KAUSAALSUSE ANALÜÜS
+# ==============================================================================
+st.markdown("---")
+st.header("⏳ 3. Grangeri kausaalsuse analüüs (Ajaline juhtroll)")
+st.write("""
+    Siin uuritakse statistiliselt, kas makromajanduslikud näitajad on **juhtivad indikaatorid**, 
+    mille ajalugu aitab kinnisvarahindade liikumist ajas ette prognoosida.
+""")
+
+# Kasutame testi jaoks puhastatud andmeid (Kogu Eesti baasil, kuna test nõuab katkematut aegrida)
+df_granger = df_loplis.groupby('fk_quarter_id').agg({
+    'keskmine_ruutmeetri_hind': 'mean',
+    'keskmine_brutopalk': 'mean',
+    'tarbijahinnaindeks': 'mean',
+    'kodulaenu_intressimäär': 'mean'
+}).sort_index()
+
+# Grangeri test nõuab statsionaarseid andmeid, seega kasutame muutusi (diff)
+df_granger_diff = df_granger.diff().dropna()
+
+from statsmodels.tsa.stattools import grangercausalitytests
+
+# Lubame kasutajal valida, millist seost testida
+st.subheader("🎯 Vali näitaja, mille mõju suunda testida:")
+testitav_näitaja = st.selectbox(
+    "Vali sõltumatu tunnus:",
+    options=["keskmine_brutopalk", "kodulaenu_intressimäär", "tarbijahinnaindeks"],
+    format_func=lambda x: "Keskmine brutopalk" if x=="keskmine_brutopalk" else ("Kodulaenu intressimäär" if x=="kodulaenu_intressimäär" else "Tarbijahinnaindeks")
+)
+
+# Testime nihkeid 1 kuni 4 kvartalit
+MAX_LAG = 8
+
+try:
+    # Jooksutame testi
+    testi_tulemused = grangercausalitytests(
+        df_granger_diff[[ 'keskmine_ruutmeetri_hind', testitav_näitaja ]], 
+        maxlag=MAX_LAG
+    )
+    
+    # Koostame tulemuste tabeli kasutajale kuvamiseks
+    granger_read = []
+    for nihe in range(1, MAX_LAG + 1):
+        # Võtame ssr_chi2test p-väärtuse (üks levinumaid teste)
+        p_val = testi_tulemused[nihe][0]['ssr_chi2test'][1]
+        oluline = "✅ Jah (Mõjutab ajas ette)" if p_val < 0.05 else "❌ Ei (Seos puudub)"
+        granger_read.append({
+            "Nihe (kvartalit)": nihe,
+            "p-väärtus": p_val,
+            "Statistiliselt juhtiv roll?": oluline
+        })
+        
+    df_granger_tulemused = pd.DataFrame(granger_read)
+    
+    # Kuvame tabeli kõrvuti tekstiga
+    col_g1, col_ols_tulemused_seletus = st.columns([1, 1])
+    
+    with col_g1:
+        st.dataframe(
+            df_granger_tulemused.style.format({"p-väärtus": "{:.4f}"}),
+            use_container_width=True
+        )
+        
+except Exception as e:
+    st.error(f"Testi käivitamisel tekkis tõrge: {e}")
+
+# Lisame õpetliku tekstilise seletuse
+st.write("") 
+st.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>💡 Makromajanduslik kokkuvõte: Kuidas Grangeri testi tulemusi üldistatult tõlgendada?</p>", unsafe_allow_html=True)
+
+st.markdown("<p style='font-size: 13px; color: #555555; margin-bottom: 5px;'><b>1. Palk ja inflatsioon (THI) kui turu juhtmootorid (Nihked 5-8 kvartalit):</b> Testi tulemused näitavad, et nii keskmine brutopalk kui ka Tarbijahinnaindeks (THI) on turu jaoks <i>pikaajalised juhtivad indikaatorid</i>. Mõlema näitaja lühiajaline mõju (1-4 kvartalit) on ebaoluline, mis viitab turu inertsusele. Reaalsed muutused majanduses ja tarbijate ostujõus jõuavad kinnisvaraturu tehinguhindadesse reaalselt alles <b>1,5 kuni 2 aasta pärast</b>, kui ostjad on uute tingimustega kohanenud ja kogunud vajalikud finantstagatised.</p>", unsafe_allow_html=True)
+
+st.markdown("<p style='font-size: 13px; color: #555555; margin-bottom: 5px;'><b>2. Kodulaenu intressimäär kui reageeriv indikaator (Kõik nihked 'Ei'):</b> Erinevalt palgast ja inflatsioonist ei oma kodulaenu intressimäär (Euribor) pikaajalist hinda ettejuhtivat rolli. Intressimäärade muutused ei liigu turust eespool, vaid toimivad koostöös teiste näitajatega kohese reaktsioonina kuumale majanduskeskkonnale. See kinnitab, et intresside mõju analüüsimisel tuleb vaadata jooksvat stressi-testi, mitte pikaajalist ajaloolist viivitust.</p>", unsafe_allow_html=True)
+
+st.markdown("<p style='font-size: 13px; color: #555555; line-height: 1.4;'><b>Kokkuvõte grupitööle:</b> Grangeri test tõestab, et Eesti kinnisvaraturg reageerib fundamentaalsetele muutustele (palk ja inflatsioon) pikaajalise nihkega, mis annab turuosalistele võimaluse prognoosida tulevasi hinnahüppeid ette, jälgides tänaseid sissetulekute ja elukalliduse trende.</p>", unsafe_allow_html=True)
+
+
+
+
+
+# ==============================================================================
+# Osa 4: STSENAARENDE PROGNOOSIMINE (3-AASTANE TULEVIKUPROGNOOS GRAAFIKUNA)
+# ==============================================================================
+st.markdown("---")
+st.header("🔮 4. 3-aastane tuleviku prognoos ja stsenaariumide simulatsioon")
+st.write("""
+    Määra allolevate liugurite abil **oodatav majanduskeskkonna areng (protsentuaalne kasv aastas)**. 
+    Rakendus simuleerib OLS mudeli koefitsientide põhjal kinnisvara hinna liikumist **3 aastat (12 kvartalit) tulevikku**.
+""")
+
+# 1. Leiame kõige viimase reaalse kvartali baasandmed [2026. aasta andmete põhjal]
+viimased_andmed = df_loplis.sort_values(by=['fk_quarter_id', 'maakond']).iloc[-1]
+viimane_kvartal_id = viimased_andmed['fk_quarter_id']
+hetke_palk = viimased_andmed['keskmine_brutopalk']
+hetke_thi = viimased_andmed['tarbijahinnaindeks']
+hetke_intress = viimased_andmed['kodulaenu_intressimäär']
+viimane_aja_trend = df_loplis['aja_trend'].max()
+
+# 2. Kasutajaliides (Liugurid protsentuaalse kasvu jaoks)
+col_s1, col_s2 = st.columns([1, 2])
+
+with col_s1:
+    st.subheader("🛠️ Stsenaariumi sisendid:")
+    
+    palk_kasv_pct = st.slider(
+        "Brutopalga oodatav kasv aastas (%):", 
+        min_value=-5.0, max_value=15.0, value=5.0, step=0.5
+    )
+    
+    thi_kasv_pct = st.slider(
+        "Tarbijahinnaindeksi (THI/inflatsioon) kasv aastas (%):", 
+        min_value=-2.0, max_value=20.0, value=3.0, step=0.5
+    )
+    
+    tuleviku_intress = st.slider(
+        "Kodulaenu intressimäära (Euribor + marginaal) tase (%):", 
+        min_value=0.0, max_value=8.0, value=float(hetke_intress), step=0.1
+    )
+
+with col_s2:
+    st.subheader("📈 Kinnisvara hinna prognoositav trajektoor:")
+    
+    # Eraldame mudelist vajalikud koefitsiendid
+    coef_palk = mudel.params.get('palk_lag', 0)
+    coef_thi = mudel.params.get('thi_lag', 0)
+    coef_intress = mudel.params.get('intress_lag', 0)
+    coef_trend = mudel.params.get('aja_trend', 0)
+    coef_const = mudel.params.get('const', 0)
+    
+    # Maakonna spetsiifiline lisa
+    maakonna_lisa = 0
+    if valitud_maakond != "Kogu Eesti":
+        maakonna_lisa = mudel.params.get(f"maakond_{valitud_maakond}", 0)
+
+    # 3. Arvutame prognoosi 12 kvartalit (3 aastat) ette [1]
+    prognoos_kvartalid = []
+    
+    # Baaspunktiks on viimane teadaolev reaalne seis
+    jooksev_palk = hetke_palk
+    jooksev_thi = hetke_thi
+    
+    # Kvartalipõhised kasvumäärad (tuletatud aastasest kasvust)
+    palk_kv_kasv = (1 + palk_kasv_pct / 100) ** 0.25
+    thi_kv_kasv = (1 + thi_kasv_pct / 100) ** 0.25
+    
+    for i in range(1, 13): # 12 kvartalit = 3 aastat [1]
+        # Arvutame uued majandustunnused jooksvasse kvartalisse (liitintressi loogika)
+        jooksev_palk *= palk_kv_kasv
+        jooksev_thi *= thi_kv_kasv
+        jooksev_aja_trend = viimane_aja_trend + i
+        
+        # OLS prognoosivalem
+        y_prognoos = (
+            coef_const + 
+            (jooksev_palk * coef_palk) + 
+            (jooksev_thi * coef_thi) + 
+            (tuleviku_intress * coef_intress) + 
+            (jooksev_aja_trend * coef_trend) + 
+            maakonna_lisa
+        )
+        
+        prognoos_kvartalid.append({
+            "Kvartali samm": f"+{i} KV",
+            "Prognoositud hind": y_prognoos
+        })
+        
+    df_simulatsioon = pd.DataFrame(prognoos_kvartalid)
+    
+    # 4. Joonistame tuleviku prognoosgraafiku
+    fig_sim, ax_sim = plt.subplots(figsize=(10, 4.5))
+    ax_sim.plot(
+        df_simulatsioon["Kvartali samm"], 
+        df_simulatsioon["Prognoositud hind"], 
+        marker='s', 
+        linestyle='--', 
+        color='#e377c2', 
+        linewidth=2, 
+        label='Mudeli simulatsioon'
+    )
+    
+    ax_sim.set_title(f'Kinnisvara m² hinna prognoos 3 aastat tulevikku ({valitud_maakond}) [1]', fontsize=11)
+    ax_sim.set_xlabel('Prognoosi periood (kvartalite samm)')
+    ax_sim.set_ylabel('Hind (€/m²)')
+    ax_sim.grid(True, alpha=0.3, linestyle=':')
+    ax_sim.legend()
+    
+    st.pyplot(fig_sim)
+
+# Selgitav tekst Variant B stiilis
+st.write("") 
+st.markdown("<p style='font-size: 16px; font-weight: bold; margin-bottom: 5px;'>💡 Kuidas 3-aastast simulatsiooni majanduslikult tõlgendada? [1]</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-size: 13px; color: #555555; margin-bottom: 5px;'><b>Protsentuaalne liitkasv:</b> Sisestades liuguritesse näiteks palga kasvu 5% ja inflatsiooni (THI) kasvu 3%, arvutab rakendus taustal automaatselt välja nende näitajate absoluutsed väärtused igas tuleviku kvartalis, võttes arvesse liitintressi mju. Samal ajal liigub kronoloogiliselt edasi ka <i>aja_trend</i> näitaja.</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-size: 13px; color: #555555;'><b>Aja trendi ja majandusnäitajate võistlus:</b> Kuna OLS mudelis on ajamuutuja koefitsient negatiivne ja brutopalga koefitsient ülitugevalt positiivne, näitab graafiku joon sulle reaalset tuleviku tasakaalupunkti. Kui paned palgakasvuks 0% ja inflatsiooniks 0%, näed, kuidas joon hakkab langema (kuna ajatrend tõmbab hinda alla). Kui aga sisestad reaalse palgakasvu (nt 6-8%), võidab palga positiivne mõju ajatrendi miinuse ja graafiku joon hakkab näitama loogilist pikaajalist hinnatõusu.</p>", unsafe_allow_html=True)

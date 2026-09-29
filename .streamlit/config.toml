@@ -1,0 +1,7 @@
+[theme]
+primaryColor = "#3c4ffc" # Matches your Pink Simulation line
+backgroundColor = "#abb7fa" # Deep dark gray/black background
+secondaryBackgroundColor = "#1d82f5" # Darker gray for the sidebar
+textColor = "#ffffff" # Crisp white text
+font = "sans serif"
+
