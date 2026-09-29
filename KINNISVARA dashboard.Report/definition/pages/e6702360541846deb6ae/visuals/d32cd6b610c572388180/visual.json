@@ -215,37 +215,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "57d2d961dc3793315b0a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ea188aeae238db70a206",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Reaalne_m2_hind"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
