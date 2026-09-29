@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a92f8d1b6cb5278eca94",
   "position": {
-    "x": 593.75,
-    "y": 0,
+    "x": 0,
+    "y": 412.85714285714289,
     "z": 6005,
-    "height": 85,
-    "width": 193.75,
+    "height": 107.14285714285715,
+    "width": 1557.1428571428573,
     "tabOrder": 6003
   },
   "visual": {
@@ -29,21 +29,6 @@
               "queryRef": "grupitoo_kv dim_time.year_number",
               "nativeQueryRef": "year_number",
               "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
-                    }
-                  },
-                  "Property": "quarter_number"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_time.quarter_number",
-              "nativeQueryRef": "quarter_number",
-              "active": false
             }
           ]
         }
@@ -75,7 +60,15 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
         }
       ],
       "data": [
@@ -84,7 +77,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'Basic'"
                 }
               }
             }
@@ -141,20 +134,6 @@
               }
             },
             "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "68550c0fad045751049a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "quarter_number"
           }
         },
         "type": "Advanced"

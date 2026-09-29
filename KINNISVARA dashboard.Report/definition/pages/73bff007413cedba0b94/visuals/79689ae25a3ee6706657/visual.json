@@ -1,37 +1,18 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "f6074d22510ccae8ea44",
+  "name": "79689ae25a3ee6706657",
   "position": {
-    "x": 12.857142857142858,
-    "y": 1428.5714285714287,
-    "z": 6004,
-    "height": 267.14285714285717,
-    "width": 614.28571428571433
+    "x": 1390,
+    "y": 62.857142857142861,
+    "z": 6012,
+    "height": 117.14285714285715,
+    "width": 167.14285714285717
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
-                    }
-                  },
-                  "Property": "year_number"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Data": {
           "projections": [
             {
               "field": {
@@ -49,7 +30,7 @@
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_intressid.intress)",
+              "queryRef": "Avg(grupitoo_kv fact_intressid.intress)",
               "nativeQueryRef": "Average of intress"
             }
           ]
@@ -59,14 +40,53 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Intressimäärade mõju eluasemelaenudele'"
+                  "Value": "'INTRESS'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -79,21 +99,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "77d6415481b909c1e99e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9c8fe13408b5502bbc06",
+        "name": "c70880f36add907860c6",
         "field": {
           "Aggregation": {
             "Expression": {

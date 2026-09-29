@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a217fc29827900192496",
   "position": {
-    "x": 675,
-    "y": 1206.25,
+    "x": 650,
+    "y": 1024.2857142857144,
     "z": 6001,
-    "height": 372.5,
-    "width": 647.5,
+    "height": 387.14285714285717,
+    "width": 604.28571428571433,
     "tabOrder": 6001
   },
   "visual": {
@@ -93,20 +93,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2d46e6503d96c203a34a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "d07f2a79de85b3898011",
         "field": {
           "Measure": {
@@ -121,7 +107,7 @@
         "type": "Advanced"
       },
       {
-        "name": "bd6f742a65bbb347c823",
+        "name": "e407d044bd1bc8e54122",
         "field": {
           "Column": {
             "Expression": {
@@ -133,6 +119,20 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "2863f8f3eba316113255",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
+              }
+            },
+            "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

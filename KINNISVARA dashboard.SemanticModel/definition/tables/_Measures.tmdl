@@ -101,6 +101,76 @@ table _Measures
 			    )
 		lineageTag: ca7b8f1c-4ce5-4172-8647-274ba8d3e752
 
+	measure Palk_Eelmine_Aasta =
+			
+			CALCULATE(
+			    AVERAGE('grupitoo_kv fact_palk'[average_salary]),
+			    SAMEPERIODLASTYEAR('grupitoo_kv fact_palk'[average_salary])
+			)
+		formatString: 0
+		lineageTag: 36338682-e849-4ad8-b7db-d20574bf96af
+
+	measure Ostujõud_Värv_Keskmine = ```
+			
+			VAR PraeguneOstujoud = [Ostujõud_m2]
+			VAR EestiKeskmineOstujoud = 
+			    CALCULATE(
+			        [Ostujõud_m2],
+			        ALL('grupitoo_kv dim_county'[county_name])
+			    )
+			RETURN
+			    IF(
+			        PraeguneOstujoud >= EestiKeskmineOstujoud,
+			        "#3B6E4C", -- Puhas pastellne Tumeroheline (Kallim)
+			        "#9BC4A3"  -- Puhas pastellne Heleroheline (Odavam)
+			    )
+			```
+		lineageTag: bbdfc0da-7c5c-4450-9c05-33658eb1a1c9
+
+	measure Hinna_Värv_Mediaan = ```
+			
+			VAR PraeguneMediaan = MEDIAN('grupitoo_kv fact_kv'[avg_price_m2])
+			VAR EestiuldineMediaan = 
+			    CALCULATE(
+			        MEDIAN('grupitoo_kv fact_kv'[avg_price_m2]),
+			        ALL('grupitoo_kv dim_county'[county_name])
+			    )
+			RETURN
+			    IF(
+			        PraeguneMediaan > EestiuldineMediaan,
+			        "#2E5A44", -- Pastellne Tumeroheline (Kallim kui Eesti mediaan)
+			        "#A3C9A8"  -- Pastellne Heleroheline (Odavam kui Eesti mediaan)
+			    )
+			```
+		lineageTag: 0b13391f-c8a1-414b-aa09-1289cfddddf5
+
+	measure Kaardi_Ostujõu_Värv = ```
+			
+			-- 1. Arvutame praeguse valitud maakonna ostujõu
+			VAR PraeguneOstujoud = 
+			    DIVIDE(
+			        AVERAGE('grupitoo_kv fact_palk'[average_salary]), 
+			        AVERAGE('grupitoo_kv fact_kv'[avg_price_m2])
+			    )
+			
+			-- 2. Arvutame kogu Eesti keskmise ostujõu (eemaldades maakonna filtri)
+			VAR EestiKeskmineOstujoud = 
+			    CALCULATE(
+			        DIVIDE(
+			            AVERAGE('grupitoo_kv fact_palk'[average_salary]), 
+			            AVERAGE('grupitoo_kv fact_kv'[avg_price_m2])
+			        ),
+			        ALL('grupitoo_kv dim_county'[county_name])
+			    )
+			RETURN
+			    IF(
+			        PraeguneOstujoud >= EestiKeskmineOstujoud,
+			        "#3B6E4C", -- Puhas pastellne Tumeroheline (ROHKEM ruutmeetreid palga eest)
+			        "#9BC4A3"  -- Puhas pastellne Heleroheline (VÄHEM ruutmeetreid palga eest)
+			    )
+			```
+		lineageTag: 622afe69-6ee8-4f4d-9b00-97d16669bfc0
+
 	partition _Measures = m
 		mode: import
 		source =

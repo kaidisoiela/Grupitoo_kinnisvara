@@ -2,18 +2,18 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d69e7186ca0909b3657c",
   "position": {
-    "x": 787.5,
-    "y": 83.75,
+    "x": 1397.1428571428573,
+    "y": 224.28571428571431,
     "z": 6010,
-    "height": 150,
-    "width": 213.75,
+    "height": 131.42857142857144,
+    "width": 155.71428571428572,
     "tabOrder": 6007
   },
   "visual": {
-    "visualType": "kpi",
+    "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Indicator": {
+        "Data": {
           "projections": [
             {
               "field": {
@@ -31,30 +31,46 @@
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_thi.keskmine_indeks)",
+              "queryRef": "Avg(grupitoo_kv fact_thi.keskmine_indeks)",
               "nativeQueryRef": "Average of keskmine_indeks"
             }
           ]
-        },
-        "TrendLine": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
-                    }
-                  },
-                  "Property": "year_number"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number"
-            }
-          ]
         }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
       }
+    },
+    "objects": {
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -63,7 +79,41 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'TARBIJAHINNAINDEKS'"
+                  "Value": "'THI'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -76,21 +126,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "7246854c4000624c40a6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1f45b6c5ce8d06d585a1",
+        "name": "ed0c329920036e5806cd",
         "field": {
           "Aggregation": {
             "Expression": {

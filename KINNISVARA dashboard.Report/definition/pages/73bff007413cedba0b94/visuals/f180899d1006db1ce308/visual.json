@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f180899d1006db1ce308",
   "position": {
-    "x": 632.5,
-    "y": 355,
+    "x": 650,
+    "y": 554.28571428571433,
     "z": 6009,
-    "height": 441.25,
-    "width": 606.25,
+    "height": 455.71428571428572,
+    "width": 604.28571428571433,
     "tabOrder": 6006
   },
   "visual": {
@@ -47,15 +47,108 @@
                       "Property": "avg_price_m2"
                     }
                   },
-                  "Function": 0
+                  "Function": 6
                 }
               },
               "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
-              "nativeQueryRef": "Sum of avg_price_m2"
+              "nativeQueryRef": "Median of avg_price_m2"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
       }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {}
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "Hinna_Värv_Mediaan"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "y1AxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'X-Axis Constant Line 1'"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_kv"
+                        }
+                      },
+                      "Property": "avg_price_m2"
+                    }
+                  },
+                  "Function": 6
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "1"
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -77,25 +170,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "4179bc0fd22e70a04617",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "41d343c99146764346ee",
         "field": {
           "Column": {
@@ -108,6 +182,25 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "02adc1b5237859977d60",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_kv"
+                  }
+                },
+                "Property": "avg_price_m2"
+              }
+            },
+            "Function": 6
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
