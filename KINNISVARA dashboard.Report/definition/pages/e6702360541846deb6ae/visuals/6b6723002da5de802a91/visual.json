@@ -4,10 +4,10 @@
   "position": {
     "x": 12,
     "y": 74,
-    "z": 4002,
+    "z": 6000,
     "height": 126,
     "width": 162,
-    "tabOrder": 4002
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -97,23 +97,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5db6ad6dd011a67dad0c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Keskmine_m2_hind"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

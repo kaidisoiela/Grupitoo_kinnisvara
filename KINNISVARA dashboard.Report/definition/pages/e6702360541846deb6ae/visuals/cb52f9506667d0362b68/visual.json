@@ -244,51 +244,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5d2711af18cd960d9240",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8778f2f7999177cd9ab2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Kinnisvara_kasv_2005"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7c00c31dc9c3dabc5093",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "THI_kasv_2005"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

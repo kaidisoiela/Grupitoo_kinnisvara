@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "98a98e29735e962e13e3",
   "position": {
-    "x": 842.5,
-    "y": 840,
+    "x": 842.85714285714289,
+    "y": 840.81632653061229,
     "z": 4000,
-    "height": 480,
-    "width": 825,
+    "height": 534.69387755102036,
+    "width": 824.48979591836735,
     "tabOrder": 2000
   },
   "visual": {
@@ -60,6 +60,26 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
+                          "Entity": "grupitoo_kv dim_county"
+                        }
+                      },
+                      "Property": "county_name"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(grupitoo_kv dim_county.county_name)",
+              "nativeQueryRef": "Maakond1",
+              "displayName": "Maakond"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
                           "Entity": "grupitoo_kv fact_palk"
                         }
                       },
@@ -70,7 +90,28 @@
                 }
               },
               "queryRef": "Sum(grupitoo_kv fact_palk.average_salary)",
-              "nativeQueryRef": "Max of average_salary"
+              "nativeQueryRef": "Maksimaalne keskmine brutopalk läbi aastate",
+              "displayName": "Maksimaalne keskmine brutopalk läbi aastate"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_kv"
+                        }
+                      },
+                      "Property": "avg_price_m2"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
+              "nativeQueryRef": "Max of avg_price_m2",
+              "displayName": "Maksimaalne keskmine korteri m2 hind"
             }
           ]
         },
@@ -93,7 +134,8 @@
                 }
               },
               "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
-              "nativeQueryRef": "Max of avg_price_m2"
+              "nativeQueryRef": "Max of avg_price_m2",
+              "displayName": "Maksimaalne keskmine korteri m2 hind"
             }
           ]
         }
@@ -140,7 +182,7 @@
             "projectionEnum": {
               "expr": {
                 "Literal": {
-                  "Value": "'albersUsa'"
+                  "Value": "'mercator'"
                 }
               }
             }
@@ -813,6 +855,39 @@
             ]
           }
         }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "manualZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -832,67 +907,123 @@
                   "Value": "24D"
                 }
               }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#5FDCA0'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D1F9DD'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#193E2F'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            },
+            "showTooltipFieldsOnly": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showSentenceFormat": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showChartSpecificTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5358be70207b40ae71c9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4e898d9779ac17802d65",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_palk"
-                  }
-                },
-                "Property": "average_salary"
-              }
-            },
-            "Function": 4
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "469a457997c3bcba66e1",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
-              }
-            },
-            "Function": 4
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
