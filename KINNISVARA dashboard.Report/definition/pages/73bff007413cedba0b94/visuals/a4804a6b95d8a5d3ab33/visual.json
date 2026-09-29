@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "c6ca59a5d47ab81d7008",
+  "name": "a4804a6b95d8a5d3ab33",
   "position": {
-    "x": 0,
-    "y": 831.11111111111109,
-    "z": 2000,
-    "height": 377.77777777777777,
-    "width": 1292.2222222222222,
-    "tabOrder": 2000
+    "x": 685.55555555555554,
+    "y": 497.77777777777777,
+    "z": 1000,
+    "height": 301.11111111111109,
+    "width": 581.11111111111109,
+    "tabOrder": 1000
   },
   "visual": {
-    "visualType": "pivotTable",
+    "visualType": "scatterChart",
     "query": {
       "queryState": {
-        "Columns": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -32,7 +32,7 @@
             }
           ]
         },
-        "Rows": {
+        "Series": {
           "projections": [
             {
               "field": {
@@ -46,12 +46,11 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name",
-              "active": true
+              "nativeQueryRef": "county_name"
             }
           ]
         },
-        "Values": {
+        "Size": {
           "projections": [
             {
               "field": {
@@ -73,6 +72,48 @@
               "nativeQueryRef": "Sum of transaction_count"
             }
           ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "grupitoo_kv dim_county"
+                    }
+                  },
+                  "Property": "Reaalne_Palk"
+                }
+              },
+              "queryRef": "grupitoo_kv dim_county.Reaalne_Palk",
+              "nativeQueryRef": "Reaalne_Palk",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_kv"
+                        }
+                      },
+                      "Property": "avg_price_m2"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
+              "nativeQueryRef": "Sum of avg_price_m2"
+            }
+          ]
         }
       }
     },
@@ -80,17 +121,10 @@
       "title": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tehingute summa'"
+                  "Value": "'Keskmine m2 hind ja reaalne palk maakondade kaupa'"
                 }
               }
             }
