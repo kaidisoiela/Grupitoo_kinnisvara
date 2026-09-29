@@ -5,8 +5,8 @@
     "x": 650,
     "y": 554.28571428571433,
     "z": 6009,
-    "height": 455.71428571428572,
-    "width": 604.28571428571433,
+    "height": 568.57142857142856,
+    "width": 601.42857142857144,
     "tabOrder": 6006
   },
   "visual": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
+                      "Entity": "grupitoo_kv dim_time"
                     }
                   },
-                  "Property": "county_name"
+                  "Property": "year_number"
                 }
               },
-              "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name",
+              "queryRef": "grupitoo_kv dim_time.year_number",
+              "nativeQueryRef": "year_number",
               "active": true
             }
           ]
@@ -47,17 +47,14 @@
                       "Property": "avg_price_m2"
                     }
                   },
-                  "Function": 6
+                  "Function": 1
                 }
               },
               "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
-              "nativeQueryRef": "Median of avg_price_m2"
+              "nativeQueryRef": "Average of avg_price_m2"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -97,6 +94,19 @@
           }
         }
       ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ],
       "y1AxisReferenceLine": [
         {
           "properties": {
@@ -119,27 +129,24 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.2
+                      "ColorId": 5,
+                      "Percent": -0.25
                     }
                   }
                 }
               }
             },
-            "value": {
+            "autoScale": {
               "expr": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "grupitoo_kv fact_kv"
-                        }
-                      },
-                      "Property": "avg_price_m2"
-                    }
-                  },
-                  "Function": 6
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -157,7 +164,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Keskmine m2 hind'"
+                  "Value": "'Keskmine kinnisvara m2 hind (€)'"
                 }
               }
             }
@@ -170,21 +177,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "41d343c99146764346ee",
+        "name": "9a5d7279c30003007268",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
+                "Entity": "grupitoo_kv dim_time"
               }
             },
-            "Property": "county_name"
+            "Property": "year_number"
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
       },
       {
-        "name": "02adc1b5237859977d60",
+        "name": "24ebd5e9aaaa4700c023",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -197,7 +204,7 @@
                 "Property": "avg_price_m2"
               }
             },
-            "Function": 6
+            "Function": 1
           }
         },
         "type": "Advanced"

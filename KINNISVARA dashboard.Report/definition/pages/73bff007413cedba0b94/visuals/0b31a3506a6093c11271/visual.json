@@ -5,7 +5,7 @@
     "x": 0,
     "y": 554.28571428571433,
     "z": 5000,
-    "height": 445.71428571428572,
+    "height": 568.57142857142856,
     "width": 627.14285714285722,
     "tabOrder": 5000
   },
@@ -78,6 +78,28 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "trend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Trend line 1'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -85,7 +107,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Keskmine palk'"
+                  "Value": "'Keskmine palk (€)'"
                 }
               }
             }
@@ -98,7 +120,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "08f4e6db09d2905016b9",
+        "name": "9377a866e5b182aabe77",
         "field": {
           "Column": {
             "Expression": {
@@ -112,7 +134,7 @@
         "type": "Advanced"
       },
       {
-        "name": "cde9d36d2cead82099ad",
+        "name": "a132c86da0cc3de016ec",
         "field": {
           "Column": {
             "Expression": {
@@ -126,7 +148,7 @@
         "type": "Categorical"
       },
       {
-        "name": "8ccaef49cb011405430d",
+        "name": "f82a1fa870c518079836",
         "field": {
           "Aggregation": {
             "Expression": {
