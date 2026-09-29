@@ -982,7 +982,7 @@
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'Canvas'"
+                  "Value": "'Default'"
                 }
               }
             },

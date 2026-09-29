@@ -54,53 +54,8 @@
               "color": {
                 "expr": {
                   "ThemeDataColor": {
-                    "ColorId": 8,
-                    "Percent": 0.6
-                  }
-                }
-              }
-            }
-          },
-          "image": {
-            "image": {
-              "name": {
-                "expr": {
-                  "Literal": {
-                    "Value": "'City view.webp'"
-                  }
-                }
-              },
-              "url": {
-                "expr": {
-                  "ResourcePackageItem": {
-                    "PackageName": "RegisteredResources",
-                    "PackageType": 1,
-                    "ItemName": "City_view24525387251181097.webp"
-                  }
-                }
-              },
-              "scaling": {
-                "expr": {
-                  "Literal": {
-                    "Value": "'Normal'"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    ],
-    "outspace": [
-      {
-        "properties": {
-          "color": {
-            "solid": {
-              "color": {
-                "expr": {
-                  "ThemeDataColor": {
-                    "ColorId": 8,
-                    "Percent": 0.6
+                    "ColorId": 0,
+                    "Percent": -0.6
                   }
                 }
               }

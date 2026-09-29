@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "0b31a3506a6093c11271",
+  "name": "9a4b34d2dde264ecdbaa",
   "position": {
-    "x": 0,
-    "y": 95,
-    "z": 5000,
+    "x": 635,
+    "y": 106.25,
+    "z": 6000,
     "height": 368.88888888888886,
-    "width": 584.44444444444446,
-    "tabOrder": 5000
+    "width": 621.11111111111109,
+    "tabOrder": 6000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
-                    }
-                  },
-                  "Property": "year_number"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
-              "active": true
-            }
-          ]
-        },
-        "Series": {
           "projections": [
             {
               "field": {
@@ -46,7 +27,26 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "Count of county_name"
+              "nativeQueryRef": "Count of county_name",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "grupitoo_kv dim_time"
+                    }
+                  },
+                  "Property": "year_number"
+                }
+              },
+              "queryRef": "grupitoo_kv dim_time.year_number",
+              "nativeQueryRef": "year_number"
             }
           ]
         },
@@ -77,21 +77,6 @@
       "sortDefinition": {
         "isDefaultSort": true
       }
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Keskmine palk maakondade kaupa'"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "drillFilterOtherVisuals": true
   }
