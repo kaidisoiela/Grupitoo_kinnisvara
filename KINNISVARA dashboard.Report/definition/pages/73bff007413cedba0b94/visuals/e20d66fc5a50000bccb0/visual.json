@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e20d66fc5a50000bccb0",
   "position": {
-    "x": 12.857142857142858,
-    "y": 1024.2857142857144,
+    "x": 0,
+    "y": 1218.5714285714287,
     "z": 6006,
     "height": 387.14285714285717,
     "width": 614.28571428571433,
@@ -176,7 +176,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ostujõud maakonniti'"
+                  "Value": "'Ostujõud maakonniti: mitu m2 saab ühe kuupalga eest?'"
                 }
               }
             }
