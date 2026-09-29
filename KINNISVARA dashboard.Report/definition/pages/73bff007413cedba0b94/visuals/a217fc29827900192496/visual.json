@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "0b31a3506a6093c11271",
+  "name": "a217fc29827900192496",
   "position": {
-    "x": 0,
-    "y": 554.28571428571433,
-    "z": 5000,
-    "height": 445.71428571428572,
-    "width": 627.14285714285722,
-    "tabOrder": 5000
+    "x": 650,
+    "y": 1024.2857142857144,
+    "z": 6001,
+    "height": 387.14285714285717,
+    "width": 604.28571428571433,
+    "tabOrder": 6001
   },
   "visual": {
     "visualType": "lineChart",
@@ -54,22 +54,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "grupitoo_kv fact_palk"
-                        }
-                      },
-                      "Property": "average_salary"
+                    "SourceRef": {
+                      "Entity": "_Measures"
                     }
                   },
-                  "Function": 1
+                  "Property": "Ostujõud_m2"
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_palk.average_salary)",
-              "nativeQueryRef": "Average of average_salary"
+              "queryRef": "_Measures.Ajalooline_Ostujõud_m2",
+              "nativeQueryRef": "Ostujõud_m2"
             }
           ]
         }
@@ -85,7 +80,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Keskmine palk'"
+                  "Value": "'Ostujõu 20 aasta trendijoon'"
                 }
               }
             }
@@ -98,21 +93,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "08f4e6db09d2905016b9",
+        "name": "d07f2a79de85b3898011",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
+                "Entity": "_Measures"
               }
             },
-            "Property": "year_number"
+            "Property": "Ostujõud_m2"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "cde9d36d2cead82099ad",
+        "name": "e407d044bd1bc8e54122",
         "field": {
           "Column": {
             "Expression": {
@@ -126,20 +121,15 @@
         "type": "Categorical"
       },
       {
-        "name": "8ccaef49cb011405430d",
+        "name": "2863f8f3eba316113255",
         "field": {
-          "Aggregation": {
+          "Column": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_palk"
-                  }
-                },
-                "Property": "average_salary"
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
               }
             },
-            "Function": 1
+            "Property": "year_number"
           }
         },
         "type": "Advanced"
