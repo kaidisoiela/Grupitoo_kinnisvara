@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "d8a6191581a0d96042e3",
+  "position": {
+    "x": 1800.5,
+    "y": 46.5,
+    "z": 6014,
+    "height": 150,
+    "width": 167
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Hinna_Värv_Mediaan"
+                }
+              },
+              "queryRef": "_Measures.Hinna_Värv_Mediaan",
+              "nativeQueryRef": "Hinna_Värv_Mediaan"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3b3fa9bc60aed93c5012",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Hinna_Värv_Mediaan"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
