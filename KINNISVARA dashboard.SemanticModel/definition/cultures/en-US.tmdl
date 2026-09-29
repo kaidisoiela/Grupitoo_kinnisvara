@@ -2424,6 +2424,189 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.ostujõud_m_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Ostujõud_m2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ostujõud m 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ostujõud_m2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.intressi_mõju_indeks": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Intressi_Mõju_Indeks"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "intressi mõju indeks": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Intressi_Mõju_Indeks": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.kättesaadavus_m2_kuupalga_eest": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Kättesaadavus (m2 kuupalga eest)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kättesaadavus (m2 kuupalga eest)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "kättesaadavus": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.foorituli_värv": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Foorituli_Värv"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "foorituli värv": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Foorituli_Värv": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.palk_eelmine_aasta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Palk_Eelmine_Aasta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "palk eelmine aasta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Palk_Eelmine_Aasta": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.ostujõud_värv_keskmine": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Ostujõud_Värv_Keskmine"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ostujõud värv keskmine": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ostujõud_Värv_Keskmine": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.hinna_värv_mediaan": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Hinna_Värv_Mediaan"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hinna värv mediaan": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Hinna_Värv_Mediaan": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.kaardi_ostujõu_värv": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Kaardi_Ostujõu_Värv"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kaardi ostujõu värv": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Kaardi_Ostujõu_Värv": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -2908,20 +3091,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_county_has_maakond_kaardile": {
+			    "grupitoo_kv_fact_palk_has_entity__measure_kaardi_ostujõu_värv": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_county"
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_county": {
+			        "grupitoo_kv_fact_palk": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county"
+			            "Entity": "grupitoo_kv_fact_palk"
 			          }
 			        },
-			        "grupitoo_kv_dim_county.maakond_kaardile": {
+			        "entity__measure.kaardi_ostujõu_värv": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county.maakond_kaardile"
+			            "Entity": "entity__measure.kaardi_ostujõu_värv"
 			          }
 			        }
 			      },
@@ -2929,15 +3112,444 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_county"
+			              "Role": "grupitoo_kv_fact_palk"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_county.maakond_kaardile"
+			              "Role": "entity__measure.kaardi_ostujõu_värv"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_counties_have_maakond_kaardiles"
+			          "ID": "grupitoo_kv_fact_palks_have_kaardi_ostujõu_värv"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_kaardi_ostujõu_värv": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.kaardi_ostujõu_värv": {
+			          "Target": {
+			            "Entity": "entity__measure.kaardi_ostujõu_värv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.kaardi_ostujõu_värv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_kaardi_ostujõu_värv"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_hinna_värv_mediaan": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.hinna_värv_mediaan": {
+			          "Target": {
+			            "Entity": "entity__measure.hinna_värv_mediaan"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.hinna_värv_mediaan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_hinna_värv_mediaan"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõud_värv_keskmine": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.ostujõud_värv_keskmine": {
+			          "Target": {
+			            "Entity": "entity__measure.ostujõud_värv_keskmine"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ostujõud_värv_keskmine"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_ostujõud_värv_keskmine"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõud_värv_keskmine": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.ostujõud_värv_keskmine": {
+			          "Target": {
+			            "Entity": "entity__measure.ostujõud_värv_keskmine"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ostujõud_värv_keskmine"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_ostujõud_värv_keskmine"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_palk_eelmine_aasta": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.palk_eelmine_aasta": {
+			          "Target": {
+			            "Entity": "entity__measure.palk_eelmine_aasta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.palk_eelmine_aasta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_palk_eelmine_aasta"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_foorituli_värv": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.foorituli_värv": {
+			          "Target": {
+			            "Entity": "entity__measure.foorituli_värv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.foorituli_värv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_foorituli_värv"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_foorituli_värv": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.foorituli_värv": {
+			          "Target": {
+			            "Entity": "entity__measure.foorituli_värv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.foorituli_värv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_foorituli_värv"
+			        }
+			      ]
+			    },
+			    "entity__measure_has_kättesaadavus_m2_kuupalga_eest": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.kättesaadavus_m2_kuupalga_eest": {
+			          "Target": {
+			            "Entity": "entity__measure.kättesaadavus_m2_kuupalga_eest"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.kättesaadavus_m2_kuupalga_eest"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_kättesaadavus_m2_kuupalga_eest"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_entity__measure_intressi_mõju_indeks": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "entity__measure.intressi_mõju_indeks": {
+			          "Target": {
+			            "Entity": "entity__measure.intressi_mõju_indeks"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intressi_mõju_indeks"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_intressi_mõju_indeks"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_intressi_mõju_indeks": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.intressi_mõju_indeks": {
+			          "Target": {
+			            "Entity": "entity__measure.intressi_mõju_indeks"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intressi_mõju_indeks"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_intressi_mõju_indeks"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_intressi_mõju_indeks": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.intressi_mõju_indeks": {
+			          "Target": {
+			            "Entity": "entity__measure.intressi_mõju_indeks"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intressi_mõju_indeks"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_intressi_mõju_indeks"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõud_m_2": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.ostujõud_m_2": {
+			          "Target": {
+			            "Entity": "entity__measure.ostujõud_m_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ostujõud_m_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_ostujõud_m_2"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõud_m_2": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.ostujõud_m_2": {
+			          "Target": {
+			            "Entity": "entity__measure.ostujõud_m_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ostujõud_m_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_ostujõud_m_2"
 			        }
 			      ]
 			    },

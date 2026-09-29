@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "3a89120a4c8c388a6d17",
   "position": {
-    "x": 0,
-    "y": 47.5,
+    "x": 63.333333333333329,
+    "y": 0,
     "z": 4000,
-    "height": 73.75,
-    "width": 140,
+    "height": 56.666666666666664,
+    "width": 122.22222222222221,
     "tabOrder": 4000
   },
   "visual": {
@@ -53,22 +53,6 @@
               "expr": {
                 "Literal": {
                   "Value": "20D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "shape": [
-        {
-          "properties": {
-            "tileShape": {
-              "expr": {
-                "Literal": {
-                  "Value": "'pill'"
                 }
               }
             }
