@@ -14,7 +14,7 @@ table 'grupitoo_kv fact_palk'
 
 	column average_salary
 		dataType: int64
-		formatString: 0
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: 4cca1c55-ff18-4129-b5c9-2d7f46e557f0
 		summarizeBy: sum
 		sourceColumn: average_salary

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "79689ae25a3ee6706657",
   "position": {
-    "x": 1390,
-    "y": 62.857142857142861,
+    "x": 1260,
+    "y": 554.28571428571433,
     "z": 6012,
     "height": 117.14285714285715,
-    "width": 167.14285714285717
+    "width": 151.42857142857144
   },
   "visual": {
     "visualType": "cardVisual",
@@ -16,27 +16,37 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "grupitoo_kv fact_intressid"
-                        }
-                      },
-                      "Property": "intress"
+                    "SourceRef": {
+                      "Entity": "_Measures"
                     }
                   },
-                  "Function": 1
+                  "Property": "Keskmine_Intressimäär"
                 }
               },
-              "queryRef": "Avg(grupitoo_kv fact_intressid.intress)",
-              "nativeQueryRef": "Average of intress"
+              "queryRef": "_Measures.Keskmine_Intressimäär",
+              "nativeQueryRef": "Keskmine_Intressimäär"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Keskmine_Intressimäär"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -48,6 +58,50 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "shapeCustomRectangle": [
+        {
+          "properties": {
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'tabCutTopCornersByPixel'"
+                }
+              }
+            },
+            "tabCutCornerSnipSizeCustomStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "fillCustom": [
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -99,20 +153,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c70880f36add907860c6",
+        "name": "f969c7d2ed59a00060a0",
         "field": {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_intressid"
-                  }
-                },
-                "Property": "intress"
+              "SourceRef": {
+                "Entity": "_Measures"
               }
             },
-            "Function": 1
+            "Property": "Keskmine_Intressimäär"
           }
         },
         "type": "Advanced"

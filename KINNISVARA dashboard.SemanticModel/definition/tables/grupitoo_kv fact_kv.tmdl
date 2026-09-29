@@ -32,13 +32,12 @@ table 'grupitoo_kv fact_kv'
 
 	column avg_price_m2
 		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: f850ccfc-35ca-4ce3-9ed0-ac1e94980087
 		summarizeBy: sum
 		sourceColumn: avg_price_m2
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition 'grupitoo_kv fact_kv' = m
 		mode: import

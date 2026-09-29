@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "b23edaeb20e1e2c4cbd8",
+  "name": "28685577eb3da5673741",
   "position": {
-    "x": 928.57142857142867,
+    "x": 1251.4285714285716,
     "y": 62.857142857142861,
-    "z": 6011,
+    "z": 6013,
     "height": 292.85714285714289,
-    "width": 322.85714285714289,
-    "tabOrder": 6008
+    "width": 318.57142857142861
   },
   "visual": {
     "visualType": "kpi",
@@ -17,22 +16,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "grupitoo_kv fact_kv"
-                        }
-                      },
-                      "Property": "avg_price_m2"
+                    "SourceRef": {
+                      "Entity": "_Measures"
                     }
                   },
-                  "Function": 1
+                  "Property": "Ostujõud_m2"
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
-              "nativeQueryRef": "Average of avg_price_m2"
+              "queryRef": "_Measures.Ostujõud_m2",
+              "nativeQueryRef": "Ostujõud_m2"
             }
           ]
         },
@@ -56,21 +50,6 @@
         }
       }
     },
-    "objects": {
-      "indicator": [
-        {
-          "properties": {
-            "indicatorDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
     "visualContainerObjects": {
       "title": [
         {
@@ -78,7 +57,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'KESKMINE M2 HIND'"
+                  "Value": "'KESKMINE OSTUJÕUD'"
                 }
               }
             }
@@ -91,7 +70,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ddb5f2452c867cad7008",
+        "name": "ff30c38242304010a702",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Ostujõud_m2"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b7eec7bf9b0be5c209c0",
         "field": {
           "Column": {
             "Expression": {
@@ -100,25 +93,6 @@
               }
             },
             "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2e23bf8cd987816515d2",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
-              }
-            },
-            "Function": 1
           }
         },
         "type": "Advanced"
