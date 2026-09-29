@@ -1,17 +1,20 @@
 table _Measures
 	lineageTag: 2551044b-7945-4e24-819f-33094a8731fb
 
+	/// Arvutab Maa-ameti andmete põhjal elamispindade dünaamilise keskmise turuväärtuse (nominaalse hinna) ruutmeetri kohta vastavalt valitud perioodile ja piirkonnale.
 	measure Keskmine_m2_hind = AVERAGE('grupitoo_kv fact_kv'[avg_price_m2])
 		formatString: #,0\ "€";-#,0\ "€";#,0\ "€"
 		lineageTag: 703810ad-9b88-4e86-b87b-6ad7167dbf1a
 
 		annotation PBI_FormatHint = {"currencyCulture":"et-EE"}
 
+	/// Statistikaameti andmetel põhinev aritmeetiline keskmine tarbijahinnaindeks, mis peegeldab üldist inflatsioonitaset ja elukalliduse muutust ajas.
 	measure Keskmine_THI = AVERAGE('grupitoo_kv fact_thi'[keskmine_indeks])
 		lineageTag: d4ff27e2-87a0-42e1-ab45-450896d2d342
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Inflatsiooniga korrigeeritud m2 hind. Valem: (Nominaalne hind / THI) * 100. Defleeritud ehk inflatsioonist puhastatud ruutmeetri hind. Jagab nominaalse hinna tarbijahinnaindeksiga (THI), et näidata vara tegelikku väärtust ja ostujõu muutust ilma rahaväärtuse devalveerumiseta.
 	measure Reaalne_m2_hind = ```
 			
 			DIVIDE(
@@ -24,6 +27,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Mõõdab kinnisvara m² hinna ja tarbijahinnaindeksi (THI) aastaste kasvutempode (Year-over-Year) vahet protsentuaalselt. Positiivne tulemus näitab, et kinnisvara kallineb elukallidusest kiiremini.
 	measure Hinnatõusu_Lõhe_YoY =
 			
 			VAR KinnisvaraEelmineAasta = CALCULATE([Keskmine_m2_hind], DATEADD('grupitoo_kv dim_time'[pk_quarter_id], -1, YEAR))
@@ -38,11 +42,13 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Struktuurse kättesaadavuse indikaator, mis jagab keskmise ruutmeetri hinna THI väärtusega. Näitab reaalajas kinnisvara ja tarbijakorvi vaheliste kääride suhtarvu stabiilsust.
 	measure Kinnisvara_THI_Suhe = DIVIDE([Keskmine_m2_hind], [Keskmine_THI], 0)
 		lineageTag: 923ac437-3a47-4283-b399-aae58a084bca
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Kinnisvara keskmise ruutmeetri hinna kumulatiivne kasv võrreldes baasperioodiga (Aasta 2005 = 1.0 ehk 100%). Näitab, mitu korda on turuhind baasaastast alates tõusnud.
 	measure Kinnisvara_kasv_2005 =
 			
 			VAR BaasHind = CALCULATE([Keskmine_m2_hind], 'grupitoo_kv dim_time'[year_number] = 2005)
@@ -52,6 +58,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Tarbijahinnaindeksi kumulatiivne kasv võrreldes baasperioodiga (Aasta 2005 = 1.0 ehk 100%). Näitab üldise elukalliduse ja tarbijakorvi mitmekordistumist ajas.
 	measure THI_kasv_2005 =
 			
 			VAR BaasTHI = CALCULATE([Keskmine_THI], 'grupitoo_kv dim_time'[year_number] = 2005)
@@ -60,6 +67,133 @@ table _Measures
 		lineageTag: 58b3b3f2-7aea-428b-a74a-fd7f13a73656
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Ostujõud_m2 = ```
+			
+			DIVIDE(
+			    AVERAGE('grupitoo_kv fact_palk'[average_salary]), 
+			    AVERAGE('grupitoo_kv fact_kv'[avg_price_m2])
+			)
+			```
+		lineageTag: e8b9a67a-4b42-4fbe-8fa0-9374639d3040
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Intressi_Mõju_Indeks =
+			
+			AVERAGE('grupitoo_kv fact_thi'[keskmine_indeks]) / [Ostujõud_m2]
+		lineageTag: 7554fcfd-b60a-4556-90a6-d31a2ff107ab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Kättesaadavus (m2 kuupalga eest)'
+		lineageTag: 7369e9cf-8ced-43c7-b0b8-83564de0400f
+
+	measure Foorituli_Värv =
+			
+			VAR Ostujoud = [Ostujõud_m2]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        Ostujoud < 1.0, "#E74C3C",  // Punane (Kriitiliselt madal)
+			        Ostujoud < 2.5, "#F1C40F",  // Kollane (Keskmine kättesaadavus)
+			        "#2ECC71"                   // Roheline (Kõrge kättesaadavus)
+			    )
+		lineageTag: ca7b8f1c-4ce5-4172-8647-274ba8d3e752
+
+	measure Palk_Eelmine_Aasta =
+			
+			CALCULATE(
+			    AVERAGE('grupitoo_kv fact_palk'[average_salary]),
+			    SAMEPERIODLASTYEAR('grupitoo_kv fact_palk'[average_salary])
+			)
+		formatString: 0
+		lineageTag: 36338682-e849-4ad8-b7db-d20574bf96af
+
+	measure Ostujõud_Värv_Keskmine = ```
+			
+			VAR PraeguneOstujoud = [Ostujõud_m2]
+			VAR EestiKeskmineOstujoud = 
+			    CALCULATE(
+			        [Ostujõud_m2],
+			        ALL('grupitoo_kv dim_county'[county_name])
+			    )
+			RETURN
+			    IF(
+			        PraeguneOstujoud >= EestiKeskmineOstujoud,
+			        "#3B6E4C", -- Puhas pastellne Tumeroheline (Kallim)
+			        "#9BC4A3"  -- Puhas pastellne Heleroheline (Odavam)
+			    )
+			```
+		lineageTag: bbdfc0da-7c5c-4450-9c05-33658eb1a1c9
+
+	measure Hinna_Värv_Mediaan = ```
+			
+			VAR PraeguneMediaan = MEDIAN('grupitoo_kv fact_kv'[avg_price_m2])
+			VAR EestiuldineMediaan = 
+			    CALCULATE(
+			        MEDIAN('grupitoo_kv fact_kv'[avg_price_m2]),
+			        ALL('grupitoo_kv dim_county'[county_name])
+			    )
+			RETURN
+			    IF(
+			        PraeguneMediaan > EestiuldineMediaan,
+			        "#2E5A44", -- Pastellne Tumeroheline (Kallim kui Eesti mediaan)
+			        "#A3C9A8"  -- Pastellne Heleroheline (Odavam kui Eesti mediaan)
+			    )
+			```
+		lineageTag: 0b13391f-c8a1-414b-aa09-1289cfddddf5
+
+	measure Kaardi_Ostujõu_Värv = ```
+			
+			-- 1. Arvutame praeguse valitud maakonna ostujõu
+			VAR PraeguneOstujoud = 
+			    DIVIDE(
+			        AVERAGE('grupitoo_kv fact_palk'[average_salary]), 
+			        AVERAGE('grupitoo_kv fact_kv'[avg_price_m2])
+			    )
+			
+			-- 2. Arvutame kogu Eesti keskmise ostujõu (eemaldades maakonna filtri)
+			VAR EestiKeskmineOstujoud = 
+			    CALCULATE(
+			        DIVIDE(
+			            AVERAGE('grupitoo_kv fact_palk'[average_salary]), 
+			            AVERAGE('grupitoo_kv fact_kv'[avg_price_m2])
+			        ),
+			        ALL('grupitoo_kv dim_county'[county_name])
+			    )
+			RETURN
+			    IF(
+			        PraeguneOstujoud >= EestiKeskmineOstujoud,
+			        "#3B6E4C", -- Puhas pastellne Tumeroheline (ROHKEM ruutmeetreid palga eest)
+			        "#9BC4A3"  -- Puhas pastellne Heleroheline (VÄHEM ruutmeetreid palga eest)
+			    )
+			```
+		lineageTag: 622afe69-6ee8-4f4d-9b00-97d16669bfc0
+
+	measure Keskmine_Intressimäär = AVERAGE('grupitoo_kv fact_intressid'[intress]) / 100
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: b489b3a8-9964-4173-8efd-5340cc0fc03b
+
+	measure Intressi_Värv_Keskmine = ```
+			
+			-- 1. Arvutame reaalaja keskmise intressi valitud filtri/perioodi kohta
+			VAR PraeguneIntress = AVERAGE('grupitoo_kv fact_intressid')
+			
+			-- 2. Arvutame kogu 20-aastase aegrea üleriigilise üldise keskmise intressi
+			VAR EestiUldineKeskmineIntress = 
+			    CALCULATE(
+			        AVERAGE('grupitoo_kv fact_intressid'),
+			        ALL('grupitoo_kv fact_kv')
+			    )
+			RETURN
+			    IF(
+			        PraeguneIntress > EestiUldineKeskmineIntress,
+			        "#E74C3C", -- Pastellne ja pehme punane (Kõrgem intress kui pikaajaline keskmine)
+			        "#3B6E4C"  -- Sinu tuttav puhas pastellne tumeroheline (Soodsam/madalam intress)
+			    )
+			```
+		lineageTag: f7f00d23-78f9-42c4-8757-1796d3ec4233
 
 	partition _Measures = m
 		mode: import
@@ -72,4 +206,6 @@ table _Measures
 				    #"Removed Columns"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

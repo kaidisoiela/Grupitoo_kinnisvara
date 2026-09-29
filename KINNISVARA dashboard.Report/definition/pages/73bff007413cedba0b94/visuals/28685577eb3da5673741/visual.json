@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "28685577eb3da5673741",
+  "position": {
+    "x": 1251.4285714285716,
+    "y": 62.857142857142861,
+    "z": 6013,
+    "height": 292.85714285714289,
+    "width": 318.57142857142861
+  },
+  "visual": {
+    "visualType": "kpi",
+    "query": {
+      "queryState": {
+        "Indicator": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Ostujõud_m2"
+                }
+              },
+              "queryRef": "_Measures.Ostujõud_m2",
+              "nativeQueryRef": "Ostujõud_m2"
+            }
+          ]
+        },
+        "TrendLine": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "grupitoo_kv dim_time"
+                    }
+                  },
+                  "Property": "year_number"
+                }
+              },
+              "queryRef": "grupitoo_kv dim_time.year_number",
+              "nativeQueryRef": "year_number"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'KESKMINE OSTUJÕUD'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ff30c38242304010a702",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Ostujõud_m2"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b7eec7bf9b0be5c209c0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
+              }
+            },
+            "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
