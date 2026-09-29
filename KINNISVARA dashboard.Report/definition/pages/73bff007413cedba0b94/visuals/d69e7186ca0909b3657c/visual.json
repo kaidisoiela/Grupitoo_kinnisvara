@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "6b6723002da5de802a91",
+  "name": "d69e7186ca0909b3657c",
   "position": {
-    "x": 12,
-    "y": 67,
-    "z": 4002,
-    "height": 135,
-    "width": 187,
-    "tabOrder": 4002
+    "x": 1397.1428571428573,
+    "y": 224.28571428571431,
+    "z": 6010,
+    "height": 131.42857142857144,
+    "width": 155.71428571428572,
+    "tabOrder": 6007
   },
   "visual": {
     "visualType": "cardVisual",
@@ -17,17 +17,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_thi"
+                        }
+                      },
+                      "Property": "keskmine_indeks"
                     }
                   },
-                  "Property": "Keskmine_m2_hind"
+                  "Function": 1
                 }
               },
-              "queryRef": "_Measures.Keskmine_m2_hind",
-              "nativeQueryRef": "Keskmine_m2_hind"
+              "queryRef": "Avg(grupitoo_kv fact_thi.keskmine_indeks)",
+              "nativeQueryRef": "Average of keskmine_indeks"
             }
           ]
         }
@@ -37,22 +42,6 @@
       }
     },
     "objects": {
-      "value": [
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "24D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
       "label": [
         {
           "properties": {
@@ -68,10 +57,8 @@
             "id": "default"
           }
         }
-      ]
-    },
-    "visualContainerObjects": {
-      "visualTooltip": [
+      ],
+      "value": [
         {
           "properties": {
             "show": {
@@ -83,10 +70,19 @@
             }
           }
         }
-      ],
+      ]
+    },
+    "visualContainerObjects": {
       "title": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'THI'"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -94,10 +90,10 @@
                 }
               }
             },
-            "text": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'Keskmine ruutmeetri hind'"
+                  "Value": "20D"
                 }
               }
             },
@@ -111,59 +107,13 @@
           }
         }
       ],
-      "border": [
+      "visualHeader": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
+                  "Value": "false"
                 }
               }
             }
@@ -176,15 +126,20 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "5db6ad6dd011a67dad0c",
+        "name": "ed0c329920036e5806cd",
         "field": {
-          "Measure": {
+          "Aggregation": {
             "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_thi"
+                  }
+                },
+                "Property": "keskmine_indeks"
               }
             },
-            "Property": "Keskmine_m2_hind"
+            "Function": 1
           }
         },
         "type": "Advanced"
