@@ -83,6 +83,8 @@
 2025 II,Harju maakond,2365
 2025 III,Harju maakond,2324
 2025 IV,Harju maakond,2392
+2026 I,Harju maakond,2406
+2026 II,Harju maakond,2488
 2005 I,Hiiu maakond,400
 2005 II,Hiiu maakond,417
 2005 III,Hiiu maakond,441
@@ -167,6 +169,8 @@
 2025 II,Hiiu maakond,1597
 2025 III,Hiiu maakond,1601
 2025 IV,Hiiu maakond,1687
+2026 I,Hiiu maakond,1663
+2026 II,Hiiu maakond,1712
 2005 I,Ida-Viru maakond,356
 2005 II,Ida-Viru maakond,398
 2005 III,Ida-Viru maakond,376
@@ -251,6 +255,8 @@
 2025 II,Ida-Viru maakond,1708
 2025 III,Ida-Viru maakond,1653
 2025 IV,Ida-Viru maakond,1726
+2026 I,Ida-Viru maakond,1677
+2026 II,Ida-Viru maakond,1852
 2005 I,Järva maakond,390
 2005 II,Järva maakond,461
 2005 III,Järva maakond,427
@@ -335,6 +341,8 @@
 2025 II,Järva maakond,1758
 2025 III,Järva maakond,1761
 2025 IV,Järva maakond,1826
+2026 I,Järva maakond,1758
+2026 II,Järva maakond,1872
 2005 I,Jõgeva maakond,394
 2005 II,Jõgeva maakond,461
 2005 III,Jõgeva maakond,414
@@ -419,6 +427,8 @@
 2025 II,Jõgeva maakond,1645
 2025 III,Jõgeva maakond,1638
 2025 IV,Jõgeva maakond,1721
+2026 I,Jõgeva maakond,1627
+2026 II,Jõgeva maakond,1711
 2005 I,Lääne maakond,397
 2005 II,Lääne maakond,421
 2005 III,Lääne maakond,396
@@ -503,6 +513,8 @@
 2025 II,Lääne maakond,1619
 2025 III,Lääne maakond,1588
 2025 IV,Lääne maakond,1670
+2026 I,Lääne maakond,1623
+2026 II,Lääne maakond,1727
 2005 I,Lääne-Viru maakond,358
 2005 II,Lääne-Viru maakond,406
 2005 III,Lääne-Viru maakond,394
@@ -587,6 +599,8 @@
 2025 II,Lääne-Viru maakond,1691
 2025 III,Lääne-Viru maakond,1639
 2025 IV,Lääne-Viru maakond,1711
+2026 I,Lääne-Viru maakond,1638
+2026 II,Lääne-Viru maakond,1780
 2005 I,Pärnu maakond,385
 2005 II,Pärnu maakond,452
 2005 III,Pärnu maakond,432
@@ -671,6 +685,8 @@
 2025 II,Pärnu maakond,1702
 2025 III,Pärnu maakond,1680
 2025 IV,Pärnu maakond,1742
+2026 I,Pärnu maakond,1691
+2026 II,Pärnu maakond,1801
 2005 I,Põlva maakond,367
 2005 II,Põlva maakond,407
 2005 III,Põlva maakond,370
@@ -755,6 +771,8 @@
 2025 II,Põlva maakond,1684
 2025 III,Põlva maakond,1638
 2025 IV,Põlva maakond,1695
+2026 I,Põlva maakond,1618
+2026 II,Põlva maakond,1750
 2005 I,Rapla maakond,377
 2005 II,Rapla maakond,439
 2005 III,Rapla maakond,432
@@ -839,6 +857,8 @@
 2025 II,Rapla maakond,1747
 2025 III,Rapla maakond,1681
 2025 IV,Rapla maakond,1795
+2026 I,Rapla maakond,1686
+2026 II,Rapla maakond,1834
 2005 I,Saare maakond,391
 2005 II,Saare maakond,454
 2005 III,Saare maakond,426
@@ -923,6 +943,8 @@
 2025 II,Saare maakond,1624
 2025 III,Saare maakond,1601
 2025 IV,Saare maakond,1667
+2026 I,Saare maakond,1620
+2026 II,Saare maakond,1733
 2005 I,Tartu maakond,446
 2005 II,Tartu maakond,499
 2005 III,Tartu maakond,461
@@ -1007,6 +1029,8 @@
 2025 II,Tartu maakond,2175
 2025 III,Tartu maakond,2060
 2025 IV,Tartu maakond,2191
+2026 I,Tartu maakond,2130
+2026 II,Tartu maakond,2285
 2005 I,Valga maakond,352
 2005 II,Valga maakond,401
 2005 III,Valga maakond,380
@@ -1091,6 +1115,8 @@
 2025 II,Valga maakond,1608
 2025 III,Valga maakond,1549
 2025 IV,Valga maakond,1615
+2026 I,Valga maakond,1564
+2026 II,Valga maakond,1677
 2005 I,Viljandi maakond,373
 2005 II,Viljandi maakond,424
 2005 III,Viljandi maakond,384
@@ -1175,6 +1201,8 @@
 2025 II,Viljandi maakond,1746
 2025 III,Viljandi maakond,1719
 2025 IV,Viljandi maakond,1812
+2026 I,Viljandi maakond,1698
+2026 II,Viljandi maakond,1840
 2005 I,Võru maakond,362
 2005 II,Võru maakond,423
 2005 III,Võru maakond,373
@@ -1259,3 +1287,5 @@
 2025 II,Võru maakond,1666
 2025 III,Võru maakond,1596
 2025 IV,Võru maakond,1689
+2026 I,Võru maakond,1624
+2026 II,Võru maakond,1774
