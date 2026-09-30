@@ -61,6 +61,34 @@
               },
               "queryRef": "_Measures.THI_kasv_2005",
               "nativeQueryRef": "THI_kasv_2005"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Hinnatõusu_Lõhe_YoY"
+                }
+              },
+              "queryRef": "_Measures.Hinnatõusu_Lõhe_YoY",
+              "nativeQueryRef": "Hinnatõusu_Lõhe_YoY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Reaalne_m2_hind"
+                }
+              },
+              "queryRef": "_Measures.Reaalne_m2_hind",
+              "nativeQueryRef": "Reaalne_m2_hind"
             }
           ]
         }
