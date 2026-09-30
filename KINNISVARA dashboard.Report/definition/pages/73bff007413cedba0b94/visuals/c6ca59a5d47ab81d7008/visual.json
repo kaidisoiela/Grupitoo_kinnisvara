@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c6ca59a5d47ab81d7008",
   "position": {
-    "x": 0,
-    "y": 831.11111111111109,
+    "x": 56.666666666666671,
+    "y": 948.33333333333337,
     "z": 2000,
-    "height": 377.77777777777777,
-    "width": 1292.2222222222222,
+    "height": 378.33333333333337,
+    "width": 1118.3333333333335,
     "tabOrder": 2000
   },
   "visual": {
@@ -55,22 +55,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "grupitoo_kv fact_kv"
-                        }
-                      },
-                      "Property": "transaction_count"
+                    "SourceRef": {
+                      "Entity": "_Measures"
                     }
                   },
-                  "Function": 0
+                  "Property": "Ostujõud_m2"
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_kv.transaction_count)",
-              "nativeQueryRef": "Sum of transaction_count"
+              "queryRef": "_Measures.Ostujõud_m2",
+              "nativeQueryRef": "Ostujõud_m2"
             }
           ]
         }
@@ -90,7 +85,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tehingute summa'"
+                  "Value": "'Mitu m2 saab ühe kuupalga eest'"
                 }
               }
             }
@@ -99,5 +94,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0d8e8d12d4590e020714",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
+              }
+            },
+            "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cbda202b93a65d02a0e5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
+              }
+            },
+            "Property": "county_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fb66b2e6c40b7e67a2ad",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Ostujõud_m2"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

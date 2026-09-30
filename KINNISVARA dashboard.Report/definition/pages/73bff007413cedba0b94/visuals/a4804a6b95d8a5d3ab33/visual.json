@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a4804a6b95d8a5d3ab33",
   "position": {
-    "x": 685.55555555555554,
-    "y": 497.77777777777777,
+    "x": 63.333333333333336,
+    "y": 1361.6666666666667,
     "z": 1000,
-    "height": 301.11111111111109,
-    "width": 581.11111111111109,
+    "height": 638.33333333333337,
+    "width": 1720,
     "tabOrder": 1000
   },
   "visual": {
@@ -50,7 +50,7 @@
             }
           ]
         },
-        "Size": {
+        "X": {
           "projections": [
             {
               "field": {
@@ -59,35 +59,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_kv"
+                          "Entity": "grupitoo_kv fact_palk"
                         }
                       },
-                      "Property": "transaction_count"
+                      "Property": "average_salary"
                     }
                   },
-                  "Function": 0
+                  "Function": 1
                 }
               },
-              "queryRef": "Sum(grupitoo_kv fact_kv.transaction_count)",
-              "nativeQueryRef": "Sum of transaction_count"
-            }
-          ]
-        },
-        "X": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
-                    }
-                  },
-                  "Property": "Reaalne_Palk"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_county.Reaalne_Palk",
-              "nativeQueryRef": "Reaalne_Palk",
+              "queryRef": "Avg(grupitoo_kv fact_palk.average_salary)",
+              "nativeQueryRef": "Average of average_salary",
               "active": true
             }
           ]
@@ -115,7 +97,72 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
       }
+    },
+    "objects": {
+      "trend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Trend line 1'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "y1AxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Y-Axis Constant Line 1'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_thi"
+                        }
+                      },
+                      "Property": "keskmine_indeks"
+                    }
+                  },
+                  "Function": 1
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "1"
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -124,7 +171,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Keskmine m2 hind ja reaalne palk maakondade kaupa'"
+                  "Value": "'Keskmine palk ja m2 hind maakondade kaupa'"
                 }
               }
             }
@@ -133,5 +180,75 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "31bbde20ec5d10025070",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
+              }
+            },
+            "Property": "county_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "672fde783b90bcc14dce",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_palk"
+                  }
+                },
+                "Property": "average_salary"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "58b6fa000446a45492d9",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_kv"
+                  }
+                },
+                "Property": "avg_price_m2"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9dfcc0f17793e9d8c208",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
+              }
+            },
+            "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

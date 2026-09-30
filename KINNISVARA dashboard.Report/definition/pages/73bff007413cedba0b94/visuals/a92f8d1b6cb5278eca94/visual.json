@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a92f8d1b6cb5278eca94",
   "position": {
-    "x": 0,
-    "y": 412.85714285714289,
+    "x": 8.3333333333333339,
+    "y": 343.33333333333337,
     "z": 6005,
     "height": 107.14285714285715,
     "width": 1557.1428571428573,
@@ -78,6 +78,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Basic'"
+                }
+              }
+            },
+            "isInvertedSelectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

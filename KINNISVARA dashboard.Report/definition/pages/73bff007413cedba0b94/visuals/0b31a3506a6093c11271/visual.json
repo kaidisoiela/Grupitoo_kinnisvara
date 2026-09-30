@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "0b31a3506a6093c11271",
   "position": {
-    "x": 0,
-    "y": 95,
+    "x": 563.33333333333337,
+    "y": 491.66666666666669,
     "z": 5000,
-    "height": 368.88888888888886,
-    "width": 584.44444444444446,
+    "height": 410,
+    "width": 576.66666666666674,
     "tabOrder": 5000
   },
   "visual": {
@@ -94,5 +94,56 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9c9ede08de1c56bb0a91",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
+              }
+            },
+            "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cb79f74b1b7976294c03",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
+              }
+            },
+            "Property": "county_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e8a21702e074d780402d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_palk"
+                  }
+                },
+                "Property": "average_salary"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

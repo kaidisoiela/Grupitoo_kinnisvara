@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "79689ae25a3ee6706657",
   "position": {
-    "x": 1260,
-    "y": 554.28571428571433,
+    "x": 33.333333333333336,
+    "y": 80,
     "z": 6012,
     "height": 117.14285714285715,
     "width": 151.42857142857144
@@ -32,21 +32,6 @@
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
-                  }
-                },
-                "Property": "Keskmine_Intressimäär"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -73,7 +58,7 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'tabCutTopCornersByPixel'"
+                  "Value": "'rectangleRoundedByPixel'"
                 }
               }
             },
