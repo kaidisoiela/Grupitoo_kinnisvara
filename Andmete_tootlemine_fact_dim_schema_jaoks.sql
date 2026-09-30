@@ -140,7 +140,7 @@ SELECT
     END AS FK_quarter_ID,
     county AS county_name,
     salary AS average_salary -- Lisatud sisendtabeli palga veerg
-FROM grupitoo_kv.Eesti_keskmine_palk_maakonniti;
+FROM grupitoo_kv.eesti_keskmine_palk_py_final;
 
 -- 3. SEOSETE LOOMINE: Järgime täpselt Sinu näidatud Fact_KV loogikat
 
