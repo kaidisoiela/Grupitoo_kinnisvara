@@ -1,7 +1,6 @@
 [theme]
-primaryColor = "#4b4d64" # Matches your Pink Simulation line
-backgroundColor = "#abb7fa" # Deep dark gray/black background
-secondaryBackgroundColor = "#7f8a97" # Darker gray for the sidebar
-textColor = "#ffffff" # Crisp white text
+primaryColor = "#2b5c8f"            # Tumesinine aktsent
+backgroundColor = "#faf9f6"         # Väga pehme ja stiilne valkjas-beež/kalgitaust
+secondaryBackgroundColor = "#edf0f2" # Rahulik ja puhas hele-hall küljepaneel
+textColor = "#2d3748"               # Pehme mustjashall tekst, mis loetav igal taustal
 font = "sans serif"
-

@@ -34,7 +34,7 @@ def laadi_ja_puhasta_andmed():
         return nimi.capitalize()
 
     # A. Palkade laadimine ja veergude ettevalmistus (quarter -> Kvartal_ID, county -> Maakond)
-    df_palk = pd.read_csv("Eesti_keskmine_palk_maakonniti_2005_2025_py_final.csv")
+    df_palk = pd.read_csv("Eesti_keskmine_palk_py_final.csv")
     df_palk.rename(columns={'quarter': 'Kvartal_ID', 'county': 'Maakond', 'salary': 'Palk'}, inplace=True)
     df_palk['Kvartal_ID'] = df_palk['Kvartal_ID'].astype(str).str.strip()
     df_palk['Maakond_Puhas'] = df_palk['Maakond'].apply(puhasta_maakond)
