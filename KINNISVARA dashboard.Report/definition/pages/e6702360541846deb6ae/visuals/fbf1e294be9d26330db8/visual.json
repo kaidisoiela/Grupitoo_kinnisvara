@@ -89,6 +89,20 @@
               },
               "queryRef": "_Measures.Reaalne_m2_hind",
               "nativeQueryRef": "Reaalne_m2_hind"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Palga_kasv_2005"
+                }
+              },
+              "queryRef": "_Measures.Palga_kasv_2005",
+              "nativeQueryRef": "Palga_kasv_2005"
             }
           ]
         }
