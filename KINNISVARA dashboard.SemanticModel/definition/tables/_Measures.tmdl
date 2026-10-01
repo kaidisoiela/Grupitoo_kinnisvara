@@ -195,6 +195,16 @@ table _Measures
 			```
 		lineageTag: f7f00d23-78f9-42c4-8757-1796d3ec4233
 
+	measure Palga_kasv_2005 =
+			
+			VAR PraegunePalk = AVERAGE('grupitoo_kv fact_palk'[average_salary])
+			VAR BaasPalk = CALCULATE(AVERAGE('grupitoo_kv fact_palk'[average_salary]), 'grupitoo_kv dim_time'[year_number] = 2005)
+			RETURN
+			DIVIDE(PraegunePalk, BaasPalk, 0)
+		lineageTag: 8a950975-7e49-4a65-a5f3-b40611e3136c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition _Measures = m
 		mode: import
 		source =
