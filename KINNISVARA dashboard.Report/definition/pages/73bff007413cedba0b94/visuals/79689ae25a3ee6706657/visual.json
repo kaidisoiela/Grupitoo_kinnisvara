@@ -4,9 +4,10 @@
   "position": {
     "x": 1260,
     "y": 554.28571428571433,
-    "z": 6012,
+    "z": 16000,
     "height": 117.14285714285715,
-    "width": 151.42857142857144
+    "width": 151.42857142857144,
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -149,23 +150,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f969c7d2ed59a00060a0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Keskmine_Intressimäär"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
