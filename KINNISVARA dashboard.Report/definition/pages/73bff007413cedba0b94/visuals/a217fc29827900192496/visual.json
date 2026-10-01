@@ -4,10 +4,10 @@
   "position": {
     "x": 655.71428571428578,
     "y": 1218.5714285714287,
-    "z": 6001,
+    "z": 7000,
     "height": 387.14285714285717,
     "width": 604.28571428571433,
-    "tabOrder": 6001
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "lineChart",
@@ -89,51 +89,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d07f2a79de85b3898011",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Ostujõud_m2"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e407d044bd1bc8e54122",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2863f8f3eba316113255",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

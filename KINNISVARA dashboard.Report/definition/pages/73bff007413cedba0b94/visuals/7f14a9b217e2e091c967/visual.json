@@ -4,10 +4,10 @@
   "position": {
     "x": 1260,
     "y": 692.85714285714289,
-    "z": 6003,
+    "z": 8000,
     "height": 430,
     "width": 278.57142857142861,
-    "tabOrder": 6002
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -111,23 +111,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "17dabbc85b70175336bd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
