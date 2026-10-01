@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "cb52f9506667d0362b68",
+  "name": "2066176792cb716600d4",
   "position": {
-    "x": 243,
-    "y": 9,
-    "z": 0,
-    "height": 244,
-    "width": 1014,
-    "tabOrder": 0
+    "x": 248,
+    "y": 547,
+    "z": 5000,
+    "height": 492,
+    "width": 733,
+    "tabOrder": 5000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Category": {
+        "Rows": {
           "projections": [
             {
               "field": {
@@ -27,12 +27,12 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
+              "nativeQueryRef": "Sum of year_number",
               "active": true
             }
           ]
         },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -70,6 +70,34 @@
                       "Entity": "_Measures"
                     }
                   },
+                  "Property": "Hinnatõusu_Lõhe_YoY"
+                }
+              },
+              "queryRef": "_Measures.Hinnatõusu_Lõhe_YoY",
+              "nativeQueryRef": "Hinnatõusu_Lõhe_YoY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Reaalne_m2_hind"
+                }
+              },
+              "queryRef": "_Measures.Reaalne_m2_hind",
+              "nativeQueryRef": "Reaalne_m2_hind"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
                   "Property": "Palga_kasv_2005"
                 }
               },
@@ -92,168 +120,36 @@
                 "Property": "year_number"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
     },
     "objects": {
-      "categoryAxis": [
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnWidth": [
         {
           "properties": {
-            "titleText": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "'Aasta'"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
-            "axisType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Categorical'"
-                }
-              }
-            },
-            "start": {
-              "expr": {
-                "Literal": {
-                  "Value": "2005D"
-                }
-              }
-            },
-            "concatenateLabels": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "99D"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "_Measures.THI_kasv_2005"
           }
         }
       ],
-      "valueAxis": [
+      "columnHeaders": [
         {
-          "properties": {
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Kasvukordaja'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "seriesLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Kinnisvarahindade ja elukalliduse kumulatiivne kasv (Baas 2005 = 1.0)'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.4
-                    }
-                  }
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
@@ -262,7 +158,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c60fe089d3d897828d2a",
+        "name": "5fb6d4fc9ebe1940445b",
         "field": {
           "Column": {
             "Expression": {
@@ -276,7 +172,7 @@
         "type": "Advanced"
       },
       {
-        "name": "4c59784b200017666a8a",
+        "name": "7abf609ab95c4ad1b50b",
         "field": {
           "Measure": {
             "Expression": {
@@ -290,7 +186,7 @@
         "type": "Advanced"
       },
       {
-        "name": "4647026c3a3b5d4a81c0",
+        "name": "9329ff5ae4ab15b48dc8",
         "field": {
           "Measure": {
             "Expression": {
@@ -299,6 +195,48 @@
               }
             },
             "Property": "THI_kasv_2005"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "312fa310584927c2491b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Hinnatõusu_Lõhe_YoY"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "11771bf00996bba6b5e1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Reaalne_m2_hind"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "92e4b3380ae660328b99",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Palga_kasv_2005"
           }
         },
         "type": "Advanced"

@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "cb52f9506667d0362b68",
+  "name": "74218af40c3410838901",
   "position": {
-    "x": 243,
-    "y": 9,
+    "x": 19,
+    "y": 37,
     "z": 0,
-    "height": 244,
-    "width": 1014,
+    "height": 473,
+    "width": 1242,
     "tabOrder": 0
   },
   "visual": {
@@ -177,6 +177,19 @@
             }
           }
         }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -262,7 +275,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c60fe089d3d897828d2a",
+        "name": "560c35c7ee03e2d2e50c",
         "field": {
           "Column": {
             "Expression": {
@@ -276,7 +289,7 @@
         "type": "Advanced"
       },
       {
-        "name": "4c59784b200017666a8a",
+        "name": "68911d54834ce0936150",
         "field": {
           "Measure": {
             "Expression": {
@@ -290,7 +303,7 @@
         "type": "Advanced"
       },
       {
-        "name": "4647026c3a3b5d4a81c0",
+        "name": "94c6f73ed3a98da35777",
         "field": {
           "Measure": {
             "Expression": {
@@ -299,6 +312,20 @@
               }
             },
             "Property": "THI_kasv_2005"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9eee1a1b5e1721574ec0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Palga_kasv_2005"
           }
         },
         "type": "Advanced"
