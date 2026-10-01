@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "63f2cd2a8b5ece0ac980",
+  "position": {
+    "x": 24.444444444444443,
+    "y": 748.88888888888891,
+    "z": 3,
+    "height": 122.22222222222221,
+    "width": 1326.6666666666667,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "2026. aastal oli ruutmeetri keskmise hinna keskmine kõrgeim ehk 1 116 €, mis oli ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "247,56% kõrgem kui 2005. aastal, mil ruutmeetri keskmise hinna keskmine oli madalaim ehk 321 €.",
+                    "textStyle": {
+                      "fontFamily": "Google Sans, Arial, sans-serif, Noto Color Emoji",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Ruutmeetri keskmise hinna keskmine ja intressi keskmine lahknesid kõige enam 2026. aastal, mil ruutmeetri keskmise hinna keskmine oli 1 112 € võrra kõrgem kui intressi keskmine.",
+                    "textStyle": {
+                      "fontFamily": "Google Sans, Arial, sans-serif, Noto Color Emoji",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Kõigi 22 aasta lõikes jäi ruutmeetri keskmise hinna keskmine vahemikku 321 € kuni 1 116 € ning intressi keskmine vahemikku 2,16 kuni 5,83.",
+                    "textStyle": {
+                      "fontFamily": "Google Sans, Arial, sans-serif, Noto Color Emoji",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

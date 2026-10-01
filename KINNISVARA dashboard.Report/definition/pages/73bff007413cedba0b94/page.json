@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "73bff007413cedba0b94",
   "displayName": "Merje",
-  "displayOption": "FitToPage",
-  "height": 2000,
-  "width": 2000,
+  "displayOption": "ActualSize",
+  "height": 3000,
+  "width": 3000,
   "filterConfig": {
     "filters": [
       {

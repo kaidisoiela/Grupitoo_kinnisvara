@@ -68,6 +68,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Kui palju kinnisvara m2 saab ühe kuupalga eest osta.
 	measure Ostujõud_m2 = ```
 			
 			DIVIDE(
@@ -89,7 +90,8 @@ table _Measures
 	measure 'Kättesaadavus (m2 kuupalga eest)'
 		lineageTag: 7369e9cf-8ced-43c7-b0b8-83564de0400f
 
-	measure Foorituli_Värv =
+	/// Kui palju kinnisvara m2 saab ühe kuupalga eest osta. Punane (Kriitiliselt madal). Kollane (Keskmine kättesaadavus). Roheline (Kõrge kättesaadavus)
+	measure 'Ostujõu foorituli' =
 			
 			VAR Ostujoud = [Ostujõud_m2]
 			RETURN
@@ -121,8 +123,8 @@ table _Measures
 			RETURN
 			    IF(
 			        PraeguneOstujoud >= EestiKeskmineOstujoud,
-			        "#3B6E4C", -- Puhas pastellne Tumeroheline (Kallim)
-			        "#9BC4A3"  -- Puhas pastellne Heleroheline (Odavam)
+			        "#2F3640", --  (Kallim)
+			        "F2F4F5"  -- (Odavam)
 			    )
 			```
 		lineageTag: bbdfc0da-7c5c-4450-9c05-33658eb1a1c9
@@ -174,26 +176,6 @@ table _Measures
 	measure Keskmine_Intressimäär = AVERAGE('grupitoo_kv fact_intressid'[intress]) / 100
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: b489b3a8-9964-4173-8efd-5340cc0fc03b
-
-	measure Intressi_Värv_Keskmine = ```
-			
-			-- 1. Arvutame reaalaja keskmise intressi valitud filtri/perioodi kohta
-			VAR PraeguneIntress = AVERAGE('grupitoo_kv fact_intressid')
-			
-			-- 2. Arvutame kogu 20-aastase aegrea üleriigilise üldise keskmise intressi
-			VAR EestiUldineKeskmineIntress = 
-			    CALCULATE(
-			        AVERAGE('grupitoo_kv fact_intressid'),
-			        ALL('grupitoo_kv fact_kv')
-			    )
-			RETURN
-			    IF(
-			        PraeguneIntress > EestiUldineKeskmineIntress,
-			        "#E74C3C", -- Pastellne ja pehme punane (Kõrgem intress kui pikaajaline keskmine)
-			        "#3B6E4C"  -- Sinu tuttav puhas pastellne tumeroheline (Soodsam/madalam intress)
-			    )
-			```
-		lineageTag: f7f00d23-78f9-42c4-8757-1796d3ec4233
 
 	partition _Measures = m
 		mode: import

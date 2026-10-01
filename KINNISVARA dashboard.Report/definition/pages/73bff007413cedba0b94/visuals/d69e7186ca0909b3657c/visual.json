@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d69e7186ca0909b3657c",
   "position": {
-    "x": 1411.4285714285716,
-    "y": 554.28571428571433,
-    "z": 14000,
+    "x": 238.75,
+    "y": 175,
+    "z": 6010,
     "height": 117.14285714285715,
     "width": 127.14285714285715,
-    "tabOrder": 12000
+    "tabOrder": 6007
   },
   "visual": {
     "visualType": "cardVisual",
@@ -17,22 +17,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "grupitoo_kv fact_thi"
-                        }
-                      },
-                      "Property": "keskmine_indeks"
+                    "SourceRef": {
+                      "Entity": "_Measures"
                     }
                   },
-                  "Function": 1
+                  "Property": "THI_kasv_2005"
                 }
               },
-              "queryRef": "Avg(grupitoo_kv fact_thi.keskmine_indeks)",
-              "nativeQueryRef": "Average of keskmine_indeks"
+              "queryRef": "_Measures.THI_kasv_2005",
+              "nativeQueryRef": "THI_kasv_2005"
             }
           ]
         }
@@ -79,7 +74,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'THI'"
+                  "Value": "'THI KASV'"
                 }
               }
             },
@@ -122,5 +117,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bb24eabb5a77522430d6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "THI_kasv_2005"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c6ca59a5d47ab81d7008",
   "position": {
-    "x": 56.666666666666671,
-    "y": 948.33333333333337,
+    "x": 623.75,
+    "y": 1470,
     "z": 2000,
-    "height": 378.33333333333337,
-    "width": 1118.3333333333335,
+    "height": 387.5,
+    "width": 1036.25,
     "tabOrder": 2000
   },
   "visual": {
@@ -46,8 +46,9 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name",
-              "active": true
+              "nativeQueryRef": "Maakond",
+              "active": true,
+              "displayName": "Maakond"
             }
           ]
         },
@@ -78,14 +79,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Mitu m2 saab ühe kuupalga eest'"
+                  "Value": "'Mitu m2 kinnisvara saab ühe kuupalga eest'"
                 }
               }
             }
