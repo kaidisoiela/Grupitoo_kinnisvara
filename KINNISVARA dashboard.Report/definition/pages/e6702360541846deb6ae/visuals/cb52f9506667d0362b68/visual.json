@@ -69,16 +69,16 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Measures"
+                    "Entity": "grupitoo_kv dim_time"
                   }
                 },
-                "Property": "Kinnisvara_kasv_2005"
+                "Property": "year_number"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -244,5 +244,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c60fe089d3d897828d2a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
+              }
+            },
+            "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4c59784b200017666a8a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Kinnisvara_kasv_2005"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4647026c3a3b5d4a81c0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "THI_kasv_2005"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
