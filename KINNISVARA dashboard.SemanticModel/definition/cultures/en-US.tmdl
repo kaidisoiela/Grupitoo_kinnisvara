@@ -2607,141 +2607,55 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.keskmine_intressimäär": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Keskmine_Intressimäär"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "keskmine intressimäär": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Keskmine_Intressimäär": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.intressi_värv_keskmine": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Intressi_Värv_Keskmine"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "intressi värv keskmine": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Intressi_Värv_Keskmine": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_day": {
-			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.day": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_days"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_month": {
-			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.month": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_months"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.quarter": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_quarters"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_year": {
-			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.year": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_years"
-			        }
-			      ]
-			    },
 			    "grupitoo_kv_dim_time_pk_quarter_id_has_date_hierarchy": {
 			      "Binding": {
 			        "ConceptualEntity": "grupitoo_kv dim_time"
@@ -3088,6 +3002,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "grupitoo_kv_dim_times_have_grupitoo_kv_fact_intressids"
+			        }
+			      ]
+			    },
+			    "entity__measure_has_intressi_värv_keskmine": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.intressi_värv_keskmine": {
+			          "Target": {
+			            "Entity": "entity__measure.intressi_värv_keskmine"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intressi_värv_keskmine"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_intressi_värv_keskmine"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_intressid_has_entity__measure_keskmine_intressimäär": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_intressid"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_intressid": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_intressid"
+			          }
+			        },
+			        "entity__measure.keskmine_intressimäär": {
+			          "Target": {
+			            "Entity": "entity__measure.keskmine_intressimäär"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_intressid"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.keskmine_intressimäär"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_intressids_have_keskmine_intressimäär"
 			        }
 			      ]
 			    },
@@ -3979,6 +3959,33 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "grupitoo_kv_fact_palks_have_average_salaries"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "grupitoo_kv_fact_palk.average_salary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "average_salary_indicates_how_expensive_grupitoo_kv_fact_palks_are"
 			        }
 			      ]
 			    },
@@ -4045,6 +4052,33 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "grupitoo_kv_fact_kvs_have_avg_price_m_2"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "grupitoo_kv_fact_kv.avg_price_m_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "avg_price_m_2_indicates_how_expensive_grupitoo_kv_fact_kvs_are"
 			        }
 			      ]
 			    },
@@ -4453,6 +4487,138 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "grupitoo_kv_dim_counties_are_in_county_names"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_year": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.year": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_years"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.quarter": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_quarters"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_month": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.month": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_months"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_day": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.day": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_days"
 			        }
 			      ]
 			    }

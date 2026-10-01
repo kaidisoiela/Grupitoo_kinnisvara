@@ -4,10 +4,10 @@
   "position": {
     "x": 650,
     "y": 554.28571428571433,
-    "z": 6009,
+    "z": 13000,
     "height": 568.57142857142856,
     "width": 601.42857142857144,
-    "tabOrder": 6006
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "barChart",
@@ -173,42 +173,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9a5d7279c30003007268",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "24ebd5e9aaaa4700c023",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

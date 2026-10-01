@@ -4,9 +4,10 @@
   "position": {
     "x": 594.28571428571433,
     "y": 62.857142857142861,
-    "z": 6008,
+    "z": 12000,
     "height": 292.85714285714289,
-    "width": 334.28571428571433
+    "width": 334.28571428571433,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "kpi",
@@ -93,42 +94,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "05fec4c55e59ac9e92c2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "59aeef1da94cedcb0326",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_palk"
-                  }
-                },
-                "Property": "average_salary"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
