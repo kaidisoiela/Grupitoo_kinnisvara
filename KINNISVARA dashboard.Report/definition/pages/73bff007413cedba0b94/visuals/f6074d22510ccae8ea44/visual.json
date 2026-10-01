@@ -4,9 +4,10 @@
   "position": {
     "x": 1255.7142857142858,
     "y": 1627.1428571428573,
-    "z": 6004,
+    "z": 9000,
     "height": 157.14285714285714,
-    "width": 450.00000000000006
+    "width": 450.00000000000006,
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -75,42 +76,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "77d6415481b909c1e99e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9c8fe13408b5502bbc06",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_intressid"
-                  }
-                },
-                "Property": "intress"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a92f8d1b6cb5278eca94",
+  "name": "7f11584b035b08b49e00",
   "position": {
-    "x": 0,
-    "y": 412.85714285714289,
-    "z": 10000,
-    "height": 107.14285714285715,
-    "width": 1557.1428571428573,
-    "tabOrder": 9000
+    "x": 1541.304347826087,
+    "y": 97.826086956521735,
+    "z": 1,
+    "height": 634.78260869565213,
+    "width": 258.695652173913,
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "slicer",
@@ -20,57 +20,22 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
+                      "Entity": "grupitoo_kv dim_county"
                     }
                   },
-                  "Property": "year_number"
+                  "Property": "county_name"
                 }
               },
-              "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
-              "active": true
+              "queryRef": "grupitoo_kv dim_county.county_name",
+              "nativeQueryRef": "Maakond",
+              "active": true,
+              "displayName": "Maakond"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "selection": [
-        {
-          "properties": {
-            "singleSelect": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "selectAllCheckboxEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "general": [
-        {
-          "properties": {
-            "orientation": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          }
-        }
-      ],
       "data": [
         {
           "properties": {
@@ -84,13 +49,31 @@
           }
         }
       ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
       "header": [
         {
           "properties": {
-            "text": {
+            "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'AASTA '"
+                  "Value": "17D"
                 }
               }
             }
@@ -99,20 +82,45 @@
       ]
     },
     "visualContainerObjects": {
-      "title": [
+      "border": [
         {
           "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "''"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
                 }
               }
             }
