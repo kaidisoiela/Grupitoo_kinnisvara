@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d69e7186ca0909b3657c",
   "position": {
-    "x": 33.333333333333336,
-    "y": 211.66666666666669,
-    "z": 6010,
+    "x": 1411.4285714285716,
+    "y": 554.28571428571433,
+    "z": 14000,
     "height": 117.14285714285715,
     "width": 127.14285714285715,
-    "tabOrder": 6007
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -122,28 +122,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ed0c329920036e5806cd",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_thi"
-                  }
-                },
-                "Property": "keskmine_indeks"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f180899d1006db1ce308",
   "position": {
-    "x": 21.666666666666668,
-    "y": 491.66666666666669,
-    "z": 6009,
-    "height": 441.66666666666669,
-    "width": 491.66666666666669,
-    "tabOrder": 6006
+    "x": 650,
+    "y": 554.28571428571433,
+    "z": 13000,
+    "height": 568.57142857142856,
+    "width": 601.42857142857144,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "barChart",
@@ -173,42 +173,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5141d2c130d0c14e3c91",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a93e07e6a907c6e6a301",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e20d66fc5a50000bccb0",
   "position": {
-    "x": 1200,
-    "y": 518.33333333333337,
-    "z": 6006,
-    "height": 415,
-    "width": 628.33333333333337,
-    "tabOrder": 6004
+    "x": 0,
+    "y": 1218.5714285714287,
+    "z": 11000,
+    "height": 387.14285714285717,
+    "width": 614.28571428571433,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -176,7 +176,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ostujõud maakonniti: '"
+                  "Value": "'Ostujõud maakonniti: mitu m2 saab ühe kuupalga eest?'"
                 }
               }
             }
@@ -185,37 +185,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4f4965a2271be917aa43",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a520c7dd7490b7d0cbd5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Ostujõud_m2"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

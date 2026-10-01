@@ -124,7 +124,7 @@ FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
 
 
 
-/* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "Eesti_keskmine_palk_maakonniti_2005_2025_py_final.csv" */
+/* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "Eesti_keskmine_palk_py_final.csv" */
 
 -- 1. Kustutame vana tabeli, kui see on olemas
 DROP TABLE IF EXISTS grupitoo_kv.fact_palk CASCADE;

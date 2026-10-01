@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "28685577eb3da5673741",
   "position": {
-    "x": 1140,
-    "y": 50,
-    "z": 6013,
+    "x": 1251.4285714285716,
+    "y": 62.857142857142861,
+    "z": 17000,
     "height": 292.85714285714289,
-    "width": 318.57142857142861
+    "width": 318.57142857142861,
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "kpi",
@@ -66,37 +67,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ff30c38242304010a702",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Ostujõud_m2"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b7eec7bf9b0be5c209c0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

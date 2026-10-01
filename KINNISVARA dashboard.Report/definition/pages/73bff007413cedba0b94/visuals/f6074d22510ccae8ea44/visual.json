@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a217fc29827900192496",
+  "name": "f6074d22510ccae8ea44",
   "position": {
-    "x": 655.71428571428578,
-    "y": 1218.5714285714287,
-    "z": 7000,
-    "height": 387.14285714285717,
-    "width": 604.28571428571433,
-    "tabOrder": 7000
+    "x": 1255.7142857142858,
+    "y": 1627.1428571428573,
+    "z": 9000,
+    "height": 157.14285714285714,
+    "width": 450.00000000000006,
+    "tabOrder": 17000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -32,39 +32,26 @@
             }
           ]
         },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
-                    }
-                  },
-                  "Property": "county_name"
-                }
-              },
-              "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "Count of county_name"
-            }
-          ]
-        },
         "Y": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_intressid"
+                        }
+                      },
+                      "Property": "intress"
                     }
                   },
-                  "Property": "Ostujõud_m2"
+                  "Function": 1
                 }
               },
-              "queryRef": "_Measures.Ajalooline_Ostujõud_m2",
-              "nativeQueryRef": "Ostujõud_m2"
+              "queryRef": "Sum(grupitoo_kv fact_intressid.intress)",
+              "nativeQueryRef": "Average of intress"
             }
           ]
         }
@@ -80,7 +67,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ostujõu 20 aasta trendijoon'"
+                  "Value": "'Intressimäärade mõju eluasemelaenudele'"
                 }
               }
             }
