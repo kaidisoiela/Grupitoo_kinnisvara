@@ -100,7 +100,15 @@
         }
       ],
       "name": "All tables",
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "zoomValue": 56.373325889555815,
+=======
       "zoomValue": 50,
+>>>>>>> main
+=======
+      "zoomValue": 50,
+>>>>>>> 6ee18ce7fe49730e01129de1840c92e23d2d7d3f
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

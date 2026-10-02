@@ -2478,6 +2478,12 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+<<<<<<< HEAD
+<<<<<<< HEAD
+			    "entity__measure.ostujõu_foorituli": {
+=======
+=======
+>>>>>>> 6ee18ce7fe49730e01129de1840c92e23d2d7d3f
 			    "entity__measure.intressi_mõju_indeks": {
 			      "Definition": {
 			        "Binding": {
@@ -2524,6 +2530,10 @@ cultureInfo en-US
 			      ]
 			    },
 			    "entity__measure.foorituli_värv": {
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> 6ee18ce7fe49730e01129de1840c92e23d2d7d3f
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -2545,6 +2555,11 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6ee18ce7fe49730e01129de1840c92e23d2d7d3f
 			    },
 			    "entity__measure.palk_eelmine_aasta": {
 			      "Definition": {
@@ -2695,6 +2710,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> 6ee18ce7fe49730e01129de1840c92e23d2d7d3f
 			    }
 			  },
 			  "Relationships": {
