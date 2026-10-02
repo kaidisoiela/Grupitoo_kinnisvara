@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "98a98e29735e962e13e3",
+  "name": "ebd8db500e5911a3c6ac",
   "position": {
-    "x": 842.85714285714289,
-    "y": 840.81632653061229,
+    "x": 516,
+    "y": 1676,
     "z": 4000,
-    "height": 534.69387755102036,
-    "width": 824.48979591836735,
+    "height": 650,
+    "width": 938,
     "tabOrder": 2000
   },
   "visual": {
@@ -1025,80 +1025,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5b26cfa10027082835eb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d8548c329c9c26704a1a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv dim_county"
-                  }
-                },
-                "Property": "county_name"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c834d348a33a2e1bd0b3",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_palk"
-                  }
-                },
-                "Property": "average_salary"
-              }
-            },
-            "Function": 4
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "aaaec1134b9ec9449075",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_kv"
-                  }
-                },
-                "Property": "avg_price_m2"
-              }
-            },
-            "Function": 4
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

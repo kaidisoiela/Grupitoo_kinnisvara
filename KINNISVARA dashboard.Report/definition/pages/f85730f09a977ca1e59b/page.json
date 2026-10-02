@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "f85730f09a977ca1e59b",
-  "displayName": "Intress",
-  "displayOption": "FitToPage",
-  "height": 3000,
-  "width": 3000
-}

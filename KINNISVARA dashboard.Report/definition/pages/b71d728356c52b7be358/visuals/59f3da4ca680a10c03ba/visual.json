@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "db8296a6c2654d2616b3",
+  "name": "59f3da4ca680a10c03ba",
   "position": {
-    "x": 1178.75,
-    "y": 147.5,
-    "z": 2,
-    "height": 506.25,
-    "width": 173.75,
-    "tabOrder": 2
+    "x": 1541.304347826087,
+    "y": 97.826086956521735,
+    "z": 2000,
+    "height": 634.78260869565213,
+    "width": 258.695652173913,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "county_name",
-              "active": true
+              "nativeQueryRef": "Maakond",
+              "active": true,
+              "displayName": "Maakond"
             }
           ]
         }
@@ -50,11 +51,16 @@
       ],
       "general": [
         {
+          "properties": {}
+        }
+      ],
+      "items": [
+        {
           "properties": {
-            "orientation": {
+            "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "15D"
                 }
               }
             }
@@ -64,10 +70,10 @@
       "header": [
         {
           "properties": {
-            "text": {
+            "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'Maakond'"
+                  "Value": "17D"
                 }
               }
             }
@@ -76,20 +82,45 @@
       ]
     },
     "visualContainerObjects": {
-      "title": [
+      "border": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
-            "text": {
+            "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "'Maakond'"
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
                 }
               }
             }
@@ -98,23 +129,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f43ae9a5c537a9860213",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

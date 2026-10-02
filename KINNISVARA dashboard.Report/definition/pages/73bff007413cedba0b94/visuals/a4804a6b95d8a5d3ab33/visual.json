@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a4804a6b95d8a5d3ab33",
   "position": {
-    "x": 50,
-    "y": 978.75,
+    "x": 51.428571428571431,
+    "y": 1641.4285714285716,
     "z": 1000,
-    "height": 453.75,
-    "width": 737.5,
+    "height": 402.85714285714289,
+    "width": 695.71428571428578,
     "tabOrder": 1000
   },
   "visual": {
@@ -47,6 +47,29 @@
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
               "nativeQueryRef": "county_name"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_kv"
+                        }
+                      },
+                      "Property": "transaction_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(grupitoo_kv fact_kv.transaction_count)",
+              "nativeQueryRef": "Sum of transaction_count"
             }
           ]
         },
@@ -123,53 +146,13 @@
           }
         }
       ],
-      "y1AxisReferenceLine": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "displayName": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Y-Axis Constant Line 1'"
-                }
-              }
-            },
-            "value": {
-              "expr": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "grupitoo_kv fact_thi"
-                        }
-                      },
-                      "Property": "keskmine_indeks"
-                    }
-                  },
-                  "Function": 1
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "1"
-          }
-        }
-      ],
       "zoom": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -221,6 +204,50 @@
             }
           }
         }
+      ],
+      "plotAreaShading": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Symmetry shading 1'"
+                }
+              }
+            },
+            "upperShadingColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "lowerShadingColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -231,6 +258,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'Keskmine palk ja m2 hind maakondade kaupa'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -304,6 +344,25 @@
               }
             },
             "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "53e6fffc4350dbb659be",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_kv"
+                  }
+                },
+                "Property": "transaction_count"
+              }
+            },
+            "Function": 0
           }
         },
         "type": "Advanced"

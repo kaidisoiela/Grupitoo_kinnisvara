@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "8655ab96ca2be6ce82a7",
+  "name": "b71d728356c52b7be358",
   "displayName": "Siret",
   "displayOption": "FitToPage",
   "height": 3000,
@@ -22,8 +22,8 @@
   },
   "visualInteractions": [
     {
-      "source": "cd173f36cb210000ca30",
-      "target": "98a98e29735e962e13e3",
+      "source": "59f3da4ca680a10c03ba",
+      "target": "ebd8db500e5911a3c6ac",
       "type": "DataFilter"
     }
   ]

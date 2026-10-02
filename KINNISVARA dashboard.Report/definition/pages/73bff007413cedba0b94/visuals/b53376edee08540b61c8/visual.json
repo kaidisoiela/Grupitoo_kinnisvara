@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a217fc29827900192496",
+  "name": "b53376edee08540b61c8",
   "position": {
-    "x": 782.85714285714289,
-    "y": 2090,
-    "z": 6001,
-    "height": 452.85714285714289,
-    "width": 767.14285714285722,
-    "tabOrder": 6001
+    "x": 50,
+    "y": 1035.7142857142858,
+    "z": 6015,
+    "height": 285.71428571428572,
+    "width": 698.57142857142867,
+    "tabOrder": 6010
   },
   "visual": {
     "visualType": "lineChart",
@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
+              "nativeQueryRef": "Count of year_number",
               "active": true
             }
           ]
@@ -46,7 +46,7 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "Count of county_name"
+              "nativeQueryRef": "county_name"
             }
           ]
         },
@@ -54,17 +54,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_kv"
+                        }
+                      },
+                      "Property": "avg_price_m2"
                     }
                   },
-                  "Property": "Ostujõud_m2"
+                  "Function": 0
                 }
               },
-              "queryRef": "_Measures.Ajalooline_Ostujõud_m2",
-              "nativeQueryRef": "Ostujõud_m2"
+              "queryRef": "Sum(grupitoo_kv fact_kv.avg_price_m2)",
+              "nativeQueryRef": "Sum of avg_price_m2"
             }
           ]
         }
@@ -74,59 +79,6 @@
       }
     },
     "objects": {
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "zoom": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showOnValueAxis": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
       "categoryAxis": [
         {
           "properties": {
@@ -140,13 +92,13 @@
           }
         }
       ],
-      "seriesLabels": [
+      "valueAxis": [
         {
           "properties": {
-            "show": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'Keskmine m2 hind'"
                 }
               }
             }
@@ -161,7 +113,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ostujõu 20 aasta trendijoon'"
+                  "Value": "'Kinnisvaraturu hinnatase'"
                 }
               }
             }
@@ -187,21 +139,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "d07f2a79de85b3898011",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Ostujõud_m2"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e407d044bd1bc8e54122",
+        "name": "ba403bfec292ac0a2a34",
         "field": {
           "Column": {
             "Expression": {
@@ -215,7 +153,7 @@
         "type": "Categorical"
       },
       {
-        "name": "2863f8f3eba316113255",
+        "name": "905bb922eb70637e099e",
         "field": {
           "Column": {
             "Expression": {
@@ -224,6 +162,25 @@
               }
             },
             "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4370706e220509e30611",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_kv"
+                  }
+                },
+                "Property": "avg_price_m2"
+              }
+            },
+            "Function": 0
           }
         },
         "type": "Advanced"
