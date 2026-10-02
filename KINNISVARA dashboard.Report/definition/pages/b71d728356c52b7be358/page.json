@@ -5,6 +5,11 @@
   "displayOption": "FitToPage",
   "height": 3000,
   "width": 3000,
+  "pageBinding": {
+    "name": "f716b20d2ea860e040ce",
+    "type": "Default",
+    "parameters": []
+  },
   "objects": {
     "outspacePane": [
       {
