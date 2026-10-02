@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "b71d728356c52b7be358",
+  "displayName": "Duplicate of Siret",
+  "displayOption": "FitToPage",
+  "height": 3000,
+  "width": 3000,
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "183L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "59f3da4ca680a10c03ba",
+      "target": "ebd8db500e5911a3c6ac",
+      "type": "DataFilter"
+    }
+  ]
+}
