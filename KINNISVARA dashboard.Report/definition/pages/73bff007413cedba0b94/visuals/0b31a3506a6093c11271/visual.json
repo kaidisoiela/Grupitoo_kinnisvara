@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "0b31a3506a6093c11271",
   "position": {
-    "x": 623.75,
-    "y": 513.75,
+    "x": 524.28571428571433,
+    "y": 440,
     "z": 5000,
-    "height": 420,
-    "width": 755,
+    "height": 571.42857142857144,
+    "width": 754.28571428571433,
     "tabOrder": 5000
   },
   "visual": {
@@ -101,6 +101,55 @@
                   "Value": "true"
                 }
               }
+            },
+            "seriesPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            },
+            "seriesMaximumWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "25L"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "leaderLines": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "seriesWordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "seriesMatchColor": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "seriesTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           }
         }
@@ -147,6 +196,27 @@
                   "Value": "'Keskmine palk'"
                 }
               }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "350D"
+                }
+              }
+            },
+            "logAxisScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "invertAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -158,6 +228,55 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "areaMatchStrokeColor": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
+            },
+            "interpolationSmooth": {
+              "expr": {
+                "Literal": {
+                  "Value": "'monotoneX'"
+                }
+              }
+            },
+            "interpolationSmoothParam": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "strokeLineJoin": {
+              "expr": {
+                "Literal": {
+                  "Value": "'round'"
+                }
+              }
+            },
+            "lineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
                 }
               }
             }
@@ -176,10 +295,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "grupitoo_kv dim_time"
+                                  "Entity": "grupitoo_kv fact_palk"
                                 }
                               },
-                              "Property": "year_number"
+                              "Property": "average_salary"
                             }
                           },
                           "Function": 0
@@ -261,6 +380,19 @@
             }
           }
         }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "88D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -271,6 +403,45 @@
               "expr": {
                 "Literal": {
                   "Value": "'Keskmine palk maakondade kaupa'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

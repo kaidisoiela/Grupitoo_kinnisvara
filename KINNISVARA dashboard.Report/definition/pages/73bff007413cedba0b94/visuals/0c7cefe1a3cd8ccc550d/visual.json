@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a217fc29827900192496",
+  "name": "0c7cefe1a3cd8ccc550d",
   "position": {
-    "x": 782.85714285714289,
-    "y": 2090,
-    "z": 6001,
-    "height": 452.85714285714289,
-    "width": 767.14285714285722,
-    "tabOrder": 6001
+    "x": 807.14285714285722,
+    "y": 1035.7142857142858,
+    "z": 6016,
+    "height": 285.71428571428572,
+    "width": 760,
+    "tabOrder": 6011
   },
   "visual": {
     "visualType": "lineChart",
@@ -46,7 +46,7 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
-              "nativeQueryRef": "Count of county_name"
+              "nativeQueryRef": "county_name"
             }
           ]
         },
@@ -54,79 +54,51 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_palk"
+                        }
+                      },
+                      "Property": "average_salary"
                     }
                   },
-                  "Property": "Ostujõud_m2"
+                  "Function": 0
                 }
               },
-              "queryRef": "_Measures.Ajalooline_Ostujõud_m2",
-              "nativeQueryRef": "Ostujõud_m2"
+              "queryRef": "Sum(grupitoo_kv fact_palk.average_salary)",
+              "nativeQueryRef": "Sum of average_salary"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "grupitoo_kv fact_palk"
+                      }
+                    },
+                    "Property": "average_salary"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
     "objects": {
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "zoom": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showOnValueAxis": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
       "categoryAxis": [
         {
           "properties": {
@@ -140,13 +112,13 @@
           }
         }
       ],
-      "seriesLabels": [
+      "valueAxis": [
         {
           "properties": {
-            "show": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'Keskmine palk'"
                 }
               }
             }
@@ -161,7 +133,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ostujõu 20 aasta trendijoon'"
+                  "Value": "'Sissetuleku tase'"
                 }
               }
             }
@@ -187,35 +159,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "d07f2a79de85b3898011",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Ostujõud_m2"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e407d044bd1bc8e54122",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
-              }
-            },
-            "Property": "county_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2863f8f3eba316113255",
+        "name": "29fd0304338ec5790689",
         "field": {
           "Column": {
             "Expression": {
@@ -227,6 +171,39 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "318cfd98d66092ce8b30",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_palk"
+                  }
+                },
+                "Property": "average_salary"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "48359da00c6ac092a663",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
+              }
+            },
+            "Property": "county_name"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

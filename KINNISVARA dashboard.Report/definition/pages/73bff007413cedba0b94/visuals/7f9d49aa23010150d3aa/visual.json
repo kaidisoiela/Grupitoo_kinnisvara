@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a92f8d1b6cb5278eca94",
+  "name": "7f9d49aa23010150d3aa",
   "position": {
-    "x": 52.857142857142861,
-    "y": 321.42857142857144,
-    "z": 6005,
-    "height": 108.57142857142858,
-    "width": 1514.2857142857144,
-    "tabOrder": 6003
+    "x": 50,
+    "y": 1345.7142857142858,
+    "z": 6017,
+    "height": 257.14285714285717,
+    "width": 700,
+    "tabOrder": 6012
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -31,6 +31,29 @@
               "active": true
             }
           ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv fact_intressid"
+                        }
+                      },
+                      "Property": "intress"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(grupitoo_kv fact_intressid.intress)",
+              "nativeQueryRef": "Average of intress"
+            }
+          ]
         }
       },
       "sortDefinition": {
@@ -38,59 +61,26 @@
       }
     },
     "objects": {
-      "selection": [
+      "categoryAxis": [
         {
           "properties": {
-            "singleSelect": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "selectAllCheckboxEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
           }
         }
       ],
-      "general": [
+      "valueAxis": [
         {
           "properties": {
-            "orientation": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "data": [
-        {
-          "properties": {
-            "mode": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Basic'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "header": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'AASTA '"
+                  "Value": "'Keskmine intress'"
                 }
               }
             }
@@ -105,14 +95,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "''"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'Finantstingimused'"
                 }
               }
             }
@@ -138,7 +121,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "be95020a778a45322800",
+        "name": "f03bb5aa17923a9b2ce7",
         "field": {
           "Column": {
             "Expression": {
@@ -147,6 +130,25 @@
               }
             },
             "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "79a7fdf5e99600a73030",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_intressid"
+                  }
+                },
+                "Property": "intress"
+              }
+            },
+            "Function": 1
           }
         },
         "type": "Advanced"
