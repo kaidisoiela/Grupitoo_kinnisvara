@@ -3,7 +3,7 @@ table 'grupitoo_kv dim_time'
 
 	column pk_quarter_id
 		dataType: dateTime
-		formatString: Long Date
+		formatString: dd/mm/yyyy
 		lineageTag: e599cac5-192c-4423-b1a7-bfc857e15d5d
 		summarizeBy: none
 		sourceColumn: pk_quarter_id
@@ -16,6 +16,8 @@ table 'grupitoo_kv dim_time'
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column year_number
 		dataType: int64
