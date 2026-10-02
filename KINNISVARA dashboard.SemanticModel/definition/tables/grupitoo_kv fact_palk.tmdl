@@ -1,9 +1,11 @@
+/// Faktitabeli fact_palk grain on ühe maakonna keskmine brutopalk ühes kvartalis. 3 veergu, 1290 rida. Ajaperiood 2005-2026 (kaks esimest kvartalit), 15 maakonda.
 table 'grupitoo_kv fact_palk'
 	lineageTag: 1dadcdcc-fee7-4ecd-ba61-826922285f37
 
+	/// Kvartali tunnus on kuupäeva formaadis, iga kvartali esimene kuupäev.
 	column fk_quarter_id
 		dataType: dateTime
-		formatString: Long Date
+		formatString: dd.mm.yyyy
 		lineageTag: 63d00476-050a-408f-ae77-2df62fc60441
 		summarizeBy: none
 		sourceColumn: fk_quarter_id
@@ -12,6 +14,9 @@ table 'grupitoo_kv fact_palk'
 
 		annotation UnderlyingDateTimeDataType = Date
 
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	/// Keskmine brutokuupalk kvartalite ja maakondade lõikes.
 	column average_salary
 		dataType: int64
 		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
@@ -21,6 +26,7 @@ table 'grupitoo_kv fact_palk'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// 1-Harju maakond, 2-Hiiu maakond, 3-Ida-Viru maakond, 4-Jõgeva maakond, 5-Järva maakond, 6-Lääne-Viru maakond, 7-Lääne maakond, 8-Põlva maakond, 9-Pärnu maakond, 10-Rapla maakond, 11-Saare maakond, 12-Tartu maakond, 13-Valga maakond, 14-Viljandi maakond, 15-Võru maakond
 	column fk_county_id
 		dataType: int64
 		formatString: 0

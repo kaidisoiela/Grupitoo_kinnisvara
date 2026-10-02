@@ -1082,6 +1082,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.6
 			          }
+			        },
+			        {
+			          "Aasta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -2399,6 +2409,16 @@ cultureInfo en-US
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Kinnisvara kasvuindeks alates 2005": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2421,6 +2441,16 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "THI kasvuindeks alates 2005": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2493,18 +2523,25 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.ostujõu_foorituli": {
+			    "entity__measure.foorituli_värv": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Ostujõu foorituli"
+			          "ConceptualProperty": "Foorituli_Värv"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ostujõu foorituli": {
+			          "foorituli värv": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Foorituli_Värv": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -2629,6 +2666,29 @@ cultureInfo en-US
 			        },
 			        {
 			          "Keskmine_Intressimäär": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.intressi_värv_keskmine": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Intressi_Värv_Keskmine"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "intressi värv keskmine": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Intressi_Värv_Keskmine": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -3053,6 +3113,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "entity__measure_has_intressi_värv_keskmine": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.intressi_värv_keskmine": {
+			          "Target": {
+			            "Entity": "entity__measure.intressi_värv_keskmine"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intressi_värv_keskmine"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_intressi_värv_keskmine"
+			        }
+			      ]
+			    },
 			    "grupitoo_kv_fact_intressid_has_entity__measure_keskmine_intressimäär": {
 			      "Binding": {
 			        "ConceptualEntity": "grupitoo_kv fact_intressid"
@@ -3284,7 +3377,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõu_foorituli": {
+			    "grupitoo_kv_fact_palk_has_entity__measure_foorituli_värv": {
 			      "Binding": {
 			        "ConceptualEntity": "grupitoo_kv fact_palk"
 			      },
@@ -3295,9 +3388,9 @@ cultureInfo en-US
 			            "Entity": "grupitoo_kv_fact_palk"
 			          }
 			        },
-			        "entity__measure.ostujõu_foorituli": {
+			        "entity__measure.foorituli_värv": {
 			          "Target": {
-			            "Entity": "entity__measure.ostujõu_foorituli"
+			            "Entity": "entity__measure.foorituli_värv"
 			          }
 			        }
 			      },
@@ -3308,16 +3401,16 @@ cultureInfo en-US
 			              "Role": "grupitoo_kv_fact_palk"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.ostujõu_foorituli"
+			              "Role": "entity__measure.foorituli_värv"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_ostujõu_foorituli"
+			          "ID": "grupitoo_kv_fact_palks_have_foorituli_värv"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõu_foorituli": {
+			    "grupitoo_kv_fact_kv_has_entity__measure_foorituli_värv": {
 			      "Binding": {
 			        "ConceptualEntity": "grupitoo_kv fact_kv"
 			      },
@@ -3328,9 +3421,9 @@ cultureInfo en-US
 			            "Entity": "grupitoo_kv_fact_kv"
 			          }
 			        },
-			        "entity__measure.ostujõu_foorituli": {
+			        "entity__measure.foorituli_värv": {
 			          "Target": {
-			            "Entity": "entity__measure.ostujõu_foorituli"
+			            "Entity": "entity__measure.foorituli_värv"
 			          }
 			        }
 			      },
@@ -3341,12 +3434,12 @@ cultureInfo en-US
 			              "Role": "grupitoo_kv_fact_kv"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.ostujõu_foorituli"
+			              "Role": "entity__measure.foorituli_värv"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_ostujõu_foorituli"
+			          "ID": "grupitoo_kv_fact_kvs_have_foorituli_värv"
 			        }
 			      ]
 			    },
