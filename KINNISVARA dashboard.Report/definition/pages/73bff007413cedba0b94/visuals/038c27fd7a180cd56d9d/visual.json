@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a5bc12b9817aa97b0005",
+  "name": "038c27fd7a180cd56d9d",
   "position": {
-    "x": 47.777777777777779,
-    "y": 147.77777777777777,
-    "z": 0,
-    "height": 556.66666666666663,
-    "width": 1103.3333333333333,
-    "tabOrder": 0
+    "x": 782.85714285714289,
+    "y": 1641.4285714285716,
+    "z": 6014,
+    "height": 402.85714285714289,
+    "width": 777.14285714285722,
+    "tabOrder": 6009
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -80,26 +80,6 @@
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "grupitoo_kv fact_kv"
-                      }
-                    },
-                    "Property": "avg_price_m2"
-                  }
-                },
-                "Function": 1
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -697,7 +677,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "98c2fe8712c0a3400208",
+        "name": "03dd3d4906c4c18d4d99",
         "field": {
           "Column": {
             "Expression": {
@@ -711,26 +691,7 @@
         "type": "Advanced"
       },
       {
-        "name": "1a4037025c9a05c4d107",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv fact_intressid"
-                  }
-                },
-                "Property": "intress"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "85b73885b0bbd4cd9b07",
+        "name": "fb194db9226c286134cd",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -741,6 +702,25 @@
                   }
                 },
                 "Property": "avg_price_m2"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ed223c7b66ec36ee1405",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "grupitoo_kv fact_intressid"
+                  }
+                },
+                "Property": "intress"
               }
             },
             "Function": 1

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f180899d1006db1ce308",
   "position": {
-    "x": 40,
-    "y": 521.25,
+    "x": 52.857142857142861,
+    "y": 440,
     "z": 6009,
-    "height": 412.5,
-    "width": 568.75,
+    "height": 571.42857142857144,
+    "width": 454.28571428571433,
     "tabOrder": 6006
   },
   "visual": {
@@ -72,6 +72,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "300D"
                 }
               }
             }
@@ -157,6 +164,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "300D"
                 }
               }
             }
@@ -267,6 +281,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'Keskmine kinnisvara m2 hind (€)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

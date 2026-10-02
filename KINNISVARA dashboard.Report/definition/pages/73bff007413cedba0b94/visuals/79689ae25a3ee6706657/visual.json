@@ -32,6 +32,21 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Keskmine_Intressimäär"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -131,6 +146,19 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -138,7 +166,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f969c7d2ed59a00060a0",
+        "name": "1c80b5f9b1868049d306",
         "field": {
           "Measure": {
             "Expression": {
