@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a217fc29827900192496",
   "position": {
-    "x": 655.71428571428578,
-    "y": 1218.5714285714287,
-    "z": 7000,
-    "height": 387.14285714285717,
-    "width": 604.28571428571433,
-    "tabOrder": 7000
+    "x": 830,
+    "y": 978.75,
+    "z": 6001,
+    "height": 437.5,
+    "width": 817.5,
+    "tabOrder": 6001
   },
   "visual": {
     "visualType": "lineChart",
@@ -73,6 +73,74 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showOnValueAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -89,5 +157,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d07f2a79de85b3898011",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Ostujõud_m2"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e407d044bd1bc8e54122",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_county"
+              }
+            },
+            "Property": "county_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2863f8f3eba316113255",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "grupitoo_kv dim_time"
+              }
+            },
+            "Property": "year_number"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

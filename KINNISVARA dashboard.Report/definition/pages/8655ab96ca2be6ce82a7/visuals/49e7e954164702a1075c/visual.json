@@ -115,21 +115,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "24D"
                 }
               }
             }
@@ -142,28 +128,14 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Korterite keskmine m2 hind (€/m²)'"
+                  "Value": "'Korteri keskmine m2 hind'"
                 }
               }
             },
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "17D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "24D"
                 }
               }
             }
@@ -176,28 +148,14 @@
             "secTitleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Keskmne brutopalk (€)'"
+                  "Value": "'Keskmne palk EUR'"
                 }
               }
             },
             "secTitleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
-                }
-              }
-            },
-            "secFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
-            "secBold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "24D"
                 }
               }
             }
@@ -254,20 +212,6 @@
                   "Value": "false"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           }
         }
@@ -296,16 +240,9 @@
                 "scaling": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Fit'"
+                      "Value": "'Fill'"
                     }
                   }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
                 }
               }
             }
@@ -327,7 +264,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "24D"
                 }
               }
             },
@@ -336,74 +273,9 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "null"
+                      "Value": "'#5CD9A3'"
                     }
                   }
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.4
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "lockAspect": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
@@ -416,7 +288,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3985f85e7eb0c60940ed",
+        "name": "bff6d3a70abb28d90d0d",
         "field": {
           "Column": {
             "Expression": {
@@ -430,7 +302,7 @@
         "type": "Advanced"
       },
       {
-        "name": "baeb4b00200d2e0d0e6b",
+        "name": "e33326a703407e579ec3",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -449,7 +321,7 @@
         "type": "Advanced"
       },
       {
-        "name": "13aa0bbd53e89b3658c7",
+        "name": "0d0305cd503bb8996274",
         "field": {
           "Aggregation": {
             "Expression": {

@@ -9,6 +9,15 @@
         "page": "2.3.1"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "AccessibleNeutral",
+      "reportVersionAtImport": {
+        "visual": "2.11.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "SharedResources"
     }
   },
   "objects": {
@@ -31,7 +40,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -44,6 +53,11 @@
       "name": "SharedResources",
       "type": "SharedResources",
       "items": [
+        {
+          "name": "AccessibleNeutral",
+          "path": "BuiltInThemes/AccessibleNeutral.json",
+          "type": "CustomTheme"
+        },
         {
           "name": "CY26SU07",
           "path": "BaseThemes/CY26SU07.json",

@@ -2493,25 +2493,18 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.foorituli_värv": {
+			    "entity__measure.ostujõu_foorituli": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Foorituli_Värv"
+			          "ConceptualProperty": "Ostujõu foorituli"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "foorituli värv": {
+			          "ostujõu foorituli": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Foorituli_Värv": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -2526,15 +2519,21 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
+			          "Palk eelmisel aastal samal ajal": {
+			            "LastModified": "2026-10-01T08:42:08.366Z"
+			          }
+			        },
+			        {
 			          "palk eelmine aasta": {
-			            "State": "Generated"
+			            "State": "Deleted",
+			            "LastModified": "2026-10-01T08:42:08.366Z"
 			          }
 			        },
 			        {
 			          "Palk_Eelmine_Aasta": {
 			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
+			            "State": "Deleted",
+			            "LastModified": "2026-10-01T08:42:08.366Z"
 			          }
 			        }
 			      ]
@@ -2549,15 +2548,21 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
+			          "Keskmine ostujõud": {
+			            "LastModified": "2026-10-01T08:41:32.825Z"
+			          }
+			        },
+			        {
 			          "ostujõud värv keskmine": {
-			            "State": "Generated"
+			            "State": "Deleted",
+			            "LastModified": "2026-10-01T08:41:32.826Z"
 			          }
 			        },
 			        {
 			          "Ostujõud_Värv_Keskmine": {
 			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
+			            "State": "Deleted",
+			            "LastModified": "2026-10-01T08:41:32.826Z"
 			          }
 			        }
 			      ]
@@ -2630,32 +2635,75 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
-			    },
-			    "entity__measure.intressi_värv_keskmine": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Intressi_Värv_Keskmine"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "intressi värv keskmine": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Intressi_Värv_Keskmine": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.quarter": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_quarters"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_year": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.year": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_years"
+			        }
+			      ]
+			    },
 			    "grupitoo_kv_dim_time_pk_quarter_id_has_date_hierarchy": {
 			      "Binding": {
 			        "ConceptualEntity": "grupitoo_kv dim_time"
@@ -3005,39 +3053,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure_has_intressi_värv_keskmine": {
-			      "Binding": {
-			        "ConceptualEntity": "_Measures"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity__measure": {
-			          "Target": {
-			            "Entity": "entity__measure"
-			          }
-			        },
-			        "entity__measure.intressi_värv_keskmine": {
-			          "Target": {
-			            "Entity": "entity__measure.intressi_värv_keskmine"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity__measure"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.intressi_värv_keskmine"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_measures_have_intressi_värv_keskmine"
-			        }
-			      ]
-			    },
 			    "grupitoo_kv_fact_intressid_has_entity__measure_keskmine_intressimäär": {
 			      "Binding": {
 			        "ConceptualEntity": "grupitoo_kv fact_intressid"
@@ -3199,7 +3214,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_ostujõud_värv_keskmine"
+			          "ID": "grupitoo_kv_fact_palks_have_Keskmine_ostujõud"
 			        }
 			      ]
 			    },
@@ -3232,7 +3247,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_ostujõud_värv_keskmine"
+			          "ID": "grupitoo_kv_fact_kvs_have_Keskmine_ostujõud"
 			        }
 			      ]
 			    },
@@ -3265,11 +3280,11 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_palk_eelmine_aasta"
+			          "ID": "grupitoo_kv_fact_palks_have_Palk_eelmisel_aastal_samal_ajal"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_palk_has_entity__measure_foorituli_värv": {
+			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõu_foorituli": {
 			      "Binding": {
 			        "ConceptualEntity": "grupitoo_kv fact_palk"
 			      },
@@ -3280,9 +3295,9 @@ cultureInfo en-US
 			            "Entity": "grupitoo_kv_fact_palk"
 			          }
 			        },
-			        "entity__measure.foorituli_värv": {
+			        "entity__measure.ostujõu_foorituli": {
 			          "Target": {
-			            "Entity": "entity__measure.foorituli_värv"
+			            "Entity": "entity__measure.ostujõu_foorituli"
 			          }
 			        }
 			      },
@@ -3293,16 +3308,16 @@ cultureInfo en-US
 			              "Role": "grupitoo_kv_fact_palk"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.foorituli_värv"
+			              "Role": "entity__measure.ostujõu_foorituli"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_foorituli_värv"
+			          "ID": "grupitoo_kv_fact_palks_have_ostujõu_foorituli"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_foorituli_värv": {
+			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõu_foorituli": {
 			      "Binding": {
 			        "ConceptualEntity": "grupitoo_kv fact_kv"
 			      },
@@ -3313,9 +3328,9 @@ cultureInfo en-US
 			            "Entity": "grupitoo_kv_fact_kv"
 			          }
 			        },
-			        "entity__measure.foorituli_värv": {
+			        "entity__measure.ostujõu_foorituli": {
 			          "Target": {
-			            "Entity": "entity__measure.foorituli_värv"
+			            "Entity": "entity__measure.ostujõu_foorituli"
 			          }
 			        }
 			      },
@@ -3326,12 +3341,12 @@ cultureInfo en-US
 			              "Role": "grupitoo_kv_fact_kv"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.foorituli_värv"
+			              "Role": "entity__measure.ostujõu_foorituli"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_foorituli_värv"
+			          "ID": "grupitoo_kv_fact_kvs_have_ostujõu_foorituli"
 			        }
 			      ]
 			    },
@@ -4487,72 +4502,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "grupitoo_kv_dim_counties_are_in_county_names"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_year": {
-			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.year": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_years"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.quarter": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_quarters"
 			        }
 			      ]
 			    },
