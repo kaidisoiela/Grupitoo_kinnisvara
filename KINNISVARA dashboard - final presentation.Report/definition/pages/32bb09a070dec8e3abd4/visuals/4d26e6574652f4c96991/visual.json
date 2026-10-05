@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "038c27fd7a180cd56d9d",
+  "name": "4d26e6574652f4c96991",
   "position": {
-    "x": 782.85714285714289,
-    "y": 1641.4285714285716,
-    "z": 6014,
-    "height": 402.85714285714289,
-    "width": 777.14285714285722,
-    "tabOrder": 6009
+    "x": 160,
+    "y": 1525,
+    "z": 3,
+    "height": 520,
+    "width": 1640,
+    "tabOrder": 3
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -626,6 +626,20 @@
                   "Value": "'Kinnisvara hindade ja intressimäärade suhe'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "17D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -695,61 +709,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "03dd3d4906c4c18d4d99",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Aeg"
-              }
-            },
-            "Property": "Aasta"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fb194db9226c286134cd",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Kinnisvara"
-                  }
-                },
-                "Property": "Keskmine_m2_hind"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ed223c7b66ec36ee1405",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Intressid"
-                  }
-                },
-                "Property": "Intress"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

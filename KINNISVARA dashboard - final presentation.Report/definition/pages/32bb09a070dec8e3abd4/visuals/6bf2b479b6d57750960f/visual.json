@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "2788360513224377132b",
+  "name": "6bf2b479b6d57750960f",
   "position": {
     "x": 160,
-    "y": 1573.3333333333335,
-    "z": 5001,
-    "height": 843.33333333333337,
-    "width": 1640
+    "y": 2110,
+    "z": 4,
+    "height": 535,
+    "width": 1640,
+    "tabOrder": 4
   },
   "visual": {
     "visualType": "lineChart",
@@ -26,9 +27,8 @@
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "Aasta",
-              "active": true,
-              "displayName": "Aasta"
+              "nativeQueryRef": "year_number",
+              "active": true
             }
           ]
         },
@@ -46,8 +46,7 @@
                 }
               },
               "queryRef": "_Measures.Kinnisvara_kasv_2005",
-              "nativeQueryRef": "Kinnisvara kasvuindeks alates 2005",
-              "displayName": "Kinnisvara kasvuindeks alates 2005"
+              "nativeQueryRef": "Kinnisvara_kasv_2005"
             },
             {
               "field": {
@@ -61,8 +60,21 @@
                 }
               },
               "queryRef": "_Measures.THI_kasv_2005",
-              "nativeQueryRef": "THI kasvuindeks alates 2005",
-              "displayName": "THI kasvuindeks alates 2005"
+              "nativeQueryRef": "THI_kasv_2005"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mõõdikud"
+                    }
+                  },
+                  "Property": "Palga_kasv_2005"
+                }
+              },
+              "queryRef": "_Measures.Palga_kasv_2005",
+              "nativeQueryRef": "Palga_kasv_2005"
             }
           ]
         }
@@ -71,36 +83,56 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Mõõdikud"
+                    "Entity": "Aeg"
                   }
                 },
-                "Property": "Kinnisvara_kasv_2005"
+                "Property": "Aasta"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "objects": {
       "categoryAxis": [
         {
           "properties": {
-            "titleFontSize": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
+                  "Value": "'Aasta'"
                 }
               }
             },
-            "fontSize": {
+            "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
+                  "Value": "1L"
+                }
+              }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "2005D"
+                }
+              }
+            },
+            "concatenateLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -110,64 +142,10 @@
       "valueAxis": [
         {
           "properties": {
-            "fontSize": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
-                }
-              }
-            },
-            "titleFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "17D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "17D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "lineStyles": [
-        {
-          "properties": {
-            "lineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'solid'"
-                }
-              }
-            },
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "lineChartType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'linear'"
-                }
-              }
-            },
-            "areaShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'Kasvukordaja'"
                 }
               }
             }
@@ -183,56 +161,17 @@
                   "Value": "true"
                 }
               }
-            },
-            "labelDensity": {
-              "expr": {
-                "Literal": {
-                  "Value": "80L"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelContentLayout": {
-              "expr": {
-                "Literal": {
-                  "Value": "'SingleLine'"
-                }
-              }
-            },
-            "leaderLines": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
             }
           }
         }
       ],
-      "plotArea": [
+      "seriesLabels": [
         {
           "properties": {
-            "image": {
-              "image": {
-                "name": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "''"
-                    }
-                  }
-                },
-                "url": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "''"
-                    }
-                  }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -247,14 +186,39 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Kinnisvara kasvuindeksi ja tarbijahinnaindeksi võrdlus 2005-2026'"
+                  "Value": "'Kinnisvarahindade ja elukalliduse kumulatiivne kasv (Baas 2005 = 1.0)'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "17D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }

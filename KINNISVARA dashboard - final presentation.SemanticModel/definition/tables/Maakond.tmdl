@@ -32,8 +32,6 @@ table Maakond
 				in
 				    #"Renamed Columns"
 
-	changedProperty = Name
-
 	annotation PBI_NavigationStepName = Navigation
 
 	annotation PBI_ResultType = Table
