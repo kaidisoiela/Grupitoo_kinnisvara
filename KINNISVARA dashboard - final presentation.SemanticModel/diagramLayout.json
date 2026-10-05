@@ -1,0 +1,112 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 166.66667175292969,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 131.06798269321706,
+            "y": 259.31729909195633
+          },
+          "nodeIndex": "grupitoo_kv dim_county",
+          "nodeLineageTag": "b8c952a5-01f8-4645-8a1e-a6b3930e1b4f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1226.723906518735,
+            "y": 245.22396761956742
+          },
+          "nodeIndex": "grupitoo_kv fact_intressid",
+          "nodeLineageTag": "0c1620aa-a808-4fd2-9875-409f90eaff74",
+          "size": {
+            "height": 145,
+            "width": 276.27999441716679
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 258.05427975720715,
+            "y": 772.14107039387454
+          },
+          "nodeIndex": "grupitoo_kv fact_kv",
+          "nodeLineageTag": "0790d168-e311-4134-bd9a-3ec607babc4b",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 723.160818364683,
+            "y": 0
+          },
+          "nodeIndex": "grupitoo_kv fact_palk",
+          "nodeLineageTag": "1dadcdcc-fee7-4ecd-ba61-826922285f37",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1146.1571828932927,
+            "y": 819.32811717405286
+          },
+          "nodeIndex": "grupitoo_kv fact_thi",
+          "nodeLineageTag": "171342b0-9e7d-4fcd-a969-e334a7b16a11",
+          "size": {
+            "height": 145,
+            "width": 246.68399832515001
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 653.60393817640625,
+            "y": 315.69062498151203
+          },
+          "nodeIndex": "grupitoo_kv dim_time",
+          "size": {
+            "height": 200,
+            "width": 291.7826590367946
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1433.364489671256,
+            "y": 495.21339233979444
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "2551044b-7945-4e24-819f-33094a8731fb",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 5
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 50,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
