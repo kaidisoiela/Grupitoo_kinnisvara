@@ -6,14 +6,11 @@ import plotly.express as px
 # === SAMM 1: ÄPI LEHE JA PEALKIRJADE SEADISTUS ===
 st.set_page_config(page_title="Kinnisvara Ostujõu Indeks", layout="wide")
 
-# --- LISATUD EFEKT: MAJAKESTE JA EURODE SADU TAASTAL ---
-# We inject the animation elements into the parent document so they display globally.
+# --- LISATUD EFEKT: MAJAKESTE JA EURODE SADU TAUSTAL ---
 efekti_html = """
 <script>
-    // Access the main Streamlit document outside of this sandboxed iframe
     const parentDoc = window.parent.document;
     
-    // Create the global animation container if it doesn't exist yet
     let sajuKast = parentDoc.getElementById('globaalne-rahasadu');
     if (!sajuKast) {
         sajuKast = parentDoc.createElement('div');
@@ -23,8 +20,8 @@ efekti_html = """
         sajuKast.style.left = '0';
         sajuKast.style.width = '100vw';
         sajuKast.style.height = '100vh';
-        sajuKast.style.pointerEvents = 'none'; // Allows clicking through elements
-        sajuKast.style.zIndex = '99999';       // Ensures it sits above standard panels
+        sajuKast.style.pointerEvents = 'none'; 
+        sajuKast.style.zIndex = '99999';       
         sajuKast.style.overflow = 'hidden';
         parentDoc.body.appendChild(sajuKast);
     }
@@ -41,39 +38,35 @@ efekti_html = """
         el.style.opacity = Math.random() * 0.4 + 0.3;       
         el.style.transform = `rotate(${Math.random() * 360}deg)`;
         
-        const kukkumisKiirus = Math.random() * 5 + 5; // Falls for 5 to 10 seconds
+        const kukkumisKiirus = Math.random() * 5 + 5; 
         el.style.transition = `top ${kukkumisKiirus}s linear, left ${kukkumisKiirus}s ease-in-out, transform ${kukkumisKiirus}s linear`;
         
         sajuKast.appendChild(el);
         
-        // Trigger the drop transition smoothly
         setTimeout(() => {
             el.style.top = '105vh';
             el.style.left = (parseFloat(el.style.left) + (Math.random() * 10 - 5)) + 'vw';
             el.style.transform = `rotate(${Math.random() * 720}deg)`;
         }, 50);
         
-        // Remove item safely once it clears the viewport bounds
         setTimeout(() => {
             el.remove();
         }, kukkumisKiirus * 1000);
     }
     
-    // Check if interval is already active to prevent multi-triggering on script reruns
     if (!window.saduKäimas) {
         window.saduKäimas = true;
-        setInterval(looElement, 700); // Generates an item every 700ms
+        setInterval(looElement, 700); 
     }
 </script>
 """
-# Render the script injection block
 st.components.v1.html(efekti_html, height=0, width=0)
 
 st.title("📐 Mitu ruutmeetrit korterit saad osta ühe kuupalgaga?")
 st.markdown("""
     Antud äpp arvutab makromajandusandmete põhjal välja **Kinnisvara Ostujõu Indeksi**.
     See näitab visuaalselt, mitu ruutmeetrit Eesti korteriomandit sai keskmise (või Sinu enda) 
-    ühe kuu netopalgaga konkreetses maakonnas reaalajas osta aastatel 2005–2025.
+    ühe kuu brutopalgaga konkreetses maakonnas reaalajas osta aastatel **2005–2026**.
 """)
 
 # === SAMM 2: ANDMETE LAADIMINE JA FORMAATIDE ÜHTLUSTAMINE ===
@@ -129,7 +122,8 @@ def laadi_ja_puhasta_andmed():
     df_merged['Maakond'] = df_merged['Maakond_Puhas'] + " maakond"
     df_merged['Aasta'] = df_merged['Kvartal_ID'].str[:4].astype(int)
     
-    df_merged = df_merged[(df_merged['Aasta'] >= 2005) & (df_merged['Aasta'] <= 2025)].copy()
+    # MUUDATUS: Filtreerime andmed vahemikku 2005 kuni 2026
+    df_merged = df_merged[(df_merged['Aasta'] >= 2005) & (df_merged['Aasta'] <= 2026)].copy()
     
     df_merged['Hind_m2'] = pd.to_numeric(df_merged['Hind_m2'], errors='coerce').fillna(1000)
     df_merged['Palk'] = pd.to_numeric(df_merged['Palk'], errors='coerce').fillna(1200)
@@ -140,7 +134,7 @@ with st.spinner("⏳ Andmete ettevalmistamine..."):
     df_ostujoud = laadi_ja_puhasta_andmed()
 
 # === SAMM 3: INTERAKTIIVNE KÜLGPANEEL (MÄNGULISUS) ===
-st.sidebar.header("👤 Sinu Personaalsed Sätted")
+st.sidebar.header("👤 Sinu personaalsed sätted")
 
 koik_maakonnad = sorted(df_ostujoud['Maakond'].unique())
 valitud_maakonnad = st.sidebar.multiselect(
@@ -157,8 +151,8 @@ palga_kordaja = st.sidebar.slider(
 
 # === SAMM 4: MATEMAATILISED REAALAJA ARVUTUSED ===
 df_calc = df_ostujoud.copy()
-df_calc['net_salary'] = (df_calc['Palk'] * palga_kordaja) * 0.80
-df_calc['Ostetavad_Ruutmeetrid'] = round(df_calc['net_salary'] / df_calc['Hind_m2'], 2)
+df_calc['bruto_salary'] = (df_calc['Palk'] * palga_kordaja)
+df_calc['Ostetavad_Ruutmeetrid'] = round(df_calc['bruto_salary'] / df_calc['Hind_m2'], 2)
 
 df_yearly = df_calc.groupby(['Maakond', 'Aasta']).agg({
     'Ostetavad_Ruutmeetrid': 'mean',
@@ -177,17 +171,16 @@ if not df_filtered.empty:
         color="Maakond",
         markers=True,
         title="Kinnisvara Ostujõu Indeks (Ruutmeetrit ühe kuupalga eest)",
-        labels={"Ostetavad_Ruutmeetrid": "Mitu m² saab 1 kuu netopalga eest", "Aasta": "Aasta"}
+        labels={"Ostetavad_Ruutmeetrid": "Mitu m² saab 1 kuu brutopalga eest", "Aasta": "Aasta"}
     )
     
     fig.update_traces(
-        hovertemplate="<b>%{json_backend_country} (%{x})</b><br>" +
-                      "Ostujõud: <b>%{y:.2f} m²</b> kuupalga eest<br>" +
+        hovertemplate="<b>%{y:.2f} m²</b> kuupalga eest<br>" +
                       "<extra></extra>"
     )
     
     fig.update_layout(
-        xaxis_nticks=21, 
+        xaxis_nticks=22, # Kohandatud, et näidata skaalat puhtalt kuni aastani 2026
         hovermode="x unified", 
         height=600
     )
