@@ -3,6 +3,7 @@ import pandas as pd
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 from statsmodels.tsa.stattools import grangercausalitytests
 from matplotlib.ticker import FixedLocator, FixedFormatter
 
@@ -38,8 +39,7 @@ st.title("📊 Kinnisvarahindade ja majandusnäitajate seoste analüüs")
 st.markdown("""
 <div class="info-box">
     <h3>👋 Tere tulemast kinnisvaraturu analüsaatorisse!</h3>
-    <p>See rakendus aitab Sul lihtsal viisil mõista, kuidas Eesti majanduse käekäik (palgad, hinnatõus ja intressid) mõjutab kinnisvara ruutmeetri hinda. 
-    Sa ei pea olema majandusteadlane – rakendus seletab kõik tulemused samm-sammult lahti.</p>
+    <p>See rakendus aitab Sul lihtsal viisil mõista, kuidas Eesti majanduse käekäik (palgad, hinnatõus ja intressid) mõjutab kinnisvara ruutmeetri hinda.</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -67,12 +67,12 @@ maakondade_nimekiri = ["Kogu Eesti"] + list(df_loplis['maakond'].unique())
 valitud_maakond = st.sidebar.selectbox("1. Vali piirkond, mida uurida:", options=maakondade_nimekiri)
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("🤖 OLS mudeli seaded")
+st.sidebar.subheader("⚙️ Statistilise mudeli sisendid")
 
 makro_tunnused = {
-    "Keskmine brutopalk (3-kuulise nihkega)": "palk_lag",
-    "Tarbijahinnaindeks / Elukallidus (3-kuulise nihkega)": "thi_lag",
-    "Kodulaenu intressimäär (3-kuulise nihkega)": "intress_lag"
+    "Keskmine brutopalk (1-kvartali nihkega)": "palk_lag",
+    "Tarbijahinnaindeks / Elukallidus (1-kvartali nihkega)": "thi_lag",
+    "Kodulaenu intressimäär (1-kvartali nihkega)": "intress_lag"
 }
 
 valitud_makro_tekst = st.sidebar.multiselect(
@@ -108,8 +108,11 @@ with col_seos1:
     st.write("**Kuidas tabelit lugeda:** Number vahemikus 0 kuni 1 tähendab, et näitajad liiguvad samas suunas (nt palga tõustes tõuseb ka kinnisvara hind). Mida lähedamal number on ühele (1.00), seda tugevam on seos.")
     
     corr_matrix = df_seosed_renamed.corr()
+    mask = np.triu(np.ones_like(corr_matrix, dtype=bool), k=0)
+    corr_matrix_trimmed = corr_matrix.iloc[1:, :-1]
+    mask_trimmed = mask[1:, :-1]
     fig_corr, ax_corr = plt.subplots(figsize=(6, 4.5))
-    sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", vmin=-1, vmax=1, fmt=".2f", ax=ax_corr, cbar=False)
+    sns.heatmap(corr_matrix_trimmed, annot=True, cmap="Blues", vmin=-1, vmax=1, fmt=".2f", ax=ax_corr, cbar=False, mask=mask_trimmed)
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     st.pyplot(fig_corr)
@@ -144,7 +147,7 @@ df_taskukohasus_aeg = df_seosed.groupby('fk_quarter_id').agg({'taskukohasus': 'm
 df_taskukohasus_aeg.index = df_taskukohasus_aeg.index.astype(str)
 
 fig_tasku, ax_tasku = plt.subplots(figsize=(10, 3.5))
-ax_tasku.plot(df_taskukohasus_aeg.index, df_taskukohasus_aeg['taskukohasus'], marker='o', color='#2ca02c', linewidth=2)
+ax_tasku.plot(df_taskukohasus_aeg.index, df_taskukohasus_aeg['taskukohasus'], marker='o', color='#1f77b4', linewidth=2)
 ax_tasku.set_ylabel('m² ühe brutopalga eest')
 ax_tasku.set_xlabel('Kvartal')
 
@@ -163,8 +166,8 @@ st.pyplot(fig_tasku)
 # ==============================================================================
 
 st.markdown("---")
-st.header("🤖 2. Regressioonmudeli tulemused vähimruutude meetodil (OLS)")
-st.write("Siin arvutame välja, kui täpselt suudavad valitud majandusnäitajad ajaloos toimunud hinnamuutusi selgitada.")
+st.header("🔬 2. Statistiline mudel näitajatevaheliste seoste leidmiseks")
+st.write("Siin arvutame välja, kui täpselt suudavad valitud majandusnäitajad ajaloos toimunud hinnamuutusi selgitada, rakendades regressioonmudelit vähimruutude meetodil (OLS).")
 
 if not valitud_makro_tekst:
     st.warning("⚠️ Palun vali vasakult menüüst vähemalt üks majandusnäitaja!")
@@ -204,7 +207,7 @@ else:
         <strong>⏱️ Mis on "ajanihe" (mudelis: <i>lag</i>)?</strong><br/>
         Kinnisvaraturg reageerib majandusele viivitusega. Kui täna tõuseb palk või intress, ei muutu korterite hinnad samal sekundil. 
         Inimestel kulub aega uute oludega kohanemiseks, pangaga suhtlemiseks ja tehinguni jõudmiseks. 
-        Seetõttu kasutab mudel <strong>1 kvartali (3 kuu) pikkust ajanihet</strong> — see tähendab, et täna näidatav mõju põhineb tegelikult sellel, mis toimus majanduses 3 kuud tagasi.
+        Seetõttu kasutab mudel <strong>1 kvartali pikkust ajanihet</strong> — see tähendab, et täna näidatav mõju põhineb tegelikult sellel, mis toimus majanduses 3 kuud tagasi.
     </div>
     """, unsafe_allow_html=True)
 
@@ -239,15 +242,15 @@ else:
    
     # --- JOONGRAAFIK (MUGAVALT JA SUURELT TABELI ALL) ---
     st.markdown("<br>", unsafe_allow_html=True)
-    st.subheader("📉 Aegrea võrdlus: Päris elu vs Mudeli arvutus")
+    st.subheader("📉 Aegrea võrdlus: Päris elu vs mudeli arvutus")
     st.write("Sellelt graafikult näed, kui täpselt suutis matemaatiline mudel (punane joon) tegelikke ajaloolisi hindu (sinine joon) jäljendada.")
     
     if valitud_maakond == "Kogu Eesti":
         df_graafik = df_mudel_puhas.groupby('fk_quarter_id').agg({'keskmine_ruutmeetri_hind': 'mean', 'prognoositud_hind': 'mean'}).sort_index()
-        pealkiri = "Kogu Eesti: Päris elu vs Mudeli arvutus"
+        pealkiri = "Kogu Eesti: Päris elu vs mudeli arvutus"
     else:
         df_graafik = df_mudel_puhas[df_mudel_puhas['maakond_nimi_graafikule'] == valitud_maakond].groupby('fk_quarter_id').agg({'keskmine_ruutmeetri_hind': 'mean', 'prognoositud_hind': 'mean'}).sort_index()
-        pealkiri = f"{valitud_maakond}: Päris elu vs Mudeli arvutus"
+        pealkiri = f"{valitud_maakond}: Päris elu vs mudeli arvutus"
 
     kvartali_positsioonid = list(range(len(df_graafik)))
     kvartali_sildid = [str(x) for x in df_graafik.index]
@@ -275,7 +278,7 @@ else:
 # ==============================================================================
 st.markdown("---")
 st.header("⏳ 3. Mis juhtub enne? (Ajaline juhtroll ehk kumba näitajat enne vaadata)")
-st.write("Majanduses võtavad asjad aega. Siin testime, kas majandusnäitajate muutused käivad kinnisvarahindadest ajaliselt ees ehk kas nad on nn varajased hoiatussignaalid.")
+st.write("Majanduses võtavad asjad aega. Siin testime, kas majandusnäitajate muutused käivad kinnisvarahindadest ajaliselt ees ehk kas nad on nn varajased hoiatussignaalid. Arvutused on tehtud Grangeri kausaalsuse regressioonmudeliga. ")
 
 df_granger = df_loplis.groupby('fk_quarter_id').agg({
     'keskmine_ruutmeetri_hind': 'mean',
@@ -286,7 +289,7 @@ df_granger = df_loplis.groupby('fk_quarter_id').agg({
 
 df_granger_diff = df_granger.diff().dropna()
 
-st.subheader("🎯 Vali näitaja, mille ajalist eelnevat mõju testida:")
+st.subheader("🎯 Vali näitaja, mille ajalist eelnevat ennustusvõimet testida:")
 testitav_näitaja = st.selectbox(
     "Vali majandusnäitaja:",
     options=["keskmine_brutopalk", "kodulaenu_intressimäär", "tarbijahinnaindeks"],
@@ -318,7 +321,7 @@ except Exception as e:
 # ==============================================================================
 st.markdown("---")
 st.header("🔮 4. Mängi tulevikuga: 3-aastane stsenaariumide simulaator")
-st.write("Muuda liugureid ja vaata, kuhu tüürib kinnisvara ruutmeetri hind järgmise 3 aasta jooksul.")
+st.write("Muuda liugureid ja vaata, kuhu tüürib kinnisvara ruutmeetri hind järgmise 3 aasta jooksul. Ennustus eeldab, et prognoosi sisendiks määratud näitajad kehtivad igal 3 aastal.")
 
 viimased_andmed = df_loplis.sort_values(by=['fk_quarter_id', 'maakond']).iloc[-1]
 hetke_palk = viimased_andmed['keskmine_brutopalk']
@@ -370,7 +373,7 @@ with col_s2:
     df_simulatsioon = pd.DataFrame(prognoos_kvartalid)
     
     fig_sim, ax_sim = plt.subplots(figsize=(10, 4.5))
-    ax_sim.plot(df_simulatsioon["Kvartal tulevikus"], df_simulatsioon["Prognoositud ruutmeetri hind (€)"], marker='s', linestyle='--', color='#e377c2', linewidth=2)
+    ax_sim.plot(df_simulatsioon["Kvartal tulevikus"], df_simulatsioon["Prognoositud ruutmeetri hind (€)"], marker='s', linestyle='--', color='#1f77b4', linewidth=2)
     ax_sim.set_ylabel('Hind (€/m²)')
     plt.xticks(rotation=45, ha='right')
     ax_sim.grid(True, alpha=0.3, linestyle=':')
