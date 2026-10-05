@@ -1,0 +1,4675 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "grupitoo_kv_dim_county.county_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_county",
+			          "ConceptualProperty": "county_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "county name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "county_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "county": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "county nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "county title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "county label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "county tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "shire": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "canton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Maakond": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_county": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_county"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupitoo_kv dim_county": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_county.pk_county_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_county",
+			          "ConceptualProperty": "pk_county_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pk county id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pk_county_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "county": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "county id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pk county identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "pk county identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "pk county identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "county identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "county identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "county identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "pk county credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "county credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupitoo_kv dim_time": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time.pk_quarter_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualProperty": "pk_quarter_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pk quarter id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pk_quarter_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "quarter id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pk quarter identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "pk quarter identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "pk quarter identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "quarter identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "quarter identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "quarter identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "pk quarter credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "quarter credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "pk qtr id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        },
+			        {
+			          "qtr id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.667
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "VariationSource": "pk_quarter_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pk quarter id date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "id date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarter id date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_dim_time.pk_quarter_id.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "VariationSource": "pk_quarter_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pk quarter id year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarter id year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pk quarter id yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "quarter id yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "id yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "pk qtr id year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.686
+			          }
+			        },
+			        {
+			          "qtr id year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        },
+			        {
+			          "pk quarter identification year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pk quarter identity year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pk quarter identifier year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "quarter identification year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_dim_time.pk_quarter_id.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "VariationSource": "pk_quarter_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pk quarter id quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarter id quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pk quarter id qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "quarter id qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "id qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "pk qtr id quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.686
+			          }
+			        },
+			        {
+			          "qtr id quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        },
+			        {
+			          "pk quarter identification quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pk quarter identity quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pk quarter identifier quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "quarter identification quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_dim_time.pk_quarter_id.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "VariationSource": "pk_quarter_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pk quarter id month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarter id month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pk quarter id mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "quarter id mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "id mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "pk qtr id month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.686
+			          }
+			        },
+			        {
+			          "qtr id month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        },
+			        {
+			          "pk quarter identification month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pk quarter identity month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pk quarter identifier month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "quarter identification month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_dim_time.pk_quarter_id.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "VariationSource": "pk_quarter_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pk quarter id day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarter id day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pk qtr id day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.686
+			          }
+			        },
+			        {
+			          "qtr id day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        },
+			        {
+			          "pk quarter identification day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pk quarter identity day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pk quarter identifier day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "quarter identification day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "quarter identity day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "quarter identifier day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identification day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_dim_time.year_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualProperty": "year_number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year_number": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "year no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "yr number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "Aasta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_dim_time.quarter_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualProperty": "quarter_number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter_number": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarter no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "qtr number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.667
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time.quarter_string": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualProperty": "quarter_string"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter string": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter_string": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "string": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "qtr string": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.667
+			          }
+			        },
+			        {
+			          "quarter filament": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "filament": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "quarter cord": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "quarter thread": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "quarter twine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "quarter rope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cord": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "thread": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "twine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time.half_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualProperty": "half_year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "half year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "half_year": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "half yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_intressid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_intressid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupitoo_kv fact_intressid": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_intressid.fk_quarter_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_intressid",
+			          "ConceptualProperty": "fk_quarter_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fk quarter id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fk_quarter_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "fk quarter identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "fk qtr id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_fact_intressid.intress": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_intressid",
+			          "ConceptualProperty": "intress"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "intress": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_kv"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupitoo_kv fact_kv": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv.fk_quarter_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_kv",
+			          "ConceptualProperty": "fk_quarter_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fk quarter id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fk_quarter_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "fk quarter identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "fk qtr id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_fact_kv.transaction_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_kv",
+			          "ConceptualProperty": "transaction_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transaction count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "transaction_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "transaction amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv.fk_county_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_kv",
+			          "ConceptualProperty": "fk_county_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "fk county id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fk_county_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "county": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fk county identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk county identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk county identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk county credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "shire": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "canton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv.avg_price_m_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_kv",
+			          "ConceptualProperty": "avg_price_m2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg price m 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avg_price_m2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "average price m 2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_palk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupitoo_kv fact_palk": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk.fk_quarter_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_palk",
+			          "ConceptualProperty": "fk_quarter_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fk quarter id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fk_quarter_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "fk quarter identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "fk qtr id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "grupitoo_kv_fact_palk.average_salary": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_palk",
+			          "ConceptualProperty": "average_salary"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "average salary": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average_salary": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "salary": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "average income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "average money": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "average remuneration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "average payment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "money": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "remuneration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "payment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "average pay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "average wage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk.fk_county_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_palk",
+			          "ConceptualProperty": "fk_county_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "fk county id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fk_county_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "county": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fk county identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk county identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk county identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk county credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "shire": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "canton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_thi"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupitoo_kv fact_thi": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi.keskmine_indek": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_thi",
+			          "ConceptualProperty": "keskmine_indeks"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "keskmine indek": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "keskmine_indeks": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi.fk_quarter_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "grupitoo_kv fact_thi",
+			          "ConceptualProperty": "fk_quarter_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fk quarter id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fk_quarter_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "fk quarter identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "fk quarter credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "fk qtr id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "entity__measure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_measure": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_ degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "_ quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "_ quota": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "_ extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "_ amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "_ portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "_ ration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "_ size": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.keskmine_m_2_hind": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Keskmine_m2_hind"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "keskmine m 2 hind": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Keskmine_m2_hind": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.keskmine_THI": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Keskmine_THI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "keskmine THI": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Keskmine_THI": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.reaalne_m_2_hind": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Reaalne_m2_hind"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reaalne m 2 hind": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Reaalne_m2_hind": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.hinnatõusu_lõhe_yo_Y": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Hinnatõusu_Lõhe_YoY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hinnatõusu lõhe yo Y": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Hinnatõusu_Lõhe_YoY": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.kinnisvara_THI_suhe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Kinnisvara_THI_Suhe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kinnisvara THI suhe": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Kinnisvara_THI_Suhe": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.kinnisvara_kasv_2005": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Kinnisvara_kasv_2005"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kinnisvara kasv 2005": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Kinnisvara_kasv_2005": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Kinnisvara kasvuindeks alates 2005": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.THI_kasv_2005": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "THI_kasv_2005"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "THI kasv 2005": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "THI_kasv_2005": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "THI kasvuindeks alates 2005": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.ostujõud_m_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Ostujõud_m2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ostujõud m 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ostujõud_m2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.intressi_mõju_indeks": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Intressi_Mõju_Indeks"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "intressi mõju indeks": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Intressi_Mõju_Indeks": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.kättesaadavus_m2_kuupalga_eest": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Kättesaadavus (m2 kuupalga eest)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kättesaadavus (m2 kuupalga eest)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "kättesaadavus": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.foorituli_värv": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Foorituli_Värv"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "foorituli värv": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Foorituli_Värv": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.palk_eelmine_aasta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Palk_Eelmine_Aasta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Palk eelmisel aastal samal ajal": {
+			            "LastModified": "2026-10-01T08:42:08.366Z"
+			          }
+			        },
+			        {
+			          "palk eelmine aasta": {
+			            "State": "Deleted",
+			            "LastModified": "2026-10-01T08:42:08.366Z"
+			          }
+			        },
+			        {
+			          "Palk_Eelmine_Aasta": {
+			            "Type": "Noun",
+			            "State": "Deleted",
+			            "LastModified": "2026-10-01T08:42:08.366Z"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.ostujõud_värv_keskmine": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Ostujõud_Värv_Keskmine"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Keskmine ostujõud": {
+			            "LastModified": "2026-10-01T08:41:32.825Z"
+			          }
+			        },
+			        {
+			          "ostujõud värv keskmine": {
+			            "State": "Deleted",
+			            "LastModified": "2026-10-01T08:41:32.826Z"
+			          }
+			        },
+			        {
+			          "Ostujõud_Värv_Keskmine": {
+			            "Type": "Noun",
+			            "State": "Deleted",
+			            "LastModified": "2026-10-01T08:41:32.826Z"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.hinna_värv_mediaan": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Hinna_Värv_Mediaan"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hinna värv mediaan": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Hinna_Värv_Mediaan": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.kaardi_ostujõu_värv": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Kaardi_Ostujõu_Värv"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kaardi ostujõu värv": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Kaardi_Ostujõu_Värv": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.keskmine_intressimäär": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Keskmine_Intressimäär"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "keskmine intressimäär": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Keskmine_Intressimäär": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.intressi_värv_keskmine": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Intressi_Värv_Keskmine"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "intressi värv keskmine": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Intressi_Värv_Keskmine": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.quarter": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_quarters"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_year": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.year": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_years"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_pk_quarter_id_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_ids_have_pk_quarter_id_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_grupitoo_kv_dim_time": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_grupitoo_kv_dim_times"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_grupitoo_kv_dim_time": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_grupitoo_kv_dim_times"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_times_have_grupitoo_kv_fact_palks"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_grupitoo_kv_dim_county": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "grupitoo_kv_dim_county": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_county"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_county"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_grupitoo_kv_dim_counties"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_county"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_counties_have_grupitoo_kv_fact_palks"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_grupitoo_kv_dim_time": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_grupitoo_kv_dim_times"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_times_have_grupitoo_kv_fact_kvs"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_grupitoo_kv_dim_county": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "grupitoo_kv_dim_county": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_county"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_county"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_grupitoo_kv_dim_counties"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_county"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_counties_have_grupitoo_kv_fact_kvs"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_intressid_has_grupitoo_kv_dim_time": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_intressid"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_intressid": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_intressid"
+			          }
+			        },
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_intressid"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_intressids_have_grupitoo_kv_dim_times"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_has_grupitoo_kv_fact_thi": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        },
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_times_have_grupitoo_kv_fact_this"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_has_grupitoo_kv_fact_intressid": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        },
+			        "grupitoo_kv_fact_intressid": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_intressid"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_intressid"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_times_have_grupitoo_kv_fact_intressids"
+			        }
+			      ]
+			    },
+			    "entity__measure_has_intressi_värv_keskmine": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.intressi_värv_keskmine": {
+			          "Target": {
+			            "Entity": "entity__measure.intressi_värv_keskmine"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intressi_värv_keskmine"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_intressi_värv_keskmine"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_intressid_has_entity__measure_keskmine_intressimäär": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_intressid"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_intressid": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_intressid"
+			          }
+			        },
+			        "entity__measure.keskmine_intressimäär": {
+			          "Target": {
+			            "Entity": "entity__measure.keskmine_intressimäär"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_intressid"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.keskmine_intressimäär"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_intressids_have_keskmine_intressimäär"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_kaardi_ostujõu_värv": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.kaardi_ostujõu_värv": {
+			          "Target": {
+			            "Entity": "entity__measure.kaardi_ostujõu_värv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.kaardi_ostujõu_värv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_kaardi_ostujõu_värv"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_kaardi_ostujõu_värv": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.kaardi_ostujõu_värv": {
+			          "Target": {
+			            "Entity": "entity__measure.kaardi_ostujõu_värv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.kaardi_ostujõu_värv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_kaardi_ostujõu_värv"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_hinna_värv_mediaan": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.hinna_värv_mediaan": {
+			          "Target": {
+			            "Entity": "entity__measure.hinna_värv_mediaan"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.hinna_värv_mediaan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_hinna_värv_mediaan"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõud_värv_keskmine": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.ostujõud_värv_keskmine": {
+			          "Target": {
+			            "Entity": "entity__measure.ostujõud_värv_keskmine"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ostujõud_värv_keskmine"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_Keskmine_ostujõud"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõud_värv_keskmine": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.ostujõud_värv_keskmine": {
+			          "Target": {
+			            "Entity": "entity__measure.ostujõud_värv_keskmine"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ostujõud_värv_keskmine"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_Keskmine_ostujõud"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_palk_eelmine_aasta": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.palk_eelmine_aasta": {
+			          "Target": {
+			            "Entity": "entity__measure.palk_eelmine_aasta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.palk_eelmine_aasta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_Palk_eelmisel_aastal_samal_ajal"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_foorituli_värv": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.foorituli_värv": {
+			          "Target": {
+			            "Entity": "entity__measure.foorituli_värv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.foorituli_värv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_foorituli_värv"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_foorituli_värv": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.foorituli_värv": {
+			          "Target": {
+			            "Entity": "entity__measure.foorituli_värv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.foorituli_värv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_foorituli_värv"
+			        }
+			      ]
+			    },
+			    "entity__measure_has_kättesaadavus_m2_kuupalga_eest": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.kättesaadavus_m2_kuupalga_eest": {
+			          "Target": {
+			            "Entity": "entity__measure.kättesaadavus_m2_kuupalga_eest"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.kättesaadavus_m2_kuupalga_eest"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_kättesaadavus_m2_kuupalga_eest"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_entity__measure_intressi_mõju_indeks": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "entity__measure.intressi_mõju_indeks": {
+			          "Target": {
+			            "Entity": "entity__measure.intressi_mõju_indeks"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intressi_mõju_indeks"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_intressi_mõju_indeks"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_intressi_mõju_indeks": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.intressi_mõju_indeks": {
+			          "Target": {
+			            "Entity": "entity__measure.intressi_mõju_indeks"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intressi_mõju_indeks"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_intressi_mõju_indeks"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_intressi_mõju_indeks": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.intressi_mõju_indeks": {
+			          "Target": {
+			            "Entity": "entity__measure.intressi_mõju_indeks"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intressi_mõju_indeks"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_intressi_mõju_indeks"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõud_m_2": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "entity__measure.ostujõud_m_2": {
+			          "Target": {
+			            "Entity": "entity__measure.ostujõud_m_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ostujõud_m_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_ostujõud_m_2"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõud_m_2": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.ostujõud_m_2": {
+			          "Target": {
+			            "Entity": "entity__measure.ostujõud_m_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ostujõud_m_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_ostujõud_m_2"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_entity__measure_THI_kasv_2005": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "entity__measure.THI_kasv_2005": {
+			          "Target": {
+			            "Entity": "entity__measure.THI_kasv_2005"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.THI_kasv_2005"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_THI_kasv_2005"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_kinnisvara_kasv_2005": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.kinnisvara_kasv_2005": {
+			          "Target": {
+			            "Entity": "entity__measure.kinnisvara_kasv_2005"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.kinnisvara_kasv_2005"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_kinnisvara_kasv_2005"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_entity__measure_kinnisvara_THI_suhe": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "entity__measure.kinnisvara_THI_suhe": {
+			          "Target": {
+			            "Entity": "entity__measure.kinnisvara_THI_suhe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.kinnisvara_THI_suhe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_kinnisvara_THI_suhe"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_kinnisvara_THI_suhe": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.kinnisvara_THI_suhe": {
+			          "Target": {
+			            "Entity": "entity__measure.kinnisvara_THI_suhe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.kinnisvara_THI_suhe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_kinnisvara_THI_suhe"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_entity__measure_hinnatõusu_lõhe_yo_Y": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "entity__measure.hinnatõusu_lõhe_yo_Y": {
+			          "Target": {
+			            "Entity": "entity__measure.hinnatõusu_lõhe_yo_Y"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.hinnatõusu_lõhe_yo_Y"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_hinnatõusu_lõhe_yo_Y"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_hinnatõusu_lõhe_yo_Y": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.hinnatõusu_lõhe_yo_Y": {
+			          "Target": {
+			            "Entity": "entity__measure.hinnatõusu_lõhe_yo_Y"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.hinnatõusu_lõhe_yo_Y"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_hinnatõusu_lõhe_yo_Y"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_entity__measure_reaalne_m_2_hind": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "entity__measure.reaalne_m_2_hind": {
+			          "Target": {
+			            "Entity": "entity__measure.reaalne_m_2_hind"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.reaalne_m_2_hind"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_reaalne_m_2_hind"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_reaalne_m_2_hind": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.reaalne_m_2_hind": {
+			          "Target": {
+			            "Entity": "entity__measure.reaalne_m_2_hind"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.reaalne_m_2_hind"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_reaalne_m_2_hind"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_entity__measure_keskmine_THI": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "entity__measure.keskmine_THI": {
+			          "Target": {
+			            "Entity": "entity__measure.keskmine_THI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.keskmine_THI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_keskmine_THI"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_entity__measure_keskmine_m_2_hind": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "entity__measure.keskmine_m_2_hind": {
+			          "Target": {
+			            "Entity": "entity__measure.keskmine_m_2_hind"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.keskmine_m_2_hind"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_keskmine_m_2_hind"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_fk_quarter_id": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "grupitoo_kv_fact_thi.fk_quarter_id": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi.fk_quarter_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_thi.fk_quarter_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_fk_quarter_ids"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_thi_has_keskmine_indek": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_thi": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi"
+			          }
+			        },
+			        "grupitoo_kv_fact_thi.keskmine_indek": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_thi.keskmine_indek"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_thi"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_thi.keskmine_indek"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_this_have_keskmine_indeks"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_average_salary": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "grupitoo_kv_fact_palk.average_salary": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk.average_salary"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_palk.average_salary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_average_salaries"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "grupitoo_kv_fact_palk.average_salary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "average_salary_indicates_how_expensive_grupitoo_kv_fact_palks_are"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_palk_has_fk_quarter_id": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_palk": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk"
+			          }
+			        },
+			        "grupitoo_kv_fact_palk.fk_quarter_id": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_palk.fk_quarter_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_palk"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_palk.fk_quarter_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_palks_have_fk_quarter_ids"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_avg_price_m_2": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "grupitoo_kv_fact_kv.avg_price_m_2": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv.avg_price_m_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_kv.avg_price_m_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_avg_price_m_2"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "grupitoo_kv_fact_kv.avg_price_m_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "avg_price_m_2_indicates_how_expensive_grupitoo_kv_fact_kvs_are"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_transaction_count": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "grupitoo_kv_fact_kv.transaction_count": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv.transaction_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_kv.transaction_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_transaction_counts"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_kv_has_fk_quarter_id": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_kv": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv"
+			          }
+			        },
+			        "grupitoo_kv_fact_kv.fk_quarter_id": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_kv.fk_quarter_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_kv"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_kv.fk_quarter_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_kvs_have_fk_quarter_ids"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_intressid_has_intress": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_intressid"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_intressid": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_intressid"
+			          }
+			        },
+			        "grupitoo_kv_fact_intressid.intress": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_intressid.intress"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_intressid"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_intressid.intress"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_intressids_have_intresses"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_fact_intressid_has_fk_quarter_id": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv fact_intressid"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_fact_intressid": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_intressid"
+			          }
+			        },
+			        "grupitoo_kv_fact_intressid.fk_quarter_id": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_fact_intressid.fk_quarter_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_fact_intressid"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_fact_intressid.fk_quarter_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_fact_intressids_have_fk_quarter_ids"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_has_half_year": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.half_year": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.half_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.half_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_times_have_half_years"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_has_quarter_string": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.quarter_string": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.quarter_string"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.quarter_string"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_times_have_quarter_strings"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_has_quarter_number": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.quarter_number": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.quarter_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.quarter_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_times_have_quarter_numbers"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_has_year_number": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.year_number": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.year_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.year_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_times_have_year_numbers"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_has_pk_quarter_id": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_times_have_pk_quarter_ids"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_county_has_pk_county_id": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_county"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_county": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_county"
+			          }
+			        },
+			        "grupitoo_kv_dim_county.pk_county_id": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_county.pk_county_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_county"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_county.pk_county_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_counties_have_pk_county_ids"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_county_has_county_name": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_county"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_county": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_county"
+			          }
+			        },
+			        "grupitoo_kv_dim_county.county_name": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_county.county_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_county"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_county.county_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_counties_have_county_names"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_county_in_county_name": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_county"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_county": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_county"
+			          }
+			        },
+			        "grupitoo_kv_dim_county.county_name": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_county.county_name"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "grupitoo_kv_dim_county.county_name"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_county"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_county.county_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grupitoo_kv_dim_counties_are_in_county_names"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_month": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.month": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_months"
+			        }
+			      ]
+			    },
+			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_day": {
+			      "Binding": {
+			        "ConceptualEntity": "grupitoo_kv dim_time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			          }
+			        },
+			        "grupitoo_kv_dim_time.pk_quarter_id.day": {
+			          "Target": {
+			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_days"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+
