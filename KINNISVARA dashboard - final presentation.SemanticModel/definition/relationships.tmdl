@@ -1,43 +1,43 @@
 relationship e0251ab1-069a-4fca-ad2a-f8f709159528
 	joinOnDateBehavior: datePartOnly
-	fromColumn: 'grupitoo_kv dim_time'.pk_quarter_id
+	fromColumn: Aeg.Põhivõti_kvartali_id
 	toColumn: LocalDateTable_958e4012-c6bb-4308-8f52-466c737b0509.Date
 
 relationship feadc231-bc9c-4db4-bcc1-4b746ab172de
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
-	fromColumn: 'grupitoo_kv fact_intressid'.fk_quarter_id
-	toColumn: 'grupitoo_kv dim_time'.pk_quarter_id
+	fromColumn: Intressid.Võõrvõti_kvartali_id
+	toColumn: Aeg.Põhivõti_kvartali_id
 
 	annotation PBI_IsFromSource = FS
 
 relationship 49da9001-5a4a-41c0-adc4-1c720649743b
-	fromColumn: 'grupitoo_kv fact_kv'.fk_county_id
-	toColumn: 'grupitoo_kv dim_county'.pk_county_id
+	fromColumn: Kinnisvara.Võõrvõti_maakonna_id
+	toColumn: Maakond.Põhivõti_maakonna_id
 
 	annotation PBI_IsFromSource = FS
 
 relationship da71d045-2328-4d68-89ed-8a34f0946c1a
-	fromColumn: 'grupitoo_kv fact_kv'.fk_quarter_id
-	toColumn: 'grupitoo_kv dim_time'.pk_quarter_id
+	fromColumn: Kinnisvara.Võõrvõti_kvartali_id
+	toColumn: Aeg.Põhivõti_kvartali_id
 
 	annotation PBI_IsFromSource = FS
 
 relationship af61dde6-41b6-4803-8481-2e265662c5ec
-	fromColumn: 'grupitoo_kv fact_palk'.fk_county_id
-	toColumn: 'grupitoo_kv dim_county'.pk_county_id
+	fromColumn: Palk.Põhivõti_maakonna_id
+	toColumn: Maakond.Põhivõti_maakonna_id
 
 	annotation PBI_IsFromSource = FS
 
 relationship 0621df59-f94a-4ecc-99a2-4ebfbb0e3d34
-	fromColumn: 'grupitoo_kv fact_palk'.fk_quarter_id
-	toColumn: 'grupitoo_kv dim_time'.pk_quarter_id
+	fromColumn: Palk.Põhivõti_kvartali_id
+	toColumn: Aeg.Põhivõti_kvartali_id
 
 	annotation PBI_IsFromSource = FS
 
 relationship 148935a4-75e3-4c4a-fad2-57c7be3260b4
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
-	fromColumn: 'grupitoo_kv fact_thi'.fk_quarter_id
-	toColumn: 'grupitoo_kv dim_time'.pk_quarter_id
+	fromColumn: Tarbijahinnaindeks.Võõrvõti_kvartali_id
+	toColumn: Aeg.Põhivõti_kvartali_id
 

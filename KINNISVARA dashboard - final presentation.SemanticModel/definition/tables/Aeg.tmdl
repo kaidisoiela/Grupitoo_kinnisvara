@@ -1,0 +1,76 @@
+table Aeg
+	lineageTag: a6e9b90b-69ee-48d2-9865-3cea0a0a182d
+
+	column Põhivõti_kvartali_id
+		dataType: dateTime
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: e599cac5-192c-4423-b1a7-bfc857e15d5d
+		summarizeBy: none
+		sourceColumn: Põhivõti_kvartali_id
+
+		variation Variation
+			isDefault
+			relationship: e0251ab1-069a-4fca-ad2a-f8f709159528
+			defaultHierarchy: LocalDateTable_958e4012-c6bb-4308-8f52-466c737b0509.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Aasta
+		dataType: int64
+		formatString: 0
+		lineageTag: ae51a20e-180a-4003-b730-f4968d254dc3
+		summarizeBy: sum
+		sourceColumn: Aasta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kvartali_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 32fab86c-28c3-4f44-9f8d-f3de31af5bc8
+		summarizeBy: sum
+		sourceColumn: Kvartali_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kvartal_aasta_lõikes
+		dataType: string
+		lineageTag: 0d8f3dcf-1d76-4124-b8f4-9e566cddfa70
+		summarizeBy: none
+		sourceColumn: Kvartal_aasta_lõikes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Poolaasta
+		dataType: int64
+		formatString: 0
+		lineageTag: eaa0b3fe-2ab7-4f2b-bf24-0490c0099af2
+		summarizeBy: sum
+		sourceColumn: Poolaasta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Aeg = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "postgres"),
+				    grupitoo_kv_dim_time = Source{[Schema="grupitoo_kv",Item="dim_time"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(grupitoo_kv_dim_time,{"grupitoo_kv.fact_intressid", "grupitoo_kv.fact_kv", "grupitoo_kv.fact_palk", "grupitoo_kv.fact_thi"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"half_year", "Poolaasta"}, {"pk_quarter_id", "Põhivõti_kvartali_id"}, {"quarter_number", "Kvartali_number"}, {"quarter_string", "Kvartal_aasta_lõikes"}, {"year_number", "Aasta"}})
+				in
+				    #"Renamed Columns"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

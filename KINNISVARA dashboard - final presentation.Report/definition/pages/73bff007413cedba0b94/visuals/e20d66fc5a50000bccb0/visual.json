@@ -20,10 +20,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
+                      "Entity": "Maakond"
                     }
                   },
-                  "Property": "county_name"
+                  "Property": "Maakonna nimi"
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "Ostujõud_m2"
@@ -58,7 +58,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Measures"
+                    "Entity": "_Mõõdikud"
                   }
                 },
                 "Property": "Ostujõud_m2"
@@ -124,7 +124,7 @@
                         "Measure": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "_Measures"
+                              "Entity": "_Mõõdikud"
                             }
                           },
                           "Property": "Ostujõud_m2"
@@ -194,7 +194,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "Ostujõud_m2"
@@ -444,10 +444,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "grupitoo_kv dim_county"
+                "Entity": "Maakond"
               }
             },
-            "Property": "county_name"
+            "Property": "Maakonna nimi"
           }
         },
         "type": "Categorical"
@@ -458,7 +458,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_Measures"
+                "Entity": "_Mõõdikud"
               }
             },
             "Property": "Ostujõud_m2"

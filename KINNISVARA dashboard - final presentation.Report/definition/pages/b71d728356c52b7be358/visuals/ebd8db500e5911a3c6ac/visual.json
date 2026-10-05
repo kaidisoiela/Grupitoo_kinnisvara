@@ -20,10 +20,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
+                      "Entity": "Maakond"
                     }
                   },
-                  "Property": "county_name"
+                  "Property": "Maakonna nimi"
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
@@ -39,10 +39,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_county"
+                      "Entity": "Maakond"
                     }
                   },
-                  "Property": "county_name"
+                  "Property": "Maakonna nimi"
                 }
               },
               "queryRef": "grupitoo_kv dim_county.county_name",
@@ -60,10 +60,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_county"
+                          "Entity": "Maakond"
                         }
                       },
-                      "Property": "county_name"
+                      "Property": "Maakonna nimi"
                     }
                   },
                   "Function": 3
@@ -80,10 +80,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_palk"
+                          "Entity": "Palk"
                         }
                       },
-                      "Property": "average_salary"
+                      "Property": "Keskmine_palk"
                     }
                   },
                   "Function": 4
@@ -100,10 +100,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_kv"
+                          "Entity": "Kinnisvara"
                         }
                       },
-                      "Property": "avg_price_m2"
+                      "Property": "Keskmine_m2_hind"
                     }
                   },
                   "Function": 4
@@ -124,10 +124,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_kv"
+                          "Entity": "Kinnisvara"
                         }
                       },
-                      "Property": "avg_price_m2"
+                      "Property": "Keskmine_m2_hind"
                     }
                   },
                   "Function": 4
@@ -250,10 +250,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -292,10 +292,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -334,10 +334,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -376,10 +376,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -418,10 +418,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -460,10 +460,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -502,10 +502,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -544,10 +544,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -586,10 +586,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -628,10 +628,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -670,10 +670,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -712,10 +712,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -754,10 +754,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -796,10 +796,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {
@@ -838,10 +838,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "grupitoo_kv dim_county"
+                            "Entity": "Maakond"
                           }
                         },
-                        "Property": "county_name"
+                        "Property": "Maakonna nimi"
                       }
                     },
                     "Right": {

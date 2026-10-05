@@ -1,0 +1,113 @@
+table _Mõõdikud
+	lineageTag: 2551044b-7945-4e24-819f-33094a8731fb
+
+	/// Arvutab Maa-ameti andmete põhjal elamispindade dünaamilise keskmise turuväärtuse (nominaalse hinna) ruutmeetri kohta vastavalt valitud perioodile ja piirkonnale.
+	measure Keskmine_m2_hind = AVERAGE('Kinnisvara'[Keskmine_m2_hind])
+		formatString: #,0\ "€";-#,0\ "€";#,0\ "€"
+		lineageTag: 703810ad-9b88-4e86-b87b-6ad7167dbf1a
+
+		annotation PBI_FormatHint = {"currencyCulture":"et-EE"}
+
+	/// Statistikaameti andmetel põhinev aritmeetiline keskmine tarbijahinnaindeks, mis peegeldab üldist inflatsioonitaset ja elukalliduse muutust ajas.
+	measure Keskmine_THI = AVERAGE('Tarbijahinnaindeks'[Keskmine_indeks])
+		lineageTag: d4ff27e2-87a0-42e1-ab45-450896d2d342
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Inflatsiooniga korrigeeritud m2 hind. Valem: (Nominaalne hind / THI) * 100. Defleeritud ehk inflatsioonist puhastatud ruutmeetri hind. Jagab nominaalse hinna tarbijahinnaindeksiga (THI), et näidata vara tegelikku väärtust ja ostujõu muutust ilma rahaväärtuse devalveerumiseta.
+	measure Reaalne_m2_hind = ```
+			
+			DIVIDE(
+			    [Keskmine_m2_hind], 
+			    [Keskmine_THI], 
+			    BLANK()
+			) * 100
+			```
+		lineageTag: 7e046abc-5367-49a7-9c76-67d56ec74683
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Mõõdab kinnisvara m² hinna ja tarbijahinnaindeksi (THI) aastaste kasvutempode (Year-over-Year) vahet protsentuaalselt. Positiivne tulemus näitab, et kinnisvara kallineb elukallidusest kiiremini.
+	measure Hinnatõusu_Lõhe_YoY =
+			
+			VAR KinnisvaraEelmineAasta = CALCULATE([Keskmine_m2_hind], DATEADD('Aeg'[Põhivõti_kvartali_id], -1, YEAR))
+			VAR THIEelmineAasta = CALCULATE([Keskmine_THI], DATEADD('Aeg'[Põhivõti_kvartali_id], -1, YEAR))
+			
+			VAR KinnisvaraMuutus = DIVIDE([Keskmine_m2_hind] - KinnisvaraEelmineAasta, KinnisvaraEelmineAasta, 0)
+			VAR THIMuutus = DIVIDE([Keskmine_THI] - THIEelmineAasta, THIEelmineAasta, 0)
+			
+			RETURN
+			KinnisvaraMuutus - THIMuutus
+		lineageTag: 857a6e95-73c0-4f78-b207-03bb961b570e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Struktuurse kättesaadavuse indikaator, mis jagab keskmise ruutmeetri hinna THI väärtusega. Näitab reaalajas kinnisvara ja tarbijakorvi vaheliste kääride suhtarvu stabiilsust.
+	measure Kinnisvara_THI_Suhe = DIVIDE([Keskmine_m2_hind], [Keskmine_THI], 0)
+		lineageTag: 923ac437-3a47-4283-b399-aae58a084bca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Kinnisvara keskmise ruutmeetri hinna kumulatiivne kasv võrreldes baasperioodiga (Aasta 2005 = 1.0 ehk 100%). Näitab, mitu korda on turuhind baasaastast alates tõusnud.
+	measure Kinnisvara_kasv_2005 =
+			
+			VAR BaasHind = CALCULATE([Keskmine_m2_hind], 'Aeg'[Aasta] = 2005)
+			RETURN
+			DIVIDE([Keskmine_m2_hind], BaasHind, 0)
+		lineageTag: 5b8ceb19-0ce3-403e-ba25-67e06ca7efa3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Tarbijahinnaindeksi kumulatiivne kasv võrreldes baasperioodiga (Aasta 2005 = 1.0 ehk 100%). Näitab üldise elukalliduse ja tarbijakorvi mitmekordistumist ajas.
+	measure THI_kasv_2005 =
+			
+			VAR BaasTHI = CALCULATE([Keskmine_THI], 'Aeg'[Aasta] = 2005)
+			RETURN
+			DIVIDE([Keskmine_THI], BaasTHI, 0)
+		lineageTag: 58b3b3f2-7aea-428b-a74a-fd7f13a73656
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Elanike reaalne ostujõud kinnisvaraturul ehk mitu ruutmeetrit elamispinda saab osta ühe maakonnas teenitud keskmise kuupalga eest.
+	measure Ostujõud_m2 = ```
+			
+			DIVIDE(
+			    AVERAGE('Palk'[Keskmine_palk]), 
+			    AVERAGE('Kinnisvara'[Keskmine_m2_hind])
+			)
+			```
+		lineageTag: e8b9a67a-4b42-4fbe-8fa0-9374639d3040
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Valitud perioodi keskmise eluasemelaenu intressimäära protsendiväärtus.
+	measure Keskmine_Intressimäär = AVERAGE('Intressid'[Intress]) / 100
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 5ecccc85-31c3-4e50-852d-bf0bd352bc03
+
+	measure Palga_kasv_2005 =
+			
+			VAR JooksevPalk = AVERAGE('Palk'[Keskmine_palk])
+			VAR BaasPalk = CALCULATE(AVERAGE('Palk'[Keskmine_palk]), 'Aeg'[Aasta] = 2005)
+			RETURN
+			DIVIDE(JooksevPalk, BaasPalk, 0)
+		lineageTag: 7204509f-de98-4972-ab81-86775e31d239
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition _Mõõdikud = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

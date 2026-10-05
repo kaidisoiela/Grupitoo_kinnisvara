@@ -1,0 +1,60 @@
+/// Faktitabeli fact_palk grain on ühe maakonna keskmine brutopalk ühes kvartalis. 3 veergu, 1290 rida. Ajaperiood 2005-2026 (kaks esimest kvartalit), 15 maakonda.
+table Palk
+	lineageTag: 1dadcdcc-fee7-4ecd-ba61-826922285f37
+
+	/// Kvartali tunnus on kuupäeva formaadis, iga kvartali esimene kuupäev.
+	column Põhivõti_kvartali_id
+		dataType: dateTime
+		isHidden
+		formatString: dd.mm.yyyy
+		lineageTag: 63d00476-050a-408f-ae77-2df62fc60441
+		summarizeBy: none
+		sourceColumn: Põhivõti_kvartali_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	/// Keskmine brutokuupalk kvartalite ja maakondade lõikes.
+	column Keskmine_palk
+		dataType: int64
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 4cca1c55-ff18-4129-b5c9-2d7f46e557f0
+		summarizeBy: sum
+		sourceColumn: Keskmine_palk
+
+		annotation SummarizationSetBy = Automatic
+
+	/// 1-Harju maakond, 2-Hiiu maakond, 3-Ida-Viru maakond, 4-Jõgeva maakond, 5-Järva maakond, 6-Lääne-Viru maakond, 7-Lääne maakond, 8-Põlva maakond, 9-Pärnu maakond, 10-Rapla maakond, 11-Saare maakond, 12-Tartu maakond, 13-Valga maakond, 14-Viljandi maakond, 15-Võru maakond
+	column Põhivõti_maakonna_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 550b62e8-603b-414a-954b-c15ae588e361
+		summarizeBy: none
+		sourceColumn: Põhivõti_maakonna_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Palk = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "postgres"),
+				    grupitoo_kv_fact_palk = Source{[Schema="grupitoo_kv",Item="fact_palk"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(grupitoo_kv_fact_palk,{"grupitoo_kv.dim_county", "grupitoo_kv.dim_time"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"average_salary", "Keskmine_palk"}, {"fk_county_id", "Põhivõti_maakonna_id"}, {"fk_quarter_id", "Põhivõti_kvartali_id"}})
+				in
+				    #"Renamed Columns"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

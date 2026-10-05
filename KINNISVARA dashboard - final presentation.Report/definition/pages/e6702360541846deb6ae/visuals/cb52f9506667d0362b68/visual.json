@@ -20,10 +20,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
+                      "Entity": "Aeg"
                     }
                   },
-                  "Property": "year_number"
+                  "Property": "Aasta"
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "Kinnisvara_kasv_2005"
@@ -53,7 +53,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "THI_kasv_2005"
@@ -61,6 +61,20 @@
               },
               "queryRef": "_Measures.THI_kasv_2005",
               "nativeQueryRef": "THI_kasv_2005"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mõõdikud"
+                    }
+                  },
+                  "Property": "Palga_kasv_2005"
+                }
+              },
+              "queryRef": "_Measures.Palga_kasv_2005",
+              "nativeQueryRef": "Palga_kasv_2005"
             }
           ]
         }
@@ -72,10 +86,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "grupitoo_kv dim_time"
+                    "Entity": "Aeg"
                   }
                 },
-                "Property": "year_number"
+                "Property": "Aasta"
               }
             },
             "direction": "Ascending"
@@ -253,10 +267,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
+                "Entity": "Aeg"
               }
             },
-            "Property": "year_number"
+            "Property": "Aasta"
           }
         },
         "type": "Advanced"
@@ -267,7 +281,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_Measures"
+                "Entity": "_Mõõdikud"
               }
             },
             "Property": "Kinnisvara_kasv_2005"
@@ -281,7 +295,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_Measures"
+                "Entity": "_Mõõdikud"
               }
             },
             "Property": "THI_kasv_2005"

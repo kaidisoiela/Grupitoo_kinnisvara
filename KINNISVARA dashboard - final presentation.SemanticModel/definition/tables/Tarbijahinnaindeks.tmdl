@@ -1,0 +1,44 @@
+table Tarbijahinnaindeks
+	lineageTag: 171342b0-9e7d-4fcd-a969-e334a7b16a11
+
+	column Keskmine_indeks
+		dataType: double
+		lineageTag: 6f8a59ac-3a13-4142-9142-8efd545f1a40
+		summarizeBy: sum
+		sourceColumn: Keskmine_indeks
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Võõrvõti_kvartali_id
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 68ab4cd8-d5ee-42c1-b38c-5e086c1503c8
+		summarizeBy: none
+		sourceColumn: Võõrvõti_kvartali_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Tarbijahinnaindeks = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "postgres"),
+				    grupitoo_kv_fact_thi = Source{[Schema="grupitoo_kv",Item="fact_thi"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(grupitoo_kv_fact_thi,{"grupitoo_kv.dim_time"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"fk_quarter_id", "Võõrvõti_kvartali_id"}, {"keskmine_indeks", "Keskmine_indeks"}})
+				in
+				    #"Renamed Columns"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -5,8 +5,8 @@
     "x": 311,
     "y": 756,
     "z": 5000,
-    "height": 718,
-    "width": 733,
+    "height": 509,
+    "width": 746,
     "tabOrder": 5000
   },
   "visual": {
@@ -20,10 +20,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
+                      "Entity": "Aeg"
                     }
                   },
-                  "Property": "year_number"
+                  "Property": "Aasta"
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "Kinnisvara_kasv_2005"
@@ -53,7 +53,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "THI_kasv_2005"
@@ -67,7 +67,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "Hinnatõusu_Lõhe_YoY"
@@ -81,7 +81,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "Reaalne_m2_hind"
@@ -105,5 +105,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "492d3bc1c2b32f189608",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Aeg"
+              }
+            },
+            "Property": "Aasta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "97271ca455d54b6a5685",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Mõõdikud"
+              }
+            },
+            "Property": "Kinnisvara_kasv_2005"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8e478b2dcb98b3bc808b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Mõõdikud"
+              }
+            },
+            "Property": "THI_kasv_2005"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "62ced83ecf323d2720d6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Mõõdikud"
+              }
+            },
+            "Property": "Hinnatõusu_Lõhe_YoY"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d24983f5d345aa4fb27f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Mõõdikud"
+              }
+            },
+            "Property": "Reaalne_m2_hind"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

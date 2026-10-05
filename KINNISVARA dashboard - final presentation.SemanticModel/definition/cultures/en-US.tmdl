@@ -8,8 +8,8 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_county.county_name": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_county",
-			          "ConceptualProperty": "county_name"
+			          "ConceptualEntity": "Maakond",
+			          "ConceptualProperty": "Maakonna nimi"
 			        }
 			      },
 			      "State": "Generated",
@@ -147,7 +147,7 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_county": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_county"
+			          "ConceptualEntity": "Maakond"
 			        }
 			      },
 			      "State": "Generated",
@@ -162,8 +162,8 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_county.pk_county_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_county",
-			          "ConceptualProperty": "pk_county_id"
+			          "ConceptualEntity": "Maakond",
+			          "ConceptualProperty": "Põhivõti_maakonna_id"
 			        }
 			      },
 			      "State": "Generated",
@@ -297,7 +297,7 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time"
+			          "ConceptualEntity": "Aeg"
 			        }
 			      },
 			      "State": "Generated",
@@ -312,8 +312,8 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.pk_quarter_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
-			          "ConceptualProperty": "pk_quarter_id"
+			          "ConceptualEntity": "Aeg",
+			          "ConceptualProperty": "Põhivõti_kvartali_id"
 			        }
 			      },
 			      "State": "Generated",
@@ -448,7 +448,7 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualEntity": "Aeg",
 			          "VariationSource": "pk_quarter_id",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Date Hierarchy"
@@ -491,7 +491,7 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.pk_quarter_id.year": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualEntity": "Aeg",
 			          "VariationSource": "pk_quarter_id",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Date Hierarchy",
@@ -628,7 +628,7 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.pk_quarter_id.quarter": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualEntity": "Aeg",
 			          "VariationSource": "pk_quarter_id",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Date Hierarchy",
@@ -765,7 +765,7 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.pk_quarter_id.month": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualEntity": "Aeg",
 			          "VariationSource": "pk_quarter_id",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Date Hierarchy",
@@ -902,7 +902,7 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.pk_quarter_id.day": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
+			          "ConceptualEntity": "Aeg",
 			          "VariationSource": "pk_quarter_id",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Date Hierarchy",
@@ -1039,8 +1039,8 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.year_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
-			          "ConceptualProperty": "year_number"
+			          "ConceptualEntity": "Aeg",
+			          "ConceptualProperty": "Aasta"
 			        }
 			      },
 			      "State": "Generated",
@@ -1099,8 +1099,8 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.quarter_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
-			          "ConceptualProperty": "quarter_number"
+			          "ConceptualEntity": "Aeg",
+			          "ConceptualProperty": "Kvartali_number"
 			        }
 			      },
 			      "State": "Generated",
@@ -1142,8 +1142,8 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.quarter_string": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
-			          "ConceptualProperty": "quarter_string"
+			          "ConceptualEntity": "Aeg",
+			          "ConceptualProperty": "Kvartal_aasta_lõikes"
 			        }
 			      },
 			      "State": "Generated",
@@ -1271,8 +1271,8 @@ cultureInfo en-US
 			    "grupitoo_kv_dim_time.half_year": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv dim_time",
-			          "ConceptualProperty": "half_year"
+			          "ConceptualEntity": "Aeg",
+			          "ConceptualProperty": "Poolaasta"
 			        }
 			      },
 			      "State": "Generated",
@@ -1304,7 +1304,7 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_intressid": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_intressid"
+			          "ConceptualEntity": "Intressid"
 			        }
 			      },
 			      "State": "Generated",
@@ -1319,8 +1319,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_intressid.fk_quarter_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_intressid",
-			          "ConceptualProperty": "fk_quarter_id"
+			          "ConceptualEntity": "Intressid",
+			          "ConceptualProperty": "Võõrvõti_kvartali_id"
 			        }
 			      },
 			      "State": "Generated",
@@ -1399,8 +1399,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_intressid.intress": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_intressid",
-			          "ConceptualProperty": "intress"
+			          "ConceptualEntity": "Intressid",
+			          "ConceptualProperty": "Intress"
 			        }
 			      },
 			      "State": "Generated",
@@ -1415,7 +1415,7 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_kv": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_kv"
+			          "ConceptualEntity": "Kinnisvara"
 			        }
 			      },
 			      "State": "Generated",
@@ -1430,8 +1430,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_kv.fk_quarter_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_kv",
-			          "ConceptualProperty": "fk_quarter_id"
+			          "ConceptualEntity": "Kinnisvara",
+			          "ConceptualProperty": "Võõrvõti_kvartali_id"
 			        }
 			      },
 			      "State": "Generated",
@@ -1510,8 +1510,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_kv.transaction_count": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_kv",
-			          "ConceptualProperty": "transaction_count"
+			          "ConceptualEntity": "Kinnisvara",
+			          "ConceptualProperty": "Tehingute_arv"
 			        }
 			      },
 			      "State": "Generated",
@@ -1543,8 +1543,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_kv.fk_county_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_kv",
-			          "ConceptualProperty": "fk_county_id"
+			          "ConceptualEntity": "Kinnisvara",
+			          "ConceptualProperty": "Võõrvõti_maakonna_id"
 			        }
 			      },
 			      "State": "Generated",
@@ -1675,8 +1675,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_kv.avg_price_m_2": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_kv",
-			          "ConceptualProperty": "avg_price_m2"
+			          "ConceptualEntity": "Kinnisvara",
+			          "ConceptualProperty": "Keskmine_m2_hind"
 			        }
 			      },
 			      "State": "Generated",
@@ -1708,7 +1708,7 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_palk": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_palk"
+			          "ConceptualEntity": "Palk"
 			        }
 			      },
 			      "State": "Generated",
@@ -1723,8 +1723,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_palk.fk_quarter_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_palk",
-			          "ConceptualProperty": "fk_quarter_id"
+			          "ConceptualEntity": "Palk",
+			          "ConceptualProperty": "Põhivõti_kvartali_id"
 			        }
 			      },
 			      "State": "Generated",
@@ -1803,8 +1803,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_palk.average_salary": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_palk",
-			          "ConceptualProperty": "average_salary"
+			          "ConceptualEntity": "Palk",
+			          "ConceptualProperty": "Keskmine_palk"
 			        }
 			      },
 			      "State": "Generated",
@@ -1932,8 +1932,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_palk.fk_county_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_palk",
-			          "ConceptualProperty": "fk_county_id"
+			          "ConceptualEntity": "Palk",
+			          "ConceptualProperty": "Põhivõti_maakonna_id"
 			        }
 			      },
 			      "State": "Generated",
@@ -2064,7 +2064,7 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_thi": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_thi"
+			          "ConceptualEntity": "Tarbijahinnaindeks"
 			        }
 			      },
 			      "State": "Generated",
@@ -2079,8 +2079,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_thi.keskmine_indek": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_thi",
-			          "ConceptualProperty": "keskmine_indeks"
+			          "ConceptualEntity": "Tarbijahinnaindeks",
+			          "ConceptualProperty": "Keskmine_indeks"
 			        }
 			      },
 			      "State": "Generated",
@@ -2102,8 +2102,8 @@ cultureInfo en-US
 			    "grupitoo_kv_fact_thi.fk_quarter_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "grupitoo_kv fact_thi",
-			          "ConceptualProperty": "fk_quarter_id"
+			          "ConceptualEntity": "Tarbijahinnaindeks",
+			          "ConceptualProperty": "Võõrvõti_kvartali_id"
 			        }
 			      },
 			      "State": "Generated",
@@ -2182,7 +2182,7 @@ cultureInfo en-US
 			    "entity__measure": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures"
+			          "ConceptualEntity": "_Mõõdikud"
 			        }
 			      },
 			      "State": "Generated",
@@ -2277,7 +2277,7 @@ cultureInfo en-US
 			    "entity__measure.keskmine_m_2_hind": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Keskmine_m2_hind"
 			        }
 			      },
@@ -2300,7 +2300,7 @@ cultureInfo en-US
 			    "entity__measure.keskmine_THI": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Keskmine_THI"
 			        }
 			      },
@@ -2323,7 +2323,7 @@ cultureInfo en-US
 			    "entity__measure.reaalne_m_2_hind": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Reaalne_m2_hind"
 			        }
 			      },
@@ -2346,7 +2346,7 @@ cultureInfo en-US
 			    "entity__measure.hinnatõusu_lõhe_yo_Y": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Hinnatõusu_Lõhe_YoY"
 			        }
 			      },
@@ -2369,7 +2369,7 @@ cultureInfo en-US
 			    "entity__measure.kinnisvara_THI_suhe": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Kinnisvara_THI_Suhe"
 			        }
 			      },
@@ -2392,7 +2392,7 @@ cultureInfo en-US
 			    "entity__measure.kinnisvara_kasv_2005": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Kinnisvara_kasv_2005"
 			        }
 			      },
@@ -2425,7 +2425,7 @@ cultureInfo en-US
 			    "entity__measure.THI_kasv_2005": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "THI_kasv_2005"
 			        }
 			      },
@@ -2458,7 +2458,7 @@ cultureInfo en-US
 			    "entity__measure.ostujõud_m_2": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Ostujõud_m2"
 			        }
 			      },
@@ -2481,7 +2481,7 @@ cultureInfo en-US
 			    "entity__measure.intressi_mõju_indeks": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Intressi_Mõju_Indeks"
 			        }
 			      },
@@ -2504,7 +2504,7 @@ cultureInfo en-US
 			    "entity__measure.kättesaadavus_m2_kuupalga_eest": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Kättesaadavus (m2 kuupalga eest)"
 			        }
 			      },
@@ -2526,7 +2526,7 @@ cultureInfo en-US
 			    "entity__measure.foorituli_värv": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Foorituli_Värv"
 			        }
 			      },
@@ -2549,7 +2549,7 @@ cultureInfo en-US
 			    "entity__measure.palk_eelmine_aasta": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Palk_Eelmine_Aasta"
 			        }
 			      },
@@ -2578,7 +2578,7 @@ cultureInfo en-US
 			    "entity__measure.ostujõud_värv_keskmine": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Ostujõud_Värv_Keskmine"
 			        }
 			      },
@@ -2607,7 +2607,7 @@ cultureInfo en-US
 			    "entity__measure.hinna_värv_mediaan": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Hinna_Värv_Mediaan"
 			        }
 			      },
@@ -2630,7 +2630,7 @@ cultureInfo en-US
 			    "entity__measure.kaardi_ostujõu_värv": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Kaardi_Ostujõu_Värv"
 			        }
 			      },
@@ -2653,7 +2653,7 @@ cultureInfo en-US
 			    "entity__measure.keskmine_intressimäär": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Keskmine_Intressimäär"
 			        }
 			      },
@@ -2676,7 +2676,7 @@ cultureInfo en-US
 			    "entity__measure.intressi_värv_keskmine": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
+			          "ConceptualEntity": "_Mõõdikud",
 			          "ConceptualProperty": "Intressi_Värv_Keskmine"
 			        }
 			      },
@@ -2700,7 +2700,7 @@ cultureInfo en-US
 			  "Relationships": {
 			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_quarter": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -2733,7 +2733,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_year": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -2766,7 +2766,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_pk_quarter_id_has_date_hierarchy": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -2799,7 +2799,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_thi_has_grupitoo_kv_dim_time": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -2832,7 +2832,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_grupitoo_kv_dim_time": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -2878,7 +2878,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_grupitoo_kv_dim_county": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -2924,7 +2924,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_grupitoo_kv_dim_time": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -2970,7 +2970,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_grupitoo_kv_dim_county": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3016,7 +3016,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_intressid_has_grupitoo_kv_dim_time": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_intressid"
+			        "ConceptualEntity": "Intressid"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3049,7 +3049,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_has_grupitoo_kv_fact_thi": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3082,7 +3082,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_has_grupitoo_kv_fact_intressid": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3115,7 +3115,7 @@ cultureInfo en-US
 			    },
 			    "entity__measure_has_intressi_värv_keskmine": {
 			      "Binding": {
-			        "ConceptualEntity": "_Measures"
+			        "ConceptualEntity": "_Mõõdikud"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3148,7 +3148,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_intressid_has_entity__measure_keskmine_intressimäär": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_intressid"
+			        "ConceptualEntity": "Intressid"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3181,7 +3181,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_entity__measure_kaardi_ostujõu_värv": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3214,7 +3214,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_kaardi_ostujõu_värv": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3247,7 +3247,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_hinna_värv_mediaan": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3280,7 +3280,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõud_värv_keskmine": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3313,7 +3313,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõud_värv_keskmine": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3346,7 +3346,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_entity__measure_palk_eelmine_aasta": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3379,7 +3379,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_entity__measure_foorituli_värv": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3412,7 +3412,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_foorituli_värv": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3445,7 +3445,7 @@ cultureInfo en-US
 			    },
 			    "entity__measure_has_kättesaadavus_m2_kuupalga_eest": {
 			      "Binding": {
-			        "ConceptualEntity": "_Measures"
+			        "ConceptualEntity": "_Mõõdikud"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3478,7 +3478,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_thi_has_entity__measure_intressi_mõju_indeks": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3511,7 +3511,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_entity__measure_intressi_mõju_indeks": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3544,7 +3544,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_intressi_mõju_indeks": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3577,7 +3577,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõud_m_2": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3610,7 +3610,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõud_m_2": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3643,7 +3643,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_thi_has_entity__measure_THI_kasv_2005": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3676,7 +3676,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_kinnisvara_kasv_2005": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3709,7 +3709,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_thi_has_entity__measure_kinnisvara_THI_suhe": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3742,7 +3742,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_kinnisvara_THI_suhe": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3775,7 +3775,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_thi_has_entity__measure_hinnatõusu_lõhe_yo_Y": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3808,7 +3808,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_hinnatõusu_lõhe_yo_Y": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3841,7 +3841,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_thi_has_entity__measure_reaalne_m_2_hind": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3874,7 +3874,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_reaalne_m_2_hind": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3907,7 +3907,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_thi_has_entity__measure_keskmine_THI": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3940,7 +3940,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_entity__measure_keskmine_m_2_hind": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -3973,7 +3973,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_thi_has_fk_quarter_id": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4006,7 +4006,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_thi_has_keskmine_indek": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_thi"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4039,7 +4039,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_average_salary": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4099,7 +4099,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_palk_has_fk_quarter_id": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_palk"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4132,7 +4132,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_avg_price_m_2": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4192,7 +4192,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_transaction_count": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4225,7 +4225,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_kv_has_fk_quarter_id": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_kv"
+			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4258,7 +4258,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_intressid_has_intress": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_intressid"
+			        "ConceptualEntity": "Intressid"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4291,7 +4291,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_fact_intressid_has_fk_quarter_id": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv fact_intressid"
+			        "ConceptualEntity": "Intressid"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4324,7 +4324,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_has_half_year": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4357,7 +4357,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_has_quarter_string": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4390,7 +4390,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_has_quarter_number": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4423,7 +4423,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_has_year_number": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4456,7 +4456,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_has_pk_quarter_id": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4489,7 +4489,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_county_has_pk_county_id": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_county"
+			        "ConceptualEntity": "Maakond"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4522,7 +4522,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_county_has_county_name": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_county"
+			        "ConceptualEntity": "Maakond"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4555,7 +4555,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_county_in_county_name": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_county"
+			        "ConceptualEntity": "Maakond"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4600,7 +4600,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_month": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4633,7 +4633,7 @@ cultureInfo en-US
 			    },
 			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_day": {
 			      "Binding": {
-			        "ConceptualEntity": "grupitoo_kv dim_time"
+			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {

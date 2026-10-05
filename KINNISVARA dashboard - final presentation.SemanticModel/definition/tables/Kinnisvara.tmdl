@@ -1,0 +1,64 @@
+table Kinnisvara
+	lineageTag: 0790d168-e311-4134-bd9a-3ec607babc4b
+
+	column Võõrvõti_kvartali_id
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: a87df17a-29b9-4a04-a2e9-aeeb64c2dace
+		summarizeBy: none
+		sourceColumn: Võõrvõti_kvartali_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Tehingute_arv
+		dataType: int64
+		formatString: 0
+		lineageTag: 8405eb27-3977-47c1-8527-1b3d2fe16062
+		summarizeBy: sum
+		sourceColumn: Tehingute_arv
+
+		annotation SummarizationSetBy = Automatic
+
+	column Võõrvõti_maakonna_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4911c464-990d-45c3-949f-b8c9d7a6f5ca
+		summarizeBy: none
+		sourceColumn: Võõrvõti_maakonna_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Keskmine_m2_hind
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: f850ccfc-35ca-4ce3-9ed0-ac1e94980087
+		summarizeBy: sum
+		sourceColumn: Keskmine_m2_hind
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Kinnisvara = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "postgres"),
+				    grupitoo_kv_fact_kv = Source{[Schema="grupitoo_kv",Item="fact_kv"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(grupitoo_kv_fact_kv,{"grupitoo_kv.dim_county", "grupitoo_kv.dim_time"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"avg_price_m2", "Keskmine_m2_hind"}, {"fk_county_id", "Võõrvõti_maakonna_id"}, {"transaction_count", "Tehingute_arv"}, {"fk_quarter_id", "Võõrvõti_kvartali_id"}})
+				in
+				    #"Renamed Columns"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

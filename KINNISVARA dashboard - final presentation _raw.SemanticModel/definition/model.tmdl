@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: et-EE
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["grupitoo_kv dim_county","grupitoo_kv dim_time","grupitoo_kv fact_intressid","grupitoo_kv fact_kv","grupitoo_kv fact_palk","grupitoo_kv fact_thi","_Measures"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'grupitoo_kv dim_county'
+ref table 'grupitoo_kv dim_time'
+ref table DateTableTemplate_321d48a4-092a-445b-a4cd-b6a0f018644e
+ref table LocalDateTable_958e4012-c6bb-4308-8f52-466c737b0509
+ref table 'grupitoo_kv fact_intressid'
+ref table 'grupitoo_kv fact_kv'
+ref table 'grupitoo_kv fact_palk'
+ref table 'grupitoo_kv fact_thi'
+ref table _Measures
+
+ref cultureInfo en-US
+

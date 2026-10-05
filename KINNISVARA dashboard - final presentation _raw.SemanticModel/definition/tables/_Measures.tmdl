@@ -85,6 +85,16 @@ table _Measures
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 5ecccc85-31c3-4e50-852d-bf0bd352bc03
 
+	measure Palga_kasv_2005 =
+			
+			VAR JooksevPalk = AVERAGE('grupitoo_kv fact_palk'[average_salary])
+			VAR BaasPalk = CALCULATE(AVERAGE('grupitoo_kv fact_palk'[average_salary]), 'grupitoo_kv dim_time'[year_number] = 2005)
+			RETURN
+			DIVIDE(JooksevPalk, BaasPalk, 0)
+		lineageTag: 7204509f-de98-4972-ab81-86775e31d239
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition _Measures = m
 		mode: import
 		source =
