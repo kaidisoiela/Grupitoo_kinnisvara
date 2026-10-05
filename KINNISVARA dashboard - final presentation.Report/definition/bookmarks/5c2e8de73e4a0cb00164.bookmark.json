@@ -1,0 +1,256 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Reset",
+  "name": "5c2e8de73e4a0cb00164",
+  "options": {
+    "targetVisualNames": [
+      "823085160e4ce30e691a"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "73bff007413cedba0b94",
+    "sections": {
+      "73bff007413cedba0b94": {
+        "visualContainers": {
+          "a4804a6b95d8a5d3ab33": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "cb2b9e93d90d1d80543e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "grupitoo_kv fact_kv"
+                            }
+                          },
+                          "Property": "avg_price_m2"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1022f36cdc086c011ab0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv dim_county"
+                        }
+                      },
+                      "Property": "county_name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9676fb857e9a286dbca8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "grupitoo_kv fact_kv"
+                            }
+                          },
+                          "Property": "transaction_count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "936407f18ce10c85270b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv dim_county"
+                        }
+                      },
+                      "Property": "Reaalne_Palk"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "78509b00739a02ab0c60",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv dim_time"
+                        }
+                      },
+                      "Property": "year_number"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "scatterChart",
+              "objects": {},
+              "activeProjections": {
+                "X": [
+                  {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv dim_county"
+                        }
+                      },
+                      "Property": "Reaalne_Palk"
+                    }
+                  }
+                ],
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv dim_time"
+                        }
+                      },
+                      "Property": "year_number"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "c6ca59a5d47ab81d7008": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f02319cfa487516b3209",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv dim_county"
+                        }
+                      },
+                      "Property": "county_name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ed7b71ae2e2ed37bac5d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv dim_time"
+                        }
+                      },
+                      "Property": "year_number"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0969d2856d1105404b87",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "grupitoo_kv fact_kv"
+                            }
+                          },
+                          "Property": "transaction_count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv dim_county"
+                        }
+                      },
+                      "Property": "county_name"
+                    }
+                  }
+                ],
+                "Columns": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "grupitoo_kv dim_time"
+                        }
+                      },
+                      "Property": "year_number"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "e225ce01aee1406204bc": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "3a89120a4c8c388a6d17": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "true"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
