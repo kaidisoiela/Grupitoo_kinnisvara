@@ -21,10 +21,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_time"
+                          "Entity": "Aeg"
                         }
                       },
-                      "Property": "year_number"
+                      "Property": "Aasta"
                     }
                   },
                   "howCreated": 0
@@ -36,7 +36,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "_Measures"
+                          "Entity": "_Mõõdikud"
                         }
                       },
                       "Property": "Kinnisvara_kasv_2005"
@@ -51,7 +51,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "_Measures"
+                          "Entity": "_Mõõdikud"
                         }
                       },
                       "Property": "THI_kasv_2005"
@@ -71,7 +71,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "_Measures"
+                          "Entity": "_Mõõdikud"
                         }
                       },
                       "Property": "Kinnisvara_kasv_2005"
@@ -85,10 +85,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_time"
+                          "Entity": "Aeg"
                         }
                       },
-                      "Property": "year_number"
+                      "Property": "Aasta"
                     }
                   }
                 ]
@@ -105,10 +105,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_county"
+                          "Entity": "Maakond"
                         }
                       },
-                      "Property": "county_name"
+                      "Property": "Maakonna nimi"
                     }
                   },
                   "howCreated": 0
@@ -124,10 +124,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_county"
+                          "Entity": "Maakond"
                         }
                       },
-                      "Property": "county_name"
+                      "Property": "Maakonna nimi"
                     }
                   }
                 ]

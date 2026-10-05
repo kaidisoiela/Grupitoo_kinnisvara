@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
+                      "Entity": "Aeg"
                     }
                   },
-                  "Property": "year_number"
+                  "Property": "Aasta"
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
-              "nativeQueryRef": "year_number",
+              "nativeQueryRef": "Aasta",
               "active": true
             }
           ]
@@ -41,10 +41,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_kv"
+                          "Entity": "Kinnisvara"
                         }
                       },
-                      "Property": "avg_price_m2"
+                      "Property": "Keskmine_m2_hind"
                     }
                   },
                   "Function": 1
@@ -61,10 +61,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_palk"
+                          "Entity": "Palk"
                         }
                       },
-                      "Property": "average_salary"
+                      "Property": "Keskmine_palk"
                     }
                   },
                   "Function": 1
@@ -86,10 +86,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "grupitoo_kv fact_kv"
+                        "Entity": "Kinnisvara"
                       }
                     },
-                    "Property": "avg_price_m2"
+                    "Property": "Keskmine_m2_hind"
                   }
                 },
                 "Function": 1
