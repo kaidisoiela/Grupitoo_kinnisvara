@@ -10,7 +10,7 @@ CREATE TABLE grupitoo_kv.maa_amet_py_final (
 );
 
 
-/* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "maa_amet_py_final.csv" */
+/* JUHEND: Tekkinud Schema all (vasakul) tee paremkliki loodud tabeli peal ning "import data". Vali git kaustas fail "maa_amet_py_final.csv" */
 
 
 --- Teeme Fact_KV tabeli:
@@ -57,7 +57,7 @@ CREATE TABLE grupitoo_kv.Dim_Time (
     PK_quarter_ID DATE PRIMARY KEY,
     year_number INTEGER NOT NULL,
     quarter_number INTEGER NOT NULL,
-    quarter_string VARCHAR(10) NOT NULL, -- nt "2024 Q2" või "2024 II"
+    quarter_string VARCHAR(10) NOT NULL,
     half_year INTEGER NOT NULL
 );
 
@@ -124,7 +124,7 @@ FOREIGN KEY (FK_quarter_ID) REFERENCES grupitoo_kv.Dim_Time(PK_quarter_ID);
 
 
 
-/* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "Eesti_keskmine_palk_py_final.csv" */
+/* JUHEND: Schema all (vasakul) tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "Eesti_keskmine_palk_py_final.csv" */
 
 -- 1. Kustutame vana tabeli, kui see on olemas
 DROP TABLE IF EXISTS grupitoo_kv.fact_palk CASCADE;
@@ -142,7 +142,7 @@ SELECT
     salary AS average_salary -- Lisatud sisendtabeli palga veerg
 FROM grupitoo_kv.eesti_keskmine_palk_py_final;
 
--- 3. SEOSETE LOOMINE: Järgime täpselt Sinu näidatud Fact_KV loogikat
+-- 3. SEOSETE LOOMINE
 
 -- Samm A: Lisame Fact_PALK tabelisse uue tühja maakonna ID veeru
 ALTER TABLE grupitoo_kv.fact_palk 
@@ -180,7 +180,7 @@ SELECT * FROM grupitoo_kv.fact_palk ORDER BY FK_quarter_ID, FK_county_id LIMIT 1
 --Intressimäärade tabeli lisamine ja ühendamine
 
 
-/* JUHEND: Tekkinud uue Schemas (vasakul) all tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "puhastatud_eluasemelaenud_py_final.csv" */
+/* JUHEND: Schema all (vasakul) tee paremkliki "Tables" peal ning "import data". Vali git kaustas fail "puhastatud_eluasemelaenud_py_final.csv" */
 
 
 DROP TABLE IF exists grupitoo_kv.intressid_kv;

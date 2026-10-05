@@ -4,13 +4,14 @@ import numpy as np
 import plotly.express as px
 
 # 1. ÄPI LEHE SEADISTUS
-st.set_page_config(page_title="Kinnisvara Ostujõu Kompass", layout="wide")
+st.set_page_config(page_title="EESTI KINNISVARA OSTUJÕU KOMPASS", layout="wide")
 
-st.title("📊 Eesti Kinnisvara Ostujõu Kompass (2005–2025)")
+# MUUDATUS: Pealkiri on muudetud suurtähtedeks ja vahemikuks 2005–2026
+st.title("📊 EESTI KINNISVARA OSTUJÕU KOMPASS (2005–2026)")
 st.markdown("""
     Nihuta vasakul olevaid slidereid vastavalt oma profiilile. Kaardi värvimuutus näitab reaalajas, 
     millised maakonnad ja aastad muutuvad sinu eelarve jaoks **taskukohaseks (roheline)** või **kättesaamatuks (punane)**.
-    Andmed põhinevad reaalsetel statistilistel näitajatel aastatest 2005–2025.
+    Andmed põhinevad reaalsetel statistilistel näitajatel aastatest 2005–2026.
 """)
 
 # 2. ANDMETE LAADIMINE JA ANDMETÖÖTLUS CSV-FAILIDEST
@@ -40,7 +41,6 @@ def laadi_ja_puhasta_andmed():
     if 'Aeg_Plokk' in df_kv.columns: 
         df_kv.rename(columns={'Aeg_Plokk': 'Kvartal_ID'}, inplace=True)
     
-    # PARANDUS: Võtame listist esimese elemendi [0]
     hinna_veerg = [col for col in df_kv.columns if 'hind' in col.lower() or 'price' in col.lower()]
     if hinna_veerg:
         df_kv.rename(columns={hinna_veerg[0]: 'Hind_m2'}, inplace=True)
@@ -90,8 +90,8 @@ def laadi_ja_puhasta_andmed():
     df_merged['Maakond'] = df_merged['Maakond_Puhas'] + " maakond"
     df_merged['Aasta'] = df_merged['Kvartal_ID'].str[:4].fillna(2005).astype(int)
     
-    # PIIRAME ANDMED AASTATEGA 2005 KUNI 2025
-    df_merged = df_merged[(df_merged['Aasta'] >= 2005) & (df_merged['Aasta'] <= 2025)].copy()
+    # MUUDATUS: Pikendame ajaperioodi kuni aastani 2026
+    df_merged = df_merged[(df_merged['Aasta'] >= 2005) & (df_merged['Aasta'] <= 2026)].copy()
     
     df_merged['Hind_m2'] = pd.to_numeric(df_merged['Hind_m2'], errors='coerce').fillna(1000)
     df_merged['Palk'] = pd.to_numeric(df_merged['Palk'], errors='coerce').fillna(1200)
@@ -103,7 +103,8 @@ with st.spinner("⏳ Andmete laadimine..."):
     df_kompass = laadi_ja_puhasta_andmed()
 
 # 3. INTERAKTIIVNE KÜLGPANEEL (SLIDERID)
-st.sidebar.header("👤 Sinu Personaalsed Andmed")
+# MUUDATUS: Tekst muudetud väikeste tähtedega "Sinu personaalsed andmed"
+st.sidebar.header("👤 Sinu personaalsed andmed")
 korteri_suurus = st.sidebar.slider("Korteri suurus (m²)", min_value=20, max_value=120, value=55, step=5)
 omafinantseering = st.sidebar.slider("Omafinantseering (%)", min_value=10, max_value=50, value=15, step=5)
 palga_kordaja = st.sidebar.slider("Sinu palga tase (kordne keskmisest)", min_value=0.5, max_value=3.0, value=1.0, step=0.1)
@@ -164,7 +165,7 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
-# 6. DÜNAAMILINE STATISTIKA (INSIGHTS)
+# 6. DÜNAAMILISED STATISTIKA (INSIGHTS)
 st.subheader("🎯 Sinu personaalne taskukohasuse analüüs")
 
 kogu_ruute = len(df_yearly)
@@ -181,7 +182,7 @@ with col1:
 with col2:
     df_sobivad = df_yearly[df_yearly['palga_protsent_laenule'] <= max_lubatud_laenuprotsent]
     if not df_sobivad.empty:
-        parim_ost = df_sobivad.loc[df_sobivad['palga_protsent_laenule'].idxmin()] # leiame kõige odavama laenumakse protsendiga koha
+        parim_ost = df_sobivad.loc[df_sobivad['palga_protsent_laenule'].idxmin()]
         st.info(f"🏆 **Optimaalne oaas turul:**\n"
                 f"Piirkonnas **{parim_ost['Maakond']}** aastal **{parim_ost['Aasta']}** oli Sulle kõige säästlikum ostupunkt, "
                 f"kus kuumakse võttis vaid **{parim_ost['palga_protsent_laenule']:.1f}%** palgast.")

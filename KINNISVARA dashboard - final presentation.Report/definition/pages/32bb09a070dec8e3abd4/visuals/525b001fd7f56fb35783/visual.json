@@ -1,15 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "2788360513224377132b",
+  "name": "525b001fd7f56fb35783",
   "position": {
     "x": 160,
-    "y": 1573.3333333333335,
-    "z": 5001,
-    "height": 843.33333333333337,
-    "width": 1640
+    "y": 97.5,
+    "z": 0,
+    "height": 635,
+    "width": 1357.5,
+    "tabOrder": 0
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "areaChart",
     "query": {
       "queryState": {
         "Category": {
@@ -27,42 +28,51 @@
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
               "nativeQueryRef": "Aasta",
-              "active": true,
-              "displayName": "Aasta"
+              "active": true
             }
           ]
         },
-        "Y": {
+        "Y2": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Mõõdikud"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kinnisvara"
+                        }
+                      },
+                      "Property": "Keskmine_m2_hind"
                     }
                   },
-                  "Property": "Kinnisvara_kasv_2005"
+                  "Function": 1
                 }
               },
-              "queryRef": "_Measures.Kinnisvara_kasv_2005",
-              "nativeQueryRef": "Kinnisvara kasvuindeks alates 2005",
-              "displayName": "Kinnisvara kasvuindeks alates 2005"
+              "queryRef": "Avg(grupitoo_kv fact_kv.avg_price_m2)",
+              "nativeQueryRef": "Korterite keskmine m2 hind",
+              "displayName": "Korterite keskmine m2 hind"
             },
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Mõõdikud"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Palk"
+                        }
+                      },
+                      "Property": "Keskmine_palk"
                     }
                   },
-                  "Property": "THI_kasv_2005"
+                  "Function": 1
                 }
               },
-              "queryRef": "_Measures.THI_kasv_2005",
-              "nativeQueryRef": "THI kasvuindeks alates 2005",
-              "displayName": "THI kasvuindeks alates 2005"
+              "queryRef": "Avg(grupitoo_kv fact_palk.average_salary)",
+              "nativeQueryRef": "Keskmine brutopalk",
+              "displayName": "Keskmine brutopalk"
             }
           ]
         }
@@ -71,13 +81,18 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Mõõdikud"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Kinnisvara"
+                      }
+                    },
+                    "Property": "Keskmine_m2_hind"
                   }
                 },
-                "Property": "Kinnisvara_kasv_2005"
+                "Function": 1
               }
             },
             "direction": "Descending"
@@ -90,6 +105,13 @@
       "categoryAxis": [
         {
           "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Aasta'"
+                }
+              }
+            },
             "titleFontSize": {
               "expr": {
                 "Literal": {
@@ -100,7 +122,14 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
+                  "Value": "14D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -110,10 +139,10 @@
       "valueAxis": [
         {
           "properties": {
-            "fontSize": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
+                  "Value": "'Korterite keskmine m2 hind (€/m²)'"
                 }
               }
             },
@@ -123,6 +152,54 @@
                   "Value": "17D"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "17D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "y2Axis": [
+        {
+          "properties": {
+            "secTitleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Keskmne brutopalk (€)'"
+                }
+              }
+            },
+            "secTitleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "17D"
+                }
+              }
+            },
+            "secFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "secBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -130,44 +207,24 @@
       "legend": [
         {
           "properties": {
+            "legendMarkerRendering": {
+              "expr": {
+                "Literal": {
+                  "Value": "'lineAndMarker'"
+                }
+              }
+            },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "lineStyles": [
-        {
-          "properties": {
-            "lineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'solid'"
+                  "Value": "14D"
                 }
               }
             },
-            "strokeWidth": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "lineChartType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'linear'"
-                }
-              }
-            },
-            "areaShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "''"
                 }
               }
             }
@@ -184,24 +241,10 @@
                 }
               }
             },
-            "labelDensity": {
-              "expr": {
-                "Literal": {
-                  "Value": "80L"
-                }
-              }
-            },
-            "enableBackground": {
+            "enableTitleDataLabel": {
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "labelContentLayout": {
-              "expr": {
-                "Literal": {
-                  "Value": "'SingleLine'"
                 }
               }
             },
@@ -209,6 +252,20 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -223,16 +280,32 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "''"
+                      "Value": "'City view.webp'"
                     }
                   }
                 },
                 "url": {
                   "expr": {
-                    "Literal": {
-                      "Value": "''"
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "City_view6478255005745885.webp"
                     }
                   }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Fit'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -247,14 +320,32 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Kinnisvara kasvuindeksi ja tarbijahinnaindeksi võrdlus 2005-2026'"
+                  "Value": "'Korterite keskmine m2 hind ja keskmine brutopalk aastate lõikes'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "16D"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "null"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -300,6 +391,19 @@
                       "Percent": 0.4
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lockAspect": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

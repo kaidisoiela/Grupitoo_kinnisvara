@@ -5,7 +5,7 @@ cultureInfo en-US
 			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "grupitoo_kv_dim_county.county_name": {
+			    "maakond.maakonna_nimi": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Maakond",
@@ -15,121 +15,8 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "county name": {
+			          "maakonna nimi": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "county_name": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "county": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "county nickname": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "county title": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "county label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "county tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "region": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "province": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "shire": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "section": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "district": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "canton": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
 			          }
 			        },
 			        {
@@ -144,7 +31,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_county": {
+			    "maakond": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Maakond"
@@ -153,13 +40,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "grupitoo_kv dim_county": {
+			          "maakond": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_county.pk_county_id": {
+			    "maakond.põhivõti_maakonna_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Maakond",
@@ -167,33 +54,24 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
-			          "pk county id": {
+			          "põhivõti maakonna id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "pk_county_id": {
+			          "Põhivõti_maakonna_id": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "county": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "county id": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "pk county identification": {
+			          "põhivõti maakonna identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -203,7 +81,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "pk county identity": {
+			          "põhivõti maakonna identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -213,7 +91,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "pk county identifier": {
+			          "põhivõti maakonna identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -223,37 +101,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "county identification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "county identity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "county identifier": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "pk county credential": {
+			          "põhivõti maakonna credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -261,40 +109,10 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.739
 			          }
-			        },
-			        {
-			          "county credential": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "region": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "province": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time": {
+			    "aeg": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Aeg"
@@ -303,13 +121,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "grupitoo_kv dim_time": {
+			          "aeg": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time.pk_quarter_id": {
+			    "aeg.põhivõti_kvartali_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Aeg",
@@ -317,14 +135,17 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
-			          "pk quarter id": {
+			          "põhivõti kvartali id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "pk_quarter_id": {
+			          "Põhivõti_kvartali_id": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -337,13 +158,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "quarter id": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "pk quarter identification": {
+			          "põhivõti kvartali identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -353,7 +168,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "pk quarter identity": {
+			          "põhivõti kvartali identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -363,7 +178,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "pk quarter identifier": {
+			          "põhivõti kvartali identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -373,37 +188,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "quarter identification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "quarter identity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "quarter identifier": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "pk quarter credential": {
+			          "põhivõti kvartali credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -411,632 +196,11 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.739
 			          }
-			        },
-			        {
-			          "quarter credential": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "pk qtr id": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.677
-			          }
-			        },
-			        {
-			          "qtr id": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.667
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Aeg",
-			          "VariationSource": "pk_quarter_id",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pk quarter id date hierarchy": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date hierarchy": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "hierarchy": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "id date hierarchy": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "quarter id date hierarchy": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "grupitoo_kv_dim_time.pk_quarter_id.year": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Aeg",
-			          "VariationSource": "pk_quarter_id",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Year"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pk quarter id year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "id year": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "quarter id year": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "pk quarter id yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.771
-			          }
-			        },
-			        {
-			          "quarter id yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "id yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "pk qtr id year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.686
-			          }
-			        },
-			        {
-			          "qtr id year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.677
-			          }
-			        },
-			        {
-			          "pk quarter identification year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "pk quarter identity year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "pk quarter identifier year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "quarter identification year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "grupitoo_kv_dim_time.pk_quarter_id.quarter": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Aeg",
-			          "VariationSource": "pk_quarter_id",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Quarter"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pk quarter id quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "id quarter": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "quarter id quarter": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "pk quarter id qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.857
-			          }
-			        },
-			        {
-			          "quarter id qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.846
-			          }
-			        },
-			        {
-			          "id qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.833
-			          }
-			        },
-			        {
-			          "qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.818
-			          }
-			        },
-			        {
-			          "pk qtr id quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.686
-			          }
-			        },
-			        {
-			          "qtr id quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.677
-			          }
-			        },
-			        {
-			          "pk quarter identification quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "pk quarter identity quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "pk quarter identifier quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "quarter identification quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "grupitoo_kv_dim_time.pk_quarter_id.month": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Aeg",
-			          "VariationSource": "pk_quarter_id",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Month"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pk quarter id month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "id month": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "quarter id month": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "pk quarter id mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.771
-			          }
-			        },
-			        {
-			          "quarter id mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "id mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "pk qtr id month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.686
-			          }
-			        },
-			        {
-			          "qtr id month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.677
-			          }
-			        },
-			        {
-			          "pk quarter identification month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "pk quarter identity month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "pk quarter identifier month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "quarter identification month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "grupitoo_kv_dim_time.pk_quarter_id.day": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Aeg",
-			          "VariationSource": "pk_quarter_id",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Day"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pk quarter id day": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "day": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "id day": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "quarter id day": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "pk qtr id day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.686
-			          }
-			        },
-			        {
-			          "qtr id day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.677
-			          }
-			        },
-			        {
-			          "pk quarter identification day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "pk quarter identity day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "pk quarter identifier day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "quarter identification day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "quarter identity day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "quarter identifier day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "identification day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "identity day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "grupitoo_kv_dim_time.year_number": {
+			    "aeg.aasta": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Aeg",
@@ -1046,57 +210,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "year number": {
+			          "aasta": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "year_number": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "year": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "year no": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "yr number": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "Aasta": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
-			      ],
-			      "SemanticType": "Time"
+			      ]
 			    },
-			    "grupitoo_kv_dim_time.quarter_number": {
+			    "aeg.kvartali_number": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Aeg",
@@ -1106,19 +226,19 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "quarter number": {
+			          "kvartali number": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "quarter_number": {
+			          "Kvartali_number": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "quarter no": {
+			          "kvartali no": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1126,20 +246,10 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
-			        },
-			        {
-			          "qtr number": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.667
-			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time.quarter_string": {
+			    "aeg.kvartal_aasta_lõike": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Aeg",
@@ -1149,126 +259,20 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "quarter string": {
+			          "kvartal aasta lõike": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "quarter_string": {
+			          "Kvartal_aasta_lõikes": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "string": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "qtr string": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.667
-			          }
-			        },
-			        {
-			          "quarter filament": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "filament": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "quarter cord": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "quarter thread": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "quarter twine": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "quarter rope": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "cord": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "thread": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "twine": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time.half_year": {
+			    "aeg.poolaasta": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Aeg",
@@ -1278,30 +282,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "half year": {
+			          "poolaasta": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "half_year": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "half yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_intressid": {
+			    "intressid": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Intressid"
@@ -1310,13 +297,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "grupitoo_kv fact_intressid": {
+			          "intressid": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_intressid.fk_quarter_id": {
+			    "intressid.võõrvõti_kvartali_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Intressid",
@@ -1324,14 +311,17 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
-			          "fk quarter id": {
+			          "võõrvõti kvartali id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "fk_quarter_id": {
+			          "Võõrvõti_kvartali_id": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -1344,7 +334,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identification": {
+			          "võõrvõti kvartali identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1354,7 +344,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identity": {
+			          "võõrvõti kvartali identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1364,7 +354,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identifier": {
+			          "võõrvõti kvartali identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1374,7 +364,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter credential": {
+			          "võõrvõti kvartali credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1382,21 +372,11 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.739
 			          }
-			        },
-			        {
-			          "fk qtr id": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.677
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "grupitoo_kv_fact_intressid.intress": {
+			    "intressid.intress": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Intressid",
@@ -1412,7 +392,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv": {
+			    "kinnisvara": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Kinnisvara"
@@ -1421,13 +401,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "grupitoo_kv fact_kv": {
+			          "kinnisvara": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv.fk_quarter_id": {
+			    "kinnisvara.võõrvõti_kvartali_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Kinnisvara",
@@ -1435,14 +415,17 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
-			          "fk quarter id": {
+			          "võõrvõti kvartali id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "fk_quarter_id": {
+			          "Võõrvõti_kvartali_id": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -1455,7 +438,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identification": {
+			          "võõrvõti kvartali identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1465,7 +448,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identity": {
+			          "võõrvõti kvartali identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1475,7 +458,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identifier": {
+			          "võõrvõti kvartali identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1485,7 +468,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter credential": {
+			          "võõrvõti kvartali credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1493,21 +476,11 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.739
 			          }
-			        },
-			        {
-			          "fk qtr id": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.677
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "grupitoo_kv_fact_kv.transaction_count": {
+			    "kinnisvara.tehingute_arv": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Kinnisvara",
@@ -1517,30 +490,20 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "transaction count": {
+			          "tehingute arv": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "transaction_count": {
+			          "Tehingute_arv": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "transaction amount": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv.fk_county_id": {
+			    "kinnisvara.võõrvõti_maakonna_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Kinnisvara",
@@ -1553,25 +516,19 @@ cultureInfo en-US
 			      },
 			      "Terms": [
 			        {
-			          "fk county id": {
+			          "võõrvõti maakonna id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "fk_county_id": {
+			          "Võõrvõti_maakonna_id": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "county": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "fk county identification": {
+			          "võõrvõti maakonna identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1581,7 +538,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk county identity": {
+			          "võõrvõti maakonna identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1591,7 +548,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk county identifier": {
+			          "võõrvõti maakonna identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1601,7 +558,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk county credential": {
+			          "võõrvõti maakonna credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1609,70 +566,10 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.739
 			          }
-			        },
-			        {
-			          "region": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "province": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "shire": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "section": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "district": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "canton": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv.avg_price_m_2": {
+			    "kinnisvara.keskmine_m_2_hind": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Kinnisvara",
@@ -1682,30 +579,20 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "avg price m 2": {
+			          "keskmine m 2 hind": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "avg_price_m2": {
+			          "Keskmine_m2_hind": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "average price m 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_palk": {
+			    "palk": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Palk"
@@ -1714,13 +601,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "grupitoo_kv fact_palk": {
+			          "palk": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_palk.fk_quarter_id": {
+			    "palk.põhivõti_kvartali_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Palk",
@@ -1728,14 +615,17 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
-			          "fk quarter id": {
+			          "põhivõti kvartali id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "fk_quarter_id": {
+			          "Põhivõti_kvartali_id": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -1748,7 +638,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identification": {
+			          "põhivõti kvartali identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1758,7 +648,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identity": {
+			          "põhivõti kvartali identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1768,7 +658,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identifier": {
+			          "põhivõti kvartali identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1778,7 +668,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter credential": {
+			          "põhivõti kvartali credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1786,21 +676,11 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.739
 			          }
-			        },
-			        {
-			          "fk qtr id": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.677
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "grupitoo_kv_fact_palk.average_salary": {
+			    "palk.keskmine_palk": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Palk",
@@ -1810,126 +690,20 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "average salary": {
+			          "keskmine palk": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "average_salary": {
+			          "Keskmine_palk": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "salary": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "average income": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "average money": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "average remuneration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "average payment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "income": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "money": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "remuneration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "payment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "average pay": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "average wage": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_palk.fk_county_id": {
+			    "palk.põhivõti_maakonna_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Palk",
@@ -1942,25 +716,19 @@ cultureInfo en-US
 			      },
 			      "Terms": [
 			        {
-			          "fk county id": {
+			          "põhivõti maakonna id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "fk_county_id": {
+			          "Põhivõti_maakonna_id": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "county": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "fk county identification": {
+			          "põhivõti maakonna identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1970,7 +738,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk county identity": {
+			          "põhivõti maakonna identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1980,7 +748,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk county identifier": {
+			          "põhivõti maakonna identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1990,7 +758,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk county credential": {
+			          "põhivõti maakonna credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1998,70 +766,10 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.739
 			          }
-			        },
-			        {
-			          "region": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "province": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "shire": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "section": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "district": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "canton": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_thi": {
+			    "tarbijahinnaindek": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Tarbijahinnaindeks"
@@ -2070,13 +778,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "grupitoo_kv fact_thi": {
+			          "tarbijahinnaindek": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_thi.keskmine_indek": {
+			    "tarbijahinnaindek.keskmine_indek": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Tarbijahinnaindeks",
@@ -2091,7 +799,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "keskmine_indeks": {
+			          "Keskmine_indeks": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -2099,7 +807,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_thi.fk_quarter_id": {
+			    "tarbijahinnaindek.võõrvõti_kvartali_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Tarbijahinnaindeks",
@@ -2107,14 +815,17 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
-			          "fk quarter id": {
+			          "võõrvõti kvartali id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "fk_quarter_id": {
+			          "Võõrvõti_kvartali_id": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -2127,7 +838,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identification": {
+			          "võõrvõti kvartali identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -2137,7 +848,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identity": {
+			          "võõrvõti kvartali identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -2147,7 +858,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter identifier": {
+			          "võõrvõti kvartali identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -2157,7 +868,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fk quarter credential": {
+			          "võõrvõti kvartali credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -2165,21 +876,11 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.739
 			          }
-			        },
-			        {
-			          "fk qtr id": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.677
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "entity__measure": {
+			    "entity__mõõdikud": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud"
@@ -2188,93 +889,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "_measure": {
+			          "_mõõdikud": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "_ degree": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "_ quantity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "_ quota": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "_ extent": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "_ amount": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "_ portion": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "_ ration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "_ size": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
 			          }
 			        }
 			      ]
 			    },
-			    "entity__measure.keskmine_m_2_hind": {
+			    "entity__mõõdikud.keskmine_m_2_hind": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
@@ -2297,7 +918,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.keskmine_THI": {
+			    "entity__mõõdikud.keskmine_THI": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
@@ -2320,7 +941,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.reaalne_m_2_hind": {
+			    "entity__mõõdikud.reaalne_m_2_hind": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
@@ -2343,7 +964,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.hinnatõusu_lõhe_yo_Y": {
+			    "entity__mõõdikud.hinnatõusu_lõhe_yo_Y": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
@@ -2366,7 +987,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.kinnisvara_THI_suhe": {
+			    "entity__mõõdikud.kinnisvara_THI_suhe": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
@@ -2389,7 +1010,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.kinnisvara_kasv_2005": {
+			    "entity__mõõdikud.kinnisvara_kasv_2005": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
@@ -2422,7 +1043,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.THI_kasv_2005": {
+			    "entity__mõõdikud.THI_kasv_2005": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
@@ -2455,7 +1076,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.ostujõud_m_2": {
+			    "entity__mõõdikud.ostujõud_m_2": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
@@ -2478,22 +1099,22 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.intressi_mõju_indeks": {
+			    "entity__mõõdikud.palga_kasv_2005": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Intressi_Mõju_Indeks"
+			          "ConceptualProperty": "Palga_kasv_2005"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "intressi mõju indeks": {
+			          "palga kasv 2005": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Intressi_Mõju_Indeks": {
+			          "Palga_kasv_2005": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -2501,156 +1122,339 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.kättesaadavus_m2_kuupalga_eest": {
+			    "aeg.põhivõti_kvartali_id.day": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Kättesaadavus (m2 kuupalga eest)"
+			          "ConceptualEntity": "Aeg",
+			          "VariationSource": "Põhivõti_kvartali_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
-			          "kättesaadavus (m2 kuupalga eest)": {
+			          "põhivõti kvartali id day": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "kättesaadavus": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.foorituli_värv": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Foorituli_Värv"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "foorituli värv": {
+			          "day": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Foorituli_Värv": {
+			          "põhivõti kvartali identification day": {
 			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identity day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identifier day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali credential day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Time"
 			    },
-			    "entity__measure.palk_eelmine_aasta": {
+			    "aeg.põhivõti_kvartali_id.month": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Palk_Eelmine_Aasta"
+			          "ConceptualEntity": "Aeg",
+			          "VariationSource": "Põhivõti_kvartali_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
 			        }
 			      },
 			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Palk eelmisel aastal samal ajal": {
-			            "LastModified": "2026-10-01T08:42:08.366Z"
-			          }
-			        },
-			        {
-			          "palk eelmine aasta": {
-			            "State": "Deleted",
-			            "LastModified": "2026-10-01T08:42:08.366Z"
-			          }
-			        },
-			        {
-			          "Palk_Eelmine_Aasta": {
-			            "Type": "Noun",
-			            "State": "Deleted",
-			            "LastModified": "2026-10-01T08:42:08.366Z"
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.ostujõud_värv_keskmine": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Ostujõud_Värv_Keskmine"
-			        }
+			      "Visibility": {
+			        "Value": "Hidden"
 			      },
-			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "Keskmine ostujõud": {
-			            "LastModified": "2026-10-01T08:41:32.825Z"
-			          }
-			        },
-			        {
-			          "ostujõud värv keskmine": {
-			            "State": "Deleted",
-			            "LastModified": "2026-10-01T08:41:32.826Z"
-			          }
-			        },
-			        {
-			          "Ostujõud_Värv_Keskmine": {
-			            "Type": "Noun",
-			            "State": "Deleted",
-			            "LastModified": "2026-10-01T08:41:32.826Z"
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.hinna_värv_mediaan": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Hinna_Värv_Mediaan"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "hinna värv mediaan": {
+			          "põhivõti kvartali id month": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Hinna_Värv_Mediaan": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.kaardi_ostujõu_värv": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Kaardi_Ostujõu_Värv"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "kaardi ostujõu värv": {
+			          "month": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Kaardi_Ostujõu_Värv": {
+			          "põhivõti kvartali id mth": {
 			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identification month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identity month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identifier month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali credential month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Time"
 			    },
-			    "entity__measure.keskmine_intressimäär": {
+			    "aeg.põhivõti_kvartali_id.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Aeg",
+			          "VariationSource": "Põhivõti_kvartali_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "põhivõti kvartali id quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "põhivõti kvartali id qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identification quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identity quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identifier quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali credential quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "aeg.põhivõti_kvartali_id.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Aeg",
+			          "VariationSource": "Põhivõti_kvartali_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "põhivõti kvartali id year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "põhivõti kvartali id yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identification year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identity year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali identifier year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "põhivõti kvartali credential year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "entity__mõõdikud.keskmine_intressimäär": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
@@ -2673,223 +1477,50 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.intressi_värv_keskmine": {
+			    "aeg.põhivõti_kvartali_id.date_hierarchy": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Intressi_Värv_Keskmine"
+			          "ConceptualEntity": "Aeg",
+			          "VariationSource": "Põhivõti_kvartali_id",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
-			          "intressi värv keskmine": {
+			          "põhivõti kvartali id date hierarchy": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Intressi_Värv_Keskmine": {
-			            "Type": "Noun",
+			          "date hierarchy": {
 			            "State": "Generated",
-			            "Weight": 0.99
+			            "Weight": 0.97
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Time"
 			    }
 			  },
 			  "Relationships": {
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "Aeg"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.quarter": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_quarters"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Aeg"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.year": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_years"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_time_pk_quarter_id_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "Aeg"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_ids_have_pk_quarter_id_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_thi_has_grupitoo_kv_dim_time": {
-			      "Binding": {
-			        "ConceptualEntity": "Tarbijahinnaindeks"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_thi": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
-			          }
-			        },
-			        "grupitoo_kv_dim_time": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_thi"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_this_have_grupitoo_kv_dim_times"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_palk_has_grupitoo_kv_dim_time": {
+			    "palk_has_maakond": {
 			      "Binding": {
 			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
+			        "palk": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
+			            "Entity": "palk"
 			          }
 			        },
-			        "grupitoo_kv_dim_time": {
+			        "maakond": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_grupitoo_kv_dim_times"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_fact_palk"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_times_have_grupitoo_kv_fact_palks"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_palk_has_grupitoo_kv_dim_county": {
-			      "Binding": {
-			        "ConceptualEntity": "Palk"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
-			          }
-			        },
-			        "grupitoo_kv_dim_county": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county"
+			            "Entity": "maakond"
 			          }
 			        }
 			      },
@@ -2897,45 +1528,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
+			              "Role": "palk"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_county"
+			              "Role": "maakond"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_grupitoo_kv_dim_counties"
+			          "ID": "palk_have_maakonds"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_county"
+			              "Role": "maakond"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_fact_palk"
+			              "Role": "palk"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_counties_have_grupitoo_kv_fact_palks"
+			          "ID": "maakonds_have_palk"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv_has_grupitoo_kv_dim_time": {
+			    "kinnisvara_has_aeg": {
 			      "Binding": {
 			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
+			        "kinnisvara": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
+			            "Entity": "kinnisvara"
 			          }
 			        },
-			        "grupitoo_kv_dim_time": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
+			            "Entity": "aeg"
 			          }
 			        }
 			      },
@@ -2943,45 +1574,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
+			              "Role": "kinnisvara"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_time"
+			              "Role": "aeg"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_grupitoo_kv_dim_times"
+			          "ID": "kinnisvaras_have_aeg"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time"
+			              "Role": "aeg"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_fact_kv"
+			              "Role": "kinnisvara"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_times_have_grupitoo_kv_fact_kvs"
+			          "ID": "aeg_have_kinnisvaras"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv_has_grupitoo_kv_dim_county": {
+			    "kinnisvara_has_maakond": {
 			      "Binding": {
 			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
+			        "kinnisvara": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
+			            "Entity": "kinnisvara"
 			          }
 			        },
-			        "grupitoo_kv_dim_county": {
+			        "maakond": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county"
+			            "Entity": "maakond"
 			          }
 			        }
 			      },
@@ -2989,45 +1620,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
+			              "Role": "kinnisvara"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_county"
+			              "Role": "maakond"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_grupitoo_kv_dim_counties"
+			          "ID": "kinnisvaras_have_maakonds"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_county"
+			              "Role": "maakond"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_fact_kv"
+			              "Role": "kinnisvara"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_counties_have_grupitoo_kv_fact_kvs"
+			          "ID": "maakonds_have_kinnisvaras"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_intressid_has_grupitoo_kv_dim_time": {
+			    "intressid_has_aeg": {
 			      "Binding": {
 			        "ConceptualEntity": "Intressid"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_intressid": {
+			        "intressid": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_intressid"
+			            "Entity": "intressid"
 			          }
 			        },
-			        "grupitoo_kv_dim_time": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
+			            "Entity": "aeg"
 			          }
 			        }
 			      },
@@ -3035,32 +1666,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_intressid"
+			              "Role": "intressid"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_time"
+			              "Role": "aeg"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_intressids_have_grupitoo_kv_dim_times"
+			          "ID": "intressids_have_aeg"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time_has_grupitoo_kv_fact_thi": {
+			    "aeg_has_tarbijahinnaindek": {
 			      "Binding": {
 			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_time": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
+			            "Entity": "aeg"
 			          }
 			        },
-			        "grupitoo_kv_fact_thi": {
+			        "tarbijahinnaindek": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
+			            "Entity": "tarbijahinnaindek"
 			          }
 			        }
 			      },
@@ -3068,32 +1699,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time"
+			              "Role": "aeg"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_fact_thi"
+			              "Role": "tarbijahinnaindek"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_times_have_grupitoo_kv_fact_this"
+			          "ID": "aeg_have_tarbijahinnaindeks"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time_has_grupitoo_kv_fact_intressid": {
+			    "aeg_has_intressid": {
 			      "Binding": {
 			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_time": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
+			            "Entity": "aeg"
 			          }
 			        },
-			        "grupitoo_kv_fact_intressid": {
+			        "intressid": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_intressid"
+			            "Entity": "intressid"
 			          }
 			        }
 			      },
@@ -3101,65 +1732,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time"
+			              "Role": "aeg"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_fact_intressid"
+			              "Role": "intressid"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_times_have_grupitoo_kv_fact_intressids"
+			          "ID": "aeg_have_intressids"
 			        }
 			      ]
 			    },
-			    "entity__measure_has_intressi_värv_keskmine": {
-			      "Binding": {
-			        "ConceptualEntity": "_Mõõdikud"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity__measure": {
-			          "Target": {
-			            "Entity": "entity__measure"
-			          }
-			        },
-			        "entity__measure.intressi_värv_keskmine": {
-			          "Target": {
-			            "Entity": "entity__measure.intressi_värv_keskmine"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity__measure"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.intressi_värv_keskmine"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_measures_have_intressi_värv_keskmine"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_intressid_has_entity__measure_keskmine_intressimäär": {
+			    "intressid_has_entity__mõõdikud_keskmine_intressimäär": {
 			      "Binding": {
 			        "ConceptualEntity": "Intressid"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_intressid": {
+			        "intressid": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_intressid"
+			            "Entity": "intressid"
 			          }
 			        },
-			        "entity__measure.keskmine_intressimäär": {
+			        "entity__mõõdikud.keskmine_intressimäär": {
 			          "Target": {
-			            "Entity": "entity__measure.keskmine_intressimäär"
+			            "Entity": "entity__mõõdikud.keskmine_intressimäär"
 			          }
 			        }
 			      },
@@ -3167,32 +1765,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_intressid"
+			              "Role": "intressid"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.keskmine_intressimäär"
+			              "Role": "entity__mõõdikud.keskmine_intressimäär"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_intressids_have_keskmine_intressimäär"
+			          "ID": "intressids_have_keskmine_intressimäär"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_palk_has_entity__measure_kaardi_ostujõu_värv": {
+			    "palk_has_entity__mõõdikud_palga_kasv_2005": {
 			      "Binding": {
 			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
+			        "palk": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
+			            "Entity": "palk"
 			          }
 			        },
-			        "entity__measure.kaardi_ostujõu_värv": {
+			        "entity__mõõdikud.palga_kasv_2005": {
 			          "Target": {
-			            "Entity": "entity__measure.kaardi_ostujõu_värv"
+			            "Entity": "entity__mõõdikud.palga_kasv_2005"
 			          }
 			        }
 			      },
@@ -3200,98 +1798,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
+			              "Role": "palk"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.kaardi_ostujõu_värv"
+			              "Role": "entity__mõõdikud.palga_kasv_2005"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_kaardi_ostujõu_värv"
+			          "ID": "palk_have_palga_kasv_2005"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_kaardi_ostujõu_värv": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.kaardi_ostujõu_värv": {
-			          "Target": {
-			            "Entity": "entity__measure.kaardi_ostujõu_värv"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.kaardi_ostujõu_värv"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_kaardi_ostujõu_värv"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_hinna_värv_mediaan": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.hinna_värv_mediaan": {
-			          "Target": {
-			            "Entity": "entity__measure.hinna_värv_mediaan"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.hinna_värv_mediaan"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_hinna_värv_mediaan"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõud_värv_keskmine": {
+			    "palk_has_entity__mõõdikud_ostujõud_m_2": {
 			      "Binding": {
 			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
+			        "palk": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
+			            "Entity": "palk"
 			          }
 			        },
-			        "entity__measure.ostujõud_värv_keskmine": {
+			        "entity__mõõdikud.ostujõud_m_2": {
 			          "Target": {
-			            "Entity": "entity__measure.ostujõud_värv_keskmine"
+			            "Entity": "entity__mõõdikud.ostujõud_m_2"
 			          }
 			        }
 			      },
@@ -3299,32 +1831,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
+			              "Role": "palk"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.ostujõud_värv_keskmine"
+			              "Role": "entity__mõõdikud.ostujõud_m_2"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_Keskmine_ostujõud"
+			          "ID": "palk_have_ostujõud_m_2"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõud_värv_keskmine": {
+			    "kinnisvara_has_entity__mõõdikud_ostujõud_m_2": {
 			      "Binding": {
 			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
+			        "kinnisvara": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
+			            "Entity": "kinnisvara"
 			          }
 			        },
-			        "entity__measure.ostujõud_värv_keskmine": {
+			        "entity__mõõdikud.ostujõud_m_2": {
 			          "Target": {
-			            "Entity": "entity__measure.ostujõud_värv_keskmine"
+			            "Entity": "entity__mõõdikud.ostujõud_m_2"
 			          }
 			        }
 			      },
@@ -3332,32 +1864,395 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
+			              "Role": "kinnisvara"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.ostujõud_värv_keskmine"
+			              "Role": "entity__mõõdikud.ostujõud_m_2"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_Keskmine_ostujõud"
+			          "ID": "kinnisvaras_have_ostujõud_m_2"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_palk_has_entity__measure_palk_eelmine_aasta": {
+			    "tarbijahinnaindek_has_entity__mõõdikud_THI_kasv_2005": {
+			      "Binding": {
+			        "ConceptualEntity": "Tarbijahinnaindeks"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tarbijahinnaindek": {
+			          "Target": {
+			            "Entity": "tarbijahinnaindek"
+			          }
+			        },
+			        "entity__mõõdikud.THI_kasv_2005": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.THI_kasv_2005"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tarbijahinnaindek"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.THI_kasv_2005"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tarbijahinnaindeks_have_THI_kasv_2005"
+			        }
+			      ]
+			    },
+			    "kinnisvara_has_entity__mõõdikud_kinnisvara_kasv_2005": {
+			      "Binding": {
+			        "ConceptualEntity": "Kinnisvara"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kinnisvara": {
+			          "Target": {
+			            "Entity": "kinnisvara"
+			          }
+			        },
+			        "entity__mõõdikud.kinnisvara_kasv_2005": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.kinnisvara_kasv_2005"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kinnisvara"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.kinnisvara_kasv_2005"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kinnisvaras_have_kinnisvara_kasv_2005"
+			        }
+			      ]
+			    },
+			    "tarbijahinnaindek_has_entity__mõõdikud_kinnisvara_THI_suhe": {
+			      "Binding": {
+			        "ConceptualEntity": "Tarbijahinnaindeks"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tarbijahinnaindek": {
+			          "Target": {
+			            "Entity": "tarbijahinnaindek"
+			          }
+			        },
+			        "entity__mõõdikud.kinnisvara_THI_suhe": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.kinnisvara_THI_suhe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tarbijahinnaindek"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.kinnisvara_THI_suhe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tarbijahinnaindeks_have_kinnisvara_THI_suhe"
+			        }
+			      ]
+			    },
+			    "kinnisvara_has_entity__mõõdikud_kinnisvara_THI_suhe": {
+			      "Binding": {
+			        "ConceptualEntity": "Kinnisvara"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kinnisvara": {
+			          "Target": {
+			            "Entity": "kinnisvara"
+			          }
+			        },
+			        "entity__mõõdikud.kinnisvara_THI_suhe": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.kinnisvara_THI_suhe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kinnisvara"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.kinnisvara_THI_suhe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kinnisvaras_have_kinnisvara_THI_suhe"
+			        }
+			      ]
+			    },
+			    "tarbijahinnaindek_has_entity__mõõdikud_hinnatõusu_lõhe_yo_Y": {
+			      "Binding": {
+			        "ConceptualEntity": "Tarbijahinnaindeks"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tarbijahinnaindek": {
+			          "Target": {
+			            "Entity": "tarbijahinnaindek"
+			          }
+			        },
+			        "entity__mõõdikud.hinnatõusu_lõhe_yo_Y": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.hinnatõusu_lõhe_yo_Y"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tarbijahinnaindek"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.hinnatõusu_lõhe_yo_Y"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tarbijahinnaindeks_have_hinnatõusu_lõhe_yo_Y"
+			        }
+			      ]
+			    },
+			    "kinnisvara_has_entity__mõõdikud_hinnatõusu_lõhe_yo_Y": {
+			      "Binding": {
+			        "ConceptualEntity": "Kinnisvara"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kinnisvara": {
+			          "Target": {
+			            "Entity": "kinnisvara"
+			          }
+			        },
+			        "entity__mõõdikud.hinnatõusu_lõhe_yo_Y": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.hinnatõusu_lõhe_yo_Y"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kinnisvara"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.hinnatõusu_lõhe_yo_Y"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kinnisvaras_have_hinnatõusu_lõhe_yo_Y"
+			        }
+			      ]
+			    },
+			    "tarbijahinnaindek_has_entity__mõõdikud_reaalne_m_2_hind": {
+			      "Binding": {
+			        "ConceptualEntity": "Tarbijahinnaindeks"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tarbijahinnaindek": {
+			          "Target": {
+			            "Entity": "tarbijahinnaindek"
+			          }
+			        },
+			        "entity__mõõdikud.reaalne_m_2_hind": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.reaalne_m_2_hind"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tarbijahinnaindek"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.reaalne_m_2_hind"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tarbijahinnaindeks_have_reaalne_m_2_hind"
+			        }
+			      ]
+			    },
+			    "kinnisvara_has_entity__mõõdikud_reaalne_m_2_hind": {
+			      "Binding": {
+			        "ConceptualEntity": "Kinnisvara"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kinnisvara": {
+			          "Target": {
+			            "Entity": "kinnisvara"
+			          }
+			        },
+			        "entity__mõõdikud.reaalne_m_2_hind": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.reaalne_m_2_hind"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kinnisvara"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.reaalne_m_2_hind"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kinnisvaras_have_reaalne_m_2_hind"
+			        }
+			      ]
+			    },
+			    "tarbijahinnaindek_has_entity__mõõdikud_keskmine_THI": {
+			      "Binding": {
+			        "ConceptualEntity": "Tarbijahinnaindeks"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tarbijahinnaindek": {
+			          "Target": {
+			            "Entity": "tarbijahinnaindek"
+			          }
+			        },
+			        "entity__mõõdikud.keskmine_THI": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.keskmine_THI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tarbijahinnaindek"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.keskmine_THI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tarbijahinnaindeks_have_keskmine_THI"
+			        }
+			      ]
+			    },
+			    "kinnisvara_has_entity__mõõdikud_keskmine_m_2_hind": {
+			      "Binding": {
+			        "ConceptualEntity": "Kinnisvara"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kinnisvara": {
+			          "Target": {
+			            "Entity": "kinnisvara"
+			          }
+			        },
+			        "entity__mõõdikud.keskmine_m_2_hind": {
+			          "Target": {
+			            "Entity": "entity__mõõdikud.keskmine_m_2_hind"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kinnisvara"
+			            },
+			            "Object": {
+			              "Role": "entity__mõõdikud.keskmine_m_2_hind"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kinnisvaras_have_keskmine_m_2_hind"
+			        }
+			      ]
+			    },
+			    "tarbijahinnaindek_has_keskmine_indek": {
+			      "Binding": {
+			        "ConceptualEntity": "Tarbijahinnaindeks"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tarbijahinnaindek": {
+			          "Target": {
+			            "Entity": "tarbijahinnaindek"
+			          }
+			        },
+			        "tarbijahinnaindek.keskmine_indek": {
+			          "Target": {
+			            "Entity": "tarbijahinnaindek.keskmine_indek"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tarbijahinnaindek"
+			            },
+			            "Object": {
+			              "Role": "tarbijahinnaindek.keskmine_indek"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tarbijahinnaindeks_have_keskmine_indeks"
+			        }
+			      ]
+			    },
+			    "palk_has_keskmine_palk": {
 			      "Binding": {
 			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
+			        "palk": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
+			            "Entity": "palk"
 			          }
 			        },
-			        "entity__measure.palk_eelmine_aasta": {
+			        "palk.keskmine_palk": {
 			          "Target": {
-			            "Entity": "entity__measure.palk_eelmine_aasta"
+			            "Entity": "palk.keskmine_palk"
 			          }
 			        }
 			      },
@@ -3365,713 +2260,20 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
+			              "Role": "palk"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.palk_eelmine_aasta"
+			              "Role": "palk.keskmine_palk"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_Palk_eelmisel_aastal_samal_ajal"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_palk_has_entity__measure_foorituli_värv": {
-			      "Binding": {
-			        "ConceptualEntity": "Palk"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
-			          }
-			        },
-			        "entity__measure.foorituli_värv": {
-			          "Target": {
-			            "Entity": "entity__measure.foorituli_värv"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.foorituli_värv"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_foorituli_värv"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_foorituli_värv": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.foorituli_värv": {
-			          "Target": {
-			            "Entity": "entity__measure.foorituli_värv"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.foorituli_värv"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_foorituli_värv"
-			        }
-			      ]
-			    },
-			    "entity__measure_has_kättesaadavus_m2_kuupalga_eest": {
-			      "Binding": {
-			        "ConceptualEntity": "_Mõõdikud"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity__measure": {
-			          "Target": {
-			            "Entity": "entity__measure"
-			          }
-			        },
-			        "entity__measure.kättesaadavus_m2_kuupalga_eest": {
-			          "Target": {
-			            "Entity": "entity__measure.kättesaadavus_m2_kuupalga_eest"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity__measure"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.kättesaadavus_m2_kuupalga_eest"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_measures_have_kättesaadavus_m2_kuupalga_eest"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_thi_has_entity__measure_intressi_mõju_indeks": {
-			      "Binding": {
-			        "ConceptualEntity": "Tarbijahinnaindeks"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_thi": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
-			          }
-			        },
-			        "entity__measure.intressi_mõju_indeks": {
-			          "Target": {
-			            "Entity": "entity__measure.intressi_mõju_indeks"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_thi"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.intressi_mõju_indeks"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_this_have_intressi_mõju_indeks"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_palk_has_entity__measure_intressi_mõju_indeks": {
-			      "Binding": {
-			        "ConceptualEntity": "Palk"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
-			          }
-			        },
-			        "entity__measure.intressi_mõju_indeks": {
-			          "Target": {
-			            "Entity": "entity__measure.intressi_mõju_indeks"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.intressi_mõju_indeks"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_intressi_mõju_indeks"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_intressi_mõju_indeks": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.intressi_mõju_indeks": {
-			          "Target": {
-			            "Entity": "entity__measure.intressi_mõju_indeks"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.intressi_mõju_indeks"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_intressi_mõju_indeks"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_palk_has_entity__measure_ostujõud_m_2": {
-			      "Binding": {
-			        "ConceptualEntity": "Palk"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
-			          }
-			        },
-			        "entity__measure.ostujõud_m_2": {
-			          "Target": {
-			            "Entity": "entity__measure.ostujõud_m_2"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.ostujõud_m_2"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_ostujõud_m_2"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_ostujõud_m_2": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.ostujõud_m_2": {
-			          "Target": {
-			            "Entity": "entity__measure.ostujõud_m_2"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.ostujõud_m_2"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_ostujõud_m_2"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_thi_has_entity__measure_THI_kasv_2005": {
-			      "Binding": {
-			        "ConceptualEntity": "Tarbijahinnaindeks"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_thi": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
-			          }
-			        },
-			        "entity__measure.THI_kasv_2005": {
-			          "Target": {
-			            "Entity": "entity__measure.THI_kasv_2005"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_thi"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.THI_kasv_2005"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_this_have_THI_kasv_2005"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_kinnisvara_kasv_2005": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.kinnisvara_kasv_2005": {
-			          "Target": {
-			            "Entity": "entity__measure.kinnisvara_kasv_2005"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.kinnisvara_kasv_2005"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_kinnisvara_kasv_2005"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_thi_has_entity__measure_kinnisvara_THI_suhe": {
-			      "Binding": {
-			        "ConceptualEntity": "Tarbijahinnaindeks"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_thi": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
-			          }
-			        },
-			        "entity__measure.kinnisvara_THI_suhe": {
-			          "Target": {
-			            "Entity": "entity__measure.kinnisvara_THI_suhe"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_thi"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.kinnisvara_THI_suhe"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_this_have_kinnisvara_THI_suhe"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_kinnisvara_THI_suhe": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.kinnisvara_THI_suhe": {
-			          "Target": {
-			            "Entity": "entity__measure.kinnisvara_THI_suhe"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.kinnisvara_THI_suhe"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_kinnisvara_THI_suhe"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_thi_has_entity__measure_hinnatõusu_lõhe_yo_Y": {
-			      "Binding": {
-			        "ConceptualEntity": "Tarbijahinnaindeks"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_thi": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
-			          }
-			        },
-			        "entity__measure.hinnatõusu_lõhe_yo_Y": {
-			          "Target": {
-			            "Entity": "entity__measure.hinnatõusu_lõhe_yo_Y"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_thi"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.hinnatõusu_lõhe_yo_Y"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_this_have_hinnatõusu_lõhe_yo_Y"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_hinnatõusu_lõhe_yo_Y": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.hinnatõusu_lõhe_yo_Y": {
-			          "Target": {
-			            "Entity": "entity__measure.hinnatõusu_lõhe_yo_Y"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.hinnatõusu_lõhe_yo_Y"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_hinnatõusu_lõhe_yo_Y"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_thi_has_entity__measure_reaalne_m_2_hind": {
-			      "Binding": {
-			        "ConceptualEntity": "Tarbijahinnaindeks"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_thi": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
-			          }
-			        },
-			        "entity__measure.reaalne_m_2_hind": {
-			          "Target": {
-			            "Entity": "entity__measure.reaalne_m_2_hind"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_thi"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.reaalne_m_2_hind"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_this_have_reaalne_m_2_hind"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_reaalne_m_2_hind": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.reaalne_m_2_hind": {
-			          "Target": {
-			            "Entity": "entity__measure.reaalne_m_2_hind"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.reaalne_m_2_hind"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_reaalne_m_2_hind"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_thi_has_entity__measure_keskmine_THI": {
-			      "Binding": {
-			        "ConceptualEntity": "Tarbijahinnaindeks"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_thi": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
-			          }
-			        },
-			        "entity__measure.keskmine_THI": {
-			          "Target": {
-			            "Entity": "entity__measure.keskmine_THI"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_thi"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.keskmine_THI"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_this_have_keskmine_THI"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_entity__measure_keskmine_m_2_hind": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "entity__measure.keskmine_m_2_hind": {
-			          "Target": {
-			            "Entity": "entity__measure.keskmine_m_2_hind"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.keskmine_m_2_hind"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_keskmine_m_2_hind"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_thi_has_fk_quarter_id": {
-			      "Binding": {
-			        "ConceptualEntity": "Tarbijahinnaindeks"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_thi": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
-			          }
-			        },
-			        "grupitoo_kv_fact_thi.fk_quarter_id": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi.fk_quarter_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_thi"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_fact_thi.fk_quarter_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_this_have_fk_quarter_ids"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_thi_has_keskmine_indek": {
-			      "Binding": {
-			        "ConceptualEntity": "Tarbijahinnaindeks"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_thi": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi"
-			          }
-			        },
-			        "grupitoo_kv_fact_thi.keskmine_indek": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_thi.keskmine_indek"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_thi"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_fact_thi.keskmine_indek"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_this_have_keskmine_indeks"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_palk_has_average_salary": {
-			      "Binding": {
-			        "ConceptualEntity": "Palk"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
-			          }
-			        },
-			        "grupitoo_kv_fact_palk.average_salary": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk.average_salary"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_fact_palk.average_salary"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_average_salaries"
+			          "ID": "palk_have_keskmine_palk"
 			        },
 			        {
 			          "Adjective": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
+			              "Role": "palk"
 			            },
 			            "Adjectives": [
 			              {
@@ -4088,62 +2290,29 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "grupitoo_kv_fact_palk.average_salary"
+			              "Role": "palk.keskmine_palk"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "average_salary_indicates_how_expensive_grupitoo_kv_fact_palks_are"
+			          "ID": "keskmine_palk_indicates_how_expensive_palk_are"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_palk_has_fk_quarter_id": {
-			      "Binding": {
-			        "ConceptualEntity": "Palk"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_palk": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk"
-			          }
-			        },
-			        "grupitoo_kv_fact_palk.fk_quarter_id": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_palk.fk_quarter_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_palk"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_fact_palk.fk_quarter_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_palks_have_fk_quarter_ids"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_kv_has_avg_price_m_2": {
+			    "kinnisvara_has_keskmine_m_2_hind": {
 			      "Binding": {
 			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
+			        "kinnisvara": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
+			            "Entity": "kinnisvara"
 			          }
 			        },
-			        "grupitoo_kv_fact_kv.avg_price_m_2": {
+			        "kinnisvara.keskmine_m_2_hind": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv.avg_price_m_2"
+			            "Entity": "kinnisvara.keskmine_m_2_hind"
 			          }
 			        }
 			      },
@@ -4151,20 +2320,20 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
+			              "Role": "kinnisvara"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_fact_kv.avg_price_m_2"
+			              "Role": "kinnisvara.keskmine_m_2_hind"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_avg_price_m_2"
+			          "ID": "kinnisvaras_have_keskmine_m_2_hinds"
 			        },
 			        {
 			          "Adjective": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
+			              "Role": "kinnisvara"
 			            },
 			            "Adjectives": [
 			              {
@@ -4181,29 +2350,29 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "grupitoo_kv_fact_kv.avg_price_m_2"
+			              "Role": "kinnisvara.keskmine_m_2_hind"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "avg_price_m_2_indicates_how_expensive_grupitoo_kv_fact_kvs_are"
+			          "ID": "keskmine_m_2_hind_indicates_how_expensive_kinnisvaras_are"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv_has_transaction_count": {
+			    "kinnisvara_has_tehingute_arv": {
 			      "Binding": {
 			        "ConceptualEntity": "Kinnisvara"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
+			        "kinnisvara": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
+			            "Entity": "kinnisvara"
 			          }
 			        },
-			        "grupitoo_kv_fact_kv.transaction_count": {
+			        "kinnisvara.tehingute_arv": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv.transaction_count"
+			            "Entity": "kinnisvara.tehingute_arv"
 			          }
 			        }
 			      },
@@ -4211,65 +2380,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
+			              "Role": "kinnisvara"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_fact_kv.transaction_count"
+			              "Role": "kinnisvara.tehingute_arv"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_transaction_counts"
+			          "ID": "kinnisvaras_have_tehingute_arv"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_kv_has_fk_quarter_id": {
-			      "Binding": {
-			        "ConceptualEntity": "Kinnisvara"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_kv": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv"
-			          }
-			        },
-			        "grupitoo_kv_fact_kv.fk_quarter_id": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_kv.fk_quarter_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_kv"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_fact_kv.fk_quarter_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_kvs_have_fk_quarter_ids"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_fact_intressid_has_intress": {
+			    "intressid_has_intress": {
 			      "Binding": {
 			        "ConceptualEntity": "Intressid"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_fact_intressid": {
+			        "intressid": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_intressid"
+			            "Entity": "intressid"
 			          }
 			        },
-			        "grupitoo_kv_fact_intressid.intress": {
+			        "intressid.intress": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_fact_intressid.intress"
+			            "Entity": "intressid.intress"
 			          }
 			        }
 			      },
@@ -4277,65 +2413,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_fact_intressid"
+			              "Role": "intressid"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_fact_intressid.intress"
+			              "Role": "intressid.intress"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_intressids_have_intresses"
+			          "ID": "intressids_have_intresses"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_fact_intressid_has_fk_quarter_id": {
-			      "Binding": {
-			        "ConceptualEntity": "Intressid"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_fact_intressid": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_intressid"
-			          }
-			        },
-			        "grupitoo_kv_fact_intressid.fk_quarter_id": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_fact_intressid.fk_quarter_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_fact_intressid"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_fact_intressid.fk_quarter_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_fact_intressids_have_fk_quarter_ids"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_time_has_half_year": {
+			    "aeg_has_poolaasta": {
 			      "Binding": {
 			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_time": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
+			            "Entity": "aeg"
 			          }
 			        },
-			        "grupitoo_kv_dim_time.half_year": {
+			        "aeg.poolaasta": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.half_year"
+			            "Entity": "aeg.poolaasta"
 			          }
 			        }
 			      },
@@ -4343,32 +2446,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time"
+			              "Role": "aeg"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.half_year"
+			              "Role": "aeg.poolaasta"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_times_have_half_years"
+			          "ID": "aeg_have_poolaastas"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time_has_quarter_string": {
+			    "aeg_has_kvartal_aasta_lõike": {
 			      "Binding": {
 			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_time": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
+			            "Entity": "aeg"
 			          }
 			        },
-			        "grupitoo_kv_dim_time.quarter_string": {
+			        "aeg.kvartal_aasta_lõike": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.quarter_string"
+			            "Entity": "aeg.kvartal_aasta_lõike"
 			          }
 			        }
 			      },
@@ -4376,32 +2479,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time"
+			              "Role": "aeg"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.quarter_string"
+			              "Role": "aeg.kvartal_aasta_lõike"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_times_have_quarter_strings"
+			          "ID": "aeg_have_kvartal_aasta_lõikes"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time_has_quarter_number": {
+			    "aeg_has_kvartali_number": {
 			      "Binding": {
 			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_time": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
+			            "Entity": "aeg"
 			          }
 			        },
-			        "grupitoo_kv_dim_time.quarter_number": {
+			        "aeg.kvartali_number": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.quarter_number"
+			            "Entity": "aeg.kvartali_number"
 			          }
 			        }
 			      },
@@ -4409,32 +2512,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time"
+			              "Role": "aeg"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.quarter_number"
+			              "Role": "aeg.kvartali_number"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_times_have_quarter_numbers"
+			          "ID": "aeg_have_kvartali_numbers"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time_has_year_number": {
+			    "aeg_has_aasta": {
 			      "Binding": {
 			        "ConceptualEntity": "Aeg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_time": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
+			            "Entity": "aeg"
 			          }
 			        },
-			        "grupitoo_kv_dim_time.year_number": {
+			        "aeg.aasta": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.year_number"
+			            "Entity": "aeg.aasta"
 			          }
 			        }
 			      },
@@ -4442,65 +2545,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time"
+			              "Role": "aeg"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.year_number"
+			              "Role": "aeg.aasta"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_times_have_year_numbers"
+			          "ID": "aeg_have_aastas"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time_has_pk_quarter_id": {
-			      "Binding": {
-			        "ConceptualEntity": "Aeg"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_times_have_pk_quarter_ids"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_county_has_pk_county_id": {
+			    "maakond_has_maakonna_nimi": {
 			      "Binding": {
 			        "ConceptualEntity": "Maakond"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_county": {
+			        "maakond": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county"
+			            "Entity": "maakond"
 			          }
 			        },
-			        "grupitoo_kv_dim_county.pk_county_id": {
+			        "maakond.maakonna_nimi": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county.pk_county_id"
+			            "Entity": "maakond.maakonna_nimi"
 			          }
 			        }
 			      },
@@ -4508,32 +2578,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_county"
+			              "Role": "maakond"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_county.pk_county_id"
+			              "Role": "maakond.maakonna_nimi"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_counties_have_pk_county_ids"
+			          "ID": "maakonds_have_maakonna_nimis"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_county_has_county_name": {
+			    "palk_has_aeg": {
 			      "Binding": {
-			        "ConceptualEntity": "Maakond"
+			        "ConceptualEntity": "Palk"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_county": {
+			        "palk": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county"
+			            "Entity": "palk"
 			          }
 			        },
-			        "grupitoo_kv_dim_county.county_name": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county.county_name"
+			            "Entity": "aeg"
 			          }
 			        }
 			      },
@@ -4541,77 +2611,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_county"
+			              "Role": "palk"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_county.county_name"
+			              "Role": "aeg"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_counties_have_county_names"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_county_in_county_name": {
-			      "Binding": {
-			        "ConceptualEntity": "Maakond"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_county": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county"
-			          }
+			          "ID": "palk_have_aeg"
 			        },
-			        "grupitoo_kv_dim_county.county_name": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_county.county_name"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "grupitoo_kv_dim_county.county_name"
-			        }
-			      },
-			      "Phrasings": [
 			        {
-			          "Preposition": {
+			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_county"
+			              "Role": "aeg"
 			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_county.county_name"
+			              "Role": "palk"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "grupitoo_kv_dim_counties_are_in_county_names"
+			          "ID": "aeg_have_palk"
 			        }
 			      ]
 			    },
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_month": {
+			    "tarbijahinnaindek_has_aeg": {
 			      "Binding": {
-			        "ConceptualEntity": "Aeg"
+			        "ConceptualEntity": "Tarbijahinnaindeks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
+			        "tarbijahinnaindek": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			            "Entity": "tarbijahinnaindek"
 			          }
 			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.month": {
+			        "aeg": {
 			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.month"
+			            "Entity": "aeg"
 			          }
 			        }
 			      },
@@ -4619,48 +2657,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
+			              "Role": "tarbijahinnaindek"
 			            },
 			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.month"
+			              "Role": "aeg"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_months"
-			        }
-			      ]
-			    },
-			    "grupitoo_kv_dim_time_pk_quarter_id_date_hierarchy_has_grupitoo_kv_dim_time_pk_quarter_id_day": {
-			      "Binding": {
-			        "ConceptualEntity": "Aeg"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			          }
-			        },
-			        "grupitoo_kv_dim_time.pk_quarter_id.day": {
-			          "Target": {
-			            "Entity": "grupitoo_kv_dim_time.pk_quarter_id.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "grupitoo_kv_dim_time.pk_quarter_id.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pk_quarter_id_date_hierarchies_have_pk_quarter_id_days"
+			          "ID": "tarbijahinnaindeks_have_aeg"
 			        }
 			      ]
 			    }
