@@ -42,7 +42,7 @@
                       "Entity": "_Mõõdikud"
                     }
                   },
-                  "Property": "Kinnisvara_kasv_2005"
+                  "Property": "Kinnisvarahinnaindeks"
                 }
               },
               "queryRef": "_Measures.Kinnisvara_kasv_2005",
@@ -57,7 +57,7 @@
                       "Entity": "_Mõõdikud"
                     }
                   },
-                  "Property": "THI_kasv_2005"
+                  "Property": "THI"
                 }
               },
               "queryRef": "_Measures.THI_kasv_2005",
@@ -77,7 +77,7 @@
                     "Entity": "_Mõõdikud"
                   }
                 },
-                "Property": "Kinnisvara_kasv_2005"
+                "Property": "Kinnisvarahinnaindeks"
               }
             },
             "direction": "Descending"
