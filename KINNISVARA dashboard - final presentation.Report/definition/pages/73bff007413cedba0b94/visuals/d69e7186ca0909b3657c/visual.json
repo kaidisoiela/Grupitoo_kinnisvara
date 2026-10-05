@@ -23,7 +23,7 @@
                       "Entity": "_Mõõdikud"
                     }
                   },
-                  "Property": "THI_kasv_2005"
+                  "Property": "THI"
                 }
               },
               "queryRef": "_Measures.THI_kasv_2005",
@@ -42,7 +42,7 @@
                     "Entity": "_Mõõdikud"
                   }
                 },
-                "Property": "THI_kasv_2005"
+                "Property": "THI"
               }
             },
             "direction": "Descending"
@@ -157,7 +157,7 @@
                 "Entity": "_Mõõdikud"
               }
             },
-            "Property": "THI_kasv_2005"
+            "Property": "THI"
           }
         },
         "type": "Advanced"

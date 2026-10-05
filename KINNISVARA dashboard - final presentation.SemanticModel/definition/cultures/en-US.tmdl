@@ -1014,7 +1014,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Kinnisvara_kasv_2005"
+			          "ConceptualProperty": "Kinnisvarahinnaindeks"
 			        }
 			      },
 			      "State": "Generated",
@@ -1047,7 +1047,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "THI_kasv_2005"
+			          "ConceptualProperty": "THI"
 			        }
 			      },
 			      "State": "Generated",
@@ -1103,7 +1103,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Palga_kasv_2005"
+			          "ConceptualProperty": "Brutopalga indeks"
 			        }
 			      },
 			      "State": "Generated",

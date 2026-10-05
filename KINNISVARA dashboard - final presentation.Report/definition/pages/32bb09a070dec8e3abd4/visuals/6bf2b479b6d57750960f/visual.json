@@ -42,11 +42,11 @@
                       "Entity": "_Mõõdikud"
                     }
                   },
-                  "Property": "Kinnisvara_kasv_2005"
+                  "Property": "Kinnisvarahinnaindeks"
                 }
               },
               "queryRef": "_Measures.Kinnisvara_kasv_2005",
-              "nativeQueryRef": "Kinnisvara_kasv_2005"
+              "nativeQueryRef": "Kinnisvarahinnaindeks"
             },
             {
               "field": {
@@ -56,11 +56,11 @@
                       "Entity": "_Mõõdikud"
                     }
                   },
-                  "Property": "THI_kasv_2005"
+                  "Property": "THI"
                 }
               },
               "queryRef": "_Measures.THI_kasv_2005",
-              "nativeQueryRef": "THI_kasv_2005"
+              "nativeQueryRef": "THI"
             },
             {
               "field": {
@@ -70,11 +70,11 @@
                       "Entity": "_Mõõdikud"
                     }
                   },
-                  "Property": "Palga_kasv_2005"
+                  "Property": "Brutopalga indeks"
                 }
               },
               "queryRef": "_Measures.Palga_kasv_2005",
-              "nativeQueryRef": "Palga_kasv_2005"
+              "nativeQueryRef": "Brutopalga indeks"
             }
           ]
         }
@@ -135,6 +135,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -148,6 +155,27 @@
                   "Value": "'Kasvukordaja'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -156,6 +184,13 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableValueDataLabel": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -174,6 +209,39 @@
                   "Value": "true"
                 }
               }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "strokeShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -186,7 +254,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Kinnisvarahindade ja elukalliduse kumulatiivne kasv (Baas 2005 = 1.0)'"
+                  "Value": "'Kinnisvarahindade, keskmise brutopalga ja tarbijahindade indeksite võrdlus (Baas 2005 = 1.0)'"
                 }
               }
             },
@@ -264,6 +332,19 @@
                       "Percent": 0.4
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

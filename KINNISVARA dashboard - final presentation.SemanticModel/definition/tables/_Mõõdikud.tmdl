@@ -49,7 +49,7 @@ table _Mõõdikud
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Kinnisvara keskmise ruutmeetri hinna kumulatiivne kasv võrreldes baasperioodiga (Aasta 2005 = 1.0 ehk 100%). Näitab, mitu korda on turuhind baasaastast alates tõusnud.
-	measure Kinnisvara_kasv_2005 =
+	measure Kinnisvarahinnaindeks =
 			
 			VAR BaasHind = CALCULATE([Keskmine_m2_hind], 'Aeg'[Aasta] = 2005)
 			RETURN
@@ -59,7 +59,7 @@ table _Mõõdikud
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Tarbijahinnaindeksi kumulatiivne kasv võrreldes baasperioodiga (Aasta 2005 = 1.0 ehk 100%). Näitab üldise elukalliduse ja tarbijakorvi mitmekordistumist ajas.
-	measure THI_kasv_2005 =
+	measure THI =
 			
 			VAR BaasTHI = CALCULATE([Keskmine_THI], 'Aeg'[Aasta] = 2005)
 			RETURN
@@ -85,7 +85,7 @@ table _Mõõdikud
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 5ecccc85-31c3-4e50-852d-bf0bd352bc03
 
-	measure Palga_kasv_2005 =
+	measure 'Brutopalga indeks' =
 			
 			VAR JooksevPalk = AVERAGE('Palk'[Keskmine_palk])
 			VAR BaasPalk = CALCULATE(AVERAGE('Palk'[Keskmine_palk]), 'Aeg'[Aasta] = 2005)
