@@ -1,0 +1,40 @@
+table 'grupitoo_kv fact_intressid'
+	lineageTag: 0c1620aa-a808-4fd2-9875-409f90eaff74
+
+	/// Kvartali esimene päev
+	column fk_quarter_id
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ff2e6100-15ce-4aa5-8554-2ed09c0ddf6b
+		summarizeBy: none
+		sourceColumn: fk_quarter_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Valitud perioodi keskmise eluasemelaenu intressimäär.
+	column intress
+		dataType: double
+		lineageTag: 2b1ca96f-6bcf-4be4-8bdd-48ffe9056d85
+		summarizeBy: sum
+		sourceColumn: intress
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'grupitoo_kv fact_intressid' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "postgres"),
+				    grupitoo_kv_fact_intressid = Source{[Schema="grupitoo_kv",Item="fact_intressid"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(grupitoo_kv_fact_intressid,{"grupitoo_kv.dim_time"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
