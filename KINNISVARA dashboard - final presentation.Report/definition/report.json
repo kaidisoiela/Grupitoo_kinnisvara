@@ -11,7 +11,7 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "AccessibleNeutral",
+      "name": "AccessibleDefault",
       "reportVersionAtImport": {
         "visual": "2.11.0",
         "report": "3.4.0",
@@ -40,7 +40,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -54,8 +54,8 @@
       "type": "SharedResources",
       "items": [
         {
-          "name": "AccessibleNeutral",
-          "path": "BuiltInThemes/AccessibleNeutral.json",
+          "name": "AccessibleDefault",
+          "path": "BuiltInThemes/AccessibleDefault.json",
           "type": "CustomTheme"
         },
         {
