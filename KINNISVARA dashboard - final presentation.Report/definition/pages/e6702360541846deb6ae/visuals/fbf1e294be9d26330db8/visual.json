@@ -20,10 +20,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
+                      "Entity": "Aeg"
                     }
                   },
-                  "Property": "year_number"
+                  "Property": "Aasta"
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "Kinnisvara_kasv_2005"
@@ -53,7 +53,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "THI_kasv_2005"
@@ -67,7 +67,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "Hinnatõusu_Lõhe_YoY"
@@ -81,7 +81,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "Reaalne_m2_hind"
@@ -114,10 +114,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
+                "Entity": "Aeg"
               }
             },
-            "Property": "year_number"
+            "Property": "Aasta"
           }
         },
         "type": "Advanced"
@@ -128,7 +128,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_Measures"
+                "Entity": "_Mõõdikud"
               }
             },
             "Property": "Kinnisvara_kasv_2005"
@@ -142,7 +142,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_Measures"
+                "Entity": "_Mõõdikud"
               }
             },
             "Property": "THI_kasv_2005"
@@ -156,7 +156,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_Measures"
+                "Entity": "_Mõõdikud"
               }
             },
             "Property": "Hinnatõusu_Lõhe_YoY"
@@ -170,7 +170,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_Measures"
+                "Entity": "_Mõõdikud"
               }
             },
             "Property": "Reaalne_m2_hind"

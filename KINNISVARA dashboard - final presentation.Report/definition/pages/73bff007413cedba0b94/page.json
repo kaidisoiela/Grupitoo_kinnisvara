@@ -13,10 +13,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
+                "Entity": "Aeg"
               }
             },
-            "Property": "year_number"
+            "Property": "Aasta"
           }
         },
         "type": "Categorical",
@@ -36,10 +36,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
+                "Entity": "Aeg"
               }
             },
-            "Property": "year_number"
+            "Property": "Aasta"
           }
         }
       }

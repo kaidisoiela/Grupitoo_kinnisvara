@@ -25,10 +25,10 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "grupitoo_kv fact_kv"
+                              "Entity": "Kinnisvara"
                             }
                           },
-                          "Property": "avg_price_m2"
+                          "Property": "Keskmine_m2_hind"
                         }
                       },
                       "Function": 0
@@ -43,10 +43,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_county"
+                          "Entity": "Maakond"
                         }
                       },
-                      "Property": "county_name"
+                      "Property": "Maakonna nimi"
                     }
                   },
                   "howCreated": 0
@@ -60,10 +60,10 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "grupitoo_kv fact_kv"
+                              "Entity": "Kinnisvara"
                             }
                           },
-                          "Property": "transaction_count"
+                          "Property": "Tehingute_arv"
                         }
                       },
                       "Function": 0
@@ -78,7 +78,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_county"
+                          "Entity": "Maakond"
                         }
                       },
                       "Property": "Reaalne_Palk"
@@ -93,10 +93,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_time"
+                          "Entity": "Aeg"
                         }
                       },
-                      "Property": "year_number"
+                      "Property": "Aasta"
                     }
                   },
                   "howCreated": 0
@@ -112,7 +112,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_county"
+                          "Entity": "Maakond"
                         }
                       },
                       "Property": "Reaalne_Palk"
@@ -124,10 +124,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_time"
+                          "Entity": "Aeg"
                         }
                       },
-                      "Property": "year_number"
+                      "Property": "Aasta"
                     }
                   }
                 ]
@@ -144,10 +144,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_county"
+                          "Entity": "Maakond"
                         }
                       },
-                      "Property": "county_name"
+                      "Property": "Maakonna nimi"
                     }
                   },
                   "howCreated": 0
@@ -159,10 +159,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_time"
+                          "Entity": "Aeg"
                         }
                       },
-                      "Property": "year_number"
+                      "Property": "Aasta"
                     }
                   },
                   "howCreated": 0
@@ -176,10 +176,10 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "grupitoo_kv fact_kv"
+                              "Entity": "Kinnisvara"
                             }
                           },
-                          "Property": "transaction_count"
+                          "Property": "Tehingute_arv"
                         }
                       },
                       "Function": 0
@@ -198,10 +198,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_county"
+                          "Entity": "Maakond"
                         }
                       },
-                      "Property": "county_name"
+                      "Property": "Maakonna nimi"
                     }
                   }
                 ],
@@ -210,10 +210,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv dim_time"
+                          "Entity": "Aeg"
                         }
                       },
-                      "Property": "year_number"
+                      "Property": "Aasta"
                     }
                   }
                 ]
