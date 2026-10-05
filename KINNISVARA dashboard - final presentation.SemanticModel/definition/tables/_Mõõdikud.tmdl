@@ -105,8 +105,6 @@ table _Mõõdikud
 				in
 				    #"Removed Columns"
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 
 	annotation PBI_NavigationStepName = Navigation
