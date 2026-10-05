@@ -1,32 +1,38 @@
-table 'grupitoo_kv dim_county'
+table Maakond
 	lineageTag: b8c952a5-01f8-4645-8a1e-a6b3930e1b4f
 
-	column pk_county_id
+	column Põhivõti_maakonna_id
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: ff372c49-fac5-4d09-aa99-57c7b0e2ceea
 		summarizeBy: none
-		sourceColumn: pk_county_id
+		sourceColumn: Põhivõti_maakonna_id
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
-	column county_name
+	column 'Maakonna nimi'
 		dataType: string
 		lineageTag: 5cbfa906-f78c-48f9-b2de-e47fdd1beba7
 		summarizeBy: none
-		sourceColumn: county_name
+		sourceColumn: Maakonna nimi
 
 		annotation SummarizationSetBy = Automatic
 
-	partition 'grupitoo_kv dim_county' = m
+	partition Maakond = m
 		mode: import
 		source =
 				let
 				    Source = PostgreSQL.Database("localhost", "postgres"),
 				    grupitoo_kv_dim_county = Source{[Schema="grupitoo_kv",Item="dim_county"]}[Data],
-				    #"Removed Columns" = Table.RemoveColumns(grupitoo_kv_dim_county,{"grupitoo_kv.fact_kv", "grupitoo_kv.fact_palk"})
+				    #"Removed Columns" = Table.RemoveColumns(grupitoo_kv_dim_county,{"grupitoo_kv.fact_kv", "grupitoo_kv.fact_palk"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"county_name", "Maakonna nimi"}, {"pk_county_id", "Põhivõti_maakonna_id"}})
 				in
-				    #"Removed Columns"
+				    #"Renamed Columns"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navigation
 

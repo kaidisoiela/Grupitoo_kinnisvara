@@ -21,10 +21,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "grupitoo_kv fact_palk"
+                          "Entity": "Palk"
                         }
                       },
-                      "Property": "average_salary"
+                      "Property": "Keskmine_palk"
                     }
                   },
                   "Function": 1
@@ -42,10 +42,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "grupitoo_kv dim_time"
+                      "Entity": "Aeg"
                     }
                   },
-                  "Property": "year_number"
+                  "Property": "Aasta"
                 }
               },
               "queryRef": "grupitoo_kv dim_time.year_number",
@@ -146,10 +146,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
+                "Entity": "Aeg"
               }
             },
-            "Property": "year_number"
+            "Property": "Aasta"
           }
         },
         "type": "Advanced"
@@ -162,10 +162,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "grupitoo_kv fact_palk"
+                    "Entity": "Palk"
                   }
                 },
-                "Property": "average_salary"
+                "Property": "Keskmine_palk"
               }
             },
             "Function": 1

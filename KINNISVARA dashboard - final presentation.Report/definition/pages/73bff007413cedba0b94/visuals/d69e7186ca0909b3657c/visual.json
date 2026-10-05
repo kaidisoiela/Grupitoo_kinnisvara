@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "_Mõõdikud"
                     }
                   },
                   "Property": "THI_kasv_2005"
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Measures"
+                    "Entity": "_Mõõdikud"
                   }
                 },
                 "Property": "THI_kasv_2005"
@@ -154,7 +154,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_Measures"
+                "Entity": "_Mõõdikud"
               }
             },
             "Property": "THI_kasv_2005"

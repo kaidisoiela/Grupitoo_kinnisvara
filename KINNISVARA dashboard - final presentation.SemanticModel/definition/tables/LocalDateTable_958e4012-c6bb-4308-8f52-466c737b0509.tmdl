@@ -110,7 +110,7 @@ table LocalDateTable_958e4012-c6bb-4308-8f52-466c737b0509
 
 	partition LocalDateTable_958e4012-c6bb-4308-8f52-466c737b0509 = calculated
 		mode: import
-		source = Calendar(Date(Year(MIN('grupitoo_kv dim_time'[pk_quarter_id])), 1, 1), Date(Year(MAX('grupitoo_kv dim_time'[pk_quarter_id])), 12, 31))
+		source = Calendar(Date(Year(MIN('Aeg'[Põhivõti_kvartali_id])), 1, 1), Date(Year(MAX('Aeg'[Põhivõti_kvartali_id])), 12, 31))
 
 	annotation __PBI_LocalDateTable = true
 
