@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "cb52f9506667d0362b68",
+  "name": "d32cd6b610c572388180",
   "position": {
     "x": 243,
-    "y": 9,
-    "z": 0,
-    "height": 244,
+    "y": 264,
+    "z": 3000,
+    "height": 198,
     "width": 1014,
-    "tabOrder": 0
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "areaChart",
     "query": {
       "queryState": {
         "Category": {
@@ -42,62 +42,33 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Kinnisvara_kasv_2005"
+                  "Property": "Reaalne_m2_hind"
                 }
               },
-              "queryRef": "_Measures.Kinnisvara_kasv_2005",
-              "nativeQueryRef": "Kinnisvara_kasv_2005"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "THI_kasv_2005"
-                }
-              },
-              "queryRef": "_Measures.THI_kasv_2005",
-              "nativeQueryRef": "THI_kasv_2005"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Palga_kasv_2005"
-                }
-              },
-              "queryRef": "_Measures.Palga_kasv_2005",
-              "nativeQueryRef": "Palga_kasv_2005"
+              "queryRef": "_Measures.Reaalne_m2_hind",
+              "nativeQueryRef": "Reaalne_m2_hind"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "grupitoo_kv dim_time"
-                  }
-                },
-                "Property": "year_number"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
+        "isDefaultSort": true
       }
     },
     "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Reaalne väärtus (indekseeritud)'"
+                }
+              }
+            }
+          }
+        }
+      ],
       "categoryAxis": [
         {
           "properties": {
@@ -105,13 +76,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Aasta'"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
                 }
               }
             },
@@ -129,36 +93,17 @@
                 }
               }
             },
-            "concatenateLabels": {
+            "end": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "2025D"
                 }
               }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "titleText": {
+            },
+            "preferredCategoryWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "'Kasvukordaja'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "20D"
                 }
               }
             }
@@ -186,7 +131,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Kinnisvarahindade ja elukalliduse kumulatiivne kasv (Baas 2005 = 1.0)'"
+                  "Value": "'Kinnisvara inflatsiooniga korrigeeritud reaalne m² hind'"
                 }
               }
             }
@@ -227,6 +172,18 @@
                   "Value": "8D"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -258,51 +215,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c60fe089d3d897828d2a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "grupitoo_kv dim_time"
-              }
-            },
-            "Property": "year_number"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4c59784b200017666a8a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Kinnisvara_kasv_2005"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4647026c3a3b5d4a81c0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "THI_kasv_2005"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
