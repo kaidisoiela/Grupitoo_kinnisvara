@@ -941,75 +941,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__mõõdikud.reaalne_m_2_hind": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Reaalne_m2_hind"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "reaalne m 2 hind": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Reaalne_m2_hind": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "entity__mõõdikud.hinnatõusu_lõhe_yo_Y": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Hinnatõusu_Lõhe_YoY"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "hinnatõusu lõhe yo Y": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Hinnatõusu_Lõhe_YoY": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "entity__mõõdikud.kinnisvara_THI_suhe": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Kinnisvara_THI_Suhe"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "kinnisvara THI suhe": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Kinnisvara_THI_Suhe": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "entity__mõõdikud.kinnisvara_kasv_2005": {
 			      "Definition": {
 			        "Binding": {
@@ -1030,16 +961,6 @@ cultureInfo en-US
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "Kinnisvara kasvuindeks alates 2005": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -1059,39 +980,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "THI_kasv_2005": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "THI kasvuindeks alates 2005": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "entity__mõõdikud.ostujõud_m_2": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Ostujõud_m2"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ostujõud m 2": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Ostujõud_m2": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -1453,29 +1341,6 @@ cultureInfo en-US
 			        }
 			      ],
 			      "SemanticType": "Time"
-			    },
-			    "entity__mõõdikud.keskmine_intressimäär": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Mõõdikud",
-			          "ConceptualProperty": "Keskmine_Intressimäär"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "keskmine intressimäär": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Keskmine_Intressimäär": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
 			    },
 			    "aeg.põhivõti_kvartali_id.date_hierarchy": {
 			      "Definition": {

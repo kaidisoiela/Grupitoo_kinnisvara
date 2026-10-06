@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "ada59a725a00a6e5f6cd",
+  "position": {
+    "x": 160,
+    "y": 1116,
+    "z": 2000,
+    "height": 673.91304347826087,
+    "width": 1639.1304347826085,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "scriptVisual",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Maakond"
+                    }
+                  },
+                  "Property": "Maakonna nimi"
+                }
+              },
+              "queryRef": "Maakond.Maakonna nimi",
+              "nativeQueryRef": "Maakonna nimi"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "script": [
+        {
+          "properties": {
+            "source": {
+              "expr": {
+                "Literal": {
+                  "Value": "'# === PARANDATUD R SKRIPT: FILTREERITAV VISUAAL TOP 5 LOOGIKAGA ===\n\n# 1. Vajalike pakettide laadimine\nsuppressPackageStartupMessages(library(tidyverse))\nsuppressPackageStartupMessages(library(scales))\nlibrary(DBI)\nlibrary(RPostgres)\nlibrary(ggrepel)\nlibrary(RColorBrewer)\n\n# 2. Kontrollime Power BI sliceri seisundit (DOLLARI MÄRGID JA KALDKRIIPSUD TÄIELIKULT EEMALDATUD!)\nvalitud_maakonnad <- unique(dataset[[\"Maakonna nimi\"]])\nkokku_maakondi_andmetes <- length(valitud_maakonnad)\n\n# 3. Andmebaasi ühenduse loomine\ncon <- dbConnect(RPostgres::Postgres(),\n                 dbname = \"postgres\",\n                 host = \"localhost\",\n                 port = 5432,\n                 user = \"postgres\",\n                 password = \"andmed\")\n\n# 4. Andmete pärimine PostgreSQL-ist\nquery <- \"\nSELECT \n    c.county_name,\n    t.year_number,\n    AVG(k.avg_price_m2)::NUMERIC(10,2) AS avg_price_m2,\n    AVG(p.average_salary)::NUMERIC(10,2) AS avg_salary,\n    SUM(k.transaction_count) AS total_transactions\nFROM grupitoo_kv.fact_kv k\nINNER JOIN grupitoo_kv.fact_palk p ON k.fk_quarter_id = p.fk_quarter_id AND k.fk_county_id = p.fk_county_id\nINNER JOIN grupitoo_kv.dim_time t ON k.fk_quarter_id = t.pk_quarter_id\nINNER JOIN grupitoo_kv.dim_county c ON k.fk_county_id = c.pk_county_id\nGROUP BY c.county_name, t.year_number\nORDER BY c.county_name, t.year_number;\n\"\n\ndf_data <- dbGetQuery(con, query)\ndbDisconnect(con)\n\n# 5. DÜNAAMILINE FILTREERIMINE (TOP 5 vs Sliceri valik)\nkoik_maakonnad_baasis <- unique(df_data[[\"county_name\"]])\n\nif (kokku_maakondi_andmetes >= length(koik_maakonnad_baasis) || kokku_maakondi_andmetes == 0) {\n  # Kui slicer on tühi, leiame 5 kõige aktiivsemat maakonda\n  top_5_maakonnad <- df_data %>%\n    group_by(county_name) %>%\n    summarise(kogu_maht = sum(total_transactions, na.rm = TRUE)) %>%\n    top_n(5, kogu_maht) %>%\n    pull(county_name)\n  \n  df_filtered <- df_data %>% filter(county_name %in% top_5_maakonnad)\n  graafiku_subtitle <- \"Kuvatakse 5 kõige suurema tehinguaktiivsusega maakonda (filtreerimata)\"\n} else {\n  # Kui kasutaja tegi valiku, näitame ainult valitud maakondi\n  df_filtered <- df_data %>% filter(county_name %in% valitud_maakonnad)\n  graafiku_subtitle <- \"Valitud maakondade trajektoor (2005-2025)\"\n}\n\n# 6. Staatilise Visuaali Joonistamine Power BI ekraanile\nvisuaal_staatiline <- ggplot(df_filtered, aes(x = avg_salary, y = avg_price_m2, color = county_name)) +\n  geom_point(aes(size = total_transactions), alpha = 0.6) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.8, linetype = \"dashed\", alpha = 0.4) +\n  scale_x_continuous(labels = unit_format(unit = \" €\", sep = \"\")) +\n  scale_y_continuous(labels = unit_format(unit = \" €/m²\", sep = \"\")) +\n  scale_size_continuous(labels = comma, range = c(4, 14)) + \n  scale_color_brewer(palette = \"Dark2\") +\n  labs(\n    title = \"Kinnisvarahindade ja keskmise palga seos Eestis\",\n    subtitle = graafiku_subtitle,\n    x = \"Keskmine brutokuupalk (€)\",\n    y = \"Korterite keskmine ruutmeetri hind (€/m²)\",\n    color = \"Maakond\",\n    size = \"Tehinguaktiivsus\"\n  ) +\n  theme_minimal(base_family = \"sans\") +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 18, color = \"#1a1a1a\", margin = margin(b = 6)), \n    plot.subtitle = element_text(size = 13, color = \"#555555\", margin = margin(b = 15)),          \n    axis.title = element_text(face = \"bold\", size = 12, color = \"#222222\"),                        \n    axis.text = element_text(size = 11, color = \"#333333\"),                                        \n    legend.title = element_text(face = \"bold\", size = 12),                                         \n    legend.text = element_text(size = 11),                                                         \n    panel.grid.major = element_line(color = \"#e6e6e6\"),\n    panel.grid.minor = element_blank(),\n    legend.position = \"right\"\n  ) +\n  geom_text_repel(\n    data = df_filtered %>% group_by(county_name) %>% filter(year_number == max(year_number)),\n    aes(label = county_name),\n    fontface = \"bold\", size = 4.5, show.legend = FALSE, box.padding = 0.6 \n  )\n\nprint(visuaal_staatiline)\n'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'R'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
