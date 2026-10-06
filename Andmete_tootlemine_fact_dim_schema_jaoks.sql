@@ -10,7 +10,7 @@ CREATE TABLE grupitoo_kv.maa_amet_py_final (
 );
 
 
-/* JUHEND: Tekkinud Schema all (vasakul) tee paremkliki loodud tabeli peal ning "import data". Vali git kaustas fail "maa_amet_py_final.csv" */
+/* JUHEND: Tekkinud Schema all (vasakul) tee paremkliki loodud tabeli peal ning "import data". Vali git kaustas fail "maa_amet_py_final.csv". Pane tähele, et veerud tuleb mappida eraldi, kuna sissetõmmatavad andmed on eestikeelsete veerunimedega. */
 
 
 --- Teeme Fact_KV tabeli:

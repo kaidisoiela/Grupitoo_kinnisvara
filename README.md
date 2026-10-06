@@ -1,11 +1,3 @@
-ÄRIMÕISTED (Ilma tabelite ja andmebaasi nimedeta) 
-
-* Kinnisvara  hind / turuväärtus: valitud piirkonnas (linnas/maakonnas) teostatud  korteriomandite ostu-müügitehingute keskmine ühe ruutmeetri (m²) hind  eurodes.
-* Palgatase  (nominaalne): täisajaga töötavale inimesele arvestatud keskmine  brutotasu kuus või tunnis enne maksude mahaarvamist.
-* Reaalne  ostujõud (kinnisvaraturul): suhtarv, mis näitab, mitu ruutmeetrit  kinnisvara on võimalik osta ühe keskmise brutokuupalga eest ilma laenuraha  kaasamata.
-* Inflatsioon  (elukalliduse muutus): tarbija ostukorvi maksumuse muutus ajas, mida  mõõdetakse tarbijahinnaindeksi (THI) protsentuaalse muutusena võrreldes  baasaastaga.
-* Turu  aktiivsus: tehingute koguarv konkreetses regioonis etteantud  ajaperioodil (kvartal/aasta). 
-
 # 📊 Eesti Kinnisvaraturu ja Ostujõu Analüüs (2005–2026)
 
 Tere tulemast kinnisvarahindade, keskmise brutopalga, tarbijahinnaindeksi (THI) ja eluasemelaenude intressimäärade andmeanalüüsi projekti! See infosüsteem koondab endas andmete puhastamise Pythonis, relatsioonilise andmebaasi disaini PostgreSQL-is, visuaalid Power BI-s ning interaktiivsed veebirakendused Streamlitis.
@@ -33,14 +25,14 @@ Enne alustamist veendu, et Sinu arvutisse on installeeritud järgmised programmi
    ```bash
    git clone https://github.com
    ```
-4. Ava allalaetud kaust `Grupotoo_kinnisvara` programmis **VS Code** (*File -> Open Folder*).
+4. Ava allalaetud kaust `Grupotoo_kinnisvara` arvutis File Exploreris või programmis **VS Code** (*File -> Open Folder*).
 
 ---
 
 ### SAMM 2: Algandmete puhastamine Pythoniga (VS Code)
-Projekt põhineb algsetel toorandmetel (failid tähisega `_raw`), mis viiakse ühisele kvartalite ja maakondade tasemele, puhastades kuupäevad, valuutad (ainult EUR) ja tekstid.
+Projekt põhineb algsetel välistest andmebaasidest alla tõmmatud toorandmetel (failid tähisega `_raw`), mis viiakse ühisele kvartalite ja (kinnisvarahindade ja brutopalkade puhul ka) maakondade tasemele, puhastades kuupäevad, numbrilised väärtused ja tekstid.
 
-1. Veendu, Sinu sisendkaustas on olemas järgmised toorfailid:
+1. Veendu, et Sinu sisendkaustas on olemas järgmised toorfailid:
    * **Kinnisvarastatistika:** `Kinnisvara hinnastatistika_05_08_raw.csv` kuni `_26_raw.csv`
    * **Palgainfo:** `PA004_20260922-103201_raw.csv`, `PA21_..._raw.csv`, `PA117_..._raw.csv`
    * **Tarbijahinnaindeks:** `tarbijahinna_indeks_2005_2025_raw.csv`
@@ -56,42 +48,36 @@ Projekt põhineb algsetel toorandmetel (failid tähisega `_raw`), mis viiakse ü
 
 ---
 
-### SAMM 3: Andmete import PostgreSQL andmebaasi (DBeaver)
+### SAMM 3: Andmete import PostgreSQL andmebaasi ning tähtskeemi loomine (DBeaver)
 1. Ava **DBeaver** ja loo ühendus oma kohaliku PostgreSQL serveriga (`localhost`).
-2. Loo uus andmebaas nimega `postgres` ja selle sisse skeem `grupitoo_kv`.
-3. Tee skeemi tabelite nimekirjal (*Tables*) paremklikk, vali **Import Data**, määra tüübiks *CSV* ning impordi äsja loodud neli `_final.csv` faili andmebaasi tabeliteks.
+2. Ava fail **`Andmete_tootlemine_fact_dim_schema_jaoks.sql`** (*File -> Open Folder*)
+3. Järgi DBeaveris SQL-redaktoris (*SQL Editor*) avanenud faili juhiseid, sh äsja loodud nelja `_py_final.csv` faili andmete korrektseks sissetõmbamiseks (pane tähele, et maa_ameti andmete impordi puhul tuleb mappida sissetõmmatava faili veerud eelnevalt loodud tabeli veergudega korrektselt).
+4. Jooksuta läbi kogu skript.
+5. Skript loob relatsioonilised andmetabelid: `dim_county`, `dim_time`, `fact_kv`, `fact_palk`, `fact_intressid` ja `fact_thi`.
 
 ---
 
-### SAMM 4: Tähtskeemi loomine SQL-iga
-Andmete kohandamiseks analüüsimudelile loome faktitabelid ja dimensioonitabelid.
-
-1. Ava DBeaveris SQL-redaktor (*SQL Editor*).
-2. Kopeeri sinna faili **`Andmete_tootlemine_fact_dim_schema_jaoks.sql`** sisu ja käivita see.
-3. Skript loob relatsioonilised andmetabelid: `dim_county`, `dim_time`, `fact_kv` ja `fact_palk`.
-
----
-
-### SAMM 5: Power BI visuaalide käivitus ja seadistamine
-1. Ava projekti kaustast Power BI raporti fail (.pbix).
-2. Kuna R-skripti visuaal teeb otseühenduse andmebaasiga, ava R-skripti redaktori aken ja uuenda andmebaasiga ühenduse rida oma reaalse parooliga:
+### SAMM 4: Power BI visuaalide käivitus ja seadistamine
+1. Ava projekti kaustast Power BI raporti fail **`KINNISVARA dashboard - final presentation.pbix`**.
+2. Kuna Power BI raport teeb otseühenduse andmebaasiga, ava üleval vasakul SQL andmebaasist DBeaveriga loodud relatsioonilised andmetabelid (dim ja fact tabelid) (*Get data -> More.. -> otsi "PostgreSQL Database" ja vajuta "Connect"-> Server = Localhost, database = postgres, Advanced options all eemalda linnuke "Include relatsionship columns" eest -> vajuta "OK" -> vali kõik eelnevalt loodud dim ja fact tabelid `grupitoo_KV.` schema alt -> vajuta "Load"*))
+3. Vasakult "Model View" alt kontrolli, et tähtskeemi seosed vastaksid sellele, mis olid loodud PostgreSQL andmebaasis.
+4. Kuna R-skripti visuaal teeb otseühenduse andmebaasiga, ava R-skripti redaktori aken ja uuenda andmebaasiga ühenduse rida oma reaalse parooliga:
    ```R
    con <- dbConnect(RPostgres::Postgres(), dbname = "postgres", host = "localhost", port = 5432, user = "postgres", password = "TEIE_PAROOL")
    ```
-3. Veendu, et R-visuaali *Values* sektsiooni on lohistatud andmetabelist väli **`Maakonna nimi`**.
-4. Vajuta peamenüüs nuppu **Refresh** (Värskenda) – andmed ja kaardid kuvatakse ekraanile.
+5. Veendu, et R-visuaali *Values* sektsiooni on lohistatud andmetabelist väli **`Maakonna nimi`**.
+6. Vajuta peamenüüs nuppu **Refresh** (Värskenda) – andmed ja kaardid kuvatakse ekraanile.
 
 ---
 
 ### SAMM 6: Interaktiivsete Pythoni veebiäppide käivitamine (Streamlit)
 Rakendused pakuvad reaalajas simulaatoreid ja ostujõu analüüse. Äpid jooksevad lokaalses veebibrauseris.
 
-1. Ava VS Code terminal ja paigalda vajalikud teegid:
-   ```bash
-   pip install streamlit pandas numpy plotly statsmodels
-   ```
+1. Ava VS Code terminal ning **`Grupotoo_kinnisvara`** kaust, kus failid paiknevad (*File -> Open Folder*)
 
-2. Äppide käivitamiseks sisesta terminali vastav käsk (uue äpi jaoks ava terminalis plussmärgist `+` uus aken):
+2. Ava fail **`KV_grupitöö_andmete_mudeldamine.ipynb`** ning vajuta **Run All**. Failis avatakse otse PostgreSQL andmebaasist varasemalt loodud tabelid (koodi alguses ühenduse loomisel vaata, et andmebaasi parool oleks korrektne ja toimiv), installitakse vajalikud Python teegid, tehakse esmane andmete töötlus, puhastamine ja analüüs ning salvestatakse samasse kausta koondfail **`kinnisvara_koondandmed.csv`**
+
+3. Äppide käivitamiseks sisesta terminali vastav käsk (uue äpi jaoks ava terminalis plussmärgist `+` uus aken):
 
    * **📊 ÄPP 1: Kinnisvaraturu põhimudel ja trendijooned**
      ```bash
@@ -110,4 +96,4 @@ Rakendused pakuvad reaalajas simulaatoreid ja ostujõu analüüse. Äpid jooksev
 
 ---
 ### 👥 Autorid ja grupiliikmed
-Grupitöö on valminud õppetöö raames. Kõik õigused andmetele ja koodile kuuluvad autoritele.
+Grupitöö on valminud õppetöö raames. Grupitöö autoriteks on Kaidi Soiela, Siret Laaneoks, Merje Nõmmik ja Kristel Kuusik. Kõik õigused andmetele ja koodile kuuluvad autoritele.
