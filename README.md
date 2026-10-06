@@ -83,11 +83,11 @@ Rakendused pakuvad reaalajas simulaatoreid ja ostujõu analüüse. Äpid jooksev
      ```bash
      streamlit run KV_grupitöö_app_täiendatud.py
      ```
-   * **📐 ÄPP 2: Kinnisvara Ostujõu Indeks (Mitu m² saab 1 kuu brutopalga eest?)**
+   * **📐 ÄPP 2: Eesti kinnisvara ostujõu kompass (2005–2026)**
      ```bash
      streamlit run KV_grupitöö_Sireti_app.py
      ```
-   * **🗺️ ÄPP 3: Eelarve kriteeriumite ja laenukoormuse soojuskaart (Heatmap)**
+   * **🗺️ ÄPP 3: Mitu ruutmeetrit korterit saad osta ühe kuupalgaga?**
      ```bash
      streamlit run KV_grupitöö_Sireti_app2.py
      ```

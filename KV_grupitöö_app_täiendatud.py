@@ -33,7 +33,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- LEHE SEADISTUS ---
-st.set_page_config(page_title="Kinnisvaraturu Analüüs", layout="wide")
+st.set_page_config(page_title="Kinnisvaraturu analüüs", layout="wide")
 st.title("📊 Kinnisvarahindade ja majandusnäitajate seoste analüüs")
 
 st.markdown("""
@@ -166,7 +166,7 @@ st.pyplot(fig_tasku)
 # ==============================================================================
 
 st.markdown("---")
-st.header("🔬 2. Statistiline mudel näitajatevaheliste seoste leidmiseks")
+st.header("🔬 2. Statistiline mudel näitajate vaheliste seoste leidmiseks")
 st.write("Siin arvutame välja, kui täpselt suudavad valitud majandusnäitajad ajaloos toimunud hinnamuutusi selgitada, rakendades regressioonmudelit vähimruutude meetodil (OLS).")
 
 if not valitud_makro_tekst:
@@ -277,7 +277,7 @@ else:
 # Osa 3: AJALINE JUHTROLL
 # ==============================================================================
 st.markdown("---")
-st.header("⏳ 3. Mis juhtub enne? (Ajaline juhtroll ehk kumba näitajat enne vaadata)")
+st.header("⏳ 3. Mis juhtub enne? (Ajaline juhtroll ehk millist näitajat enne vaadata)")
 st.write("Majanduses võtavad asjad aega. Siin testime, kas majandusnäitajate muutused käivad kinnisvarahindadest ajaliselt ees ehk kas nad on nn varajased hoiatussignaalid. Arvutused on tehtud Grangeri kausaalsuse regressioonmudeliga. ")
 
 df_granger = df_loplis.groupby('fk_quarter_id').agg({
