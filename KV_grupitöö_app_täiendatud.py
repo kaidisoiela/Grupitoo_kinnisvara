@@ -215,9 +215,9 @@ else:
     
     tõlgitud_nimed = {
         'const': 'Baashind (kui muud näitajad on nullis)',
-        'palk_lag': 'Brutopalga tõus 1€ võrra (3 kuud tagasi)',
-        'thi_lag': 'Elukalliduse tõus 1 ühiku võrra (3 kuud tagasi)',
-        'intress_lag': 'Laenuintressi tõus 1% võrra (3 kuud tagasi)',
+        'palk_lag': 'Brutopalga tõus 1€ võrra (1 kvartal tagasi)',
+        'thi_lag': 'Elukalliduse tõus 1 ühiku võrra (1 kvartal tagasi)',
+        'intress_lag': 'Laenuintressi tõus 1% võrra (1 kvartal tagasi)',
         'aja_trend': 'Aja loomulik möödumine (1 kvartal)'
     }
     
