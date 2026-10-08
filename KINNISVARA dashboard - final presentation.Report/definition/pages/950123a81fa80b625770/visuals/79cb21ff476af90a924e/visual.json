@@ -4,10 +4,10 @@
   "position": {
     "x": 1346,
     "y": 84,
-    "z": 4002,
+    "z": 6000,
     "height": 302,
     "width": 454,
-    "tabOrder": 4002
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "kpi",
@@ -76,6 +76,26 @@
             }
           }
         }
+      ],
+      "lastDate": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -128,5 +148,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1bca59e32a39a5fc8893",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Palk"
+                  }
+                },
+                "Property": "Keskmine_palk"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6165eb3d15f09f2cdd39",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Aeg"
+              }
+            },
+            "Property": "Aasta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
