@@ -4,10 +4,10 @@
   "position": {
     "x": 810,
     "y": 84,
-    "z": 4001,
+    "z": 5000,
     "height": 302,
     "width": 458,
-    "tabOrder": 4001
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "kpi",
@@ -69,10 +69,8 @@
             }
           }
         }
-      ]
-    },
-    "visualContainerObjects": {
-      "dropShadow": [
+      ],
+      "lastDate": [
         {
           "properties": {
             "show": {
@@ -81,10 +79,19 @@
                   "Value": "true"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
             }
           }
         }
-      ],
+      ]
+    },
+    "visualContainerObjects": {
       "title": [
         {
           "properties": {
@@ -111,8 +118,71 @@
             }
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b8daf08f170de6f0a012",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Kinnisvara"
+                  }
+                },
+                "Property": "Keskmine_m2_hind"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e9a7efdf0a014e973b01",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Aeg"
+              }
+            },
+            "Property": "Aasta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

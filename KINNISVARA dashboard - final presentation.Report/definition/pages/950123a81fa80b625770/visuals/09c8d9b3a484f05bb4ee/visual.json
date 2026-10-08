@@ -220,6 +220,25 @@
         },
         {
           "properties": {}
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(grupitoo_kv fact_intressid.intress)"
+          }
         }
       ],
       "xAxisReferenceLine": [

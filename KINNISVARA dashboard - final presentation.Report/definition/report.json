@@ -11,13 +11,13 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "AccessibleDefault",
+      "name": "CY23SU0218963772141752777.json",
       "reportVersionAtImport": {
         "visual": "2.11.0",
         "report": "3.4.0",
         "page": "2.3.1"
       },
-      "type": "SharedResources"
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -40,7 +40,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "false"
+                "Value": "true"
               }
             }
           }
@@ -53,11 +53,6 @@
       "name": "SharedResources",
       "type": "SharedResources",
       "items": [
-        {
-          "name": "AccessibleDefault",
-          "path": "BuiltInThemes/AccessibleDefault.json",
-          "type": "CustomTheme"
-        },
         {
           "name": "CY26SU07",
           "path": "BaseThemes/CY26SU07.json",
@@ -73,6 +68,11 @@
           "name": "City_view6478255005745885.webp",
           "path": "City_view6478255005745885.webp",
           "type": "Image"
+        },
+        {
+          "name": "CY23SU0218963772141752777.json",
+          "path": "CY23SU0218963772141752777.json",
+          "type": "CustomTheme"
         },
         {
           "name": "maakond5049902126473338.json",

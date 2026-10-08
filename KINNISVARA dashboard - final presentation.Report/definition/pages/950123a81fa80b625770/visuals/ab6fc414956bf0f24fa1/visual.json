@@ -4,10 +4,10 @@
   "position": {
     "x": 184,
     "y": 84,
-    "z": 4004,
+    "z": 8000,
     "height": 302,
     "width": 570,
-    "tabOrder": 4004
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "shapeMap",
@@ -144,6 +144,41 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fillRule": {
+              "linearGradient2": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'asZero'"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -173,26 +208,21 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7f2651afacd48e8efc60",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Maakond"
-              }
-            },
-            "Property": "Maakonna nimi"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
