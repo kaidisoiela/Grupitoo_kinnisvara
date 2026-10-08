@@ -207,7 +207,7 @@ else:
         <strong>⏱️ Mis on "ajanihe" (mudelis: <i>lag</i>)?</strong><br/>
         Kinnisvaraturg reageerib majandusele viivitusega. Kui täna tõuseb palk või intress, ei muutu korterite hinnad samal sekundil. 
         Inimestel kulub aega uute oludega kohanemiseks, pangaga suhtlemiseks ja tehinguni jõudmiseks. 
-        Seetõttu kasutab mudel <strong>1 kvartali pikkust ajanihet</strong> — see tähendab, et täna näidatav mõju põhineb tegelikult sellel, mis toimus majanduses 3 kuud tagasi.
+        Seetõttu kasutab mudel <strong>1 kvartali pikkust ajanihet</strong> — see tähendab, et täna näidatav mõju põhineb tegelikult sellel, mis toimus majanduses 1 kvartal tagasi.
     </div>
     """, unsafe_allow_html=True)
 
@@ -215,9 +215,9 @@ else:
     
     tõlgitud_nimed = {
         'const': 'Baashind (kui muud näitajad on nullis)',
-        'palk_lag': 'Brutopalga tõus 1€ võrra (3 kuud tagasi)',
-        'thi_lag': 'Elukalliduse tõus 1 ühiku võrra (3 kuud tagasi)',
-        'intress_lag': 'Laenuintressi tõus 1% võrra (3 kuud tagasi)',
+        'palk_lag': 'Brutopalga tõus 1€ võrra (1 kvartal tagasi)',
+        'thi_lag': 'Elukalliduse tõus 1 ühiku võrra (1 kvartal tagasi)',
+        'intress_lag': 'Laenuintressi tõus 1% võrra (1 kvartal tagasi)',
         'aja_trend': 'Aja loomulik möödumine (1 kvartal)'
     }
     
